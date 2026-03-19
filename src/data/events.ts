@@ -93,7 +93,7 @@ export const events: Event[] = [
         date: "April 9th / 10th, 2026",
         location: "GGSIPU Delhi",
         coverImage: "/images/events/women-who-hustle-iiit-delhi/cover.jpg",
-        shortDescription: "An exclusive event celebrating women leadership and entrepreneurship at IIIT Delhi.",
+        shortDescription: "Not just degrees—explore careers, startups, and how to build real impact in today’s world at GGSIPU Delhi.",
         fullDescription: [
             "Inspire India Talks – Edition 02 is designed to challenge the traditional idea of success being limited to degrees. With the theme “Beyond Degrees: Building Careers, Startups & Impact,” the event brings together leaders from civil services, entrepreneurship, and the digital ecosystem to share real-world insights with students. From building startups and navigating careers to creating meaningful impact in society, this event aims to inspire students to think beyond academics and take action toward building their own paths.Attendees will gain exposure to diverse perspectives, practical experiences, and powerful stories that bridge the gap between classroom learning and real-world execution."
         ],
@@ -107,7 +107,7 @@ export const events: Event[] = [
             {
                 id: "s2",
                 name: "Khushi Grewal",
-                role: "AI/ML Influencer | Content Creator (60K+ Followers)",
+                role: "AI/ML Influencer | Content Creator (60K+ Followers) | Entrepreneurship",
                 image: "/images/events/Khushi-grewal.jpg"
             },
             {
