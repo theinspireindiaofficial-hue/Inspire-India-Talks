@@ -87,30 +87,41 @@ export const events: Event[] = [
     },
     {
         id: "e2",
-        slug: "women-who-hustle-iiit-delhi",
-        title: "Women Who Hustle",
-        tagline: "Women Who Hustle, From Idea to Impact",
-        date: "March 14th, 2024",
-        location: "GGSIPU",
+        slug: "beyond-degrees-ggsipu-delhi",
+        title: "Beyond Degrees",
+        tagline: "Building Careers, Startups & Impact",
+        date: "April 9th / 10th, 2026",
+        location: "GGSIPU Delhi",
         coverImage: "/images/events/women-who-hustle-iiit-delhi/cover.jpg",
         shortDescription: "An exclusive event celebrating women leadership and entrepreneurship at IIIT Delhi.",
         fullDescription: [
-            "Inspire India Talks brought together some of the most inspiring women leaders to IIIT Delhi for a day of motivation, learning, and networking.",
-            "The 'Women Who Hustle' event focused on the unique challenges and triumphs of women in entrepreneurship, tech, and creative industries. Attendees had the opportunity to hear firsthand accounts of building successful ventures from the ground up."
+            "Inspire India Talks – Edition 02 is designed to challenge the traditional idea of success being limited to degrees. With the theme “Beyond Degrees: Building Careers, Startups & Impact,” the event brings together leaders from civil services, entrepreneurship, and the digital ecosystem to share real-world insights with students. From building startups and navigating careers to creating meaningful impact in society, this event aims to inspire students to think beyond academics and take action toward building their own paths.Attendees will gain exposure to diverse perspectives, practical experiences, and powerful stories that bridge the gap between classroom learning and real-world execution."
         ],
         speakers: [
             {
                 id: "s1",
-                name: "Jane Doe",
-                role: "Founder & CEO, TechCorp",
-                image: "/images/events/women-who-hustle-iiit-delhi/speaker1.jpg"
+                name: "Vijender Singh Chauhan",
+                role: "Chief Guest | Civil Servant (IAS/IPS) | Motivational Speaker",
+                image: "/images/events/Vijendra-singh-chauhan.jpeg"
             },
             {
                 id: "s2",
-                name: "Sarah Smith",
-                role: "Director of Product",
-                image: "/images/events/women-who-hustle-iiit-delhi/speaker2.jpg"
-            }
+                name: "Khushi Grewal",
+                role: "AI/ML Influencer | Content Creator (60K+ Followers)",
+                image: "/images/events/Khushi-grewal.jpg"
+            },
+            {
+                id: "s3",
+                name: "Shamshad Alam",
+                role: "Founder & CEO – Edunachal | Founder – Inspire India Talks",
+                image: "/images/events/Shamshad-Alam.jpeg"
+            },
+            {
+                id: "s4",
+                name: "Satyaprakash Singh",
+                role: "Indian Forest Service (IFS) Officer",
+                image: "/images/events/satya-prakash-singh.jpeg"
+            },
         ],
         gallery: [
             "/images/events/women-who-hustle-iiit-delhi/gallery1.jpg",
