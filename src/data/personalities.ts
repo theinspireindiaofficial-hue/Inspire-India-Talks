@@ -324,6 +324,52 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-17",
   },
+  {
+    id: "janardan-khorate",
+    name: "Janardan Khorate",
+    title: "Founder & Manager, Ambrosia Organic Farm",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/saladbaba.webp",
+    born: "Goa, India",
+    profession: "Entrepreneur & Organic Farming Leader",
+    knownFor: "Scaling Ambrosia Organic Farm into a ₹22 crore organic business",
+    quote: "What started as a small farm became a life-changing journey of growth and purpose.",
+    story: "Janardan Khorate, popularly known as ‘Saladbaba’ in Goa, transformed a small organic farming initiative into a multi-crore enterprise. His journey took a pivotal turn in 2003 when David Grower and Michaela Kelemen, a couple from London who had started Ambrosia Organic Farm in Goa, adopted him and took him to London for education and a better future. Originally started in 1993 as a 5-acre farm in Siolim, Ambrosia supplied fresh vegetables like tomatoes and capsicum to local restaurants, earning its nickname ‘Saladbaba’. Over time, the venture expanded into products like peanut butter, rice, and chia seeds. In 2008, Janardan was entrusted with managing the farm. With dedication and vision, he scaled the business from a modest Rs 20 lakh turnover to an impressive Rs 22 crore annually. Today, Ambrosia spans 135 acres and serves numerous restaurants and cafes across Goa, standing as a pioneer in India’s organic farming movement. Janardan’s journey reflects how opportunity, trust, and hard work can transform not just a business, but an entire life.",
+    achievements: [
+      "Scaled Ambrosia Organic Farm from ₹20 lakh to ₹22 crore turnover",
+      "Expanded farm operations from 5 acres to 135 acres",
+      "Pioneered organic farming supply to restaurants and cafes in Goa",
+      "Diversified into products like peanut butter, rice, and chia seeds",
+      "Built one of India’s early successful organic farming enterprises"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
+  },
+  {
+    id: "bhim-raj-sharma",
+    name: "Bhim Raj Sharma",
+    title: "Founder, Gaukriti",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/brij-raj.webp",
+    born: "Jaipur, Rajasthan",
+    profession: "Eco-Entrepreneur",
+    knownFor: "Building a ₹1 crore business by turning cow dung into eco-friendly paper",
+    quote: "What people mocked became my mission to create something meaningful.",
+    story: "Bhim Raj Sharma, a resident of Jaipur, turned an idea once mocked by many into a successful eco-friendly business. In 2014, he came across the concept of making paper from elephant dung and wondered why cow dung couldn’t be used in a similar way. When he shared this idea with his family and friends, many dismissed it as foolish and even called him a maniac. Despite the criticism and lack of financial support, Sharma took a bold step by investing the money he had saved for his daughter’s marriage to start his venture. In 2017, he established his company ‘Gaukriti’ with an investment of Rs 30 lakh and began producing paper from cow dung. His initial attempts failed, producing uneven and fragile sheets, but he spent months researching and refining the process. Eventually, he succeeded in creating high-quality eco-friendly paper made from cow dung, urine, and cotton waste. Today, his innovation not only generates an annual revenue of around Rs 1 crore but also promotes sustainable practices and waste utilization.",
+    achievements: [
+      "Built a ₹1 crore eco-friendly paper business",
+      "Founded Gaukriti with an initial investment of ₹30 lakh",
+      "Developed and patented cow dung paper technology",
+      "Promoted sustainable waste management using cow dung",
+      "Turned a mocked idea into a successful green enterprise"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
+  },
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",
@@ -1187,6 +1233,30 @@ export const personalities: Personality[] = [
     authorName: "Inspire India Talks",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-11"
+  },
+  {
+    id: "ramesh-kharmale",
+    name: "Ramesh Kharmale",
+    title: "Ex-Army Veteran & Environmentalist",
+    category: "Environmentalists",
+    categorySlug: "environmentalists",
+    image: "/images/personalities/ramesh-kharmale.jpg",
+    born: "Junnar, Pune, Maharashtra",
+    profession: "Forest Guard & Environmentalist",
+    knownFor: "Reviving barren hills by digging trenches and restoring water ecosystems",
+    quote: "Conservation is my passion, but it’s also my duty.",
+    story: "Ramesh Kharmale, a former Army serviceman from Junnar, Pune, transformed his discipline into a mission to restore nature. After serving 17 years in the Army and brief stints in banking and education, he found his true calling in environmental conservation. In 2021, he began a solo initiative to tackle water scarcity in the hills near the Khandoba Temple in Dhamankhel. Over two months, he spent 300 hours digging 70 contour trenches across the mountainside, designed to capture and store rainwater. These trenches, stretching over 412 meters, now hold up to 8 lakh litres of water per season, significantly improving groundwater levels. What started as an individual effort soon became a family mission. His wife Swati clears invasive weeds and restores ancient stepwells, while their children Mayuresh and Vaishnavi help plant seeds and nurture saplings. Together, they have planted over 450 trees and continue to expand their green efforts. Their work also includes making tourist spots plastic-free and developing an 'Oxygen Park' to promote biodiversity. Through persistence and collective action, the Kharmale family is turning barren land into thriving ecosystems, proving that real change begins with small, consistent efforts.",
+    achievements: [
+      "Dug 70 contour trenches storing 8 lakh litres of water",
+      "Improved groundwater recharge in Junnar hills",
+      "Planted 450+ trees with plans to expand further",
+      "Led family-driven environmental conservation movement",
+      "Initiated 'Oxygen Park' to promote biodiversity",
+      "Worked towards making local tourist areas plastic-free"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
   },
 
   // ===== SPORTS ICONS =====
@@ -2172,6 +2242,29 @@ export const personalities: Personality[] = [
     authorName: "Inspire India Talks",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-11"
+  },
+  {
+    id: "ruma-devi",
+    name: "Ruma Devi",
+    title: "Social Entrepreneur & Rural Artisan Leader",
+    category: "Others",
+    categorySlug: "others",
+    image: "/images/personalities/ruma-devi.webp",
+    born: "Barmer, Rajasthan",
+    profession: "Social Entrepreneur",
+    knownFor: "Empowering 22,000+ rural women through embroidery-based livelihoods",
+    quote: "The skill I learned at home became the key to changing my life.",
+    story: "Ruma Devi, born in a small village in Barmer, Rajasthan, grew up watching women practice intricate embroidery as part of daily life, yet never earning from it. After losing her mother early and leaving school at a young age, she faced the same limitations as many rural women. After marriage, she began to see that the traditional skills women possessed could become a source of income if connected to the right market. Starting with just two women, she began stitching products collectively. Soon, a group of ten women contributed Rs 100 each to buy a second-hand sewing machine, marking the beginning of a collective journey. Despite facing resistance from family and society, Ruma continued and learned everything from production to pricing and selling. A turning point came when she connected with GVCS (Gramin Vikas Evam Chetna Sansthan), which helped her link rural artisans to larger markets. What started as a small initiative grew into a movement across 75 villages, empowering over 22,000 women. Today, these women earn independent incomes through traditional crafts like embroidery, mirror work, and patchwork. Ruma Devi’s work has transformed not only livelihoods but also the confidence and decision-making power of thousands of women.",
+    achievements: [
+      "Empowered 22,000+ rural women across 75 villages",
+      "Revived traditional Rajasthani embroidery into sustainable livelihoods",
+      "Built a large-scale rural artisan network",
+      "Collaborated with GVCS to expand market access",
+      "Enabled financial independence and social empowerment for women"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
   },
 
 ];
