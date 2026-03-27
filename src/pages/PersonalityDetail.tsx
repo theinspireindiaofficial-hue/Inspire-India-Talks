@@ -28,6 +28,25 @@ const PersonalityDetail = () => {
 
   const related = getPersonalitiesByCategory(person.categorySlug).filter(p => p.id !== person.id).slice(0, 4);
 
+  // Helper to render text with **bold** and *italic* support
+  const renderRichText = (text: string) => {
+    // Handle bold: **text**
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i} className="text-primary font-bold">{part.slice(2, -2)}</strong>;
+      }
+      // Handle italic: *text* (simple version)
+      const subParts = part.split(/(\*.*?\*)/g);
+      return subParts.map((sub, j) => {
+        if (sub.startsWith('*') && sub.endsWith('*')) {
+          return <em key={`${i}-${j}`} className="italic text-foreground/90">{sub.slice(1, -1)}</em>;
+        }
+        return sub;
+      });
+    });
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -81,25 +100,91 @@ const PersonalityDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              <div className="glass-card p-8 md:p-10 flex gap-5 border-l-4 border-l-primary">
-                <Quote className="h-8 w-8 text-primary flex-shrink-0 mt-1 opacity-60" />
-                <p className="font-serif text-xl md:text-2xl italic text-foreground/90 leading-relaxed">"{person.quote}"</p>
+            {/* Story Section - Editorial Style */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="relative"
+            >
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-10 relative inline-block">
+                The Inspiring Story
+                <span className="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full" />
+              </h2>
+
+              <div className="prose prose-invert max-w-none">
+                {person.story.split('\n\n').map((paragraph, idx) => {
+                  const isHighlight = paragraph.trim().startsWith('Key:') || paragraph.trim().startsWith('Crucially:');
+                  
+                  return (
+                    <motion.div 
+                      key={idx} 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      className="relative group"
+                    >
+                      {/* Drop Cap for first paragraph */}
+                      {idx === 0 ? (
+                        <p className="font-serif text-xl md:text-2xl text-foreground/80 leading-relaxed mb-12 first-letter:text-7xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left first-letter:mt-1">
+                          {renderRichText(paragraph)}
+                        </p>
+                      ) : isHighlight ? (
+                        <div className="my-12 p-8 md:p-10 bg-primary/5 border-l-4 border-primary rounded-r-2xl glass-card">
+                          <p className="font-serif text-xl md:text-2xl text-foreground font-medium leading-relaxed italic">
+                            {renderRichText(paragraph.replace(/^(Key:|Crucially:)\s*/, ''))}
+                          </p>
+                        </div>
+                      ) : (
+                        <p className="font-serif text-xl md:text-2xl text-foreground/80 leading-relaxed mb-12">
+                          {renderRichText(paragraph)}
+                        </p>
+                      )}
+
+                      {/* Pull Quote - Inserted after the 1st paragraph */}
+                      {idx === 0 && person.story.split('\n\n').length > 1 && (
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          className="my-16 py-12 px-8 md:px-16 border-y border-primary/20 bg-primary/5 relative overflow-hidden group rounded-3xl"
+                        >
+                          <Quote className="absolute -top-4 -left-4 h-32 w-32 text-primary opacity-5 rotate-12" />
+                          <div className="relative z-10 text-center">
+                            <p className="font-serif text-3xl md:text-4xl italic font-bold text-foreground leading-tight mb-6 glow-text">
+                              "{person.quote}"
+                            </p>
+                            <div className="flex items-center justify-center gap-4">
+                              <div className="h-px w-12 bg-primary/40" />
+                              <span className="text-primary text-sm uppercase tracking-widest font-black">{person.name}</span>
+                              <div className="h-px w-12 bg-primary/40" />
+                            </div>
+                          </div>
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">The Inspiring Story</h2>
-              <p className="text-foreground/70 leading-relaxed whitespace-pre-line text-lg">{person.story}</p>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Key Achievements</h2>
-              <div className="space-y-4">
+            {/* Achievements Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="pt-8"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">Key Achievements</h2>
+                <div className="h-px flex-grow bg-gradient-to-r from-border/60 to-transparent" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {person.achievements.map((a, i) => (
-                  <div key={i} className="flex items-start gap-4 glass-card p-5 border-l-2 border-l-primary/40 hover:border-l-primary transition-colors">
-                    <span className="h-9 w-9 rounded-full bg-primary/20 text-primary flex items-center justify-center text-sm font-bold flex-shrink-0">{i + 1}</span>
-                    <span className="text-foreground/80 pt-1.5">{a}</span>
+                  <div key={i} className="flex items-start gap-4 glass-card p-6 border-l-2 border-l-primary/30 hover:border-l-primary transition-all duration-300 hover:translate-x-1 group">
+                    <span className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">{i + 1}</span>
+                    <span className="text-foreground/90 font-medium pt-1.5 leading-snug">{a}</span>
                   </div>
                 ))}
               </div>
