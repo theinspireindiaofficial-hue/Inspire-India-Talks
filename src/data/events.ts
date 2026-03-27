@@ -30,7 +30,7 @@ export const events: Event[] = [
         date: "March 14, 2026",
         location: "IIIT Delhi",
         coverImage: "/images/events/IIIT-Delhi.jpg",
-        heroVideo: "/images/events/0306(1).mp4",
+        heroVideo: "/images/events/InspireIndiaTalks - Website - Vid.mp4",
         shortDescription: "An exclusive event celebrating entrepreneurship, leadership and startup's at IIIT Delhi.",
         fullDescription: [
             "The theme “From Idea to Impact” will highlight the challenges, learnings, and strategic decisions involved in building meaningful ventures. Attendees will gain insights into product-market fit, early-stage struggles, leadership mindset, and how bold ideas evolve into impactful startups."
