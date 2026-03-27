@@ -586,6 +586,53 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-11"
   },
+  {
+    id: "ira-singhal",
+    name: "Ira Singhal",
+    title: "IAS Officer (AIR 1, UPSC 2015)",
+    category: "She Talks",
+    categorySlug: "she-talks",
+    image: "/images/personalities/ira-singhal.jpg",
+    born: "1983, Meerut, Uttar Pradesh",
+    profession: "Civil Servant & Public Policy Leader",
+    knownFor: "Securing All India Rank 1 in UPSC 2015 and advocating for inclusion and disability rights",
+    quote: "Your limitations do not define you. Your determination does.",
+    story: "Ira Singhal’s journey is a powerful example of resilience, courage, and unwavering determination. Born in Meerut, Uttar Pradesh, she grew up with scoliosis, a condition that affected her physical mobility. Despite excelling academically and completing her engineering degree, she faced repeated challenges in her career due to societal perceptions around disability. Her dream of becoming a civil servant faced a major setback when, even after clearing the UPSC Civil Services Examination earlier, she was denied a posting on the grounds of her physical condition. Instead of accepting this as her fate, Ira chose to fight back. She challenged the decision legally, standing up not just for herself but for thousands of others facing similar discrimination. Alongside this battle, she continued preparing with even greater focus and determination. In 2015, she achieved a historic milestone by securing All India Rank 1 in the UPSC Civil Services Examination, becoming the first differently-abled woman to top the exam. Her success was not just personal—it was symbolic of breaking deep-rooted barriers in society. As an IAS officer, Ira has contributed across sectors such as urban governance, public policy, inclusion, and social development. She has been actively involved in advocating for accessibility, equal opportunities, and inclusive governance. Her journey continues to inspire millions of aspirants, especially those who feel limited by circumstances, proving that true strength lies in persistence and self-belief.",
+    achievements: [
+      "Secured All India Rank 1 in UPSC Civil Services Examination 2015",
+      "First differently-abled woman to top the UPSC exam",
+      "Successfully fought a legal battle against discrimination in civil services",
+      "Advocate for disability rights and inclusive governance",
+      "Worked across urban development, public policy, and social sectors",
+      "Fulbright Humphrey Fellow (2021)"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
+  },
+  {
+    id: "saumya-sharma",
+    name: "Saumya Sharma",
+    title: "IAS Officer (AIR 9, UPSC 2017)",
+    category: "She Talks",
+    categorySlug: "she-talks",
+    image: "/images/personalities/Saumya-sharma.jpg",
+    born: "Delhi, India",
+    profession: "Civil Servant",
+    knownFor: "Securing AIR 9 in UPSC 2017 with 98% hearing impairment through self-study",
+    quote: "Your circumstances don’t define your limits. Your mindset does.",
+    story: "Saumya Sharma’s journey is a remarkable story of resilience, discipline, and unshakable self-belief. Diagnosed with 98% hearing impairment at a young age, she grew up facing challenges that most people cannot even imagine. Communication barriers, social limitations, and academic hurdles could have easily held her back—but Saumya chose a different path. Determined to prove that disability does not define capability, she set her sights on one of the toughest exams in the country—the UPSC Civil Services Examination. What makes her journey even more extraordinary is that she prepared entirely through self-study, without any coaching support. She relied on her own strategy, consistency, and deep focus to navigate the vast syllabus. Despite the odds, she remained disciplined, turning her limitations into strengths by developing intense concentration and clarity in her preparation. In 2017, her hard work paid off when she secured All India Rank 9, becoming one of the top performers in the country. Her achievement was not just a personal milestone but a powerful message to society—that physical limitations cannot stop a determined mind. Today, as an IAS officer, Saumya Sharma stands as an inspiration for millions of aspirants and individuals facing challenges, proving that with the right mindset and perseverance, even the toughest barriers can be broken.",
+    achievements: [
+      "Secured All India Rank 9 in UPSC Civil Services Examination 2017",
+      "Achieved success with 98% hearing impairment",
+      "Prepared entirely through self-study without coaching",
+      "Became a role model for aspirants with disabilities",
+      "Symbol of resilience, discipline, and self-belief"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-03-23",
+  },
 
 
   // ===== TEACHERS & EDUCATORS =====
