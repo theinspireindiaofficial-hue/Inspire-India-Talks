@@ -73,9 +73,9 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-8">
             {[
-              { icon: <Mail className="h-5 w-5" />, title: "Email", detail: "hello@inspireindiatalks.com" },
+              { icon: <Mail className="h-5 w-5" />, title: "Email", detail: "theinspireindiaofficial@gmail.com" },
               { icon: <Phone className="h-5 w-5" />, title: "Phone", detail: "+91 97187 76830" },
-              { icon: <MapPin className="h-5 w-5" />, title: "Location", detail: "Nehru Place, New Delhi, India" },
+              { icon: <MapPin className="h-5 w-5" />, title: "Location", detail: "Office no-T-06 Fourth floor, B-10 Sector - 2 Noida" },
             ].map((item, i) => (
               <motion.div
                 key={i}
