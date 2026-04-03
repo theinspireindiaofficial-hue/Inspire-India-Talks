@@ -90,9 +90,9 @@ export const events: Event[] = [
         slug: "beyond-degrees-ggsipu-delhi",
         title: "Beyond Degrees",
         tagline: "Building Careers, Startups & Impact",
-        date: "April 9th / 10th, 2026",
+        date: "April 10th, 2026",
         location: "GGSIPU Delhi",
-        coverImage: "/public/images/events/ggsipu.jpg",
+        coverImage: "/images/events/ggsipu-univ.jpg",
         shortDescription: "Not just degrees—explore careers, startups, and how to build real impact in today’s world at GGSIPU Delhi.",
         fullDescription: [
             "Inspire India Talks – Edition 02 is designed to challenge the traditional idea of success being limited to degrees. With the theme “Beyond Degrees: Building Careers, Startups & Impact,” the event brings together leaders from civil services, entrepreneurship, and the digital ecosystem to share real-world insights with students. From building startups and navigating careers to creating meaningful impact in society, this event aims to inspire students to think beyond academics and take action toward building their own paths.Attendees will gain exposure to diverse perspectives, practical experiences, and powerful stories that bridge the gap between classroom learning and real-world execution."
@@ -100,15 +100,15 @@ export const events: Event[] = [
         speakers: [
             {
                 id: "s1",
-                name: "Vijender Singh Chauhan",
+                name: "Ira Singhal",
                 role: "Chief Guest | Civil Servant (IAS/IPS) | Motivational Speaker",
-                image: "/images/events/Vijendra-singh-chauhan.jpeg"
+                image: "/images/events/Ira_singhal.jpeg"
             },
             {
                 id: "s2",
                 name: "Khushi Grewal",
                 role: "AI/ML Influencer | Content Creator (82K+ Followers) | Entrepreneurship",
-                image: "/images/events/Khushi-grewal.jpg"
+                image: "/events/Khushi-grewal.jpg"
             },
             {
                 id: "s3",
@@ -118,9 +118,9 @@ export const events: Event[] = [
             },
             {
                 id: "s4",
-                name: "Satyaprakash Singh",
-                role: "Indian Forest Service (IFS) Officer",
-                image: "/images/events/satya-prakash-singh.jpeg"
+                name: "Vivek Mahrishi",
+                role: "Founder SuperrApp | Ex PharmEasy, Kirana King, OYO  | Northwestern University Chicago",
+                image: "/images/events/vivek-mahrishi.jpeg"
             },
         ],
         gallery: [
