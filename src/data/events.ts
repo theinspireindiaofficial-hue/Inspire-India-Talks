@@ -117,7 +117,7 @@ export const events: Event[] = [
                 name: "Khushi Grewal",
                 role: "AI/ML Influencer | Content Creator (82K+ Followers) | Entrepreneurship",
                 image: "/images/events/Khushi-grewal.jpg",
-                socialLink: "/public/images/events/Khushi-grewalll.jpg"
+                socialLink: "/images/events/Khushi-grewalll.jpg"
             },
             {
                 id: "s3",
