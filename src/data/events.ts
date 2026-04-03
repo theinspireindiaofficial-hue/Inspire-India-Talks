@@ -102,7 +102,7 @@ export const events: Event[] = [
         coverImage: "/images/events/ggsipu-univ.jpg",
         shortDescription: "Not just degrees—explore careers, startups, and how to build real impact in today’s world at GGSIPU Delhi.",
         fullDescription: [
-            "Inspire India Talks – Edition 02 is designed to challenge the traditional idea of success being limited to degrees. With the theme “Beyond Degrees: Building Careers, Startups & Impact,” the event brings together leaders from civil services, entrepreneurship, and the digital ecosystem to share real-world insights with students. From building startups and navigating careers to creating meaningful impact in society, this event aims to inspire students to think beyond academics and take action toward building their own paths.Attendees will gain exposure to diverse perspectives, practical experiences, and powerful stories that bridge the gap between classroom learning and real-world execution."
+            "Inspire India Talks – Edition 02 is designed to challenge the traditional idea of success being limited to degrees. With the theme “Beyond Degrees: Building Careers, Startups & Impact,” the event brings together leaders from civil services, entrepreneurship, and the digital ecosystem to share real-world insights with students.", "From building startups and navigating careers to creating meaningful impact in society, this event aims to inspire students to think beyond academics and take action toward building their own paths.Attendees will gain exposure to diverse perspectives, practical experiences, and powerful stories that bridge the gap between classroom learning and real-world execution."
         ],
         speakers: [
             {
