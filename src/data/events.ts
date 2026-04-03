@@ -130,7 +130,7 @@ export const events: Event[] = [
                 id: "s4",
                 name: "Vivek Mahrishi",
                 role: "Founder SuperrApp | Ex PharmEasy, Kirana King, OYO  | Northwestern University Chicago",
-                image: "/public/images/events/vivek-mahrishi-pho.png",
+                image: "/images/events/vivek-mahrishi-pho.png",
                 socialLink: "https://www.linkedin.com/in/vivek-mahrishi22/"
             },
             {
