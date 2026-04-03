@@ -122,6 +122,18 @@ export const events: Event[] = [
                 role: "Founder SuperrApp | Ex PharmEasy, Kirana King, OYO  | Northwestern University Chicago",
                 image: "/images/events/vivek-mahrishi.jpeg"
             },
+            {
+                id: "s5",
+                name: "To be announce from IPU University",
+                role: "",
+                image: ""
+            },
+            {
+                id: "s6",
+                name: "To be announce from IPU University",
+                role: "",
+                image: ""
+            },
         ],
         gallery: [
             "/images/events/women-who-hustle-iiit-delhi/gallery1.jpg",
