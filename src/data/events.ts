@@ -108,7 +108,7 @@ export const events: Event[] = [
             {
                 id: "s1",
                 name: "Ira Singhal",
-                role: "Chief Guest | Civil Servant (IAS/IPS) | Motivational Speaker",
+                role: "Chief Guest | Civil Servant (IAS) | Motivational Speaker",
                 image: "/images/events/Ira_singhal.jpeg",
                 socialLink: "https://www.linkedin.com/in/ira-singhal-7248aa37/"
             },
