@@ -3,6 +3,7 @@ export interface EventSpeaker {
     name: string;
     role: string;
     image: string;
+    socialLink?: string;
 }
 
 export interface Event {
@@ -40,37 +41,43 @@ export const events: Event[] = [
                 id: "s1",
                 name: "Chandan Singh",
                 role: "Founder & CEO, Kinzy & Ex-Cofounder of Adda247",
-                image: "/images/events/Chandan-Sir.jpeg"
+                image: "/images/events/Chandan-Sir.jpeg",
+                socialLink: "https://www.linkedin.com/in/chandan-singh-cse08/"
             },
             {
                 id: "s2",
                 name: "Samshad Alam",
                 role: "Founder & CEO, Edunachal & Inspire India Talks",
-                image: "/images/events/Shamshad-Alam.jpeg"
+                image: "/images/events/Shamshad-Alam.jpeg",
+                socialLink: "https://www.linkedin.com/in/shamshad-alam-791b9067/"
             },
             {
                 id: "s3",
                 name: "Anjali Malhotra",
                 role: "Founder — C-Xcel, Venture Partner & Independent Director",
-                image: "/images/events/Anjali-malhotra.jpeg"
+                image: "/images/events/Anjali-malhotra.jpeg",
+                socialLink: "https://www.linkedin.com/in/anjali-malhotra-17505525/"
             },
             {
                 id: "s4",
                 name: "Tanmay Arora",
                 role: "Partner & Vice President — KRESERA™ & Managing Director — The XCLUSIVE™ Crew",
-                image: "/images/events/Tanmay-arora.jpeg"
+                image: "/images/events/Tanmay-arora.jpeg",
+                socialLink: "https://www.linkedin.com/in/tanmayaroraaa/"
             },
             {
                 id: "s5",
                 name: "Dipali Kulshrestha",
                 role: "AWS Hero, Principal Engineer & Building Resilient Financial Systems",
-                image: "/images/events/Dipali-Kulshrestha.jpeg"
+                image: "/images/events/Dipali-Kulshrestha.jpeg",
+                socialLink: "https://www.linkedin.com/in/dipalik/"
             },
             {
                 id: "s6",
                 name: "Amit Kumar",
                 role: "Senior Solutions Architect @ Amazon Web Services & Hybrid Cloud Specialist",
-                image: "/images/events/Amit-kumar.jpeg"
+                image: "/images/events/Amit-kumar.jpeg",
+                socialLink: "https://www.linkedin.com/in/amitkyvmw/"
             }
         ],
         gallery: [
@@ -102,25 +109,29 @@ export const events: Event[] = [
                 id: "s1",
                 name: "Ira Singhal",
                 role: "Chief Guest | Civil Servant (IAS/IPS) | Motivational Speaker",
-                image: "/images/events/Ira_singhal.jpeg"
+                image: "/images/events/Ira_singhal.jpeg",
+                socialLink: "https://www.linkedin.com/in/ira-singhal-7248aa37/"
             },
             {
                 id: "s2",
                 name: "Khushi Grewal",
                 role: "AI/ML Influencer | Content Creator (82K+ Followers) | Entrepreneurship",
-                image: "/images/events/Khushi-grewal.jpg"
+                image: "/images/events/Khushi-grewal.jpg",
+                socialLink: "https://www.linkedin.com/in/khushi-grewall-ai/"
             },
             {
                 id: "s3",
                 name: "Shamshad Alam",
                 role: "Founder & CEO – Edunachal | Founder – Inspire India Talks",
-                image: "/images/events/Shamshad-Alam.jpeg"
+                image: "/images/events/Shamshad-Alam.jpeg",
+                socialLink: "https://www.linkedin.com/in/shamshad-alam-791b9067/"
             },
             {
                 id: "s4",
                 name: "Vivek Mahrishi",
                 role: "Founder SuperrApp | Ex PharmEasy, Kirana King, OYO  | Northwestern University Chicago",
-                image: "/images/events/vivek-mahrishi.jpeg"
+                image: "/images/events/vivek-mahrishi.jpeg",
+                socialLink: "https://www.linkedin.com/in/vivek-mahrishi22/"
             },
             {
                 id: "s5",

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, MapPin, ArrowLeft, X, CheckCircle2 } from "lucide-react";
+import { Calendar, MapPin, ArrowLeft, X, CheckCircle2, Linkedin, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { events } from "@/data/events";
@@ -133,32 +133,64 @@ const EventDetail = () => {
                                         <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary rounded-full"></span>
                                     </h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                        {event.speakers.map((speaker, idx) => (
-                                            <motion.div
-                                                key={speaker.id}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                viewport={{ once: true }}
-                                                transition={{ delay: idx * 0.1 }}
-                                                className="flex items-center gap-4 bg-muted/30 p-4 rounded-2xl border border-border/50"
-                                            >
-                                                <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 bg-muted">
-                                                    <img
-                                                        src={speaker.image}
-                                                        alt={speaker.name}
-                                                        className="w-full h-full object-cover"
-                                                        onError={(e) => {
-                                                            (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(speaker.name) + '&background=random';
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <h3 className="font-serif text-lg font-medium">{speaker.name}</h3>
-                                                    <p className="text-sm text-primary">{speaker.role}</p>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </div>
+                                         {event.speakers.map((speaker, idx) => {
+                                             const SpeakerCard = (
+                                                 <motion.div
+                                                     initial={{ opacity: 0, y: 20 }}
+                                                     whileInView={{ opacity: 1, y: 0 }}
+                                                     viewport={{ once: true }}
+                                                     transition={{ delay: idx * 0.1 }}
+                                                     whileHover={speaker.socialLink ? { y: -5, scale: 1.02 } : {}}
+                                                     className={`group relative flex items-center gap-4 bg-muted/30 p-4 rounded-2xl border border-border/50 transition-all duration-300 ${speaker.socialLink ? 'hover:border-primary/50 hover:bg-muted/50 cursor-pointer shadow-sm hover:shadow-md' : ''}`}
+                                                 >
+                                                     <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 bg-muted relative">
+                                                         <img
+                                                             src={speaker.image}
+                                                             alt={speaker.name}
+                                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                             onError={(e) => {
+                                                                 (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(speaker.name) + '&background=random';
+                                                             }}
+                                                         />
+                                                         {speaker.socialLink && (
+                                                             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                                 {speaker.socialLink.includes('linkedin') ? (
+                                                                     <Linkedin className="w-6 h-6 text-white" />
+                                                                 ) : (
+                                                                     <ExternalLink className="w-6 h-6 text-white" />
+                                                                 )}
+                                                             </div>
+                                                         )}
+                                                     </div>
+                                                     <div className="flex-grow">
+                                                         <div className="flex items-center justify-between mb-1">
+                                                             <h3 className="font-serif text-lg font-medium group-hover:text-primary transition-colors">{speaker.name}</h3>
+                                                             {speaker.socialLink && (
+                                                                 <ExternalLink className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                                             )}
+                                                         </div>
+                                                         <p className="text-sm text-muted-foreground line-clamp-2 leading-snug">{speaker.role}</p>
+                                                     </div>
+                                                 </motion.div>
+                                             );
+
+                                             if (speaker.socialLink) {
+                                                 return (
+                                                     <a
+                                                         key={speaker.id}
+                                                         href={speaker.socialLink}
+                                                         target="_blank"
+                                                         rel="noopener noreferrer"
+                                                         className="block"
+                                                     >
+                                                         {SpeakerCard}
+                                                     </a>
+                                                 );
+                                             }
+
+                                             return <div key={speaker.id}>{SpeakerCard}</div>;
+                                         })}
+                                     </div>
                                 </section>
                             )}
 
