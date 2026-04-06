@@ -2057,6 +2057,29 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-27",
   },
+  {
+    id: "sukhmani-lamba",
+    name: "Sukhmani Lamba",
+    title: "Product Leader, Microsoft | AI & Future of Work Advocate",
+    category: "Young Achievers",
+    categorySlug: "young-achievers",
+    image: "/images/personalities/sukhmani-lamba.png",
+    born: "India",
+    profession: "Product Leader & AI Strategist",
+    knownFor: "Driving conversations around AI, product thinking, and the future of work",
+    quote: "AI will not replace humans, but humans who use AI will replace those who don’t.",
+    story: "Sukhmani Lamba’s journey reflects the power of **curiosity-driven growth** in a rapidly evolving world. Growing up across different environments, she developed a global perspective early on, seeing technology not just as a tool, but as a way to solve meaningful problems and create real impact.\n\nShe began her career in consulting, working closely with organizations to solve business challenges. However, she soon realized that while advising creates direction, **building creates ownership**. This insight led her to transition into product management, where she could directly shape solutions used at scale.\n\nToday, as a product leader at Microsoft, she is actively contributing to the evolving landscape of AI and the future of work. She emphasizes that as AI automates tasks, the real human advantage lies in **critical thinking, creativity, communication, and decision-making**. Her work and insights continue to guide students and professionals toward adapting, building, and staying relevant in an AI-driven world.",
+    achievements: [
+      "Product leadership role at Microsoft",
+      "Transitioned from consulting to product management",
+      "Advocates AI adoption for future workforce readiness",
+      "Influences students and professionals on career growth",
+      "Works at the intersection of AI, product, and strategy"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-04-06",
+  },
 
   // ===== OTHERS (CHANGEMAKERS) =====
   {
