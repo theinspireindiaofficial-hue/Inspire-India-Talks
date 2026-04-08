@@ -135,15 +135,10 @@ export const events: Event[] = [
             },
             {
                 id: "s5",
-                name: "To be announce from IPU University",
-                role: "",
-                image: ""
-            },
-            {
-                id: "s6",
-                name: "To be announce from IPU University",
-                role: "",
-                image: ""
+                name: "Akriti Singh",
+                role: "International Athlete | Lawyer & Researcher",
+                image: "/images/events/Akriti-singh.jpg",
+                socialLink: "https://www.linkedin.com/in/akriti-singh-927b781a9/"
             },
         ],
         gallery: [
