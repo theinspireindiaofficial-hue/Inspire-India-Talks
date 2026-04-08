@@ -1,73 +1,37 @@
-# Welcome to your Lovable project
+# Inspire India Talks
 
-## Project info
+Inspire India Talks is India's premium storytelling platform, designed to showcase the awe-inspiring journeys of over 50 iconic personalities—including entrepreneurs, IAS officers, startup founders, women leaders, and student achievers. Driven by an elegant design language, robust performance, and SEO optimization.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features Let’s Explore
 
-## How can I edit this code?
+- **Premium Interface:** High-end visual language with glassmorphism, fluid typography, and dark-mode optimization.
+- **Dynamic Interactions:** Subtle micro-animations, engaging hover states, and smooth carousels.
+- **Optimized Content Delivery:** Performant load times and structured metadata rendering for stories and event pages.
+- **Fully Responsive Architecture:** Consistent aesthetic and usability layout across desktops, tablets, and smartphones.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+This project is meticulously crafted with modern, scalable, and highly performant technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **React & Vite**: Extremely fast development environment, optimized build rendering process.
+- **TypeScript**: Ensuring robust code quality via detailed type-checking interfaces.
+- **Tailwind CSS & shadcn/ui**: State-of-the-art styling framework to build bespoke, highly customizable components without writing excessive proprietary CSS.
+- **Framer Motion**: Delivering smooth and high-fidelity animations.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To explore this codebase locally, simply run:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install the dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the local development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Your server will be up and running locally, typically on `http://localhost:8080`.
