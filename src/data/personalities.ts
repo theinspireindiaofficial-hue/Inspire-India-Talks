@@ -370,6 +370,29 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-23",
   },
+  {
+    id: "srikanth-bolla",
+    name: "Srikanth Bolla",
+    title: "Founder & Chairman, Bollant Industries",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/srikanth-bolla.webp",
+    born: "7 July 1991, Andhra Pradesh, India",
+    profession: "Entrepreneur, Industrialist & Social Changemaker",
+    knownFor: "Building Bollant Industries and redefining disability inclusion in entrepreneurship",
+    quote: "Vision is not what you see with your eyes, but what you feel with your mind.",
+    story: "Born visually impaired in a small village in Andhra Pradesh, Srikanth Bolla entered a world where expectations were low and opportunities were limited. Many doubted his future, but he refused to let society define his potential. Instead of accepting barriers, he challenged them.\n\nAfter excelling academically, he fought for the right to study science when institutions tried to deny him access. He later became the first international blind student to study at the Massachusetts Institute of Technology (MIT), proving that determination can open doors no obstacle can close.\n\nSrikanth then returned to India with a larger mission — to create jobs, dignity, and opportunity. He founded **Bollant Industries**, a company manufacturing eco-friendly products while employing hundreds of people, including many with disabilities. What began as a bold idea became a movement for inclusive growth.\n\nHis journey is not only about business success. It is about courage, resilience, and rewriting what society believes is possible. Srikanth Bolla stands as a powerful reminder that true vision comes from belief, action, and purpose.",
+    achievements: [
+      "First international blind student admitted to MIT",
+      "Founder of Bollant Industries",
+      "Created employment opportunities for people with disabilities",
+      "Built a successful eco-friendly manufacturing company",
+      "Recognized as one of India’s leading social entrepreneurs"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-04-16",
+  },
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",

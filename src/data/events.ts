@@ -97,7 +97,7 @@ export const events: Event[] = [
         slug: "beyond-degrees-ggsipu-delhi",
         title: "Beyond Degrees",
         tagline: "Building Careers, Startups & Impact",
-        date: "Announcing soon",
+        date: "Announcing",
         location: "GGSIPU Delhi",
         coverImage: "/images/events/ggsipu-univ.jpg",
         shortDescription: "Not just degrees—explore careers, startups, and how to build real impact in today’s world at GGSIPU Delhi.",
