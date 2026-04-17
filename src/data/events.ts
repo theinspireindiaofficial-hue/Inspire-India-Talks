@@ -97,7 +97,7 @@ export const events: Event[] = [
         slug: "beyond-degrees-ggsipu-delhi",
         title: "Beyond Degrees",
         tagline: "Building Careers, Startups & Impact",
-        date: "Announcing",
+        date: "23rd April 2026",
         location: "GGSIPU Delhi",
         coverImage: "/images/events/ggsipu-univ.jpg",
         shortDescription: "Not just degrees—explore careers, startups, and how to build real impact in today’s world at GGSIPU Delhi.",
@@ -128,13 +128,20 @@ export const events: Event[] = [
             },
             {
                 id: "s4",
-                name: "Vivek Mahrishi",
-                role: "Founder SuperrApp | Ex PharmEasy, Kirana King, OYO  | Northwestern University Chicago",
-                image: "/images/events/vivek-mahrishi-pho.png",
-                socialLink: "https://www.linkedin.com/in/vivek-mahrishi22/"
+                name: "Arush Lakhani",
+                role: "Co-founder at SpurIQ.ai | Designing Revenue Orchestration Systems that Eliminate Revenue Leakage",
+                image: "/images/events/Arush-founder.jpg",
+                socialLink: "https://www.linkedin.com/in/arush-lakhani/"
             },
             {
                 id: "s5",
+                name: "Sonam Gupta",
+                role: "Founder and the System Designer @ The Design Ethos | Kingston University",
+                image: "/images/events/Sonam-founder.jpg",
+                socialLink: "https://www.linkedin.com/in/sonam2308/"
+            },
+            {
+                id: "s6",
                 name: "Akriti Singh",
                 role: "International Athlete | Lawyer & Researcher",
                 image: "/images/events/Akriti-singh.jpg",
