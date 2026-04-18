@@ -130,7 +130,7 @@ export const events: Event[] = [
                 id: "s4",
                 name: "Arush Lakhani",
                 role: "Co-founder at Programming Pathshala & Zenith School Of AI | IIT BHU",
-                image: "/public/images/events/Vivekanadn-Vivek.jpg",
+                image: "/images/events/Vivekanadn-Vivek.jpg",
                 socialLink: "https://www.linkedin.com/in/vivekanand-vivek-7a4ab388/"
             },
             {
