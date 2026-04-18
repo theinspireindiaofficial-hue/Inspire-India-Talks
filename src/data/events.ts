@@ -129,19 +129,26 @@ export const events: Event[] = [
             {
                 id: "s4",
                 name: "Arush Lakhani",
+                role: "Co-founder at Programming Pathshala & Zenith School Of AI | IIT BHU",
+                image: "/public/images/events/Vivekanadn-Vivek.jpg",
+                socialLink: "https://www.linkedin.com/in/vivekanand-vivek-7a4ab388/"
+            },
+            {
+                id: "s5",
+                name: "Vivekanand Vivek",
                 role: "Co-founder at SpurIQ.ai | Designing Revenue Orchestration Systems that Eliminate Revenue Leakage",
                 image: "/images/events/Arush-founder.jpg",
                 socialLink: "https://www.linkedin.com/in/arush-lakhani/"
             },
             {
-                id: "s5",
+                id: "s6",
                 name: "Sonam Gupta",
                 role: "Founder and the System Designer @ The Design Ethos | Kingston University",
                 image: "/images/events/Sonam-founder.jpg",
                 socialLink: "https://www.linkedin.com/in/sonam2308/"
             },
             {
-                id: "s6",
+                id: "s7",
                 name: "Akriti Singh",
                 role: "International Athlete | Lawyer & Researcher",
                 image: "/images/events/Akriti-singh.jpg",
