@@ -128,14 +128,14 @@ export const events: Event[] = [
             },
             {
                 id: "s4",
-                name: "Arush Lakhani",
+                name: "Vivekanand Vivek",
                 role: "Co-founder at Programming Pathshala & Zenith School Of AI | IIT BHU",
                 image: "/images/events/Vivekanadn-Vivek.jpg",
                 socialLink: "https://www.linkedin.com/in/vivekanand-vivek-7a4ab388/"
             },
             {
                 id: "s5",
-                name: "Vivekanand Vivek",
+                name: "Arush Lakhani",
                 role: "Co-founder at SpurIQ.ai | Designing Revenue Orchestration Systems that Eliminate Revenue Leakage",
                 image: "/images/events/Arush-founder.jpg",
                 socialLink: "https://www.linkedin.com/in/arush-lakhani/"
