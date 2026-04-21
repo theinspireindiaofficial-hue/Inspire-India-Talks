@@ -2103,6 +2103,29 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-04-06",
   },
+  {
+    id: "anil-swarup",
+    name: "Anil Swarup",
+    title: "Former IAS Officer | Founder, Nexus of Good Foundation",
+    category: "Indian Heroes",
+    categorySlug: "indian-heroes",
+    image: "/images/personalities/anil-swarup.jpg",
+    born: "India",
+    profession: "IAS Officer, Author & Social Impact Leader",
+    knownFor: "Transformative public service leadership and founding Nexus of Good Foundation",
+    quote: "The purpose of leadership is not power, but positive impact.",
+    story: "Anil Swarup is a distinguished former IAS officer whose career stands as a powerful example of ethical leadership, bold governance, and nation-building through action.\n\nAcross decades of public service, he worked on some of India’s most critical challenges with a reputation for integrity, innovation, and results. Whether it was improving governance systems, driving reforms, or solving large-scale administrative problems, he consistently demonstrated that bureaucracy can be a force for transformation when guided by purpose.\n\nWhat sets Anil Swarup apart is his ability to lead with courage. In systems where many accept delays and limitations, he believed meaningful change was always possible through clarity, accountability, and execution. His work inspired countless young professionals to see public service not as a position, but as an opportunity to create lasting impact.\n\nAfter an accomplished administrative career, he continued his mission beyond government by founding the Nexus of Good Foundation. Through this initiative, he has built a platform that celebrates positivity, encourages changemakers, and highlights stories of people quietly creating impact across society.\n\nHis journey proves that leadership does not end with a title. It lives on through the lives you improve, the systems you strengthen, and the values you leave behind.\n\nIn a world that often focuses on problems, Anil Swarup chose to build solutions.\n\nAnd that is what makes him truly inspiring.",
+    achievements: [
+      "Distinguished former IAS officer with decades of public service",
+      "Known for governance reforms and impactful leadership",
+      "Worked on solving critical national-level administrative challenges",
+      "Founder of Nexus of Good Foundation",
+      "Inspiring youth through leadership, ethics, and nation-building"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-04-21",
+  },
 
   // ===== OTHERS (CHANGEMAKERS) =====
   {
