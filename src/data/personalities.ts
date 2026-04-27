@@ -2428,6 +2428,29 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-23",
   },
+  {
+    id: "kamal-kumbhar",
+    name: "Kamal Kumbhar",
+    title: "Grassroots Innovator & Rural Changemaker",
+    category: "Others",
+    categorySlug: "others",
+    image: "/images/personalities/kamal-kumbhar.avif",
+    born: "Maharashtra, India",
+    profession: "Innovator & Social Entrepreneur",
+    knownFor: "Creating low-cost rural innovations that improved lives through sustainability and practical problem-solving",
+    quote: "Real innovation begins when we solve the problems people face every day.",
+    story: "Kamal Kumbhar is a powerful example of how innovation can emerge from the ground level, where real problems exist every day. Born in Maharashtra, India, he grew up witnessing the challenges faced by rural communities—limited resources, inefficient systems, and everyday struggles that many accepted as normal.\n\nWhere others saw obstacles, Kamal saw opportunities to create change. He believed that innovation should not be reserved for laboratories or large companies. It should be accessible, affordable, and useful for ordinary people.\n\nInstead of waiting for someone else to solve these issues, he began working on practical ideas that could directly improve lives. With determination and creativity, he developed low-cost solutions focused on sustainability, energy efficiency, and livelihood improvement.\n\nKey: Kamal Kumbhar proved that the most meaningful innovations are often the simplest—solutions built with empathy, designed for real needs, and accessible to everyone.\n\nHis journey was filled with challenges. Like many grassroots innovators, he faced limited funding, low visibility, and the difficulty of scaling ideas from rural India. Yet he continued because his mission was larger than recognition—it was impact.\n\nOver time, his work gained national attention and inspired many people to rethink innovation itself. He showed that world-class ideas can come from villages, from lived experience, and from those closest to the problem.\n\nToday, Kamal Kumbhar stands as a symbol of inclusive progress, proving that talent exists everywhere and that true leadership is measured by the lives we improve.",
+    achievements: [
+      "Recognized as one of India’s leading grassroots innovators",
+      "Developed low-cost solutions for rural communities",
+      "Promoted sustainable and practical innovation models",
+      "Inspired youth through social impact and problem-solving",
+      "Showcased the power of rural creativity on national platforms"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-04-27",
+  },
 
 ];
 
