@@ -170,5 +170,154 @@ export const events: Event[] = [
             "Interactive Q&A sessions with the founders",
             "Networking opportunities with industry leaders"
         ]
-    }
+    },
+    {
+        id: "e3",
+        slug: "the-next-big-thing-bangalore",
+        title: "The Next Big Thing",
+        tagline: "Building the future with Tech & Innovation.",
+        date: "To Be Announced Soon",
+        location: "Polaris School of Technology, Bangalore",
+        coverImage: "/images/events/polaris-campus.avif",
+        shortDescription: "Join us in Bangalore to explore the next big thing in tech and innovation. Where ideas meet impact and future leaders get inspired.",
+        fullDescription: [
+            "Inspire India Talks – Edition 03 is coming to Bangalore! With the theme “The Next Big Thing: Building the future with Tech & Innovation,” this event promises to be an extraordinary gathering where ideas meet impact, and future leaders get inspired.",
+            "Featuring 5 game-changing speakers (lineup revealing soon!), this event is open to all students, faculty, and the public. Don't miss out on this opportunity to be a part of something extraordinary in collaboration with Polaris School of Technology."
+        ],
+        speakers: [
+            {
+                id: "s1",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+            {
+                id: "s2",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+            {
+                id: "s3",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+            {
+                id: "s4",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+            {
+                id: "s5",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+            {
+                id: "s6",
+                name: "To Be Announced Soon",
+                role: "",
+                image: "",
+                socialLink: ""
+            },
+        ],
+        gallery: [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        ],
+        highlights: [
+            "5 Game-Changing Speakers (Lineup revealing soon)",
+            "Explore Tech & Innovation",
+            "Open to all students, faculty, and public"
+        ]
+    },
+    {
+    id: "e4",
+    slug: "builders-of-tomorrow-varanasi",
+    title: "Builders of Tomorrow",
+    tagline: "Creating the Next Wave of Innovation",
+    date: "To Be Announced Soon",
+    location: "Indian Institute of Technology (BHU), Varanasi",
+    coverImage: "/images/events/IIT-BHU.jpg",
+    shortDescription: "Join us at IIT (BHU), Varanasi for an inspiring gathering of founders, innovators, and visionaries building the products, technologies, and companies of tomorrow.",
+    fullDescription: [
+        "Inspire India Talks – Edition 04 is coming to IIT (BHU), Varanasi. This edition will bring together some of the most inspiring founders, innovators, and technology leaders who are actively building the future.",
+        "Centered around the theme 'Builders of Tomorrow: Creating the Next Wave of Innovation,' the event will explore entrepreneurship, emerging technologies, artificial intelligence, and the mindset required to turn bold ideas into meaningful impact.",
+        "Featuring 5–6 exceptional speakers (lineup to be revealed soon), this event is open to students, researchers, faculty, and aspiring entrepreneurs who want to learn directly from those shaping what comes next."
+    ],
+    speakers: [
+        {
+            id: "s1",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        },
+        {
+            id: "s2",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        },
+        {
+            id: "s3",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        },
+        {
+            id: "s4",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        },
+        {
+            id: "s5",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        },
+        {
+            id: "s6",
+            name: "To Be Announced Soon",
+            role: "",
+            image: "",
+            socialLink: ""
+        }
+    ],
+    gallery: [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    highlights: [
+        "5–6 Visionary Speakers (Lineup Revealing Soon)",
+        "AI, Innovation, Inspiring Journey & Entrepreneurship",
+        "Open to Students, Faculty & Entrepreneurs",
+        "Learn from Founders and Industry Leaders",
+        "Build Connections with Future Innovators"
+    ]
+}
 ];
