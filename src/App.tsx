@@ -14,6 +14,7 @@ import FoundersTalk from "./pages/FoundersTalk";
 import NotFound from "./pages/NotFound";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
+import TreeVolution from "./pages/TreeVolution";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/founders-talk" element={<FoundersTalk />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:slug" element={<EventDetail />} />
+          <Route path="/tree-volution" element={<TreeVolution />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

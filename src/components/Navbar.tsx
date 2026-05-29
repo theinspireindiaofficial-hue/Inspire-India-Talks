@@ -72,12 +72,21 @@ const Navbar = () => {
           {[
             { path: "/about", label: "About" },
             { path: "/events", label: "Events" },
-            { path: "/youth-spotlight", label: "Youth Spotlight" },
-            { path: "/founders-talk", label: "Founders Talk" },
+            { path: "/tree-volution", label: "Tree-volution 🌿", highlight: true },
             { path: "/host-event", label: "Host a Talk" },
             { path: "/contact", label: "Contact" },
-          ].map(({ path, label }) => (
-            <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
+          ].map(({ path, label, highlight }) => (
+            <Link 
+              key={path} 
+              to={path} 
+              className={`text-sm font-medium transition-all hover:text-primary flex items-center ${
+                highlight 
+                  ? "text-emerald-400 font-bold border border-emerald-500/30 px-3 py-1.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)] hover:scale-102" 
+                  : isActive(path) 
+                  ? "text-primary" 
+                  : "text-foreground/70"
+              }`}
+            >
               {label}
             </Link>
           ))}
@@ -106,8 +115,7 @@ const Navbar = () => {
               ))}
               <Link to="/about" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>About</Link>
               <Link to="/events" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Events</Link>
-              <Link to="/youth-spotlight" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Youth Spotlight</Link>
-              <Link to="/founders-talk" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Founders Talk</Link>
+              <Link to="/tree-volution" className="block text-sm font-bold py-2.5 px-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5" onClick={() => setIsOpen(false)}>Tree-volution 🌿</Link>
               <Link to="/host-event" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Host a Talk</Link>
               <Link to="/contact" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Contact</Link>
             </div>
