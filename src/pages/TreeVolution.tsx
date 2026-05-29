@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion as motionFramer, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { toast } from "sonner";
-import { X, CreditCard, Leaf, CheckCircle2, User, Mail, Award, ArrowRight, Share2, Clipboard, ShieldCheck, Check, TreePine } from "lucide-react";
+import { X, CreditCard, Leaf, CheckCircle2, User, Mail, Award, ArrowRight, Share2, Clipboard, ShieldCheck, Check, TreePine, QrCode } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/tree-volution/HeroSection";
 import ImpactCounter from "@/components/tree-volution/ImpactCounter";
@@ -80,6 +80,7 @@ export default function TreeVolution() {
   const [selectedTierId, setSelectedTierId] = useState<string>("t1");
   const [isCustomCount, setIsCustomCount] = useState(false);
   const [customTreeCount, setCustomTreeCount] = useState<number>(12);
+  const [payMethod, setPayMethod] = useState<"razorpay" | "qr">("razorpay");
 
   // Determine current trees count and total price
   const activeTier = tiers.find(t => t.id === selectedTierId);
@@ -109,6 +110,7 @@ export default function TreeVolution() {
     setIsModalOpen(true);
     setFormStep("details");
     setIsSubmitting(false);
+    setPayMethod("razorpay");
   };
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -467,76 +469,170 @@ export default function TreeVolution() {
                 </form>
               )}
 
-              {/* STEP 2: STUNNING FEDERAL BANK QR CODE PAYMENT CARD */}
+              {/* STEP 2: STUNNING PAYMENT GATEWAY & QR CARD */}
               {formStep === "pay" && (
                 <div className="space-y-6 py-2">
                   
-                  {/* Outer structured federal bank QR card */}
-                  <div className="w-full bg-white text-neutral-900 rounded-3xl p-6 shadow-2xl flex flex-col items-center relative overflow-hidden border border-white">
-                    
-                    {/* Header: Ilmeza and Federal Bank */}
-                    <div className="w-full flex items-center justify-between border-b border-neutral-100 pb-4 mb-4 select-none">
-                      <div className="flex items-center gap-1.5">
-                        {/* Styled Ilmeza Logo mimic */}
-                        <span className="font-serif font-black text-emerald-600 tracking-tight text-sm">
-                          Ilmeza
-                        </span>
-                        <span className="text-[7px] bg-emerald-500/10 text-emerald-700 px-1 py-0.5 rounded font-sans font-bold">
-                          FOUNDATION
-                        </span>
-                      </div>
-                      
-                      <div className="flex items-center gap-1.5">
-                        {/* Federal bank mark */}
-                        <span className="text-[10px] font-black text-blue-900 tracking-tighter uppercase font-sans border-r border-blue-900/10 pr-2">
-                          Federal Bank
-                        </span>
-                        <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-pulse" />
-                      </div>
-                    </div>
-
-                    {/* QR Code Container */}
-                    <div className="relative p-4 bg-neutral-50 rounded-2xl border border-neutral-100/60 shadow-inner flex items-center justify-center w-60 h-60 mb-4 group">
-                      <img
-                        src={qrCodeUrl}
-                        alt="Federal Bank UPI Scan to Pay QR Code"
-                        className="w-full h-full object-contain"
-                      />
-                      <div className="absolute inset-0 bg-neutral-950/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                    </div>
-
-                    {/* UPI ID Field with Direct Copy button */}
-                    <div className="w-full max-w-sm px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-100 flex items-center justify-between">
-                      <div>
-                        <div className="text-[9px] text-neutral-400 font-bold uppercase tracking-widest">
-                          Payee UPI ID
-                        </div>
-                        <div className="text-sm font-bold text-neutral-800 tracking-wide font-sans mt-0.5">
-                          {payeeAddress}
-                        </div>
-                      </div>
-                      
-                      <button
-                        onClick={handleCopyUpi}
-                        className="p-2 rounded-lg bg-white border border-neutral-200 hover:border-emerald-500 hover:text-emerald-500 text-neutral-500 transition-colors shadow-sm"
-                      >
-                        {copied ? <Check className="w-4.5 h-4.5 text-emerald-500" /> : <Clipboard className="w-4.5 h-4.5" />}
-                      </button>
-                    </div>
-
-                    {/* Scan to Pay Footer */}
-                    <div className="w-full border-t border-neutral-100 pt-4 mt-4 text-center">
-                      <div className="text-[9px] text-neutral-400 font-bold uppercase tracking-widest mb-2 font-sans">
-                        Scan to Pay with any UPI App
-                      </div>
-                      <div className="flex justify-center items-center gap-4 text-neutral-400 text-xs font-semibold select-none">
-                        <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">UPI</span>
-                        <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">GPay</span>
-                        <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">Paytm</span>
-                        <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">PhonePe</span>
-                      </div>
-                    </div>
+                  {/* Select Payment Method Tabs */}
+                  <div className="flex gap-2 p-1 bg-neutral-950/80 rounded-xl border border-white/5 mb-5 select-none">
+                    <button
+                      type="button"
+                      onClick={() => setPayMethod("razorpay")}
+                      className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                        payMethod === "razorpay"
+                          ? "bg-emerald-500 text-white shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                          : "text-neutral-400 hover:text-white"
+                      }`}
+                    >
+                      <CreditCard className="w-3.5 h-3.5" />
+                      Pay via Razorpay
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPayMethod("qr")}
+                      className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                        payMethod === "qr"
+                          ? "bg-emerald-500 text-white shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                          : "text-neutral-400 hover:text-white"
+                      }`}
+                    >
+                      <QrCode className="w-3.5 h-3.5" />
+                      Scan UPI QR
+                    </button>
                   </div>
+
+                  {payMethod === "razorpay" ? (
+                    /* OPTION A: PREMIUM RAZORPAY CHECKOUT CARD */
+                    <div className="w-full bg-neutral-950 text-white rounded-3xl p-6 shadow-2xl flex flex-col items-center relative overflow-hidden border border-white/5">
+                      
+                      {/* Background ambient light */}
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                      
+                      {/* Header: Razorpay Shield */}
+                      <div className="w-full flex items-center justify-between border-b border-white/5 pb-4 mb-5 select-none">
+                        <div className="flex items-center gap-2">
+                          <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse" />
+                          <span className="font-serif font-black text-white tracking-tight text-sm">
+                            Razorpay <span className="text-emerald-400">Secure</span>
+                          </span>
+                        </div>
+                        <div className="text-[9px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full font-sans font-bold uppercase tracking-widest">
+                          Instant Online Pay
+                        </div>
+                      </div>
+
+                      {/* Info & Price */}
+                      <div className="text-center mb-6">
+                        <div className="text-xs text-neutral-400 font-sans font-light uppercase tracking-widest">
+                          Sponsorship Total
+                        </div>
+                        <div className="text-4xl font-black font-serif text-white mt-1 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                          ₹{totalPrice}
+                        </div>
+                        <div className="text-[11px] text-neutral-500 mt-1 font-sans">
+                          {saplingCount} {saplingCount === 1 ? "sapling" : "saplings"} • {tierNameLabel}
+                        </div>
+                      </div>
+
+                      {/* Razorpay Gateway Direct Button */}
+                      <a
+                        href="https://rzp.io/rzp/OiLCpeJ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 text-white font-bold text-sm text-center hover:scale-[1.02] active:scale-[0.98] transition-transform flex items-center justify-center gap-2 shadow-[0_10px_20px_rgba(16,185,129,0.15)] group animate-pulse hover:animate-none"
+                      >
+                        <CreditCard className="w-4.5 h-4.5" />
+                        Proceed to Pay Online (₹{totalPrice})
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </a>
+
+                      <p className="text-[10px] text-neutral-500 text-center leading-relaxed mt-4 font-sans max-w-sm">
+                        Redirects to our official Razorpay billing portal. Supports credit/debit cards, NetBanking, digital wallets, and instant UPI apps.
+                      </p>
+
+                      {/* Supported icons footer */}
+                      <div className="w-full border-t border-white/5 pt-4 mt-5">
+                        <div className="text-[8px] text-neutral-500 text-center font-bold uppercase tracking-widest mb-2.5 font-sans">
+                          Accepted Payment Modes
+                        </div>
+                        <div className="flex justify-center items-center gap-3.5 text-neutral-500 text-xs font-semibold select-none flex-wrap">
+                          <span className="text-[9px] bg-neutral-900 border border-white/5 px-2 py-1 rounded">UPI / GPay</span>
+                          <span className="text-[9px] bg-neutral-900 border border-white/5 px-2 py-1 rounded">Visa / Master</span>
+                          <span className="text-[9px] bg-neutral-900 border border-white/5 px-2 py-1 rounded">RuPay</span>
+                          <span className="text-[9px] bg-neutral-900 border border-white/5 px-2 py-1 rounded">NetBanking</span>
+                          <span className="text-[9px] bg-neutral-900 border border-white/5 px-2 py-1 rounded">Wallets</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  ) : (
+                    /* OPTION B: STUNNING FEDERAL BANK QR CODE PAYMENT CARD */
+                    <div className="w-full bg-white text-neutral-900 rounded-3xl p-6 shadow-2xl flex flex-col items-center relative overflow-hidden border border-white">
+                      
+                      {/* Header: Ilmeza and Federal Bank */}
+                      <div className="w-full flex items-center justify-between border-b border-neutral-100 pb-4 mb-4 select-none">
+                        <div className="flex items-center gap-1.5">
+                          {/* Styled Ilmeza Logo mimic */}
+                          <span className="font-serif font-black text-emerald-600 tracking-tight text-sm">
+                            Ilmeza
+                          </span>
+                          <span className="text-[7px] bg-emerald-500/10 text-emerald-700 px-1 py-0.5 rounded font-sans font-bold">
+                            FOUNDATION
+                          </span>
+                        </div>
+                        
+                        <div className="flex items-center gap-1.5">
+                          {/* Federal bank mark */}
+                          <span className="text-[10px] font-black text-blue-900 tracking-tighter uppercase font-sans border-r border-blue-900/10 pr-2">
+                            Federal Bank
+                          </span>
+                          <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-pulse" />
+                        </div>
+                      </div>
+
+                      {/* QR Code Container */}
+                      <div className="relative p-4 bg-neutral-50 rounded-2xl border border-neutral-100/60 shadow-inner flex items-center justify-center w-60 h-60 mb-4 group">
+                        <img
+                          src={qrCodeUrl}
+                          alt="Federal Bank UPI Scan to Pay QR Code"
+                          className="w-full h-full object-contain"
+                        />
+                        <div className="absolute inset-0 bg-neutral-950/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                      </div>
+
+                      {/* UPI ID Field with Direct Copy button */}
+                      <div className="w-full max-w-sm px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-100 flex items-center justify-between">
+                        <div>
+                          <div className="text-[9px] text-neutral-400 font-bold uppercase tracking-widest">
+                            Payee UPI ID
+                          </div>
+                          <div className="text-sm font-bold text-neutral-800 tracking-wide font-sans mt-0.5">
+                            {payeeAddress}
+                          </div>
+                        </div>
+                        
+                        <button
+                          onClick={handleCopyUpi}
+                          className="p-2 rounded-lg bg-white border border-neutral-200 hover:border-emerald-500 hover:text-emerald-500 text-neutral-500 transition-colors shadow-sm"
+                        >
+                          {copied ? <Check className="w-4.5 h-4.5 text-emerald-500" /> : <Clipboard className="w-4.5 h-4.5" />}
+                        </button>
+                      </div>
+
+                      {/* Scan to Pay Footer */}
+                      <div className="w-full border-t border-neutral-100 pt-4 mt-4 text-center">
+                        <div className="text-[9px] text-neutral-400 font-bold uppercase tracking-widest mb-2 font-sans">
+                          Scan to Pay with any UPI App
+                        </div>
+                        <div className="flex justify-center items-center gap-4 text-neutral-400 text-xs font-semibold select-none">
+                          <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">UPI</span>
+                          <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">GPay</span>
+                          <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">Paytm</span>
+                          <span className="px-2 py-1 rounded bg-neutral-50 border border-neutral-100 text-[10px]">PhonePe</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Direct screenshot warning banner */}
                   <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-neutral-300 text-sm leading-relaxed flex flex-col gap-2 font-sans font-light">
@@ -545,7 +641,7 @@ export default function TreeVolution() {
                       CRITICAL ACTIVATION STEP
                     </div>
                     <div>
-                      Scan this QR code, complete your payment of <b className="text-white">₹{totalPrice}</b>, and share your payment transaction screenshot to WhatsApp: <b className="text-white font-bold tracking-wide">97187 76830</b>.
+                      Complete your payment of <b className="text-white">₹{totalPrice}</b> securely using either Razorpay or the UPI QR, and share your transaction payment screenshot to WhatsApp: <b className="text-white font-bold tracking-wide">97187 76830</b>.
                     </div>
                   </div>
 
