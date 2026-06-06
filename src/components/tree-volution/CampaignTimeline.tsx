@@ -13,7 +13,7 @@ interface TimelineDay {
 }
 
 export default function CampaignTimeline() {
-  const [activeDay, setActiveDay] = useState<number>(1);
+  const [activeDay, setActiveDay] = useState<number>(6);
 
   // ==========================================
   // HARDCODE YOUR DAILY CAMPAIGN STATUSES HERE!
@@ -32,7 +32,7 @@ export default function CampaignTimeline() {
         "Founding Member Batch: Launch of special digital batches for early supporters.",
         "WhatsApp Broadcast: Share QR code and payment links to close lists - target 500 trees."
       ],
-      status: "upcoming",
+      status: "completed",
       highlight: "Day 1 completed: Emotional connect initiated. Team stories shared instantly."
     },
     {
@@ -45,7 +45,7 @@ export default function CampaignTimeline() {
         "Corporate & Startup Outreach: Connecting with Delhi-NCR startups and offices for group pledges.",
         "Influencer Support Announcement: Onboarding environmental voices for caused-based features."
       ],
-      status: "upcoming",
+      status: "completed",
       highlight: "Mainstream focus shift from generic talks to concrete ecological facts."
     },
     {
@@ -58,7 +58,7 @@ export default function CampaignTimeline() {
         "New Moms Initiatives: Promoting mother-child plantation partnerships to plant green roots.",
         "Influencer Co-posts: Expanding the digital ripple effect across regional networks."
       ],
-      status: "upcoming",
+      status: "completed",
       highlight: "Launching the primary social challenge: Stand For What You Stand On."
     },
     {
@@ -71,7 +71,7 @@ export default function CampaignTimeline() {
         "QR Leaflets: Distributing physical flyers/pamphlets with direct Scan-to-Plant QR codes.",
         "T-Shirt Incentives: Distribute official campaign T-Shirts to individuals adopting 2+ trees."
       ],
-      status: "upcoming",
+      status: "completed",
       highlight: "Bridging the online campaign into high-density local residential sectors."
     },
     {
@@ -84,7 +84,7 @@ export default function CampaignTimeline() {
         "Support Spotlight: Publishing live lists of co-sponsors and overall trees booked.",
         "Gift-a-Plant: Encouraging users to purchase and dedicate a tree to family members as birthday gifts."
       ],
-      status: "upcoming",
+      status: "completed",
       highlight: "Securing local newspaper features and highlighting top active donors."
     },
     {
@@ -97,7 +97,7 @@ export default function CampaignTimeline() {
         "Student Reels: Collaboration with college influencers posting 'Plant a tree for your future'.",
         "Campus Leaderboard: Competing college groups on digital charts."
       ],
-      status: "upcoming",
+      status: "active",
       highlight: "Direct student partnerships generating strong volunteer numbers."
     },
     {

@@ -13,6 +13,7 @@ import CertificateDemo from "@/components/tree-volution/CertificateDemo";
 import TrustAndTransparency from "@/components/tree-volution/TrustAndTransparency";
 import PlantationMap from "@/components/tree-volution/PlantationMap";
 import ActivitiesShowcase from "@/components/tree-volution/ActivitiesShowcase";
+import CampaignGallery from "@/components/tree-volution/CampaignGallery";
 import ImpactVisualization from "@/components/tree-volution/ImpactVisualization";
 import OrganizationSection from "@/components/tree-volution/OrganizationSection";
 import FinalCTA from "@/components/tree-volution/FinalCTA";
@@ -240,6 +241,7 @@ export default function TreeVolution() {
         <TrustAndTransparency />
         <PlantationMap />
         <ActivitiesShowcase />
+        <CampaignGallery />
         <ImpactVisualization />
         <OrganizationSection />
         <FinalCTA onPlantClick={handlePlantClick} />
