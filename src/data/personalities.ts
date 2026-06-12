@@ -2454,7 +2454,7 @@ export const personalities: Personality[] = [
 {
   id: "malik-ambar",                    
   name: "Malik Ambar",
-  title: "India's Forgotten General",
+  title: "From Ambar's Shadow: The Untold Siddi Story",
   category: "Others",          
   categorySlug: "others",      
   image: "/images/personalities/malik-ambar.avif",
