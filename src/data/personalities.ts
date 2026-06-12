@@ -2457,7 +2457,7 @@ export const personalities: Personality[] = [
   title: "From Ambar's Shadow: The Untold Siddi Story",
   category: "Others",          
   categorySlug: "others",      
-  image: "/images/personalities/malik-ambar.avif",
+  image: "/images/personalities/malik-ambar-siddi.avif",
   born: "Kambata, Ethiopia",
   profession: "Military general & Kingmaker",
   knownFor: "From enslaved boy to the general who defied an empire through guerrilla warfare.",
