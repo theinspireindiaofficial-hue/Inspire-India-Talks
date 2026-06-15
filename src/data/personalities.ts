@@ -2474,7 +2474,7 @@ export const personalities: Personality[] = [
  // authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
  // addedAt: "2026-06-12",  
 //},
-//];
+];
 
 export const getPersonalitiesByCategory = (categorySlug: string): Personality[] => {
   return personalities.filter(p => p.categorySlug === categorySlug).reverse();
