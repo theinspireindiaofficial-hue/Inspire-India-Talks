@@ -15,7 +15,7 @@ const BusinessInsights = () => {
               Business <span className="text-primary">Insights</span>
             </h1>
             <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
-              Content coming soon.
+              import { businessInsights } from "../data/businessInsights";
             </p>
           </motion.div>
         </div>
