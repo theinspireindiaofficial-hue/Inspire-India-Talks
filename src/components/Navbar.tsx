@@ -32,10 +32,10 @@ const Navbar = () => {
             Inspire India <span className="text-primary">Talks</span>
           </span>
         </Link>
-
         <div className="hidden md:flex items-center gap-8">
           {[
             { path: "/", label: "Home" },
+            { path: "/business-insights", label: "Business Insights" },
           ].map(({ path, label }) => (
             <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
               {label}
@@ -107,6 +107,7 @@ const Navbar = () => {
           >
             <div className="px-4 py-6 space-y-3">
               <Link to="/" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link to="/business-insights" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Business Insights</Link>
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3">Inspiring Voices</div>
               {categories.map(cat => (
                 <Link key={cat.slug} to={`/category/${cat.slug}`} className="block text-sm py-2 pl-3 hover:text-primary" onClick={() => setIsOpen(false)}>
