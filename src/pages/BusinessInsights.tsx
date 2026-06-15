@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { businessInsights } from "../data/businessinsights";
+import { businessinsights } from "../data/businessinsights";
 
 const BusinessInsights = () => {
   return (
