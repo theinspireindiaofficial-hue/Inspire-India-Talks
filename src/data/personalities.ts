@@ -2470,11 +2470,11 @@ export const personalities: Personality[] = [
  //   "Introduced a fair land-revenue system later admired across the Deccan",
  //   "Founded the city of Khadki, later known as Aurangabad",
 //],
-  authorName: "Inspire India",
-  authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
-  addedAt: "2026-06-12",  
-},
-];
+ // authorName: "Inspire India",
+ // authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+ // addedAt: "2026-06-12",  
+//},
+//];
 
 export const getPersonalitiesByCategory = (categorySlug: string): Personality[] => {
   return personalities.filter(p => p.categorySlug === categorySlug).reverse();
