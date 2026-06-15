@@ -44,7 +44,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "Biodimension Raises ₹8 Crore to Transform Life Sciences",
     date: "15-06-2026",
     category: "Life Sciences",
-    image: "/images/business-insights/biodimension.jpg",
+    image: "/images/business-insights/biodimension.png",
     excerpt:
       "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
     readTime: "4 min read",
