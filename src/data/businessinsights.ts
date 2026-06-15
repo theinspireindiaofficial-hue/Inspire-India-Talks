@@ -15,3 +15,4 @@ export const businessinsights: BusinessInsights[] = [
     content: "Biodimension's latest funding round marks a significant milestone for India's growing life sciences ecosystem. The investment will help the company expand research capabilities, strengthen product development, and support collaborations with healthcare and biotech organizations. The funding also reflects increasing investor confidence in deep-tech and life sciences startups emerging from India",
 
   },
+];
