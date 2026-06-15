@@ -16,7 +16,7 @@ const BusinessInsights = () => {
               Business <span className="text-primary">Insights</span>
             </h1>
             <div className="mt-12 max-w-4xl">
-  {businessInsights.map((article) => (
+  {businessinsights.map((article) => (
     <div
       key={article.id}
       className="bg-black/30 border border-primary/20 rounded-xl overflow-hidden mb-10"
