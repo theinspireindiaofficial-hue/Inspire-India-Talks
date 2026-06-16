@@ -44,7 +44,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "Biodimension Raises ₹8 Crore to Transform Life Sciences",
     date: "15-06-2026",
     category: "Life Sciences",
-    image: "/images/business-insights/biodimension.jpg",
+    image: "/images/business-insights/biodimension.png",
     excerpt:
       "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
     readTime: "4 min read",
@@ -61,7 +61,7 @@ Founders say the funding marks a turning point for deeptech in Indian life scien
     title: "Bengaluru Deeptech Startup Closes $40M Series B",
     date: "14-06-2026",
     category: "Funding",
-    image: "/images/business-insights/deeptech.jpg",
+    image: "/images/business-insights/deeptech.png",
     excerpt:
       "The round will fund global expansion and a new AI research lab in Bengaluru.",
     readTime: "3 min read",
@@ -75,7 +75,7 @@ The company intends to use the capital to expand into new markets and open a ded
     title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
     date: "13-06-2026",
     category: "Energy",
-    image: "/images/business-insights/hydrogen.jpg",
+    image: "/images/business-insights/hydrogen.png",
     excerpt:
       "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
     readTime: "5 min read",
