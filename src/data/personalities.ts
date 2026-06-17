@@ -393,6 +393,35 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-04-16",
   },
+    {
+    id: "j-r-d-tata",
+    name: "J.R.D. Tata",
+    title: "The Visionary Who Built With Conscience",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/j-r-d-tata.jpeg",
+    born: "29 July 1904, Paris, France",
+    profession: "Industrialist & Aviation Pioneer",
+    knownFor: "Founding India's first airline and transforming Tata Group into a global business house",
+    quote: "To lead men, you have to lead them with affection.",
+    story: "Born in Paris in 1904, JRD Tata grew up between two worlds, French by upbringing and Indian by heritage, and would spend his life building a bridge between the two through enterprise. He took to the skies early, becoming India's first licensed pilot in 1929, and within three years had turned that passion into a business: Tata Airlines, launched in 1932, with JRD himself flying the inaugural mail run from Karachi to Bombay. That fledgling airline would grow into Air India, carrying the country's flag across the world.
+
+At just 34, he was named chairman of Tata Sons, a position he would hold for more than fifty years. His method of leadership was deceptively simple: find strong, independent people and give them real authority. Russi Mody at Tata Steel, Sumant Moolgaokar at Telco, and Darbari Seth at Tata Chemicals were men he trusted with autonomy rather than oversight, living out his own belief that leading people required leading with affection rather than control. Under his stewardship, the Tata Group expanded from fourteen companies in 1938 to ninety-five by 1991, with assets growing roughly 160-fold.
+
+JRD's instinct for building things ahead of their time went well beyond aviation. He laid the foundations for Tata Motors, Tata Chemicals, Voltas, and Titan, and in 1968 founded Tata Consultancy Services, now among the largest IT companies in the world. He treated workers' welfare as core to the business itself, introducing an eight-hour workday, paid leave, and provident funds in his companies long before Indian law required any of it. That same conviction that prosperity and social good were linked led him to establish the Tata Institute of Fundamental Research in 1945, the Tata Memorial Hospital in 1941, and the National Institute of Advanced Studies, and to become an early, vocal advocate for family planning as a matter of national survival.
+
+In 1992, the nation recognized him with the Bharat Ratna. JRD Tata's life stands as proof that a business built on conscience and national purpose, not just profit, can endure long enough to outlive its founder, and indeed, to keep growing decades after he is gone.",
+    achievements: [
+      "Became India's first licensed pilot and pioneered civil aviation in the country",
+      "Founded Tata Airlines, which later became Air India",
+      "Expanded the Tata Group from 14 companies to over 90 enterprises across diverse industries",
+      "Led Indian industry with a vision of excellence, innovation, and nation-building for over five decades.",
+      "Received the prestigious Bharat Ratna in 1992 for his outstanding contribution to India"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-06-17",
+  },
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",
