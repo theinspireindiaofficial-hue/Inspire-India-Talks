@@ -49,11 +49,11 @@ export const businessinsights: BusinessInsight[] = [
       "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
     readTime: "4 min read",
     featured: true,
-    content: `Biodimension, a Pune-based biotechnology startup, has raised ₹8 crore in a fresh funding round aimed at scaling its 3D bioprinting platform.
+    content: `Life sciences firm Biodimension, headquartered out of Bengaluru, has raised ₹8 crore in a fundraising round co-led by IAN Angel Fund and including other investors like Campus Angels Network, Dr. Sampath Srisailam, and angel investor Aaryan Baid. These funds will be utilized in product development, expanding laboratories, reinforcing its research and business teams, and commercializing its products in India and overseas.
 
-The company plans to expand its research team and accelerate work on tissue-engineering models that could reduce India's dependence on imported lab equipment.
+Manojkumar S., Ranjith Kumar Velusamy, and Pradeep Arunachalam are the founders of this company that focuses on providing human tissue and organoid models, which could act as an alternative to animal testing. Biodimension's solutions provide assistance to pharmaceuticals, biotech, and cosmetics companies to make their research and safety assessments easier.
 
-Founders say the funding marks a turning point for deeptech in Indian life sciences, an area that has historically struggled to attract early-stage capital.`,
+Currently, Biodimension has formed strategic collaborations with pharmaceutical companies, biotechs, research institutions, and contract research organizations both in India and Singapore. Moving forward, this company intends to ramp up their oncology research capability, scale their Bioassay-as-a-Service offering, and enter international markets, especially Southeast Asia.`,
   },
 
   {
@@ -65,9 +65,11 @@ Founders say the funding marks a turning point for deeptech in Indian life scien
     excerpt:
       "The round will fund global expansion and a new AI research lab in Bengaluru.",
     readTime: "3 min read",
-    content: `A Bengaluru-based deeptech startup has closed a $40 million Series B round led by a consortium of domestic and international investors.
+    content: `Bangalore-based fashion-tech startup NeuroPixel.AI recently stated that it is discontinuing its services after five years of developing AI-powered products for the fashion industry. Launched in 2020 by co-founders Arvind Venugopal Nair and Amritendu Mukherjee, the company offered a suite of technologies that helped fashion companies develop virtual models, automate their product catalogs, and provide virtual try-on experiences without the expensive process of photo shoots.
 
-The company intends to use the capital to expand into new markets and open a dedicated AI research lab.`,
+NeuroPixel.AI managed to attract the interest of retail and e-commerce companies as well as investors such as Flipkart Ventures. However, with technology leaders like Google, Meta, and Alibaba developing advanced generative AI, the challenge for this small startup increased.
+
+As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in obtaining timely payments from the company's largest client, other factors such as lack of funds and limited market presence hindered the growth of NeuroPixel.AI. The company maintains its own unique set of AI technologies that can produce top quality products for less, but it has decided to end its service business while looking into other ways to make money off its technology stack.`,
   },
 
   {
@@ -79,8 +81,12 @@ The company intends to use the capital to expand into new markets and open a ded
     excerpt:
       "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
     readTime: "5 min read",
-    content: `Reliance has announced a ₹75,000 crore investment into green hydrogen production over the coming years.
+    content: `The firm has also announced plans of making investments worth ₹75,000 crores in its oil-to-chemicals (O2C) division, besides boosting its green energy efforts. It is expected that such an investment will be used to increase the efficiency of their refining and petrochemical production operations, thus improving the firm's international competitiveness.
 
-The move is part of a wider strategy to bring the cost of clean energy down to competitive levels and support India's net-zero ambitions.`,
+On the other hand, Reliance's ambition is to have a manufacturing capacity for solar modules worth 20 GW within the next five years from its Giga complex in Jamnagar, Gujarat. The proposed facility would target solar modules, battery storage, fuel cells, and green hydrogen manufacturing operations as part of the country's efforts to boost renewable energy production.
+
+According to Chairman Mukesh Ambani, it was imperative to address present-day needs while at the same time looking at future needs. As much as O2C continues being the largest source of revenues for the company, Reliance is heavily investing in renewable energy products.
+
+Industry experts regard such efforts as steps towards diversifying Reliance's energy sources.`,
   },
 ];
