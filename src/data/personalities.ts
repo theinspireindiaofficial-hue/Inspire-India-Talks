@@ -393,6 +393,39 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-04-16",
   },
+    {
+    id: "j-r-d-tata",
+    name: "J.R.D. Tata",
+    title: "The Visionary Who Built With Conscience",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/j-r-d-tata.jpeg",
+    born: "29 July 1904, Paris, France",
+    profession: "Industrialist & Aviation Pioneer",
+    knownFor: "Founding India's first airline and transforming Tata Group into a global business house",
+    quote: "To lead men, you have to lead them with affection.",
+    story: `J.R.D. Tata was an industrialist, institution builder, and visionary leader who believed that business should serve the larger goal of nation-building. As India's first licensed pilot in 1929, he pioneered the country's civil aviation sector and founded Tata Airlines in 1932, which later evolved into Air India. At the age of 34, he became Chairman of Tata Sons and led the Tata Group for more than five decades.
+
+His greatest strength was empowering people. J.R.D. believed in identifying exceptional talent, giving individuals autonomy, and trusting them to lead. Leaders such as Russi Mody, Sumant Moolgaokar, and Darbari Seth flourished under his mentorship. As he famously said, "To lead men, you have to lead them with affection."
+
+Under his leadership, the Tata Group expanded from 14 companies in 1938 to more than 95 companies by 1991, while its assets grew from approximately ₹62 crore to over ₹10,000 crore.
+
+A true pioneer, J.R.D. personally flew the first Tata Airlines mail flight from Karachi to Bombay in 1932. He also laid the foundation for several landmark enterprises, including Tata Motors (TELCO), Tata Chemicals, Voltas, Titan, and Tata Consultancy Services (TCS), which would later become one of the world's leading IT companies.
+
+J.R.D. firmly believed that prosperity and social welfare were inseparable. Long before such practices became legal requirements, he championed employee welfare through initiatives such as the eight-hour workday, paid leave, and provident funds. He also supported institutions of national importance, including the Tata Memorial Hospital and the Tata Institute of Fundamental Research. A strong advocate of family planning and sustainable development, he viewed long-term national progress as a responsibility of business.
+
+For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue a purpose greater than profit, hire talented people and trust them, lead with integrity, embrace innovation, strive relentlessly for excellence, and always contribute to the nation. Awarded the Bharat Ratna in 1992, J.R.D. Tata remains a symbol of enterprise, integrity, and patriotism. His legacy demonstrates that truly great businesses are built not only to create wealth but also to serve society and leave a lasting positive impact on the world.`,
+    achievements: [
+      "Became India's first licensed pilot and pioneered civil aviation in the country",
+      "Founded Tata Airlines, which later became Air India",
+      "Expanded the Tata Group from 14 companies to over 90 enterprises across diverse industries",
+      "Led Indian industry with a vision of excellence, innovation, and nation-building for over five decades.",
+      "Received the prestigious Bharat Ratna in 1992 for his outstanding contribution to India"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-06-17",
+  },
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",
@@ -2425,7 +2458,7 @@ export const personalities: Personality[] = [
       "Enabled financial independence and social empowerment for women"
     ],
     authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-23",
   },
   {
@@ -2448,10 +2481,32 @@ export const personalities: Personality[] = [
       "Showcased the power of rural creativity on national platforms"
     ],
     authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-04-27",
   },
-
+//{
+ // id: "malik-ambar",                    
+//  name: "Malik Ambar",
+ // title: "From Ambar's Shadow: The Untold Siddi Story",
+ // category: "Others",          
+ // categorySlug: "others",      
+  //image: "/images/personalities/malik-ambar-siddi.jpeg",
+ // born: "Kambata, Ethiopia",
+ // profession: "Military general & Kingmaker",
+ // knownFor: "From enslaved boy to the general who defied an empire through guerrilla warfare.",
+ // quote: "A chain can hold a body, never a will. They named me slave; the Deccan named me ruler.",
+ // story: "The African General Who Defied an Empire — and the Indians We Forgot\n\nAfricans have lived on Indian shores for well over a thousand years, carried along Indian Ocean trade routes as sailors, merchants, and slaves from as early as the 7th century. Their descendants are the Siddis — and one of them changed the course of Indian history.\n\nHis name was Malik Ambar.\n\nBorn around 1548 in present-day Ethiopia, he was captured as a boy, sold across the Red Sea and through Baghdad, and finally brought to the Deccan in chains. He died a free man who was never conquered. Rising from slavery, Ambar became prime minister and de facto ruler of the Ahmadnagar Sultanate, commanding a force of tens of thousands. He is credited as a pioneer of guerrilla warfare against the Mughal Empire at its peak — frustrating Emperor Jahangir so completely that Jahangir commissioned a painting of himself shooting Ambar's severed head, a victory he never actually won.\n\nAmbar also raised the stone Murud-Janjira sea fort off the Maharashtra coast in the 16th century. Despite repeated sieges by the Marathas, Portuguese, and British, it was never captured — and it still stands today.\n\nYet most Indians have never heard his name.\n\nThe Siddis are not a historical footnote. They are a living community — concentrated in Gujarat, Karnataka, Maharashtra, and Goa, with estimates ranging from roughly 50,000 to over 250,000 people, as no reliable count exists. They speak Kannada, Konkani, Gujarati, and Urdu; farm Indian land; raise Indian children. In the 1980s, India's sports authorities even recruited Siddi youth in the hope of producing Olympic athletes. And only on 8 January 2003 — after centuries in this country — were they granted Scheduled Tribe status.\n\nThat long silence is not an accident. It is what happens when a nation builds its identity around a narrow set of stories and calls it complete.\n\nSo what does this mean for us as professionals, storytellers, and leaders?\n\nThe stories we tell — in boardrooms, classrooms, and content — decide who is remembered and who is erased. Every brand and platform faces a choice: amplify the familiar, or make room for the forgotten.\n\nAt Inspire India Talks, we believe the most powerful stories are the ones no one is telling yet. The Siddis are one of them.\n\n India's story is larger than any one version of it.\n\nPart of our Untold India series. Follow Inspire India Talks for stories that shape nations.",
+ // achievements: [
+ //   "Rose from enslavement to become de facto ruler of the Ahmadnagar Sultanate",
+ //   "Pioneered guerrilla warfare that held off the Mughal Empire for over two decades",
+ //   "Built and commanded a multi-ethnic army of tens of thousands",
+ //   "Introduced a fair land-revenue system later admired across the Deccan",
+ //   "Founded the city of Khadki, later known as Aurangabad",
+//],
+ // authorName: "Inspire India",
+ // authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+ // addedAt: "2026-06-12",  
+//},
 ];
 
 export const getPersonalitiesByCategory = (categorySlug: string): Personality[] => {
