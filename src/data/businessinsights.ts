@@ -85,6 +85,23 @@ As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in o
   },
 
   {
+    id: "bigbasket-hari-menon",
+    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
+    date: "18-06-2026",
+    category: "Funding",
+    image: "/images/buisness-insights/deeptech.png",
+    excerpt:
+      "Business — Corporate Leadership / Retail & E-commerce",
+    readTime: "3 min read",
+    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
+Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
+"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
+Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
+Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.
+`,
+  },
+
+  {
     id: "green-hydrogen-push",
     title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
     date: "13-06-2026",
