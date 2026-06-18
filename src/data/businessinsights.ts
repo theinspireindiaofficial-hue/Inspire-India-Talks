@@ -40,8 +40,7 @@ export const businessinsights: BusinessInsight[] = [
   // =================================================================================
 {
     id: "fable-5-ai",
-    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns
-",
+    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
     date: "18-06-2026",
     category: "Technology — AI Policy & Export Controls",
     image: "/images/buisness-insights/biodimension.png",
