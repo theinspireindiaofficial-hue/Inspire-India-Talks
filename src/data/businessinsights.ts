@@ -104,7 +104,7 @@ As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in o
     id: "indian-deep-tech-innotrek-uk",
     title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
     category: "Emerging Tech",
-    image: "/images/buisness-insights/hydrogen.png",
+    image: "/images/buisness-insights/indian-deep-tech-innotrek-uk.png",
     excerpt:
       "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
     readTime: "4 min read",
@@ -138,7 +138,7 @@ For a generation of founders building in artificial intelligence, semiconductors
     title: "IIT Madras Leads India's Innovation Charge in Nice at Bharat Innovates 2026",
     date: "18-06-2026",
     category: "Startups & Innovation",
-    image: "/images/buisness-insights/hydrogen.png",
+    image: "/images/buisness-insights/iit-madras-world-stage-bharat-innovates-2026.png",
     excerpt:
       "At Bharat Innovates 2026 in Nice, IIT Madras presents fifteen startups and leads two thematic tracks—proof that world-class deep-tech is emerging from Indian campuses.",
     readTime: "5 min read",
@@ -157,7 +157,7 @@ For aspiring founders, the message is clear: world-class ideas can and do emerge
     title: "India's Youngest Founders Cash In at Masters' Union Demo Day 2026",
     date: "18-06-2026",
     category: "Education & Entrepreneurship",
-    image: "/images/buisness-insights/hydrogen.png",
+    image: "/images/buisness-insights/masters-union-demo-day-2026.png",
     excerpt:
       "At Masters' Union's Demo Day 2026, eighteen student startups raised Rs 4 crore across AI, fintech, mobility, and more—proof that company-building is starting before graduation.",
     readTime: "4 min read",
