@@ -38,18 +38,18 @@ export const businessinsights: BusinessInsight[] = [
   // Leave a blank line to start a new paragraph. Write as much as you like here.`,
   // },
   // =================================================================================
-{
-    id: "fable-5-ai",
-    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
-    date: "18-06-2026",
-    category: "Technology — AI Policy & Export Controls",
-    image: "/images/buisness-insights/biodimension.png",
-    excerpt:
-      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
-    readTime: "4 min read",
-    featured: true,
-    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
-  },
+//{
+//    id: "fable-5-ai",
+//    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
+//    date: "18-06-2026",
+//    category: "Technology — AI Policy & Export Controls",
+//    image: "/images/buisness-insights/biodimension.png",
+//    excerpt:
+//      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
+//    readTime: "4 min read",
+//    featured: true,
+//    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
+//  },
 
   {
     id: "biodimension-8-crore",
@@ -84,32 +84,30 @@ NeuroPixel.AI managed to attract the interest of retail and e-commerce companies
 As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in obtaining timely payments from the company's largest client, other factors such as lack of funds and limited market presence hindered the growth of NeuroPixel.AI. The company maintains its own unique set of AI technologies that can produce top quality products for less, but it has decided to end its service business while looking into other ways to make money off its technology stack.`,
   },
 
+//  {
+//    id: "bigbasket-hari-menon",
+//    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
+//    date: "18-06-2026",
+//    category: "Funding",
+//    image: "/images/buisness-insights/deeptech.png",
+//    excerpt:
+//      "Business — Corporate Leadership / Retail & E-commerce",
+//    readTime: "3 min read",
+//    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
+//Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
+//"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
+//Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
+//Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.
+//`,
+//  },
   {
-    id: "bigbasket-hari-menon",
-    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
-    date: "18-06-2026",
-    category: "Funding",
-    image: "/images/buisness-insights/deeptech.png",
-    excerpt:
-      "Business — Corporate Leadership / Retail & E-commerce",
-    readTime: "3 min read",
-    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
-Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
-"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
-Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
-Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.
-`,
-  },
-
-  {
-    id: "green-hydrogen-push",
-    title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
-    date: "13-06-2026",
-    category: "Energy",
+    id: "indian-deep-tech-innotrek-uk",
+    title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
+    category: "Emerging Tech",
     image: "/images/buisness-insights/hydrogen.png",
     excerpt:
-      "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
-    readTime: "5 min read",
+      "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
+    readTime: "4 min read",
     content: `The firm has also announced plans of making investments worth ₹75,000 crores in its oil-to-chemicals (O2C) division, besides boosting its green energy efforts. It is expected that such an investment will be used to increase the efficiency of their refining and petrochemical production operations, thus improving the firm's international competitiveness.
 
 On the other hand, Reliance's ambition is to have a manufacturing capacity for solar modules worth 20 GW within the next five years from its Giga complex in Jamnagar, Gujarat. The proposed facility would target solar modules, battery storage, fuel cells, and green hydrogen manufacturing operations as part of the country's efforts to boost renewable energy production.
@@ -117,5 +115,58 @@ On the other hand, Reliance's ambition is to have a manufacturing capacity for s
 According to Chairman Mukesh Ambani, it was imperative to address present-day needs while at the same time looking at future needs. As much as O2C continues being the largest source of revenues for the company, Reliance is heavily investing in renewable energy products.
 
 Industry experts regard such efforts as steps towards diversifying Reliance's energy sources.`,
+  },
+
+  {
+    id: "green-hydrogen-push",
+    title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
+    date: "18-06-2026",
+    category: "Energy",
+    image: "/images/buisness-insights/hydrogen.png",
+    excerpt:
+      "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
+    readTime: "5 min read",
+    content: `India's deep-tech ambitions took a decisive international turn this June as industry body Nasscom launched InnoTrek UK 2026, a flagship global market-access programme. From June 8 to 12, a carefully selected cohort of Indian deep-tech startups travelled to the United Kingdom for an intensive week of market insights, investor access, and business development opportunities, with several engagements timed around London Tech Week.
+
+The initiative is more than a networking trip. It is designed to strengthen India–UK technology collaboration and help promising Indian startups build globally competitive businesses, connecting founders directly with investors, enterprises, and policymakers in one of the world's most mature innovation ecosystems.
+
+For a generation of founders building in artificial intelligence, semiconductors, and other frontier fields, programmes like InnoTrek signal a shift in mindset: Indian startups are no longer content to serve only the domestic market. They are positioning themselves as global players from day one. As cross-border partnerships deepen, such missions could prove pivotal in turning India's deep-tech promise into worldwide commercial success.`,
+  },
+
+    {
+    id: "iit-madras-world-stage-bharat-innovates-2026",
+    title: "IIT Madras Leads India's Innovation Charge in Nice at Bharat Innovates 2026",
+    date: "18-06-2026",
+    category: "Startups & Innovation",
+    image: "/images/buisness-insights/hydrogen.png",
+    excerpt:
+      "At Bharat Innovates 2026 in Nice, IIT Madras presents fifteen startups and leads two thematic tracks—proof that world-class deep-tech is emerging from Indian campuses.",
+    readTime: "5 min read",
+    content: `India's premier engineering institution is carrying the country's innovation story to a global audience. IIT Madras is showcasing a range of deep-tech innovations, startups, and strategic research initiatives at Bharat Innovates 2026, an international technology exhibition organised by the Ministry of Education in Nice, France, from June 14 to 16.
+
+The institute's role at the event is significant. IIT Madras is leading two of the thirteen thematic areas on display and presenting fifteen startups incubated within its own ecosystem — a powerful demonstration of how academic research is being translated into real, market-ready ventures.
+
+This kind of presence matters. For years, India's brightest technical talent has been celebrated abroad; now its institutions are exporting not just engineers but entire companies and research agendas. By placing home-grown deep-tech alongside global peers, IIT Madras strengthens India's reputation as a serious source of frontier innovation.
+
+For aspiring founders, the message is clear: world-class ideas can and do emerge from Indian campuses, and the global stage is increasingly within reach.`,
+  },
+
+  
+    {
+    id: "masters-union-demo-day-2026",
+    title: "India's Youngest Founders Cash In at Masters' Union Demo Day 2026",
+    date: "18-06-2026",
+    category: "Education & Entrepreneurship",
+    image: "/images/buisness-insights/hydrogen.png",
+    excerpt:
+      "At Masters' Union's Demo Day 2026, eighteen student startups raised Rs 4 crore across AI, fintech, mobility, and more—proof that company-building is starting before graduation.",
+    readTime: "4 min read",
+    content: `Entrepreneurial energy was on full display at Masters' Union's Demo Day 2026 in Gurugram, where eighteen student-led startups secured a combined Rs 4 crore in funding commitments. Remarkably, much of the backing was announced within an hour of the founders' pitches — a testament to both investor confidence and the quality of ideas on show.
+
+The funded ventures spanned an impressively broad range of sectors, including artificial intelligence, fintech, enterprise technology, consumer brands, mobility, hospitality, and edtech. The breadth reflects a generation of young founders unafraid to tackle problems across the economy.
+
+These companies emerged from Masters' Union's year-long Venture Initiation Programme, which has now supported more than eighty student startups. Rather than treating entrepreneurship as a post-graduation pursuit, the programme builds company-creation directly into the student experience.
+
+The story is an encouraging one for India's startup pipeline. When students can validate ideas, build early traction, and attract real capital before they even graduate, the result is a deeper, faster-moving talent pool feeding the wider innovation ecosystem.`,
   },
 ];
