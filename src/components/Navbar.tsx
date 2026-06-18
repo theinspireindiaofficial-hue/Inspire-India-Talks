@@ -4,9 +4,15 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { categories } from "@/data/personalities";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Past campaigns that have concluded. Add new ones here as they end.
+const archivedCampaigns = [
+  { path: "/tree-volution", label: "Tree-volution", icon: "🌿", note: "2026" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showCategories, setShowCategories] = useState(false);
+  const [showArchive, setShowArchive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -72,21 +78,51 @@ const Navbar = () => {
           {[
             { path: "/about", label: "About" },
             { path: "/events", label: "Events" },
-            { path: "/tree-volution", label: "Tree-volution 🌿", highlight: true },
+          ].map(({ path, label }) => (
+            <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
+              {label}
+            </Link>
+          ))}
+
+          <div className="relative" onMouseEnter={() => setShowArchive(true)} onMouseLeave={() => setShowArchive(false)}>
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${archivedCampaigns.some(c => isActive(c.path)) ? "text-primary" : "text-foreground/70"}`}>
+              Archive <ChevronDown className="h-3 w-3" />
+            </button>
+            <AnimatePresence>
+              {showArchive && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  className="absolute top-full right-0 mt-2 w-72 glass-card py-2 overflow-hidden"
+                >
+                  <div className="px-5 pt-1 pb-2 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    Past Campaigns
+                  </div>
+                  {archivedCampaigns.map(c => (
+                    <Link
+                      key={c.path}
+                      to={c.path}
+                      className="flex items-center px-5 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors"
+                      onClick={() => setShowArchive(false)}
+                    >
+                      <span className="mr-3">{c.icon}</span>
+                      <span className="flex-1">{c.label}</span>
+                      <span className="ml-2 text-[10px] font-medium text-muted-foreground border border-border/60 rounded-full px-2 py-0.5">
+                        {c.note}
+                      </span>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {[
             { path: "/host-event", label: "Host a Talk" },
             { path: "/contact", label: "Contact" },
-          ].map(({ path, label, highlight }) => (
-            <Link 
-              key={path} 
-              to={path} 
-              className={`text-sm font-medium transition-all hover:text-primary flex items-center ${
-                highlight 
-                  ? "text-emerald-400 font-bold border border-emerald-500/30 px-3 py-1.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)] hover:scale-102" 
-                  : isActive(path) 
-                  ? "text-primary" 
-                  : "text-foreground/70"
-              }`}
-            >
+          ].map(({ path, label }) => (
+            <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
               {label}
             </Link>
           ))}
@@ -116,7 +152,13 @@ const Navbar = () => {
               ))}
               <Link to="/about" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>About</Link>
               <Link to="/events" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Events</Link>
-              <Link to="/tree-volution" className="block text-sm font-bold py-2.5 px-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5" onClick={() => setIsOpen(false)}>Tree-volution 🌿</Link>
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3">Archive</div>
+              {archivedCampaigns.map(c => (
+                <Link key={c.path} to={c.path} className="flex items-center gap-2 text-sm py-2 pl-3 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <span>{c.icon} {c.label}</span>
+                  <span className="text-[10px] font-medium text-muted-foreground border border-border/60 rounded-full px-2 py-0.5">{c.note}</span>
+                </Link>
+              ))}
               <Link to="/host-event" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Host a Talk</Link>
               <Link to="/contact" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Contact</Link>
             </div>
