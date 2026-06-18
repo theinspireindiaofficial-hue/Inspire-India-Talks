@@ -706,6 +706,7 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
                    "Inspired adoption of water-saving practices in thousands of restaurants",
                    "Featured in Forbes 30 Under 30 Asia"],
     authorName: "Rhea Pathak",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-06-18",
   },
 
