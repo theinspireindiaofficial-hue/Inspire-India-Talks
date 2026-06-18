@@ -690,6 +690,27 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     addedAt: "2026-03-27",
   },
 
+    {
+    id: "garvita-gulhati",
+    name: "Garvita Gulhati",
+    title: "Water Girl",
+    category: "She Talks",
+    categorySlug: "she-talks",
+    image: "/images/personalities/Kalpana-Chawla.avif",
+    born: "22 September 1999, Bengaluru",
+    profession: "Water Conservation Advocate",
+    knownFor: "Founder of Why Waste? and creator of the Glass Half Full Campaign to reduce water wastage in restaurants across India.",
+    quote: "Every drop counts. If we change small habits, we can create a big impact on water conservation.",
+    story: "Garvita Gulhati’s journey is a remarkable story of how a simple observation can spark a nationwide movement. At the age of fifteen, she was deeply moved by the contrast between water scarcity faced by millions and the everyday wastage of water in restaurants. Determined to make a difference, she founded Why Waste?, a youth-led initiative focused on water conservation. Through her innovative Glass Half Full Campaign, she encouraged restaurants to serve half-filled glasses of water, reducing unnecessary wastage while promoting mindful consumption. Despite initial skepticism, her persistence helped the campaign gain support from major institutions and spread across thousands of restaurants in India and beyond. Recognized globally for her impact, Garvita has inspired millions to believe that small changes in daily habits can create meaningful environmental change and contribute to a more sustainable future.",
+    achievements: ["Founded Why Waste?, a youth-led water conservation movement",
+                   "Created the Glass Half Full Campaign adopted by thousands of restaurants",
+                   "Inspired millions to reduce water wastage through behavioral change",
+                   "Recognized in Forbes 30 Under 30 Asia",
+                   ],
+    authorName: "Rhea Pathak",
+    addedAt: "2026-06-18",
+  },
+
 
   // ===== TEACHERS & EDUCATORS =====
   {
