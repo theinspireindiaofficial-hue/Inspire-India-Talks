@@ -38,6 +38,19 @@ export const businessinsights: BusinessInsight[] = [
   // Leave a blank line to start a new paragraph. Write as much as you like here.`,
   // },
   // =================================================================================
+{
+    id: "fable-5-ai",
+    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns
+",
+    date: "18-06-2026",
+    category: "Technology — AI Policy & Export Controls",
+    image: "/images/buisness-insights/biodimension.png",
+    excerpt:
+      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
+    readTime: "4 min read",
+    featured: true,
+    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
+  },
 
   {
     id: "biodimension-8-crore",
