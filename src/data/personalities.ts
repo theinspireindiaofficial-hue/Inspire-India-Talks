@@ -1908,7 +1908,7 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     title: "Chess Prodigy",
     category: "Young Achievers",
     categorySlug: "young-achievers",
-    image: "/images/personalities/r-praggnanandhaa.jpg",
+    image: "/images/personalities/r-praggnanandhaa.avif",
     born: "10 August 2005, Chennai, India",
     profession: "Chess Grandmaster",
     knownFor: "Defeating World Champion Magnus Carlsen multiple times",
