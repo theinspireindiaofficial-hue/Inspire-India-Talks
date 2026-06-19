@@ -327,48 +327,38 @@ const Index = () => {
                   >
                     <Link
                       to={`/category/${cat.slug}`}
-                      className="group relative block h-full overflow-hidden rounded-3xl border border-white/5 bg-white/[0.03] transition-all duration-500 hover:border-primary/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-primary/10"
+                      className="group relative block h-80 overflow-hidden rounded-3xl border border-white/5 transition-all duration-500 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10"
                     >
-                      {/* Image header */}
-                      <div className="relative h-44 overflow-hidden">
-                        {catImage ? (
-                          <img
-                            src={catImage}
-                            alt={cat.name}
-                            loading="lazy"
-                            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                          />
-                        ) : (
-                          <div className="h-full w-full bg-gradient-to-br from-primary/20 to-primary/5" />
-                        )}
-                        {/* Fade the image into the card body */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                      {/* Full-bleed image */}
+                      {catImage ? (
+                        <img
+                          src={catImage}
+                          alt={cat.name}
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/5" />
+                      )}
 
-                        {/* Icon badge overlapping the image */}
-                        <div className="absolute -bottom-8 left-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 text-primary ring-1 ring-primary/30 backdrop-blur-md shadow-lg shadow-primary/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:from-primary/40">
-                          {categoryIcons[cat.slug] || <Star className="h-8 w-8" />}
+                      {/* Dark gradient so text stays readable */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/5 transition-all duration-500 group-hover:from-background group-hover:via-background/60" />
+
+                      {/* Content pinned to the bottom, over the image */}
+                      <div className="absolute inset-0 z-10 flex flex-col justify-end p-7">
+                        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20 text-primary ring-1 ring-primary/30 backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/30">
+                          {categoryIcons[cat.slug] || <Star className="h-7 w-7" />}
                         </div>
-                      </div>
 
-                      {/* Hover Background Glow */}
-                      <div className="absolute -right-8 top-32 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition-all duration-700 group-hover:bg-primary/20 group-hover:scale-150" />
-
-                      {/* Content */}
-                      <div className="relative z-10 p-8 pt-12">
-                        <h3 className="font-serif text-2xl font-bold group-hover:text-primary transition-colors duration-300">
+                        <h3 className="font-serif text-2xl font-bold text-white drop-shadow-sm group-hover:text-primary transition-colors duration-300">
                           {cat.name}
                         </h3>
-                        <p className="mt-4 text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                        <p className="mt-2 text-sm text-white/75 leading-relaxed line-clamp-2">
                           {cat.description}
                         </p>
 
-                        <div className="mt-8 flex items-center justify-between">
-                          <span className="text-primary text-sm font-semibold tracking-wide uppercase opacity-0 -translate-x-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
-                            View Collection
-                          </span>
-                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground group-hover:rotate-[-45deg]">
-                            <ArrowRight className="h-5 w-5" />
-                          </div>
+                        <div className="mt-4 flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                          View Collection <ArrowRight className="h-4 w-4" />
                         </div>
                       </div>
                     </Link>
