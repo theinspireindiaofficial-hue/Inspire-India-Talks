@@ -230,29 +230,7 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-02-24"
   },
-  {
-    id: "vaishali-patil",
-    name: "Vaishali Patil",
-    title: "Reviver of India’s Ancient Supergrain",
-    category: "Entrepreneurs & Founders",
-    categorySlug: "entrepreneurs",
-    image: "/images/personalities/Vaishali-patil.webp",
-    born: "Jalgaon, Maharashtra, India",
-    profession: "Agricultural Entrepreneur & Seed Innovator",
-    knownFor: "Reviving Khapli (Emmer) wheat and scaling its cultivation across Maharashtra",
-    quote: "Sometimes the future of health lies in the wisdom of our past.",
-    story: "Vaishali Patil’s journey into agricultural entrepreneurship began not in a boardroom, but beside her mother’s hospital bed. When her mother was diagnosed with leukemia, Vaishali began searching for traditional, low-glycemic and nutrient-rich foods that could support better health. During this search, she rediscovered Khapli (Emmer) wheat — an ancient Indian grain that had nearly disappeared from farms after the Green Revolution prioritized high-yield hybrid varieties.\n\nWhat she uncovered was more than just a grain; it was a forgotten piece of agricultural heritage. Khapli wheat, known for its low gluten content and high nutritional value, had once been a staple in Indian households. However, modern farming trends had pushed it to the margins.\n\nDetermined to bring it back, Vaishali began cultivation on just two acres of land. Despite initial skepticism from farmers who were accustomed to hybrid seeds, she persisted — educating communities about the health benefits and economic viability of the grain.\n\nKey: Her efforts sparked a quiet revolution. Today, Khapli wheat is grown on over 1,500 acres, and Vaishali holds one of the first Seed Dealer Licenses for this variety, ensuring certified distribution to farmers. Her work has empowered thousands of cultivators to grow what she calls 'medicine as food,' reconnecting agriculture with nutrition and sustainability.Vaishali’s story is not just about reviving a crop — it is about reviving confidence in indigenous knowledge, empowering rural farmers, and proving that tradition and entrepreneurship can grow side by side. Through resilience and purpose, she **transformed** a personal struggle into a statewide agricultural movement.",
-    achievements: [
-      "Revived large-scale cultivation of Khapli (Emmer) wheat in Maharashtra",
-      "Scaled cultivation from 2 acres to over 1,500 acres",
-      "Holds one of the first Seed Dealer Licenses for Khapli wheat",
-      "Empowered thousands of farmers to adopt nutrient-rich traditional crops",
-      "Promoted the concept of 'medicine as food' through sustainable farming"
-    ],
-    authorName: "Inspire India Talks",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
-    addedAt: "2026-02-24"
-  },
+
   {
     id: "chandan-singh",
     name: "Chandan Singh",
@@ -275,6 +253,29 @@ export const personalities: Personality[] = [
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-17",
+  },
+    {
+    id: "vaishali-patil",
+    name: "Vaishali Patil",
+    title: "Reviver of India’s Ancient Supergrain",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/Vaishali-patil.webp",
+    born: "Jalgaon, Maharashtra, India",
+    profession: "Agricultural Entrepreneur & Seed Innovator",
+    knownFor: "Reviving Khapli (Emmer) wheat and scaling its cultivation across Maharashtra",
+    quote: "Sometimes the future of health lies in the wisdom of our past.",
+    story: "Vaishali Patil’s journey into agricultural entrepreneurship began not in a boardroom, but beside her mother’s hospital bed. When her mother was diagnosed with leukemia, Vaishali began searching for traditional, low-glycemic and nutrient-rich foods that could support better health. During this search, she rediscovered Khapli (Emmer) wheat — an ancient Indian grain that had nearly disappeared from farms after the Green Revolution prioritized high-yield hybrid varieties.\n\nWhat she uncovered was more than just a grain; it was a forgotten piece of agricultural heritage. Khapli wheat, known for its low gluten content and high nutritional value, had once been a staple in Indian households. However, modern farming trends had pushed it to the margins.\n\nDetermined to bring it back, Vaishali began cultivation on just two acres of land. Despite initial skepticism from farmers who were accustomed to hybrid seeds, she persisted — educating communities about the health benefits and economic viability of the grain.\n\nKey: Her efforts sparked a quiet revolution. Today, Khapli wheat is grown on over 1,500 acres, and Vaishali holds one of the first Seed Dealer Licenses for this variety, ensuring certified distribution to farmers. Her work has empowered thousands of cultivators to grow what she calls 'medicine as food,' reconnecting agriculture with nutrition and sustainability.Vaishali’s story is not just about reviving a crop — it is about reviving confidence in indigenous knowledge, empowering rural farmers, and proving that tradition and entrepreneurship can grow side by side. Through resilience and purpose, she **transformed** a personal struggle into a statewide agricultural movement.",
+    achievements: [
+      "Revived large-scale cultivation of Khapli (Emmer) wheat in Maharashtra",
+      "Scaled cultivation from 2 acres to over 1,500 acres",
+      "Holds one of the first Seed Dealer Licenses for Khapli wheat",
+      "Empowered thousands of farmers to adopt nutrient-rich traditional crops",
+      "Promoted the concept of 'medicine as food' through sustainable farming"
+    ],
+    authorName: "Inspire India Talks",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-02-24"
   },
   {
     id: "anjali-sardana",
