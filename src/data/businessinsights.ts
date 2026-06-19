@@ -38,18 +38,33 @@ export const businessinsights: BusinessInsight[] = [
   // Leave a blank line to start a new paragraph. Write as much as you like here.`,
   // },
   // =================================================================================
-//{
-//    id: "fable-5-ai",
-//    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
-//    date: "18-06-2026",
-//    category: "Technology — AI Policy & Export Controls",
-//    image: "/images/buisness-insights/biodimension.png",
-//    excerpt:
-//      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
-//    readTime: "4 min read",
-//    featured: true,
-//    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
-//  },
+{
+    id: "fable-5-ai",
+    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
+    date: "18-06-2026",
+    category: "Technology — AI Policy & Export Controls",
+    image: "/images/buisness-insights/fable-5-ai.png",
+    excerpt:
+     "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
+    readTime: "4 min read",
+    featured: true,
+    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
+  },
+  {
+    id: "bigbasket-hari-menon",
+    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
+    date: "18-06-2026",
+    category: "Funding",
+    image: "/images/buisness-insights/bigbasket-hari-menon.png",
+    excerpt:
+      "Business — Corporate Leadership / Retail & E-commerce",
+    readTime: "3 min read",
+    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
+Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
+"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
+Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
+Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.`,
+  },
 
   {
     id: "biodimension-8-crore",
@@ -83,22 +98,7 @@ NeuroPixel.AI managed to attract the interest of retail and e-commerce companies
 As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in obtaining timely payments from the company's largest client, other factors such as lack of funds and limited market presence hindered the growth of NeuroPixel.AI. The company maintains its own unique set of AI technologies that can produce top quality products for less, but it has decided to end its service business while looking into other ways to make money off its technology stack.`,
   },
 
-//  {
-//    id: "bigbasket-hari-menon",
-//    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
-//    date: "18-06-2026",
-//    category: "Funding",
-//    image: "/images/buisness-insights/deeptech.png",
-//    excerpt:
-//      "Business — Corporate Leadership / Retail & E-commerce",
-//    readTime: "3 min read",
-//    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
-//Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
-//"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
-//Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
-//Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.
-//`,
-//  },
+
   {
     id: "indian-deep-tech-innotrek-uk",
     title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
