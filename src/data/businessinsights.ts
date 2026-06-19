@@ -38,18 +38,81 @@ export const businessinsights: BusinessInsight[] = [
   // Leave a blank line to start a new paragraph. Write as much as you like here.`,
   // },
   // =================================================================================
-//{
-//    id: "fable-5-ai",
-//    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
-//    date: "18-06-2026",
-//    category: "Technology — AI Policy & Export Controls",
-//    image: "/images/buisness-insights/biodimension.png",
-//    excerpt:
-//      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
-//    readTime: "4 min read",
-//    featured: true,
-//    content: `Anthropic has cut off its newest models, Mythos 5 and Fable 5, to non US individuals after the US government issued an order limiting them under export-control regulations. American officials had concerns that the systems were vulnerable to being "jailbroken" into revealing software vulnerabilities. While Anthropic is complying, it says it plans to challenge the order, citing what it believes is insufficient evidence and renewing discussion about AI regulation. The AI provider has announced two new "Mythos-class" models, its most capable yet and significantly more advanced than the previous "Opus" model class. In addition to the ability to autonomously reason, Mythos-class models are capable of complex tasks over multiple days without human input. Fable 5 was the enterprise and knowledge work oriented public model for Mythos 5, and restricted Mythos 5 was released to vetted partners to perform tasks like vulnerability discovery, drug design and biodefense. The government announced an order to restrict both models on June 12 to non US persons on an immediate basis, and Anthropic cited that both had previously passed government review. In particular, a jailbreak was able to mimic a Mythos 5 model in Fable 5 to turn it into an automated vulnerability finding tool. A Wall Street Journal article also reports on the same or similar vulnerabilities found in Amazon's AI and shared with the Commerce Department.`
-//  },
+{
+    id: "fable-5-ai",
+    title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
+    date: "18-06-2026",
+    category: "Technology — AI Policy & Export Controls",
+    image: "/images/buisness-insights/fable-5-ai.png",
+    excerpt:
+     "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
+    readTime: "4 min read",
+    featured: true,
+    content: `Anthropic stunned the tech world this week, hitting a $965 billion valuation that pushed it past rival OpenAI—remarkable, given OpenAI's six-year head start and the fact that Anthropic was founded by its former employees.
+
+Strong numbers help explain the rise: revenue is projected to reach $10.9 billion this quarter, more than double the last, likely making it Anthropic's first profitable quarter.
+
+However, the deeper driver is one word: trust.
+
+It started internally. In 2020, a group of OpenAI staff, including CEO Dario Amodei, left over the belief that AI needs safety and alignment, not just scaling. That reputation now draws top talent—AI luminary Andrej Karpathy recently joined.
+
+Public trust grew after a clash with the Pentagon, which cut ties over surveillance and weapons concerns. Rather than hurt Anthropic, the stand boosted its image as principled, contrasting with OpenAI's "sellout" reputation.
+
+Users trust it too—many find Claude more accurate, balanced, and willing to push back than ChatGPT.
+
+Investors, meanwhile, back Anthropic's clear enterprise-first path to profit, proven by tools like Claude Code.
+
+The AI race is young, but whoever earns the most trust may win.
+
+For now, Anthropic leads.`
+  },
+
+    {
+    id: "non-metro-startup-story",
+    title: "India's Startup Boom Breaks Out of the Metros",
+    date: "19-06-2026",
+    category: "Startups",
+    image: "/images/buisness-insights/non-metro-startup-story.png",
+    excerpt:
+      "Nearly half of India's 207,000-plus recognised startups now emerge from Tier II and Tier III cities, signalling a profound democratisation of entrepreneurship.",
+    readTime: "3 min read",
+    content: `India's startup boom is no longer confined to its big-city hubs. The country now counts more than 207,000 recognised startups, 112 unicorns, and over $350 billion in collective value — and crucially, nearly half of these startups are emerging from Tier II and Tier III cities. \n\nThis geographic shift carries real significance. Founders building outside Bengaluru, Mumbai, and Delhi enjoy lower operating costs, closer proximity to underserved customers, and a sharper understanding of demand in markets that larger players have long overlooked. Instead of chasing trends from a distance, they are solving problems they live alongside every day. \n\nThe trend also speaks to the maturing of India's startup infrastructure. Digital public rails, policy support, seed programmes, and growing founder networks now make it possible to build a serious company almost anywhere in the country. For India, the implication is profound: entrepreneurship is becoming genuinely democratised. The next great Indian company may well be built not in a glass tower in a metro, but in a smaller city, closer to the real demand it serves.`,
+  },
+
+    {
+  id: "second-time-founder-prolearn",
+  title: "Ex-Vedantu Leader Raises Rs 30 Crore to Build an AI-Native Learning Platform",
+  date: "19-06-2026",
+  category: "Edtech",
+  image: "/images/buisness-insights/second-time-founder-prolearn.png",    
+  excerpt:
+    "Second-time founder Ravneet Singh has raised Rs 30 crore in pre-seed funding for ProLearn, an AI-native platform aiming to replace one-size-fits-all video lectures with adaptive, personalised learning.",
+  readTime: "2 min read",
+  content: "Experience counts in entrepreneurship, and ProLearn is a case in point. Former Vedantu technology leader Ravneet Singh has raised Rs 30 crore in a pre-seed round for his new venture, an AI-native learning platform aiming to reimagine online education.\n\nAt the heart of ProLearn is an AI-powered learning companion designed to deliver personalised, interactive, and adaptive learning experiences — moving beyond one-size-fits-all video lectures toward education that responds to each individual student. The fresh capital will fuel product and engineering development, strengthen the platform's AI and reasoning infrastructure, expand curriculum-aligned content, and support hiring ahead of its public launch.\n\nWhat makes the story compelling is the founder's pedigree. Having previously helped build technology at one of India's best-known edtech companies, Singh represents a growing wave of experienced operators taking another swing at hard problems with sharper insight and stronger networks. As AI reshapes how knowledge is delivered, seasoned founders like Singh are well placed to build the next generation of learning tools — and to do so with the wisdom of having been there before.",
+
+  },
+  
+  {
+    id: "bigbasket-hari-menon",
+    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
+    date: "18-06-2026",
+    category: "Funding",
+    image: "/images/buisness-insights/bigbasket-hari-menon.png",
+    excerpt:
+      "Business — Corporate Leadership / Retail & E-commerce",
+    readTime: "3 min read",
+    content: `BENGALURU — Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
+
+Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team.
+
+Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
+
+"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
+
+Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
+
+Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.`,
+  },
 
   {
     id: "biodimension-8-crore",
@@ -83,22 +146,7 @@ NeuroPixel.AI managed to attract the interest of retail and e-commerce companies
 As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in obtaining timely payments from the company's largest client, other factors such as lack of funds and limited market presence hindered the growth of NeuroPixel.AI. The company maintains its own unique set of AI technologies that can produce top quality products for less, but it has decided to end its service business while looking into other ways to make money off its technology stack.`,
   },
 
-//  {
-//    id: "bigbasket-hari-menon",
-//    title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
-//    date: "18-06-2026",
-//    category: "Funding",
-//    image: "/images/buisness-insights/deeptech.png",
-//    excerpt:
-//      "Business — Corporate Leadership / Retail & E-commerce",
-//    readTime: "3 min read",
-//    content: `Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
-//Menon will step back from daily operations but stay on the board alongside fellow co-founder Vipul Parekh, mentoring the leadership team. Nanda, who spent 11 years at Amazon India—most recently leading Selling Partner Services—brings deep experience in ecommerce, technology, and consumer businesses. He earlier worked at Hindustan Unilever and Citibank.
-//"I am incredibly excited to join Bigbasket and build upon the phenomenal trust it has established with millions of consumers," Nanda said, noting that pairing Bigbasket's customer-first values with the Tata legacy creates a strong foundation.
-//Founded in 2011, Bigbasket helped popularise online grocery shopping in India and became central to Tata Digital after the group's 2021 majority acquisition. It now serves over 25 million customers across 60-plus cities through more than 900 dark stores.
-//Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.
-//`,
-//  },
+
   {
     id: "indian-deep-tech-innotrek-uk",
     title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
