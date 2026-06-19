@@ -1902,7 +1902,25 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
   },
 
   // ===== YOUNG ACHIEVERS =====
+
   {
+    id: "sheetal-devi",
+    name: "Sheetal Devi",
+    title: "Armless Archer",
+    category: "Young Achievers",
+    categorySlug: "young-achievers",
+    image: "/images/personalities/sheetal-devi.jpg", // Placeholder
+    born: "2007, Kishtwar, J&K",
+    profession: "Para Archer",
+    knownFor: "World's first armless female archer",
+    quote: "Disability is not an obstacle, but a challenge to overcome.",
+    story: "Sheetal Devi's story is nothing short of a miracle. Born with Phocomelia (no arms), she learned to use her feet for daily activities.\n\nInspired by other para-athletes, she took up archery, holding the bow with her toes. Within just 11 months of training, she won two Gold medals at the Asian Para Games 2022.\n\nKey: She is the first and only international para-archery champion without upper limbs. Her focus and determination redefine the limits of human potential.",
+    achievements: ["2 Gold Medals, Asian Para Games 2022", "First armless female archer", "Arjuna Award recipient", "World No. 1 Para Archer", "Global inspiration"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-02-15",
+  },
+    {
     id: "praggnanandhaa",
     name: "R. Praggnanandhaa",
     title: "Chess Prodigy",
@@ -1924,23 +1942,6 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     authorName: "Inspire India Talks",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-02-15"
-  },
-  {
-    id: "sheetal-devi",
-    name: "Sheetal Devi",
-    title: "Armless Archer",
-    category: "Young Achievers",
-    categorySlug: "young-achievers",
-    image: "/images/personalities/sheetal-devi.jpg", // Placeholder
-    born: "2007, Kishtwar, J&K",
-    profession: "Para Archer",
-    knownFor: "World's first armless female archer",
-    quote: "Disability is not an obstacle, but a challenge to overcome.",
-    story: "Sheetal Devi's story is nothing short of a miracle. Born with Phocomelia (no arms), she learned to use her feet for daily activities.\n\nInspired by other para-athletes, she took up archery, holding the bow with her toes. Within just 11 months of training, she won two Gold medals at the Asian Para Games 2022.\n\nKey: She is the first and only international para-archery champion without upper limbs. Her focus and determination redefine the limits of human potential.",
-    achievements: ["2 Gold Medals, Asian Para Games 2022", "First armless female archer", "Arjuna Award recipient", "World No. 1 Para Archer", "Global inspiration"],
-    authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-02-15",
   },
   {
     id: "yashasvi-jaiswal",
