@@ -66,6 +66,32 @@ The AI race is young, but whoever earns the most trust may win.
 
 For now, Anthropic leads.`
   },
+
+    {
+    id: "non-metro-startup-story",
+    title: "India's Startup Boom Breaks Out of the Metros",
+    date: "19-06-2026",
+    category: "Startups",
+    image: "/images/buisness-insights/non-metro-startup-story.png",
+    excerpt:
+      "Nearly half of India's 207,000-plus recognised startups now emerge from Tier II and Tier III cities, signalling a profound democratisation of entrepreneurship.",
+    readTime: "3 min read",
+    content: `India's startup boom is no longer confined to its big-city hubs. The country now counts more than 207,000 recognised startups, 112 unicorns, and over $350 billion in collective value — and crucially, nearly half of these startups are emerging from Tier II and Tier III cities. \n\nThis geographic shift carries real significance. Founders building outside Bengaluru, Mumbai, and Delhi enjoy lower operating costs, closer proximity to underserved customers, and a sharper understanding of demand in markets that larger players have long overlooked. Instead of chasing trends from a distance, they are solving problems they live alongside every day. \n\nThe trend also speaks to the maturing of India's startup infrastructure. Digital public rails, policy support, seed programmes, and growing founder networks now make it possible to build a serious company almost anywhere in the country. For India, the implication is profound: entrepreneurship is becoming genuinely democratised. The next great Indian company may well be built not in a glass tower in a metro, but in a smaller city, closer to the real demand it serves.`,
+  },
+
+    {
+  id: "second-time-founder-prolearn",
+  title: "Ex-Vedantu Leader Raises Rs 30 Crore to Build an AI-Native Learning Platform",
+  date: "19-06-2026",
+  category: "Edtech",
+  image: "/images/buisness-insights/second-time-founder-prolearn.png",    
+  excerpt:
+    "Second-time founder Ravneet Singh has raised Rs 30 crore in pre-seed funding for ProLearn, an AI-native platform aiming to replace one-size-fits-all video lectures with adaptive, personalised learning.",
+  readTime: "2 min read",
+  body: "Experience counts in entrepreneurship, and ProLearn is a case in point. Former Vedantu technology leader Ravneet Singh has raised Rs 30 crore in a pre-seed round for his new venture, an AI-native learning platform aiming to reimagine online education.\n\nAt the heart of ProLearn is an AI-powered learning companion designed to deliver personalised, interactive, and adaptive learning experiences — moving beyond one-size-fits-all video lectures toward education that responds to each individual student. The fresh capital will fuel product and engineering development, strengthen the platform's AI and reasoning infrastructure, expand curriculum-aligned content, and support hiring ahead of its public launch.\n\nWhat makes the story compelling is the founder's pedigree. Having previously helped build technology at one of India's best-known edtech companies, Singh represents a growing wave of experienced operators taking another swing at hard problems with sharper insight and stronger networks. As AI reshapes how knowledge is delivered, seasoned founders like Singh are well placed to build the next generation of learning tools — and to do so with the wisdom of having been there before.",
+
+  },
+  
   {
     id: "bigbasket-hari-menon",
     title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
