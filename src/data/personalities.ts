@@ -728,23 +728,6 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     addedAt: "2026-06-18",
   },
 
-    {
-  id: "kiran-mazumdar-shaw",
-  name: "Kiran Mazumdar Shaw",
-  title: "Founder & Executive Chairperson, Biocon Limited",
-  category: "She Talks",
-  categorySlug: "she-talks",
-  image: "/images/personalities/kiran-mazumdar-shaw.jpeg",
-  born: "1953, Bangalore",
-  profession: "Entrepreneur & Biotechnologist",
-  knownFor: "Building Biocon into one of Asia's leading biopharmaceutical companies",
-  quote: "As you become more successful, the gender barrier disappears. The credibility challenges you have during your growing up years start disappearing when you start demonstrating success.",
-  story: "Kiran Mazumdar Shaw is one of India's most remarkable entrepreneurs — a woman who defied convention, confronted scepticism, and built a world-class biotechnology empire from the ground up. As the founder and Executive Chairperson of Biocon Limited, she transformed a small enzyme manufacturing startup into one of Asia's leading biopharmaceutical companies, rewriting the rules of Indian industry along the way.\n\n**Early Life and an Unlikely Beginning**\n\nBorn in Bangalore in 1953, Kiran Mazumdar Shaw grew up with an interest in science nurtured by her father, the head brewmaster at United Breweries. She pursued a degree in Zoology from Bangalore University, followed by a postgraduate qualification in Malting and Brewing from Ballarat College in Melbourne, Australia — making her one of the few women to qualify as a master brewer.\n\nHowever, despite her credentials, she struggled to find employment in the brewing industry, which remained largely unwilling to hire women in technical roles. This rejection, frustrating as it was, proved to be a turning point.\n\n**Building Biocon**\n\nIn 1978, at the age of 25, Kiran Mazumdar Shaw co-founded Biocon India in a rented garage with just ₹10,000 in seed capital. The company began by extracting enzymes from papaya for export to the Irish firm Biocon Biochemicals. The early years were far from easy — banks refused loans, vendors were reluctant to work with a young woman entrepreneur, and the concept of biotechnology was barely understood in India at the time.\n\nUndeterred, she persisted. Over the decades, Biocon expanded its portfolio into biopharmaceuticals, developing affordable biosimilar versions of insulin and cancer-fighting drugs that are today accessible to patients across emerging markets. In 2004, Biocon became the first Indian biotechnology company to list on the Indian stock exchanges, marking a watershed moment for the sector.\n\n**Recognition and Legacy**\n\nKiran Mazumdar Shaw's contributions have earned her widespread recognition. She has been featured on Forbes' list of the World's 100 Most Powerful Women multiple times and has received India's highest civilian honours, including the Padma Shri and the Padma Bhushan. She is also a vocal advocate for affordable healthcare, believing that life-saving medicines must not remain the privilege of the wealthy.\n\nBeyond business, she has invested significantly in cancer care through the Mazumdar Shaw Medical Center in Bangalore, making advanced oncology treatment accessible to patients from all economic backgrounds.\n\n**A Lasting Inspiration**\n\nKiran Mazumdar Shaw's story is not merely one of entrepreneurial success — it is a testament to resilience, vision, and the transformative power of believing in an idea when few others do. She turned rejection into resolve, and a garage startup into a global enterprise, proving that innovation has no gender, and that determination, above all, is the most powerful currency in business.",
-  achievements: ["Co-founded Biocon India in 1978 with ₹10,000 in a rented garage", "Developed affordable biosimilar insulin and cancer drugs for emerging markets", "Received the Padma Shri and Padma Bhushan", "Featured multiple times on Forbes' World's 100 Most Powerful Women", "Established the Mazumdar Shaw Medical Center for accessible cancer care"],
-  authorName: "Siya Aswal",
-  authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
-  addedAt: "2026-06-19",
-},
 
   // ===== TEACHERS & EDUCATORS =====
   {
