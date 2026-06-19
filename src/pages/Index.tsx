@@ -285,7 +285,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Categories — With Lucide Icons */}
+       {/* Categories — With Lucide Icons */}
         <section className="relative py-24 overflow-hidden">
           {/* Background Decorative Elements */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl -z-10 opacity-30">
@@ -308,49 +308,66 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categories.map((cat, i) => (
-                <motion.div
-                  key={cat.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05, duration: 0.6 }}
-                >
-                  <Link
-                    to={`/category/${cat.slug}`}
-                    className="group relative block h-full overflow-hidden rounded-3xl border border-white/5 bg-white/[0.03] p-8 transition-all duration-500 hover:border-primary/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-primary/10"
+              {categories.map((cat, i) => {
+                // Uses cat.image if you add one to your data; otherwise falls back
+                // to the image of the first personality in that category.
+                const catImage =
+                  (cat as any).image ||
+                  personalities.find(
+                    (p) => p.category === cat.name || p.category === cat.slug
+                  )?.image;
+
+                return (
+                  <motion.div
+                    key={cat.slug}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05, duration: 0.6 }}
                   >
-                    {/* Hover Background Glow */}
-                    <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition-all duration-700 group-hover:bg-primary/20 group-hover:scale-150" />
+                    <Link
+                      to={`/category/${cat.slug}`}
+                      className="group relative block h-80 overflow-hidden rounded-3xl border border-white/5 transition-all duration-500 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10"
+                    >
+                      {/* Full-bleed image */}
+                      {catImage ? (
+                        <img
+                          src={catImage}
+                          alt={cat.name}
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/5" />
+                      )}
 
-                    <div className="relative z-10">
-                      <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary ring-1 ring-primary/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:from-primary/30 group-hover:ring-primary/40 shadow-lg shadow-primary/5">
-                        {categoryIcons[cat.slug] || <Star className="h-8 w-8" />}
-                      </div>
+                      {/* Dark gradient so text stays readable */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/5 transition-all duration-500 group-hover:from-background group-hover:via-background/60" />
 
-                      <h3 className="font-serif text-2xl font-bold group-hover:text-primary transition-colors duration-300">
-                        {cat.name}
-                      </h3>
-                      <p className="mt-4 text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                        {cat.description}
-                      </p>
+                      {/* Content pinned to the bottom, over the image */}
+                      <div className="absolute inset-0 z-10 flex flex-col justify-end p-7">
+                        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20 text-primary ring-1 ring-primary/30 backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/30">
+                          {categoryIcons[cat.slug] || <Star className="h-7 w-7" />}
+                        </div>
 
-                      <div className="mt-8 flex items-center justify-between">
-                        <span className="text-primary text-sm font-semibold tracking-wide uppercase opacity-0 -translate-x-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
-                          View Collection
-                        </span>
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground group-hover:rotate-[-45deg]">
-                          <ArrowRight className="h-5 w-5" />
+                        <h3 className="font-serif text-2xl font-bold text-white drop-shadow-sm group-hover:text-primary transition-colors duration-300">
+                          {cat.name}
+                        </h3>
+                        <p className="mt-2 text-sm text-white/75 leading-relaxed line-clamp-2">
+                          {cat.description}
+                        </p>
+
+                        <div className="mt-4 flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                          View Collection <ArrowRight className="h-4 w-4" />
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
-
         {/* Quote */}
         <section className="container mx-auto px-4 py-20 text-center">
           <div className="max-w-3xl mx-auto">
