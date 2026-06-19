@@ -48,12 +48,23 @@ export const businessinsights: BusinessInsight[] = [
      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
     readTime: "4 min read",
     featured: true,
-    content: `Anthropic stunned the tech world this week, hitting a $965 billion valuation that pushed it past rival OpenAI—remarkable, given OpenAI's six-year head start and the fact that Anthropic was founded by its former employees. Strong numbers help explain the rise: revenue is projected to reach $10.9 billion this quarter, more than double the last, likely making it Anthropic's first profitable quarter.
-But the deeper driver is one word: trust.
+    content: `Anthropic stunned the tech world this week, hitting a $965 billion valuation that pushed it past rival OpenAI—remarkable, given OpenAI's six-year head start and the fact that Anthropic was founded by its former employees.
+
+Strong numbers help explain the rise: revenue is projected to reach $10.9 billion this quarter, more than double the last, likely making it Anthropic's first profitable quarter.
+
+However, the deeper driver is one word: trust.
+
 It started internally. In 2020, a group of OpenAI staff, including CEO Dario Amodei, left over the belief that AI needs safety and alignment, not just scaling. That reputation now draws top talent—AI luminary Andrej Karpathy recently joined.
+
 Public trust grew after a clash with the Pentagon, which cut ties over surveillance and weapons concerns. Rather than hurt Anthropic, the stand boosted its image as principled, contrasting with OpenAI's "sellout" reputation.
-Users trust it too—many find Claude more accurate, balanced, and willing to push back than ChatGPT. Investors, meanwhile, back Anthropic's clear enterprise-first path to profit, proven by tools like Claude Code.
-The AI race is young, but whoever earns the most trust may win. For now, Anthropic leads.`
+
+Users trust it too—many find Claude more accurate, balanced, and willing to push back than ChatGPT.
+
+Investors, meanwhile, back Anthropic's clear enterprise-first path to profit, proven by tools like Claude Code.
+
+The AI race is young, but whoever earns the most trust may win.
+
+For now, Anthropic leads.`
   },
   {
     id: "bigbasket-hari-menon",
