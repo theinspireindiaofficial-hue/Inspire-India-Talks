@@ -154,40 +154,45 @@ const BusinessInsights = () => {
       <AnimatePresence>
         {active && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-start md:items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto"
+            className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setActive(null)}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 24, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 24, scale: 0.98 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl bg-background border border-primary/20 rounded-2xl overflow-hidden my-8"
+            {/* py-20 clears the navbar; clicking the pad area closes the modal */}
+            <div
+              className="min-h-full px-4 py-20"
+              onClick={() => setActive(null)}
             >
-              <button
-                onClick={() => setActive(null)}
-                aria-label="Close article"
-                className="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+              <motion.div
+                initial={{ opacity: 0, y: 24, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 24, scale: 0.98 }}
+                transition={{ duration: 0.3 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative w-full max-w-4xl bg-background border border-primary/20 rounded-2xl overflow-hidden mx-auto"
               >
-                ✕
-              </button>
-              <Cover article={active} className="w-full h-72 md:h-96" />
-              <div className="p-8 md:p-10">
-                <Meta article={active} />
-                <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-                  {active.title}
-                </h2>
-                {active.content && (
-                  <p className="text-foreground/80 leading-relaxed whitespace-pre-line text-lg">
-                    {active.content}
-                  </p>
-                )}
-              </div>
-            </motion.div>
+                <button
+                  onClick={() => setActive(null)}
+                  aria-label="Close article"
+                  className="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+                >
+                  ✕
+                </button>
+                <Cover article={active} className="w-full h-72 md:h-96" />
+                <div className="p-8 md:p-10">
+                  <Meta article={active} />
+                  <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
+                    {active.title}
+                  </h2>
+                  {active.content && (
+                    <p className="text-foreground/80 leading-relaxed whitespace-pre-line text-lg">
+                      {active.content}
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
