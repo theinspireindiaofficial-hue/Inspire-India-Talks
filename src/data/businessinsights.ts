@@ -38,7 +38,23 @@ export const businessinsights: BusinessInsight[] = [
   // Leave a blank line to start a new paragraph. Write as much as you like here.`,
   // },
   // =================================================================================
-{
+  {
+    id: "jio-platforms-ipo",
+    title: "Jio Files for India's Largest-Ever IPO Valued at ₹13 Lakh Crore",
+    date: "22-06-2026",
+    category: "IPO & Markets",
+    image: "/images/buisness-insights/jio-ipo.png",
+    excerpt:
+      "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
+    readTime: "3 min read",
+    featured: true,
+    content: `Reliance Industries has officially set the stage for India's biggest stock market debut. At its 49th Annual General Meeting (AGM), chairman Mukesh Ambani confirmed that the board approved the draft papers for the Jio Platforms IPO, with the filing submitted to the Securities and Exchange Board of India (SEBI) on June 19.
+
+Jio Platforms, Reliance's telecom and digital arm with over 527 million subscribers and a 43% revenue market share, is structured as a 100% fresh issue — meaning all proceeds go to the company, not existing shareholders. Analysts at Elara Capital have valued the entity at ₹12–13 lakh crore, with an expected fundraise of ₹35,000–52,000 crore. Akash Ambani, appointed Managing Director in May, will lead the listed entity alongside siblings Isha and Anant, marking a generational transition at Reliance.
+
+With the SEBI review underway, the public issue is expected later in 2026. The Jio IPO is widely seen as both a market milestone and a defining chapter in India's digital economy story.`,
+  },
+  {
     id: "fable-5-ai",
     title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
     date: "18-06-2026",
@@ -47,7 +63,7 @@ export const businessinsights: BusinessInsight[] = [
     excerpt:
      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
     readTime: "4 min read",
-    featured: true,
+    featured: false,
     content: `Anthropic stunned the tech world this week, hitting a $965 billion valuation that pushed it past rival OpenAI—remarkable, given OpenAI's six-year head start and the fact that Anthropic was founded by its former employees.
 
 Strong numbers help explain the rise: revenue is projected to reach $10.9 billion this quarter, more than double the last, likely making it Anthropic's first profitable quarter.

@@ -1,330 +1,486 @@
 import { useState, useRef } from "react";
 import Layout from "@/components/Layout";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Helmet } from "react-helmet-async";
-import {
-    Youtube,
-    Target,
-    Mic2,
-    Share2,
-    ArrowRight,
-    CheckCircle2,
+import { 
+  Play, 
+  Calendar, 
+  User, 
+  ArrowRight, 
+  Sparkles, 
+  Send, 
+  CheckCircle2, 
+  AlertCircle, 
+  ExternalLink,
+  MessageSquare,
+  Building2,
+  TrendingUp
 } from "lucide-react";
 
-const WEB3FORMS_KEY = "d77dc1ef-a855-4e35-9f65-f97285ea5df2";
+interface Talk {
+  id: string;
+  founderName: string;
+  companyName: string;
+  designation: string;
+  topic: string;
+  date: string;
+  duration: string;
+  youtubeId: string;
+  excerpt: string;
+  keyInsights: string[];
+}
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
-    }),
-};
-
-const features = [
-    {
-        icon: <Youtube className="h-6 w-6" />,
-        title: "Long-Form YouTube Feature",
-        desc: "A dedicated deep-dive episode on our growing YouTube channel, crafted for lasting impact.",
-    },
-    {
-        icon: <Target className="h-6 w-6" />,
-        title: "High-Intent Audience",
-        desc: "Our viewers are students, aspiring founders, and professionals actively seeking inspiration.",
-    },
-    {
-        icon: <Mic2 className="h-6 w-6" />,
-        title: "Premium Storytelling Format",
-        desc: "Thoughtfully produced conversations — not interviews. Stories told with depth and dignity.",
-    },
-    {
-        icon: <Share2 className="h-6 w-6" />,
-        title: "Cross-Platform Visibility",
-        desc: "Your story reaches audiences across YouTube, Instagram, LinkedIn, and our website.",
-    },
+const featuredTalks: Talk[] = [
+  {
+    id: "nithin-kamath-zerodha",
+    founderName: "Nithin Kamath",
+    companyName: "Zerodha",
+    designation: "Co-Founder & CEO",
+    topic: "Bootstrapping India's Largest Brokerage & Giving Back",
+    date: "14-05-2026",
+    duration: "42 min",
+    youtubeId: "dQw4w9WgXcQ", // Placeholder or relevant video id
+    excerpt: "Nithin shares why they chose not to take venture capital, how they built Zerodha's core tech, and the philosophy behind Rainmatter's environmental funding.",
+    keyInsights: [
+      "Bootstrapping forces you to focus on product and customer satisfaction over vanity metrics.",
+      "Building a trust-based culture with zero marketing spend creates sustainable viral growth.",
+      "Success in fintech requires long-term patience and strict adherence to regulatory rules."
+    ]
+  },
+  {
+    id: "kunal-shah-cred",
+    founderName: "Kunal Shah",
+    companyName: "CRED",
+    designation: "Founder & CEO",
+    topic: "Delta 4 Theory & Building for India's High-Trust Users",
+    date: "02-04-2026",
+    duration: "38 min",
+    youtubeId: "dQw4w9WgXcQ",
+    excerpt: "Kunal Shah dives into the Delta 4 framework, consumer behavior shifts in India, and how trust can be productized to build premium networks.",
+    keyInsights: [
+      "The Delta 4 efficiency score determines if consumers will permanently shift to a new product.",
+      "High-trust user cohorts exhibit significantly better monetization and loyalty profiles.",
+      "Wealth creation is directly correlated with curiosity and the speed of decision-making."
+    ]
+  },
+  {
+    id: "sridhar-vembu-zoho",
+    founderName: "Sridhar Vembu",
+    companyName: "Zoho Corporation",
+    designation: "Founder & CEO",
+    topic: "Rural Revival & Building Global Software from Indian Villages",
+    date: "20-02-2026",
+    duration: "45 min",
+    youtubeId: "dQw4w9WgXcQ",
+    excerpt: "Sridhar shares Zoho's unique rural-office strategy, building world-class SaaS, and investing heavily in local capital and talent development.",
+    keyInsights: [
+      "Talent is globally distributed, but opportunities are heavily concentrated. Local offices bridge this gap.",
+      "True self-reliance (Atmanirbhar) requires developing fundamental engineering and toolmaking skills.",
+      "SaaS built with low customer-acquisition costs provides unmatched financial stability during downturns."
+    ]
+  }
 ];
 
-
+const WEB3FORMS_KEY = "4cde47b8-4bc1-40b8-8166-72179e1d74e9";
 
 const FoundersTalk = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const { toast } = useToast();
-    const formRef = useRef<HTMLDivElement>(null);
+  const [activeTalk, setActiveTalk] = useState<Talk | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [consentChecked, setConsentChecked] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  
+  const formRef = useRef<HTMLFormElement>(null);
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const { toast } = useToast();
 
-    const scrollToForm = () => {
-        formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+  const validateForm = (formData: FormData): boolean => {
+    const newErrors: Record<string, string> = {};
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const company = formData.get("company") as string;
+    const role = formData.get("role") as string;
+    const story = formData.get("story") as string;
+    const honeypot = formData.get("website") as string;
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+    if (honeypot) {
+      newErrors.honeypot = "Spam detected";
+      setErrors(newErrors);
+      return false;
+    }
 
-        const formData = new FormData(e.currentTarget);
-        formData.append("access_key", WEB3FORMS_KEY);
-        formData.append("subject", "Founders Talk Application — Inspire India Talks");
-        formData.append("from_name", "Founders Talk Application");
+    if (!name?.trim()) newErrors.name = "Full name is required";
+    if (!email?.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    if (!company?.trim()) newErrors.company = "Company/Startup name is required";
+    if (!role?.trim()) newErrors.role = "Designation/Role is required";
+    if (!story?.trim() || story.trim().length < 50) {
+      newErrors.story = "Please share a brief description of your startup and journey (min 50 characters)";
+    }
+    if (!consentChecked) newErrors.consent = "Consent is required";
 
-        try {
-            const res = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData,
-            });
-            const data = await res.json();
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-            if (data.success) {
-                toast({
-                    title: "Application Received ✅",
-                    description: "Thank you. Our team will review your application and get back to you.",
-                });
-                (e.target as HTMLFormElement).reset();
-            } else {
-                toast({
-                    title: "Error",
-                    description: "Something went wrong. Please try again.",
-                    variant: "destructive",
-                });
-            }
-        } catch {
-            toast({
-                title: "Error",
-                description: "Network error. Please try again.",
-                variant: "destructive",
-            });
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
 
-    return (
-        <Layout>
-            <Helmet>
-                <title>Founders Talk — Inspire India Talks</title>
-                <meta
-                    name="description"
-                    content="Apply to be featured on Founders Talk — long-form conversations with builders, operators, and visionaries shaping India's future."
-                />
-                <meta property="og:title" content="Founders Talk — Inspire India Talks" />
-                <meta property="og:description" content="Long-form conversations with builders, operators, and visionaries shaping India's future. Apply to be featured." />
-                <meta property="og:image" content="https://inspireindiatalks.com/images/founders-talk-og.png" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://inspireindiatalks.com/founders-talk" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Founders Talk — Inspire India Talks" />
-                <meta name="twitter:description" content="Long-form conversations with builders, operators, and visionaries shaping India's future." />
-                <meta name="twitter:image" content="https://inspireindiatalks.com/images/founders-talk-og.png" />
-            </Helmet>
+    if (consentChecked) {
+      formData.set("consent", "accepted");
+    } else {
+      formData.delete("consent");
+    }
 
-            {/* ─── HERO ─── */}
-            <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-                {/* Subtle background mesh */}
-                <div className="absolute inset-0 gradient-mesh opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+    if (!validateForm(formData)) {
+      toast({
+        title: "Validation Error",
+        description: "Please fix the errors in the form.",
+        variant: "destructive",
+      });
+      return;
+    }
 
-                <div className="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-                    <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={{
-                            visible: { transition: { staggerChildren: 0.15 } },
-                        }}
-                    >
-                        <motion.div variants={fadeUp} custom={0} className="flex items-center justify-center gap-3 mb-8">
-                            <div className="h-px w-10 bg-primary/60" />
-                            <span className="text-primary/80 font-medium tracking-[0.25em] uppercase text-xs">
-                                Apply to be Featured
-                            </span>
-                            <div className="h-px w-10 bg-primary/60" />
-                        </motion.div>
+    setIsSubmitting(true);
 
-                        <motion.h1
-                            variants={fadeUp}
-                            custom={1}
-                            className="font-serif text-5xl md:text-7xl font-bold tracking-tight"
-                        >
-                            Founders{" "}
-                            <span className="text-primary">Talk</span>
-                        </motion.h1>
+    try {
+      formData.append("access_key", WEB3FORMS_KEY);
+      formData.append("subject", "Founders Talk Nominee — Inspire India Talks");
+      formData.append("from_name", "Inspire India Talks — Founders Talk");
 
-                        <motion.p
-                            variants={fadeUp}
-                            custom={2}
-                            className="text-foreground/70 mt-6 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
-                        >
-                            We feature founders building meaningful companies and shaping India's future.
-                        </motion.p>
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
 
-                        <motion.p
-                            variants={fadeUp}
-                            custom={3}
-                            className="text-muted-foreground mt-3 text-base md:text-lg"
-                        >
-                            Long-form conversations with builders, operators, and visionaries.
-                        </motion.p>
+      if (data.success) {
+        setShowSuccess(true);
+        formRef.current?.reset();
+        setConsentChecked(false);
+        setErrors({});
+        toast({
+          title: "Application Submitted! 🚀",
+          description: "We'll review your application and get in touch with you shortly.",
+        });
+        setTimeout(() => setShowSuccess(false), 5000);
+      } else {
+        toast({
+          title: "Submission Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Nomination submission error:", error);
+      toast({
+        title: "Submission Error",
+        description: "Something went wrong. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-                        <motion.div variants={fadeUp} custom={4} className="mt-10">
-                            <Button
-                                onClick={scrollToForm}
-                                size="lg"
-                                className="rounded-full px-10 py-6 text-base font-medium tracking-wide group"
-                            >
-                                Apply for Feature
-                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </Button>
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </section>
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative py-24 overflow-hidden gradient-mesh">
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-8 bg-primary" />
+              <span className="text-primary font-medium tracking-[0.2em] uppercase text-xs">Founders Talk</span>
+            </div>
+            <h1 className="font-serif text-4xl md:text-6xl font-bold glow-text mb-6">
+              Insights from India's <span className="text-primary">Visionary Builders</span>
+            </h1>
+            <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
+              Long-form conversations and deep-dives with builders, operators, and visionaries shaping India's future. Learn from their early struggles, scaling strategies, and foundational wisdom.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-            {/* ─── WHY GET FEATURED ─── */}
-            <section className="py-24">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold">
-                            Why Get <span className="text-primary">Featured</span>
-                        </h2>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {features.map((f, i) => (
-                            <motion.div
-                                key={i}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                variants={fadeUp}
-                                custom={i}
-                                className="glass-card p-8 transition-all duration-300 hover:border-primary/20 hover:-translate-y-1"
-                            >
-                                <div className="text-primary mb-4">{f.icon}</div>
-                                <h3 className="font-serif text-lg font-semibold mb-2">{f.title}</h3>
-                                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── SELECTIVE NOTICE ─── */}
-            <section className="py-12">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center"
+      {/* Main Content: Talks & Application */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          {/* Talks list */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="flex items-center gap-3 mb-4">
+              <Sparkles className="h-5 w-5 text-primary" />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">Featured Conversations</h2>
+            </div>
+            
+            <div className="grid gap-6">
+              {featuredTalks.map((talk) => (
+                <motion.article
+                  key={talk.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  onClick={() => setActiveTalk(talk)}
+                  className="group cursor-pointer bg-black/30 border border-primary/20 hover:border-primary/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 transition-all duration-300"
                 >
-                    <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-border/50 bg-card/40 backdrop-blur-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                        <p className="text-sm text-muted-foreground tracking-wide">
-                            We feature a limited number of founders each month.
-                        </p>
+                  <div className="relative aspect-video md:w-56 shrink-0 rounded-xl overflow-hidden bg-gradient-to-br from-primary/30 to-black flex items-center justify-center border border-white/5">
+                    <span className="font-serif text-lg font-bold text-foreground/75 px-4 text-center">
+                      {talk.founderName}
+                    </span>
+                    <div className="absolute inset-0 bg-black/45 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                      <div className="h-12 w-12 rounded-full bg-primary text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="h-5 w-5 fill-black ml-0.5" />
+                      </div>
                     </div>
-                </motion.div>
-            </section>
+                  </div>
+                  
+                  <div className="flex flex-col justify-between flex-1">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2 mb-2 text-xs text-muted-foreground uppercase tracking-widest">
+                        <span className="text-primary font-medium flex items-center gap-1">
+                          <Building2 className="h-3 w-3" /> {talk.companyName}
+                        </span>
+                        <span className="h-1 w-1 rounded-full bg-foreground/30" />
+                        <span className="flex items-center gap-1">
+                          <User className="h-3 w-3" /> {talk.designation}
+                        </span>
+                      </div>
+                      <h3 className="font-serif text-xl md:text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                        {talk.topic}
+                      </h3>
+                      <p className="text-sm text-foreground/80 leading-relaxed line-clamp-3">
+                        {talk.excerpt}
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/10 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3.5 w-3.5" /> {talk.date}
+                      </span>
+                      <span className="text-primary font-medium group-hover:underline flex items-center gap-1">
+                        Watch Episode <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
 
-            {/* ─── APPLICATION FORM ─── */}
-            <section ref={formRef} className="py-24">
-                <div className="container mx-auto px-4 max-w-3xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-14"
-                    >
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold">
-                            Application
-                        </h2>
-                        <p className="text-muted-foreground mt-3 text-base max-w-lg mx-auto">
-                            Tell us about yourself and your startup. We review every application personally.
-                        </p>
-                    </motion.div>
-
-                    <motion.form
-                        onSubmit={handleSubmit}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="glass-card p-8 md:p-12 space-y-8"
-                    >
-                        <div className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">Full Name <span className="text-primary">*</span></label>
-                                    <Input name="full_name" required placeholder="Your full name" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">Startup Name <span className="text-primary">*</span></label>
-                                    <Input name="startup_name" required placeholder="Your startup name" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">Email <span className="text-primary">*</span></label>
-                                    <Input name="email" type="email" required placeholder="you@startup.com" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">Phone Number</label>
-                                    <Input name="phone" type="tel" placeholder="+91 9876543210" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">LinkedIn Profile <span className="text-primary">*</span></label>
-                                    <Input name="linkedin" required placeholder="linkedin.com/in/yourprofile" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                                <div>
-                                    <label className="text-sm font-medium mb-1.5 block text-foreground/80">Website URL</label>
-                                    <Input name="website" placeholder="yourstartup.com" className="bg-background/50 border-border/40 focus:border-primary/50" />
-                                </div>
-                            </div>
-                            <div>
-                                <label className="text-sm font-medium mb-1.5 block text-foreground/80">What makes your story unique? (Briefly) <span className="text-primary">*</span></label>
-                                <Textarea
-                                    name="story"
-                                    required
-                                    rows={3}
-                                    placeholder="Your elevator pitch, a major challenge overcome, or why our audience should hear from you..."
-                                    className="bg-background/50 border-border/40 focus:border-primary/50 resize-none"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="pt-2">
-                            <Button
-                                type="submit"
-                                disabled={isSubmitting}
-                                size="lg"
-                                className="w-full rounded-xl py-6 text-base font-medium tracking-wide group"
-                            >
-                                {isSubmitting ? (
-                                    "Submitting..."
-                                ) : (
-                                    <>
-                                        <CheckCircle2 className="h-4 w-4 mr-2" />
-                                        Submit Application
-                                    </>
-                                )}
-                            </Button>
-                            <p className="text-center text-xs text-muted-foreground mt-4">
-                                Takes less than a minute. We'll reach out if there's a fit.
-                            </p>
-                        </div>
-                    </motion.form>
+          {/* Form nomination sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-28 space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="glass-card p-6 md:p-8"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <MessageSquare className="h-6 w-6 text-primary" />
+                  <h3 className="font-serif text-2xl font-bold text-foreground">Apply to be Featured</h3>
                 </div>
-            </section>
-        </Layout>
-    );
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                  Are you a founder, builder, or scaling leader building a business in India? Apply now to share your journey on the Founders Talk podcast.
+                </p>
+
+                {showSuccess ? (
+                  <div className="text-center py-8">
+                    <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-3" />
+                    <h4 className="font-serif text-xl font-bold text-foreground mb-1">Thank You!</h4>
+                    <p className="text-xs text-muted-foreground mb-4">
+                      Your application has been received successfully.
+                    </p>
+                    <Button
+                      onClick={() => setShowSuccess(false)}
+                      variant="outline"
+                      size="sm"
+                      className="rounded-xl"
+                    >
+                      Nominate Someone Else
+                    </Button>
+                  </div>
+                ) : (
+                  <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                    {/* Honeypot */}
+                    <input
+                      ref={honeypotRef}
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      className="absolute opacity-0 pointer-events-none"
+                      aria-hidden="true"
+                    />
+
+                    <div>
+                      <label className="text-xs font-medium mb-1 block text-foreground">Full Name</label>
+                      <Input
+                        name="name"
+                        required
+                        placeholder="Your full name"
+                        className={`bg-background/50 border-border/50 ${errors.name ? "border-destructive" : ""}`}
+                      />
+                      {errors.name && <p className="text-[10px] text-destructive mt-0.5">{errors.name}</p>}
+                    </div>
+
+                    <div>
+                      <label className="text-xs font-medium mb-1 block text-foreground">Email</label>
+                      <Input
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="you@company.com"
+                        className={`bg-background/50 border-border/50 ${errors.email ? "border-destructive" : ""}`}
+                      />
+                      {errors.email && <p className="text-[10px] text-destructive mt-0.5">{errors.email}</p>}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="text-xs font-medium mb-1 block text-foreground">Company Name</label>
+                        <Input
+                          name="company"
+                          required
+                          placeholder="e.g., Zerodha"
+                          className={`bg-background/50 border-border/50 ${errors.company ? "border-destructive" : ""}`}
+                        />
+                        {errors.company && <p className="text-[10px] text-destructive mt-0.5">{errors.company}</p>}
+                      </div>
+                      <div>
+                        <label className="text-xs font-medium mb-1 block text-foreground">Designation/Role</label>
+                        <Input
+                          name="role"
+                          required
+                          placeholder="e.g., Co-Founder"
+                          className={`bg-background/50 border-border/50 ${errors.role ? "border-destructive" : ""}`}
+                        />
+                        {errors.role && <p className="text-[10px] text-destructive mt-0.5">{errors.role}</p>}
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="text-xs font-medium mb-1 block text-foreground">Your Startup Journey</label>
+                      <Textarea
+                        name="story"
+                        required
+                        rows={4}
+                        placeholder="Briefly describe what you are building and some notable milestones..."
+                        className={`bg-background/50 border-border/50 resize-none ${errors.story ? "border-destructive" : ""}`}
+                      />
+                      {errors.story && <p className="text-[10px] text-destructive mt-0.5">{errors.story}</p>}
+                    </div>
+
+                    <div className="flex items-start gap-2 pt-2">
+                      <Checkbox
+                        id="consent"
+                        checked={consentChecked}
+                        onCheckedChange={(checked) => setConsentChecked(!!checked)}
+                        className={`mt-0.5 ${errors.consent ? "border-destructive" : ""}`}
+                      />
+                      <label htmlFor="consent" className="text-xs text-foreground cursor-pointer select-none leading-normal">
+                        I consent to the Inspire India Talks team contacting me regarding this nomination.
+                      </label>
+                    </div>
+                    {errors.consent && <p className="text-[10px] text-destructive">{errors.consent}</p>}
+
+                    <Button
+                      type="submit"
+                      className="w-full rounded-xl py-5 text-sm font-medium mt-2"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : <>Submit Nomination <Send className="h-3.5 w-3.5 ml-2" /></>}
+                    </Button>
+                  </form>
+                )}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Episode Detail Overlay / Modal */}
+      <AnimatePresence>
+        {activeTalk && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveTalk(null)}
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm overflow-y-auto px-4 py-20 flex items-center justify-center"
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-3xl bg-background border border-primary/20 rounded-2xl overflow-hidden"
+            >
+              <button
+                onClick={() => setActiveTalk(null)}
+                aria-label="Close details"
+                className="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+              >
+                ✕
+              </button>
+
+              <div className="aspect-video w-full bg-black relative">
+                {/* Embed YouTube video player */}
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${activeTalk.youtubeId}`}
+                  title={`${activeTalk.founderName} - Founders Talk`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
+              <div className="p-6 md:p-8">
+                <div className="flex flex-wrap items-center gap-2 mb-3 text-xs text-muted-foreground uppercase tracking-widest">
+                  <span className="text-primary font-medium">{activeTalk.companyName}</span>
+                  <span className="h-1 w-1 rounded-full bg-foreground/30" />
+                  <span>{activeTalk.designation}</span>
+                  <span className="h-1 w-1 rounded-full bg-foreground/30" />
+                  <span>{activeTalk.duration}</span>
+                </div>
+                
+                <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                  {activeTalk.founderName}: {activeTalk.topic}
+                </h2>
+                
+                <p className="text-sm text-foreground/80 leading-relaxed mb-6">
+                  {activeTalk.excerpt}
+                </p>
+
+                <div className="p-5 bg-primary/5 rounded-xl border border-primary/10">
+                  <h4 className="font-serif text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+                    <TrendingUp className="h-4.5 w-4.5 text-primary" /> Key Takeaways & Insights
+                  </h4>
+                  <ul className="space-y-3">
+                    {activeTalk.keyInsights.map((insight, idx) => (
+                      <li key={idx} className="text-sm text-foreground/90 flex gap-2">
+                        <span className="text-primary font-bold">{idx + 1}.</span>
+                        <span>{insight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Layout>
+  );
 };
 
 export default FoundersTalk;
