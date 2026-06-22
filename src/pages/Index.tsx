@@ -196,12 +196,6 @@ const Index = () => {
               <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
                 Live sessions, speaker events, and fireside chats with India's most inspiring personalities. Stay tuned for announcements.
               </p>
-              <Link
-                to="/host-event"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium mt-8 hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20"
-              >
-                Host an Inspire Talk <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </section>
@@ -379,26 +373,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="glass-card p-10 md:p-16 text-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-              <div className="relative z-10">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Want to Inspire Your Audience?</h2>
-                <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                  Book our speakers for your next event — motivational talks featuring India's most inspiring stories.
-                </p>
-                <Link
-                  to="/host-event"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-4 rounded-xl font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20"
-                >
-                  Host a Talk <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </Layout>
     </div>
   );
