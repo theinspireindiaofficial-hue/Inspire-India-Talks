@@ -451,7 +451,7 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     title: "Founder & CEO, Paytm (One97 Communications)",
     category: "Entrepreneurs & Founders",
     categorySlug: "entrepreneurs",
-    image: "/images/personalities/vijay-shekhar-sharma.jpg",
+    image: "/images/personalities/vijay-shekhar-sharma.jpeg",
     born: "1978, Aligarh, Uttar Pradesh",
     profession: "Fintech Entrepreneur",
     knownFor: "Founding Paytm and digitising India's payment ecosystem",
