@@ -131,7 +131,7 @@ const Index = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden aspect-video glass-card group">
                   <video
-                    src="/images/events/0306(1).mp4"
+                    src="/images/events/InspireIndiaTalks - Website - Vid.mp4"
                     autoPlay
                     muted
                     loop
