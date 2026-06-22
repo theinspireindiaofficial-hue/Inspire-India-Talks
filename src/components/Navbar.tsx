@@ -76,7 +76,6 @@ const Navbar = () => {
           </div>
 
           {[
-            { path: "/about", label: "About" },
             { path: "/events", label: "Events" },
           ].map(({ path, label }) => (
             <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
@@ -119,7 +118,6 @@ const Navbar = () => {
           </div>
 
           {[
-            { path: "/host-event", label: "Host a Talk" },
             { path: "/contact", label: "Contact" },
           ].map(({ path, label }) => (
             <Link key={path} to={path} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(path) ? "text-primary" : "text-foreground/70"}`}>
@@ -150,7 +148,6 @@ const Navbar = () => {
                   {cat.icon} {cat.name}
                 </Link>
               ))}
-              <Link to="/about" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>About</Link>
               <Link to="/events" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Events</Link>
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3">Archive</div>
               {archivedCampaigns.map(c => (
@@ -159,7 +156,6 @@ const Navbar = () => {
                   <span className="text-[10px] font-medium text-muted-foreground border border-border/60 rounded-full px-2 py-0.5">{c.note}</span>
                 </Link>
               ))}
-              <Link to="/host-event" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Host a Talk</Link>
               <Link to="/contact" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Contact</Link>
             </div>
           </motion.div>
