@@ -230,29 +230,7 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-02-24"
   },
-  {
-    id: "vaishali-patil",
-    name: "Vaishali Patil",
-    title: "Reviver of India’s Ancient Supergrain",
-    category: "Entrepreneurs & Founders",
-    categorySlug: "entrepreneurs",
-    image: "/images/personalities/Vaishali-patil.webp",
-    born: "Jalgaon, Maharashtra, India",
-    profession: "Agricultural Entrepreneur & Seed Innovator",
-    knownFor: "Reviving Khapli (Emmer) wheat and scaling its cultivation across Maharashtra",
-    quote: "Sometimes the future of health lies in the wisdom of our past.",
-    story: "Vaishali Patil’s journey into agricultural entrepreneurship began not in a boardroom, but beside her mother’s hospital bed. When her mother was diagnosed with leukemia, Vaishali began searching for traditional, low-glycemic and nutrient-rich foods that could support better health. During this search, she rediscovered Khapli (Emmer) wheat — an ancient Indian grain that had nearly disappeared from farms after the Green Revolution prioritized high-yield hybrid varieties.\n\nWhat she uncovered was more than just a grain; it was a forgotten piece of agricultural heritage. Khapli wheat, known for its low gluten content and high nutritional value, had once been a staple in Indian households. However, modern farming trends had pushed it to the margins.\n\nDetermined to bring it back, Vaishali began cultivation on just two acres of land. Despite initial skepticism from farmers who were accustomed to hybrid seeds, she persisted — educating communities about the health benefits and economic viability of the grain.\n\nKey: Her efforts sparked a quiet revolution. Today, Khapli wheat is grown on over 1,500 acres, and Vaishali holds one of the first Seed Dealer Licenses for this variety, ensuring certified distribution to farmers. Her work has empowered thousands of cultivators to grow what she calls 'medicine as food,' reconnecting agriculture with nutrition and sustainability.Vaishali’s story is not just about reviving a crop — it is about reviving confidence in indigenous knowledge, empowering rural farmers, and proving that tradition and entrepreneurship can grow side by side. Through resilience and purpose, she **transformed** a personal struggle into a statewide agricultural movement.",
-    achievements: [
-      "Revived large-scale cultivation of Khapli (Emmer) wheat in Maharashtra",
-      "Scaled cultivation from 2 acres to over 1,500 acres",
-      "Holds one of the first Seed Dealer Licenses for Khapli wheat",
-      "Empowered thousands of farmers to adopt nutrient-rich traditional crops",
-      "Promoted the concept of 'medicine as food' through sustainable farming"
-    ],
-    authorName: "Inspire India Talks",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
-    addedAt: "2026-02-24"
-  },
+
   {
     id: "chandan-singh",
     name: "Chandan Singh",
@@ -275,6 +253,29 @@ export const personalities: Personality[] = [
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-17",
+  },
+    {
+    id: "vaishali-patil",
+    name: "Vaishali Patil",
+    title: "Reviver of India’s Ancient Supergrain",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/Vaishali-patil.webp",
+    born: "Jalgaon, Maharashtra, India",
+    profession: "Agricultural Entrepreneur & Seed Innovator",
+    knownFor: "Reviving Khapli (Emmer) wheat and scaling its cultivation across Maharashtra",
+    quote: "Sometimes the future of health lies in the wisdom of our past.",
+    story: "Vaishali Patil’s journey into agricultural entrepreneurship began not in a boardroom, but beside her mother’s hospital bed. When her mother was diagnosed with leukemia, Vaishali began searching for traditional, low-glycemic and nutrient-rich foods that could support better health. During this search, she rediscovered Khapli (Emmer) wheat — an ancient Indian grain that had nearly disappeared from farms after the Green Revolution prioritized high-yield hybrid varieties.\n\nWhat she uncovered was more than just a grain; it was a forgotten piece of agricultural heritage. Khapli wheat, known for its low gluten content and high nutritional value, had once been a staple in Indian households. However, modern farming trends had pushed it to the margins.\n\nDetermined to bring it back, Vaishali began cultivation on just two acres of land. Despite initial skepticism from farmers who were accustomed to hybrid seeds, she persisted — educating communities about the health benefits and economic viability of the grain.\n\nKey: Her efforts sparked a quiet revolution. Today, Khapli wheat is grown on over 1,500 acres, and Vaishali holds one of the first Seed Dealer Licenses for this variety, ensuring certified distribution to farmers. Her work has empowered thousands of cultivators to grow what she calls 'medicine as food,' reconnecting agriculture with nutrition and sustainability.Vaishali’s story is not just about reviving a crop — it is about reviving confidence in indigenous knowledge, empowering rural farmers, and proving that tradition and entrepreneurship can grow side by side. Through resilience and purpose, she **transformed** a personal struggle into a statewide agricultural movement.",
+    achievements: [
+      "Revived large-scale cultivation of Khapli (Emmer) wheat in Maharashtra",
+      "Scaled cultivation from 2 acres to over 1,500 acres",
+      "Holds one of the first Seed Dealer Licenses for Khapli wheat",
+      "Empowered thousands of farmers to adopt nutrient-rich traditional crops",
+      "Promoted the concept of 'medicine as food' through sustainable farming"
+    ],
+    authorName: "Inspire India Talks",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-02-24"
   },
   {
     id: "anjali-sardana",
@@ -393,6 +394,57 @@ export const personalities: Personality[] = [
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-04-16",
   },
+    {
+    id: "j-r-d-tata",
+    name: "J.R.D. Tata",
+    title: "The Visionary Who Built With Conscience",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/j-r-d-tata.jpeg",
+    born: "29 July 1904, Paris, France",
+    profession: "Industrialist & Aviation Pioneer",
+    knownFor: "Founding India's first airline and transforming Tata Group into a global business house",
+    quote: "To lead men, you have to lead them with affection.",
+    story: `J.R.D. Tata was an industrialist, institution builder, and visionary leader who believed that business should serve the larger goal of nation-building. As India's first licensed pilot in 1929, he pioneered the country's civil aviation sector and founded Tata Airlines in 1932, which later evolved into Air India. At the age of 34, he became Chairman of Tata Sons and led the Tata Group for more than five decades.
+
+His greatest strength was empowering people. J.R.D. believed in identifying exceptional talent, giving individuals autonomy, and trusting them to lead. Leaders such as Russi Mody, Sumant Moolgaokar, and Darbari Seth flourished under his mentorship. As he famously said, "To lead men, you have to lead them with affection."
+
+Under his leadership, the Tata Group expanded from 14 companies in 1938 to more than 95 companies by 1991, while its assets grew from approximately ₹62 crore to over ₹10,000 crore.
+
+A true pioneer, J.R.D. personally flew the first Tata Airlines mail flight from Karachi to Bombay in 1932. He also laid the foundation for several landmark enterprises, including Tata Motors (TELCO), Tata Chemicals, Voltas, Titan, and Tata Consultancy Services (TCS), which would later become one of the world's leading IT companies.
+
+J.R.D. firmly believed that prosperity and social welfare were inseparable. Long before such practices became legal requirements, he championed employee welfare through initiatives such as the eight-hour workday, paid leave, and provident funds. He also supported institutions of national importance, including the Tata Memorial Hospital and the Tata Institute of Fundamental Research. A strong advocate of family planning and sustainable development, he viewed long-term national progress as a responsibility of business.
+
+For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue a purpose greater than profit, hire talented people and trust them, lead with integrity, embrace innovation, strive relentlessly for excellence, and always contribute to the nation. Awarded the Bharat Ratna in 1992, J.R.D. Tata remains a symbol of enterprise, integrity, and patriotism. His legacy demonstrates that truly great businesses are built not only to create wealth but also to serve society and leave a lasting positive impact on the world.`,
+    achievements: [
+      "Became India's first licensed pilot and pioneered civil aviation in the country",
+      "Founded Tata Airlines, which later became Air India",
+      "Expanded the Tata Group from 14 companies to over 90 enterprises across diverse industries",
+      "Led Indian industry with a vision of excellence, innovation, and nation-building for over five decades.",
+      "Received the prestigious Bharat Ratna in 1992 for his outstanding contribution to India"
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-06-17",
+  },
+
+  {
+  id: "kiran-mazumdar-shaw",
+  name: "Kiran Mazumdar Shaw",
+  title: "Founder & Executive Chairperson, Biocon Limited",
+  category: "Entrepreneurs & Founders",
+  categorySlug: "entrepreneurs",
+  image: "/images/personalities/kiran-mazumdar-shaw.jpeg",
+  born: "1953, Bangalore",
+  profession: "Entrepreneur & Biotechnologist",
+  knownFor: "Building Biocon into one of Asia's leading biopharmaceutical companies",
+  quote: "As you become more successful, the gender barrier disappears. The credibility challenges you have during your growing up years start disappearing when you start demonstrating success.",
+  story: "Kiran Mazumdar Shaw is one of India's most remarkable entrepreneurs — a woman who defied convention, confronted scepticism, and built a world-class biotechnology empire from the ground up. As the founder and Executive Chairperson of Biocon Limited, she transformed a small enzyme manufacturing startup into one of Asia's leading biopharmaceutical companies, rewriting the rules of Indian industry along the way.\n\n**Early Life and an Unlikely Beginning**\n\nBorn in Bangalore in 1953, Kiran Mazumdar Shaw grew up with an interest in science nurtured by her father, the head brewmaster at United Breweries. She pursued a degree in Zoology from Bangalore University, followed by a postgraduate qualification in Malting and Brewing from Ballarat College in Melbourne, Australia — making her one of the few women to qualify as a master brewer.\n\nHowever, despite her credentials, she struggled to find employment in the brewing industry, which remained largely unwilling to hire women in technical roles. This rejection, frustrating as it was, proved to be a turning point.\n\n**Building Biocon**\n\nIn 1978, at the age of 25, Kiran Mazumdar Shaw co-founded Biocon India in a rented garage with just ₹10,000 in seed capital. The company began by extracting enzymes from papaya for export to the Irish firm Biocon Biochemicals. The early years were far from easy — banks refused loans, vendors were reluctant to work with a young woman entrepreneur, and the concept of biotechnology was barely understood in India at the time.\n\nUndeterred, she persisted. Over the decades, Biocon expanded its portfolio into biopharmaceuticals, developing affordable biosimilar versions of insulin and cancer-fighting drugs that are today accessible to patients across emerging markets. In 2004, Biocon became the first Indian biotechnology company to list on the Indian stock exchanges, marking a watershed moment for the sector.\n\n**Recognition and Legacy**\n\nKiran Mazumdar Shaw's contributions have earned her widespread recognition. She has been featured on Forbes' list of the World's 100 Most Powerful Women multiple times and has received India's highest civilian honours, including the Padma Shri and the Padma Bhushan. She is also a vocal advocate for affordable healthcare, believing that life-saving medicines must not remain the privilege of the wealthy.\n\nBeyond business, she has invested significantly in cancer care through the Mazumdar Shaw Medical Center in Bangalore, making advanced oncology treatment accessible to patients from all economic backgrounds.\n\n**A Lasting Inspiration**\n\nKiran Mazumdar Shaw's story is not merely one of entrepreneurial success — it is a testament to resilience, vision, and the transformative power of believing in an idea when few others do. She turned rejection into resolve, and a garage startup into a global enterprise, proving that innovation has no gender, and that determination, above all, is the most powerful currency in business.",
+  achievements: ["Co-founded Biocon India in 1978 with ₹10,000 in a rented garage", "Developed affordable biosimilar insulin and cancer drugs for emerging markets", "Received the Padma Shri and Padma Bhushan", "Featured multiple times on Forbes' World's 100 Most Powerful Women", "Established the Mazumdar Shaw Medical Center for accessible cancer care"],
+  authorName: "Siya Aswal",
+  authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+  addedAt: "2026-06-19",
+},
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",
@@ -655,6 +707,26 @@ export const personalities: Personality[] = [
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-03-27",
+  },
+  {
+    id: "garvita-gulhati",
+    name: "Garvita Gulhati",
+    title: "Water Girl",
+    category: "She Talks",
+    categorySlug: "she-talks",
+    image: "/images/personalities/garvita-gulhati.avif",
+    born: "22 September 1999, Bengaluru",
+    profession: "Water Conservation Advocate",
+    knownFor: "Founder of Why Waste? and creator of the Glass Half Full Campaign to reduce water wastage in restaurants across India.",
+    quote: "Every drop counts. If we change small habits, we can create a big impact on water conservation.",
+    story: "Most people, handed a glass of water at a restaurant, drink half of it, push it aside, and never think about it again. Garvita Gulhati thought about it. That small, ordinary act of waste water poured, barely touched, tipped down the drain became the thing she built her whole reputation around. India's press took to calling her the 'Water Girl,' and the nickname stuck.\n\nShe grew up in Bengaluru, born around the turn of the millennium, in a home she describes as the kind where you noticed things like fairness and waste. The moment that set her on her path came when she was about thirteen, on a trip to Ahmedabad. She was visiting one of the old stepwells in Gujarat those deep, beautiful structures built centuries ago precisely because water was precious when she crossed paths with a little girl frantically looking for something to drink. The image didn't leave her. Here was a monument to scarcity, and there was a child going thirsty, and back home people were leaving water to evaporate in glasses without a second thought. It rearranged something in her head.\n\nWhat pushed her from feeling to doing was a number. She came across the figure that roughly fourteen million litres of water were being wasted in India just from the half-finished glasses left on restaurant tables. Not factories, not farms restaurants. Waste hiding in plain sight, repeated millions of times a day, and nobody was bothering to look at it.\n\nSo in 2015, at fifteen, she started Why Waste? It wasn't slick. In the early days it was a teenager and a handful of friends walking into restaurants to talk to managers about leftover water, running awareness sessions, telling the stories of people who didn't have enough. Plenty of adults didn't take her seriously. Her own family thought it was a distraction from school. Restaurateurs waved her off as a kid with a cause. She kept showing up anyway.\n\nThe idea that finally cut through was almost embarrassingly simple. Instead of filling every glass to the brim out of habit, why not serve it half full and top it up only if the customer actually wanted more? She called it Glass Half Full, partly because the optimism of the phrase was the whole point. Nobody had to give anything up. The water was still there for the asking. The change lived in a single default, and defaults are quietly powerful because almost no one bothers to override them. Multiply a slightly smaller pour across every meal in a country and the savings stop being trivial.She was smart about not trying to do it alone, restaurant by restaurant. She went after institutions. Around 2019 the National Restaurant Association of India got behind the concept, which suddenly put it in front of the whole industry instead of just the places her volunteers could physically reach. The idea also started escaping India entirely  people in the US, the UK, parts of Africa, Nepal, Mexico, Dubai, picking it up and running their own versions, no permission required. That's the kind of thing that happens when an idea is simple enough to copy.\n\nBy her own count, the campaign reached hundreds of thousands of restaurants and millions of people, and saved something on the order of ten million litres of water. Those are her organization's own figures, repeated across years of interviews rather than independently audited, so it's fair to take them as claims of scale rather than gospel but the reach was clearly real.\n\nWhen the pandemic shut down the in-person work, she didn't wait it out. She built an app instead, launched in 2021, that lets people work out their own water footprint and chip away at it through a game-like nudge each day. She's said the inspiration was Cape Town in 2018, when an entire city rationed its way back from the brink of running dry. Around the same time she and a group of students put together a children's book of short fables animal stories aimed at getting kids thinking about the environment early published with Pratham and UNICEF.\n\nThat instinct for the next generation runs through everything she does. Through a schools program tied to the Ashoka network she's reached hundreds of schools and, by various accounts, a couple of million students, the idea being that if you teach a child the worth of water young, it compounds over a lifetime.\n\nThe recognition piled up fast: Forbes 30 Under 30 Asia, the Diana Award, a Global Changemaker title picked up in Zurich, a National Geographic Explorer listing, and the distinction of being the only Indian to receive a Wonder Grant from singer Shawn Mendes's foundation, among others. And then she did something that surprises people who only know the activist version of her she finished an engineering degree at PES University, spent a stretch in fintech, and took a job as an investment analyst at West Bridge Capital. Not a retreat from the cause so much as learning where the money lives. Away from all of it she paints, plays badminton, and trained for years in Kathak.\n\nStrip away the awards and what's actually interesting about Garvita Gulhati is the method. She picked a problem small enough that one person could move it. She changed a habit instead of preaching at people. And she made the idea easy enough that strangers across the world could steal it. For someone who started at fifteen with nothing but a glass of water and a stubborn refusal to look away, that's not a bad blueprint.",
+    achievements: ["Founded Why Waste? at the age of 15",
+                   "Created the Glass Half Full Campaign for water conservation",
+                   "Inspired adoption of water-saving practices in thousands of restaurants",
+                   "Featured in Forbes 30 Under 30 Asia"],
+    authorName: "Rhea Pathak",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-06-18",
   },
 
 
@@ -1814,29 +1886,7 @@ export const personalities: Personality[] = [
   },
 
   // ===== YOUNG ACHIEVERS =====
-  {
-    id: "praggnanandhaa",
-    name: "R. Praggnanandhaa",
-    title: "Chess Prodigy",
-    category: "Young Achievers",
-    categorySlug: "young-achievers",
-    image: "/images/personalities/r-praggnanandhaa.jpg",
-    born: "10 August 2005, Chennai, India",
-    profession: "Chess Grandmaster",
-    knownFor: "Defeating World Champion Magnus Carlsen multiple times",
-    quote: "I just want to play good chess.",
-    story: "Key: Rameshbabu Praggnanandhaa is one of India's brightest chess prodigies. He became an International Master at the age of 10 and a Grandmaster at just 12, making him one of the youngest in history.\n\nHe stunned the chess world by defeating World Champion Magnus Carlsen multiple times in rapid formats. In 2023, he reached the final of the FIDE Chess World Cup, becoming the youngest finalist and qualifying for the Candidates Tournament.\n\nHis calm composure, deep calculation, and fearless play have positioned him as a future World Championship contender.",
-    achievements: [
-      "Grandmaster at age 12",
-      "FIDE World Cup Runner-up 2023",
-      "Multiple wins against Magnus Carlsen",
-      "Arjuna Award recipient",
-      "Youngest World Cup finalist"
-    ],
-    authorName: "Inspire India Talks",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
-    addedAt: "2026-02-15"
-  },
+
   {
     id: "sheetal-devi",
     name: "Sheetal Devi",
@@ -1853,6 +1903,29 @@ export const personalities: Personality[] = [
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
     addedAt: "2026-02-15",
+  },
+    {
+    id: "praggnanandhaa",
+    name: "R. Praggnanandhaa",
+    title: "Chess Prodigy",
+    category: "Young Achievers",
+    categorySlug: "young-achievers",
+    image: "/images/personalities/r-praggnanandhaa.avif",
+    born: "10 August 2005, Chennai, India",
+    profession: "Chess Grandmaster",
+    knownFor: "Defeating World Champion Magnus Carlsen multiple times",
+    quote: "I just want to play good chess.",
+    story: "Key: Rameshbabu Praggnanandhaa is one of India's brightest chess prodigies. He became an International Master at the age of 10 and a Grandmaster at just 12, making him one of the youngest in history.\n\nHe stunned the chess world by defeating World Champion Magnus Carlsen multiple times in rapid formats. In 2023, he reached the final of the FIDE Chess World Cup, becoming the youngest finalist and qualifying for the Candidates Tournament.\n\nHis calm composure, deep calculation, and fearless play have positioned him as a future World Championship contender.",
+    achievements: [
+      "Grandmaster at age 12",
+      "FIDE World Cup Runner-up 2023",
+      "Multiple wins against Magnus Carlsen",
+      "Arjuna Award recipient",
+      "Youngest World Cup finalist"
+    ],
+    authorName: "Inspire India Talks",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+    addedAt: "2026-02-15"
   },
   {
     id: "yashasvi-jaiswal",
@@ -2425,7 +2498,7 @@ export const personalities: Personality[] = [
       "Enabled financial independence and social empowerment for women"
     ],
     authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-23",
   },
   {
@@ -2448,10 +2521,32 @@ export const personalities: Personality[] = [
       "Showcased the power of rural creativity on national platforms"
     ],
     authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-04-27",
   },
-
+//{
+ // id: "malik-ambar",                    
+//  name: "Malik Ambar",
+ // title: "From Ambar's Shadow: The Untold Siddi Story",
+ // category: "Others",          
+ // categorySlug: "others",      
+  //image: "/images/personalities/malik-ambar-siddi.jpeg",
+ // born: "Kambata, Ethiopia",
+ // profession: "Military general & Kingmaker",
+ // knownFor: "From enslaved boy to the general who defied an empire through guerrilla warfare.",
+ // quote: "A chain can hold a body, never a will. They named me slave; the Deccan named me ruler.",
+ // story: "The African General Who Defied an Empire — and the Indians We Forgot\n\nAfricans have lived on Indian shores for well over a thousand years, carried along Indian Ocean trade routes as sailors, merchants, and slaves from as early as the 7th century. Their descendants are the Siddis — and one of them changed the course of Indian history.\n\nHis name was Malik Ambar.\n\nBorn around 1548 in present-day Ethiopia, he was captured as a boy, sold across the Red Sea and through Baghdad, and finally brought to the Deccan in chains. He died a free man who was never conquered. Rising from slavery, Ambar became prime minister and de facto ruler of the Ahmadnagar Sultanate, commanding a force of tens of thousands. He is credited as a pioneer of guerrilla warfare against the Mughal Empire at its peak — frustrating Emperor Jahangir so completely that Jahangir commissioned a painting of himself shooting Ambar's severed head, a victory he never actually won.\n\nAmbar also raised the stone Murud-Janjira sea fort off the Maharashtra coast in the 16th century. Despite repeated sieges by the Marathas, Portuguese, and British, it was never captured — and it still stands today.\n\nYet most Indians have never heard his name.\n\nThe Siddis are not a historical footnote. They are a living community — concentrated in Gujarat, Karnataka, Maharashtra, and Goa, with estimates ranging from roughly 50,000 to over 250,000 people, as no reliable count exists. They speak Kannada, Konkani, Gujarati, and Urdu; farm Indian land; raise Indian children. In the 1980s, India's sports authorities even recruited Siddi youth in the hope of producing Olympic athletes. And only on 8 January 2003 — after centuries in this country — were they granted Scheduled Tribe status.\n\nThat long silence is not an accident. It is what happens when a nation builds its identity around a narrow set of stories and calls it complete.\n\nSo what does this mean for us as professionals, storytellers, and leaders?\n\nThe stories we tell — in boardrooms, classrooms, and content — decide who is remembered and who is erased. Every brand and platform faces a choice: amplify the familiar, or make room for the forgotten.\n\nAt Inspire India Talks, we believe the most powerful stories are the ones no one is telling yet. The Siddis are one of them.\n\n India's story is larger than any one version of it.\n\nPart of our Untold India series. Follow Inspire India Talks for stories that shape nations.",
+ // achievements: [
+ //   "Rose from enslavement to become de facto ruler of the Ahmadnagar Sultanate",
+ //   "Pioneered guerrilla warfare that held off the Mughal Empire for over two decades",
+ //   "Built and commanded a multi-ethnic army of tens of thousands",
+ //   "Introduced a fair land-revenue system later admired across the Deccan",
+ //   "Founded the city of Khadki, later known as Aurangabad",
+//],
+ // authorName: "Inspire India",
+ // authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
+ // addedAt: "2026-06-12",  
+//},
 ];
 
 export const getPersonalitiesByCategory = (categorySlug: string): Personality[] => {
