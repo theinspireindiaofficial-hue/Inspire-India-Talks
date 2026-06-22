@@ -43,7 +43,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "Jio Files for India's Largest-Ever IPO Valued at ₹13 Lakh Crore",
     date: "22-06-2026",
     category: "IPO & Markets",
-    image: "/images/buisness-insights/jio-ipo.png",
+    image: "/images/buisness-insights/jio-ipo.jpeg",
     excerpt:
       "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
     readTime: "3 min read",
@@ -54,6 +54,28 @@ Jio Platforms, Reliance's telecom and digital arm with over 527 million subscrib
 
 With the SEBI review underway, the public issue is expected later in 2026. The Jio IPO is widely seen as both a market milestone and a defining chapter in India's digital economy story.`,
   },
+
+    {
+    id: "india-uk-trade",
+    title: "India-UK trade pact kicks in July 15 — Scotch whisky, cars, and Indian textiles set for tariff cuts",
+    date: "22-06-2026",
+    category: "Economy & Trade",
+    image: "/images/buisness-insights/india-uk-trade.png",
+    excerpt:
+      "The India-UK Comprehensive Economic and Trade Agreement will come into force on July 15, 2026, ushering in sweeping tariff reductions and expanded market access for both countries. While Scotch whisky and British automobiles will benefit from lower Indian duties, Indian exporters in textiles, footwear, marine products, and engineering goods gain duty-free access to the UK market, paving the way for stronger bilateral trade and economic cooperation.",
+    readTime: "3 min read",
+    content: `After years of negotiations and a signing in July 2025, the India-UK Comprehensive Economic and Trade Agreement will formally come into force on July 15, 2026 — making it India's first bilateral trade deal with a Western nation.
+
+
+
+Indian whisky tariffs on British Scotch drop from 150% to 75% on day one, falling further to 40% over ten years. UK automobile tariffs fall from 100% to 10% under a quota. In return, India gains duty-free access on 99% of its exports to the UK from day one, with sectors like textiles, footwear, marine products, and engineering goods set to benefit immediately. The deal is projected to boost bilateral trade by £25.5 billion annually in the long run.
+
+
+
+Experts caution that Indian exporters must upgrade product standards to meet UK regulatory norms to fully capitalise on the new terms. The government has been urged to run domestic outreach programmes for industry.`,
+  },
+
+  
   {
     id: "fable-5-ai",
     title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
