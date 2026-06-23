@@ -25,7 +25,6 @@ const CategoryDetail = () => {
       <section className="relative py-20 overflow-hidden gradient-mesh">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <p className="text-5xl mb-4">{category.icon}</p>
             <h1 className="font-serif text-4xl md:text-6xl font-bold glow-text">{category.name}</h1>
             <p className="text-muted-foreground mt-4 max-w-xl text-lg">{category.description}</p>
             <p className="text-sm text-primary mt-4 font-medium">{people.length} Personalities</p>
