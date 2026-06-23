@@ -200,9 +200,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Registration Form */}
-        <RegistrationSection />
-
         {/* Story of the Week */}
         <section className="container mx-auto px-4 py-20">
           <div className="flex items-center gap-3 mb-10">
@@ -372,6 +369,9 @@ const Index = () => {
             <p className="mt-6 text-primary font-medium tracking-wider">— Ratan Tata</p>
           </div>
         </section>
+
+        {/* Registration Form */}
+        <RegistrationSection />
 
       </Layout>
     </div>
