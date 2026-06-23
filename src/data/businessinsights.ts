@@ -43,7 +43,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
     date: "23-06-2026",
     category: "Funding",
-    image: "/images/buisness-insights/startup-funding-2026.jpg",
+    image: "/images/buisness-insights/meta-cred.jpg",
     excerpt:
       "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
     readTime: "3 min read",
@@ -59,7 +59,7 @@ The mood in India's startup world is shifting — from chasing growth to buildin
     title: "Meta Invests $900 Million in CRED, Taps Kunal Shah to Lead WhatsApp",
     date: "22-06-2026",
     category: "Deals & Fintech",
-    image: "/images/buisness-insights/meta-cred.jpg",
+    image: "/images/buisness-insights/startup-funding-2026.jpg",
     excerpt:
       "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
     readTime: "3 min read",
