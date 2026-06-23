@@ -43,7 +43,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
     date: "23-06-2026",
     category: "Funding",
-    image: "/images/buisness-insights/startup-funding-2026.jpg",
+    image: "/images/buisness-insights/meta-cred.jpg",
     excerpt:
       "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
     readTime: "3 min read",
@@ -59,10 +59,11 @@ The mood in India's startup world is shifting — from chasing growth to buildin
     title: "Meta Invests $900 Million in CRED, Taps Kunal Shah to Lead WhatsApp",
     date: "22-06-2026",
     category: "Deals & Fintech",
-    image: "/images/buisness-insights/meta-cred.jpg",
+    image: "/images/buisness-insights/startup-funding-2026.jpg",
     excerpt:
       "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
     readTime: "3 min read",
+    featured: true,
     content: `In a landmark deal reshaping India's tech landscape, Meta has led a $900 million financing round in Indian fintech giant CRED, structured through a combination of primary and secondary share purchases, making Meta a minority investor in the company.
 
 The investment gives Meta a roughly 20% stake in CRED, valuing it at $4.5 billion post-money. This marks a recovery from CRED's peak valuation of $6.4 billion in 2022, which had since dipped to $3.6 billion in May 2025.
@@ -81,7 +82,7 @@ Shah's fintech background has fuelled speculation that Meta may deepen financial
     excerpt:
       "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
     readTime: "3 min read",
-    featured: true,
+    featured: false,
     content: `Reliance Industries has officially set the stage for India's biggest stock market debut. At its 49th Annual General Meeting (AGM), chairman Mukesh Ambani confirmed that the board approved the draft papers for the Jio Platforms IPO, with the filing submitted to the Securities and Exchange Board of India (SEBI) on June 19.
 
 Jio Platforms, Reliance's telecom and digital arm with over 527 million subscribers and a 43% revenue market share, is structured as a 100% fresh issue — meaning all proceeds go to the company, not existing shareholders. Analysts at Elara Capital have valued the entity at ₹12–13 lakh crore, with an expected fundraise of ₹35,000–52,000 crore. Akash Ambani, appointed Managing Director in May, will lead the listed entity alongside siblings Isha and Anant, marking a generational transition at Reliance.
@@ -226,7 +227,7 @@ As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in o
     image: "/images/buisness-insights/indian-deep-tech-innotrek-uk.png",
     excerpt:
       "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
-    featured: true,
+    featured: false,
     readTime: "4 min read",
     content: `The firm has also announced plans of making investments worth ₹75,000 crores in its oil-to-chemicals (O2C) division, besides boosting its green energy efforts. It is expected that such an investment will be used to increase the efficiency of their refining and petrochemical production operations, thus improving the firm's international competitiveness.
 
