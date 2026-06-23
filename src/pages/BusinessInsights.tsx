@@ -1,11 +1,12 @@
 import Layout from "@/components/Layout";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Clock, TrendingUp } from "lucide-react";
 import { businessinsights as rawInsights } from "../data/businessinsights";
+import { highlightKeywords } from "@/lib/highlight";
 
 /* Loose local type so this page compiles regardless of how
-   src/data/businessinsights.ts is typed. Only id/title/date/image are
-   assumed; everything else is optional. */
+   src/data/businessinsights.ts is typed. */
 interface Article {
   id: string;
   title: string;
@@ -18,18 +19,22 @@ interface Article {
   readTime?: string;
 }
 
-const businessinsights = rawInsights as unknown as Article[];
+/* "DD-MM-YYYY" -> sortable timestamp. Falls back to 0 if malformed. */
+const toTime = (d: string): number => {
+  const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(d?.trim() ?? "");
+  if (!m) return 0;
+  return new Date(+m[3], +m[2] - 1, +m[1]).getTime();
+};
 
-/* Image with graceful fallback: if the file is missing, a gradient + the
-   headline shows instead of an empty black box. */
+/* Newest first — so the latest story is always at the top. */
+const articles = ([...(rawInsights as unknown as Article[])]).sort(
+  (a, b) => toTime(b.date) - toTime(a.date)
+);
+
 const Cover = ({ article, className = "" }: { article: Article; className?: string }) => (
-  <div
-    className={`relative overflow-hidden bg-gradient-to-br from-primary/25 via-black/50 to-black ${className}`}
-  >
+  <div className={`relative overflow-hidden bg-gradient-to-br from-primary/25 via-black/50 to-black ${className}`}>
     <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
-      <span className="font-serif text-foreground/40 text-lg leading-snug">
-        {article.title}
-      </span>
+      <span className="font-serif text-foreground/30 text-lg leading-snug">{article.title}</span>
     </div>
     <img
       src={article.image}
@@ -37,165 +42,128 @@ const Cover = ({ article, className = "" }: { article: Article; className?: stri
       onError={(e) => {
         e.currentTarget.style.display = "none";
       }}
-      className="relative w-full h-full object-cover"
+      className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
     />
   </div>
 );
 
-const Meta = ({ article }: { article: Article }) => (
-  <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-foreground/50 mb-3">
-    {article.category && (
-      <>
-        <span className="text-primary">{article.category}</span>
-        <span className="h-1 w-1 rounded-full bg-foreground/30" />
-      </>
-    )}
-    <span>{article.date}</span>
+const MetaRow = ({ article }: { article: Article }) => (
+  <div className="font-mono flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] uppercase tracking-widest text-foreground/55">
+    {article.category && <span className="text-primary font-semibold">{article.category}</span>}
+    {article.category && <span className="h-1 w-1 rounded-full bg-foreground/30" />}
+    <span className="inline-flex items-center gap-1.5">
+      <Calendar className="h-3 w-3" /> {article.date}
+    </span>
     {article.readTime && (
       <>
         <span className="h-1 w-1 rounded-full bg-foreground/30" />
-        <span>{article.readTime}</span>
+        <span className="inline-flex items-center gap-1.5">
+          <Clock className="h-3 w-3" /> {article.readTime}
+        </span>
       </>
     )}
   </div>
 );
 
 const BusinessInsights = () => {
-  const [active, setActive] = useState<Article | null>(null);
-
-  const featured = businessinsights.find((a) => a.featured) ?? businessinsights[0];
-  const rest = businessinsights.filter((a) => a !== featured);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActive(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  const [latest, ...rest] = articles;
 
   return (
     <Layout>
-      <section className="relative py-20 overflow-hidden gradient-mesh">
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Header */}
+      {/* ===== Page header ===== */}
+      <section className="relative pt-20 pb-10 overflow-hidden gradient-mesh">
+        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-primary" />
-              <span className="text-primary font-medium tracking-[0.2em] uppercase text-xs">
-                Insights
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="h-px w-8 bg-primary" />
+              <span className="font-mono text-primary font-medium tracking-[0.3em] uppercase text-[11px]">
+                Independent Journalism
               </span>
+              <span className="h-px w-8 bg-primary" />
             </div>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold glow-text mb-12">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold glow-text">
               Business <span className="text-primary">Insights</span>
             </h1>
+            <p className="mt-5 text-foreground/60 max-w-2xl mx-auto text-lg font-light">
+              Sharp reporting on the deals, markets, and founders shaping India's economy — newest first.
+            </p>
           </motion.div>
-
-          {/* Featured hero — full-bleed image with text overlaid */}
-          {featured && (
-            <motion.article
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              onClick={() => setActive(featured)}
-              className="group relative h-[440px] mb-16 rounded-2xl overflow-hidden cursor-pointer border border-primary/20"
-            >
-              <Cover article={featured} className="absolute inset-0 w-full h-full" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10 max-w-2xl">
-                <Meta article={featured} />
-                <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 group-hover:text-primary transition-colors">
-                  {featured.title}
-                </h2>
-                {featured.excerpt && (
-                  <p className="text-foreground/80 leading-relaxed mb-5 line-clamp-2">
-                    {featured.excerpt}
-                  </p>
-                )}
-                <span className="text-primary font-medium inline-flex items-center gap-2">
-                  Read full story <span aria-hidden>→</span>
-                </span>
-              </div>
-            </motion.article>
-          )}
-
-          {/* The rest — grid that fills the page width */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start">
-            {rest.map((article, i) => (
-              <motion.article
-                key={article.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-                onClick={() => setActive(article)}
-                className="group cursor-pointer bg-black/30 border border-primary/20 rounded-xl overflow-hidden flex flex-col hover:border-primary/40 transition-colors"
-              >
-                <Cover article={article} className="h-52" />
-                <div className="p-6 flex flex-col flex-1">
-                  <Meta article={article} />
-                  <h3 className="font-serif text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                    {article.title}
-                  </h3>
-                  {article.excerpt && (
-                    <p className="text-foreground/70 text-sm leading-relaxed line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                  )}
-                  <span className="mt-4 text-primary text-sm font-medium">Read more →</span>
-                </div>
-              </motion.article>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Bigger view on click */}
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      <section className="container mx-auto px-4 md:px-8 pb-24">
+        {/* ===== Latest / featured story ===== */}
+        {latest && (
+          <motion.article
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="group relative grid lg:grid-cols-2 gap-0 mb-20 rounded-3xl overflow-hidden border border-primary/20 bg-black/30 hover:border-primary/40 transition-colors"
           >
-            {/* py-20 clears the navbar; clicking the pad area closes the modal */}
-            <div
-              className="min-h-full px-4 py-20"
-              onClick={() => setActive(null)}
+            <Link to={`/business-insights/${latest.id}`} className="absolute inset-0 z-20" aria-label={latest.title} />
+            <Cover article={latest} className="h-72 lg:h-full min-h-[340px]" />
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="font-mono inline-flex items-center gap-2 self-start mb-5 rounded-full bg-primary/15 text-primary text-[11px] font-bold uppercase tracking-widest px-3 py-1.5">
+                <TrendingUp className="h-3.5 w-3.5" /> Latest Story
+              </div>
+              <MetaRow article={latest} />
+              <h2 className="font-serif text-3xl md:text-5xl font-bold leading-[1.1] mt-4 mb-4 group-hover:text-primary transition-colors">
+                {latest.title}
+              </h2>
+              {latest.excerpt && (
+                <p className="text-foreground/75 text-lg leading-relaxed line-clamp-3">
+                  {highlightKeywords(latest.excerpt)}
+                </p>
+              )}
+              <span className="mt-7 text-primary font-medium inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                Read full story <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </motion.article>
+        )}
+
+        {/* ===== Section label ===== */}
+        {rest.length > 0 && (
+          <div className="flex items-center gap-4 mb-10">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold whitespace-nowrap">
+              More <span className="text-primary">Stories</span>
+            </h3>
+            <span className="h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent" />
+          </div>
+        )}
+
+        {/* ===== Grid of the rest ===== */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {rest.map((article, i) => (
+            <motion.article
+              key={article.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
+              className="group bg-black/30 border border-primary/20 rounded-2xl overflow-hidden flex flex-col hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 24, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 24, scale: 0.98 }}
-                transition={{ duration: 0.3 }}
-                onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-4xl bg-background border border-primary/20 rounded-2xl overflow-hidden mx-auto"
-              >
-                <button
-                  onClick={() => setActive(null)}
-                  aria-label="Close article"
-                  className="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
-                >
-                  ✕
-                </button>
-                <Cover article={active} className="w-full h-72 md:h-96" />
-                <div className="p-8 md:p-10">
-                  <Meta article={active} />
-                  <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-                    {active.title}
-                  </h2>
-                  {active.content && (
-                    <p className="text-foreground/80 leading-relaxed whitespace-pre-line text-lg">
-                      {active.content}
+              <Link to={`/business-insights/${article.id}`} className="flex flex-col flex-1">
+                <Cover article={article} className="h-52" />
+                <div className="p-6 flex flex-col flex-1">
+                  <MetaRow article={article} />
+                  <h3 className="font-serif text-xl font-bold leading-snug mt-3 mb-2 group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                  {article.excerpt && (
+                    <p className="text-foreground/65 text-sm leading-relaxed line-clamp-3">
+                      {highlightKeywords(article.excerpt)}
                     </p>
                   )}
+                  <span className="mt-5 pt-4 border-t border-border/30 text-primary text-sm font-medium inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Read more <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
                 </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 };
