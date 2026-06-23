@@ -470,6 +470,23 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
   },
   // ===== SHE TALKS =====
   {
+    id: "ghazal-alagh",
+    name: "Ghazal Alagh",
+    title: "Co-founder, Mamaearth",
+    category: "She Talks",
+    categorySlug: "she-talks",
+    image: "/images/personalities/ghazal-alagh.jpg",
+    born: "1988, Chandigarh",
+    profession: "Entrepreneur & Investor",
+    knownFor: "Building Mamaearth into a ₹10,000 crore consumer brand",
+    quote: "When your why is strong enough, the how will follow.",
+    story: "In the crowded world of Indian entrepreneurship, few stories are as refreshingly human as that of Ghazal Alagh. Co-founder of Mamaearth, Ghazal did not build her empire chasing trends or venture capital; she built it chasing something far more personal: safety for her child. Her journey from a first-time mother searching for toxin-free baby products to leading one of India's most celebrated consumer brands is a testament to what happens when purpose meets perseverance.\n\nKey: **The Spark Behind the Brand** — In 2016, Ghazal and her husband Varun Alagh welcomed their first child and were immediately confronted with a troubling reality: most baby care products available in India were loaded with harmful chemicals. Unable to find safe, certified alternatives locally, the couple began importing products from abroad. But rather than settle for a workaround, Ghazal saw a gap that millions of Indian parents were silently suffering through. She decided to close it.\n\nMamaearth was born — a brand built on the radical idea that what you put on your body should be as clean as what you put in it. The company became India's first to earn the **Made Safe certification**, guaranteeing that every ingredient used was thoroughly vetted for human safety. It was a bold move in an industry that had long operated without such accountability.\n\n*Growing with Purpose.* What makes Ghazal's story particularly inspiring is how she scaled without losing her soul. With a background in fine arts, she brought a rare creative sensibility to the business, shaping not just products, but a brand identity rooted in trust and transparency. Mamaearth expanded from baby care into skincare, haircare, and wellness, resonating with a new generation of conscious Indian consumers who demanded better.\n\nThe results spoke for themselves. Mamaearth crossed a valuation of **over ₹10,000 crore** and became one of the fastest-growing consumer brands to list on Indian stock exchanges. Through it all, Ghazal remained the conscience of the company, ensuring that growth never came at the cost of values.\n\nGhazal Alagh's story is a reminder that the most powerful businesses are often born from the most ordinary moments — a mother wanting the best for her child. She has redefined what modern entrepreneurship looks like in India: bold, values-driven, and deeply human. For anyone building something from scratch, her journey offers one enduring truth: when your why is strong enough, the how will follow.",
+    achievements: ["Co-founded Mamaearth in 2016", "Built India's first Made Safe certified brand", "Scaled Mamaearth past a ₹10,000 crore valuation", "Took the brand to a public listing on Indian stock exchanges", "Shark Tank India investor and mentor to founders"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-06-23",
+  },
+  {
     id: "kalpana-chawla",
     name: "Kalpana Chawla",
     title: "NASA Astronaut",
