@@ -39,6 +39,40 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-startup-funding-2026",
+    title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
+    date: "23-06-2026",
+    category: "Funding",
+    image: "/images/buisness-insights/startup-funding-2026.jpg",
+    excerpt:
+      "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
+    readTime: "3 min read",
+    content: `India's startup ecosystem is going through a careful phase in 2026. While money is still flowing in, investors are being far more selective about where they put it.
+
+Indian startups raised $8.44 billion across 831 equity funding rounds between January and June 2026 — a 14.7% drop compared to the same period last year, when $9.9 billion was raised across over 1,480 rounds. Despite the dip in volume, individual deals remain significant. The first week of June alone saw startups raise nearly $187 million, led by FirstClub's $55 million Series B round backed by Peak XV Partners and Sofina. On the policy front, the government launched Startup India Fund of Funds 2.0 with a ₹10,000 crore corpus, aimed at channelling more capital into early-stage startups through regulated investment funds.
+
+The mood in India's startup world is shifting — from chasing growth to building real businesses. Investors are tightening their standards, but the ecosystem remains one of the most active in the world.`,
+  },
+
+  {
+    id: "meta-cred-investment",
+    title: "Meta Invests $900 Million in CRED, Taps Kunal Shah to Lead WhatsApp",
+    date: "22-06-2026",
+    category: "Deals & Fintech",
+    image: "/images/buisness-insights/meta-cred.jpg",
+    excerpt:
+      "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
+    readTime: "3 min read",
+    content: `In a landmark deal reshaping India's tech landscape, Meta has led a $900 million financing round in Indian fintech giant CRED, structured through a combination of primary and secondary share purchases, making Meta a minority investor in the company.
+
+The investment gives Meta a roughly 20% stake in CRED, valuing it at $4.5 billion post-money. This marks a recovery from CRED's peak valuation of $6.4 billion in 2022, which had since dipped to $3.6 billion in May 2025.
+
+As part of the deal, CRED founder Kunal Shah has been appointed global CEO of WhatsApp, marking one of the biggest leadership changes in the platform's history. Shah will step down as CRED's chief executive while retaining his personal shareholding, with Miten Sampat taking over as interim CEO.
+
+Shah's fintech background has fuelled speculation that Meta may deepen financial services and commerce integrations within WhatsApp in the years ahead.`,
+  },
+
+  {
     id: "jio-platforms-ipo",
     title: "Jio Files for India's Largest-Ever IPO Valued at ₹13 Lakh Crore",
     date: "22-06-2026",
@@ -256,3 +290,7 @@ These companies emerged from Masters' Union's year-long Venture Initiation Progr
 The story is an encouraging one for India's startup pipeline. When students can validate ideas, build early traction, and attract real capital before they even graduate, the result is a deeper, faster-moving talent pool feeding the wider innovation ecosystem.`,
   },
 ];
+
+// Look up a single article by its id (used by the full-page article view).
+export const getBusinessInsightById = (id: string): BusinessInsight | undefined =>
+  businessinsights.find((a) => a.id === id);
