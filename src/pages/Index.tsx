@@ -186,6 +186,20 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Upcoming Talks */}
+        <section className="container mx-auto px-4 py-20">
+          <div className="glass-card p-10 md:p-16 text-center relative overflow-hidden">
+            <div className="absolute inset-0 gradient-mesh" />
+            <div className="relative z-10">
+              <span className="text-primary font-medium tracking-[0.2em] uppercase text-xs">Coming Soon</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mt-4">Upcoming Inspire Talks</h2>
+              <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+                Live sessions, speaker events, and fireside chats with India's most inspiring personalities. Stay tuned for announcements.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Registration Form */}
         <RegistrationSection />
 

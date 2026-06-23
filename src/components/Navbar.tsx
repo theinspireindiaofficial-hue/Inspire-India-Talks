@@ -67,7 +67,7 @@ const Navbar = () => {
                       className="block px-5 py-3 text-sm hover:bg-primary/10 hover:text-primary transition-colors"
                       onClick={() => setShowCategories(false)}
                     >
-                      <span className="mr-3">{cat.icon}</span>{cat.name}
+                      {cat.name}
                     </Link>
                   ))}
                 </motion.div>
@@ -145,7 +145,7 @@ const Navbar = () => {
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3">Inspiring Voices</div>
               {categories.map(cat => (
                 <Link key={cat.slug} to={`/category/${cat.slug}`} className="block text-sm py-2 pl-3 hover:text-primary" onClick={() => setIsOpen(false)}>
-                  {cat.icon} {cat.name}
+                  {cat.name}
                 </Link>
               ))}
               <Link to="/events" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Events</Link>
