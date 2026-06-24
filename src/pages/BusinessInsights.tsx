@@ -66,8 +66,9 @@ const MetaRow = ({ article }: { article: Article }) => (
 );
 
 const BusinessInsights = () => {
-  // A pinned `featured` article takes the hero slot; otherwise the newest does.
-  const latest = articles.find((a) => a.featured) ?? articles[0];
+  // The newest article always takes the hero slot, so every new article pushed
+  // is automatically featured on top. (`featured` can still pin one as a fallback.)
+  const latest = articles[0] ?? articles.find((a) => a.featured);
   const rest = articles.filter((a) => a !== latest);
 
   return (

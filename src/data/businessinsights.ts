@@ -39,6 +39,61 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "bharatiya-vyapar-mahotsav-2026",
+    title: "India Gears Up for Bharatiya Vyapar Mahotsav 2026",
+    date: "24-06-2026",
+    category: "Trade & MSME",
+    image: "/images/buisness-insights/bharatiya-vyapar-mahotsav-2026.jpg",
+    excerpt:
+      "India's largest Make-in-India multi-sectoral business expo runs 12–15 August 2026 at Bharat Mandapam, with 2,000+ exhibitors and over 10 lakh visitors expected.",
+    readTime: "3 min read",
+    featured: true,
+    content: `India's most ambitious trade exposition is set to take centre stage this Independence Day season. The Bharatiya Vyapar Mahotsav (BVM) 2026, billed as the country's largest Make-in-India multi-sectoral business expo, will be held from 12 to 15 August 2026 at Bharat Mandapam, Pragati Maidan, New Delhi.
+
+Organised jointly by the Confederation of All India Traders (CAIT) and the India Trade Promotion Organisation (ITPO) under a landmark MoU, the event carries the theme "Made in India, Made for India, Made for the World" — an echo of Prime Minister Narendra Modi's vision of Atmanirbhar Bharat and Vocal for Local.
+
+The four-day expo is expected to host over 2,000 exhibitors spanning sectors including MSMEs, agriculture, textiles, electronics, handicrafts, startups, and digital commerce. Organisers anticipate more than 10 lakh visitors, 2 lakh business delegates, and 5,000 international participants — making it one of India's largest commercial gatherings to date.
+
+Union Commerce Minister Piyush Goyal, who launched the BVM portal in May, called the event a milestone for domestic trade, noting that India's exports have already reached $863 billion this year, nearly 5% higher than the previous year — with a national target of $1 trillion in sight.
+
+Registrations are currently open across four categories — Exhibitor, Business Delegate, Speaker, and Visitor — at bharatiyavyaparmahotsav.com.`,
+  },
+
+  {
+    id: "india-overtakes-japan-stock-market",
+    title: "India Overtakes Japan to Become World's Fourth Largest Stock Market",
+    date: "24-06-2026",
+    category: "IPO & Markets",
+    image: "/images/buisness-insights/india-stock-market-fourth-largest.jpg",
+    excerpt:
+      "India crosses the $5.5 trillion milestone in June 2026, overtaking Japan to become the world's fourth largest stock market as the Sensex tops 85,000.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India has officially overtaken Japan to become the world's fourth largest stock market by market capitalization, crossing the $5.5 trillion milestone in June 2026. The BSE Sensex crossed the 85,000 mark this month, driven by strong foreign institutional investor inflows, robust corporate earnings, and growing retail investor participation. India now trails only the United States, China, and the United Kingdom in total market cap.
+
+The surge has been fueled by outperformance in sectors including capital goods, defence, infrastructure, and financial services. Systematic Investment Plan contributions hit an all-time high of ₹26,000 crore in May 2026, reflecting deep-rooted domestic confidence in equity markets.
+
+Market analysts at Goldman Sachs and Morgan Stanley have both upgraded India's equity outlook to "Overweight," projecting further upside driven by a young demographic, rising middle-class consumption, and continued government capital expenditure in infrastructure and manufacturing.`,
+  },
+
+  {
+    id: "tata-semiconductor-gujarat-expansion",
+    title: "Tata Group Eyes $2 Billion Semiconductor Expansion in Gujarat",
+    date: "24-06-2026",
+    category: "Manufacturing",
+    image: "/images/buisness-insights/tata-semiconductor-gujarat.jpg",
+    excerpt:
+      "Tata Group plans an additional $2 billion in its Dholera chip plant, boosting capacity by nearly 60% and creating an estimated 8,000 direct jobs by 2027.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The Tata Group is set to invest an additional $2 billion in expanding its semiconductor manufacturing facility in Dholera, Gujarat, as part of India's ambitious push to become a global chipmaking hub. The expansion, expected to be operational by 2027, will increase the plant's production capacity by nearly 60% and create an estimated 8,000 direct jobs.
+
+This move comes on the back of strong government support under the India Semiconductor Mission, which has already committed over ₹76,000 crore in incentives to attract global chipmakers. Tata Electronics, which partnered with Taiwan's Powerchip Semiconductor Manufacturing Corporation for the original facility, is in advanced talks with two more global technology firms for technology transfer agreements.
+
+Industry experts believe India's semiconductor ambitions could position the country as a credible alternative to China and Taiwan in the global supply chain, especially as Western nations aggressively diversify chip sourcing.`,
+  },
+
+  {
     id: "india-startup-funding-2026",
     title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
     date: "23-06-2026",
@@ -63,7 +118,7 @@ The mood in India's startup world is shifting — from chasing growth to buildin
     excerpt:
       "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
     readTime: "3 min read",
-    featured: true,
+    featured: false,
     content: `In a landmark deal reshaping India's tech landscape, Meta has led a $900 million financing round in Indian fintech giant CRED, structured through a combination of primary and secondary share purchases, making Meta a minority investor in the company.
 
 The investment gives Meta a roughly 20% stake in CRED, valuing it at $4.5 billion post-money. This marks a recovery from CRED's peak valuation of $6.4 billion in 2022, which had since dipped to $3.6 billion in May 2025.

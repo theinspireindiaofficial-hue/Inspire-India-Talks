@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "kumar-mangalam-birla",
+    name: "Kumar Mangalam Birla",
+    title: "Chairman, Aditya Birla Group",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/kumar-mangalam-birla.jpg",
+    born: "14 June 1967, Kolkata",
+    profession: "Industrialist & Philanthropist",
+    knownFor: "Building the Aditya Birla Group into a $65 billion global conglomerate",
+    quote: "Greatness is rarely born in comfort. It is forged in the moments that test us most.",
+    story: "Imagine being handed one of India's most storied business empires at the age of **28** — not as a celebration, but in the wake of grief. That is exactly the moment Kumar Mangalam Birla stepped into when he lost his father, Aditya Vikram Birla, in 1995. Most people would have buckled under the weight of that inheritance. He chose to grow with it.\n\n**A Vision Bigger Than Inheritance.** Kumar Mangalam could have simply maintained what was handed to him. He didn't. With quiet determination, he looked at a respected Indian conglomerate and asked a bigger question: what could this become? Over three decades, he expanded the Aditya Birla Group into a **$65 billion global enterprise** spanning 36 countries, 180,000 employees, and industries ranging from cement and metals to telecom, financial services, and renewable energy.\n\nHis boldest moves were never reckless — instead they were rooted in belief. The acquisition of **Novelis through Hindalco in 2007**, one of the largest overseas deals by an Indian company at the time, told the world that Indian business was no longer thinking small. Even when the telecom venture through Vodafone Idea faced brutal headwinds in the wake of Jio's disruption, he didn't walk away. He stayed, adapted, and kept searching for a way forward.\n\nAnd through it all, he never forgot the larger purpose of enterprise. His work as **Chancellor of BITS Pilani** and the Group's far-reaching initiatives in education and healthcare reflect a man who understands that true success is measured not just in profits, but in the lives touched along the way.\n\nKumar Mangalam Birla's journey is a reminder that greatness is rarely born in comfort. He inherited a legacy and refused to let it define his ceiling — instead, he made it his foundation. In a world chasing shortcuts, his story stands tall as proof that **patient ambition, unwavering resilience, and a purpose beyond profit** can build something truly enduring.",
+    achievements: ["Grew Aditya Birla Group into a $65B global conglomerate", "Operations across 36 countries with 180,000+ employees", "Led Hindalco's landmark $6B Novelis acquisition in 2007", "Chancellor of BITS Pilani", "Champion of education and healthcare initiatives"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-06-24",
+  },
+  {
     id: "ratan-tata",
     name: "Ratan Tata",
     title: "Chairman Emeritus, Tata Group",
