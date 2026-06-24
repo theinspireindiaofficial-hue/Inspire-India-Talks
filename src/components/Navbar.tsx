@@ -49,9 +49,9 @@ const Navbar = () => {
           ))}
 
           <div className="relative" onMouseEnter={() => setShowCategories(true)} onMouseLeave={() => setShowCategories(false)}>
-            <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary text-foreground/70">
+            <Link to="/inspiring-voices" className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${isActive("/inspiring-voices") ? "text-primary" : "text-foreground/70"}`}>
               Inspiring Voices <ChevronDown className="h-3 w-3" />
-            </button>
+            </Link>
             <AnimatePresence>
               {showCategories && (
                 <motion.div
@@ -60,6 +60,13 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: 8 }}
                   className="absolute top-full left-0 mt-2 w-72 glass-card py-2 overflow-hidden"
                 >
+                  <Link
+                    to="/inspiring-voices"
+                    className="block px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors border-b border-border/30 mb-1"
+                    onClick={() => setShowCategories(false)}
+                  >
+                    All Inspiring Voices →
+                  </Link>
                   {categories.map(cat => (
                     <Link
                       key={cat.slug}
@@ -143,6 +150,7 @@ const Navbar = () => {
               <Link to="/" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Home</Link>
               <Link to="/business-insights" className="block text-sm font-medium py-2 hover:text-primary" onClick={() => setIsOpen(false)}>Business Insights</Link>
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3">Inspiring Voices</div>
+              <Link to="/inspiring-voices" className="block text-sm font-semibold text-primary py-2 pl-3 hover:text-primary" onClick={() => setIsOpen(false)}>All Inspiring Voices →</Link>
               {categories.map(cat => (
                 <Link key={cat.slug} to={`/category/${cat.slug}`} className="block text-sm py-2 pl-3 hover:text-primary" onClick={() => setIsOpen(false)}>
                   {cat.name}
