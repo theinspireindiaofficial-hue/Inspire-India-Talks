@@ -131,7 +131,7 @@ const Index = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden aspect-video glass-card group">
                   <video
-                    src="/images/events/InspireIndiaTalks - Website - Vid.mp4"
+                    src="/images/events/0306(1).mp4"
                     autoPlay
                     muted
                     loop
@@ -185,9 +185,6 @@ const Index = () => {
             ))}
           </div>
         </section>
-
-        {/* Registration Form */}
-        <RegistrationSection />
 
         {/* Story of the Week */}
         <section className="container mx-auto px-4 py-20">
@@ -358,6 +355,9 @@ const Index = () => {
             <p className="mt-6 text-primary font-medium tracking-wider">— Ratan Tata</p>
           </div>
         </section>
+
+        {/* Registration Form */}
+        <RegistrationSection />
 
       </Layout>
     </div>

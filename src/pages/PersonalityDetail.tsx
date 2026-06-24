@@ -88,13 +88,31 @@ const PersonalityDetail = () => {
               <ArrowLeft className="h-4 w-4" /> Back to {person.category}
             </Link>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <p className="text-primary text-sm uppercase tracking-widest font-medium mb-2">{person.category}</p>
-              <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground glow-text">{person.name}</h1>
-              <p className="text-muted-foreground mt-2 text-lg">{person.title}</p>
+              <p className="font-mono text-primary text-[11px] uppercase tracking-[0.25em] font-medium mb-3">{person.category}</p>
+              <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground glow-text leading-[1.02]">{person.name}</h1>
+              <p className="text-muted-foreground mt-3 text-lg md:text-xl font-light">{person.title}</p>
             </motion.div>
           </div>
         </div>
       </motion.section>
+
+      {/* ===== Editorial facts band ===== */}
+      <div className="border-b border-border/40 bg-black/20">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border/40">
+            {[
+              { label: "Born", value: person.born },
+              { label: "Profession", value: person.profession },
+              { label: "Known For", value: person.knownFor },
+            ].map(({ label, value }) => (
+              <div key={label} className="py-6 sm:px-8 first:sm:pl-0">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary mb-2">{label}</p>
+                <p className="font-serif text-base md:text-lg text-foreground/90 leading-snug">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -213,23 +231,7 @@ const PersonalityDetail = () => {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
-            <div className="glass-card p-6">
-              <h3 className="font-serif text-lg font-bold mb-5">Quick Facts</h3>
-              <dl className="space-y-4 text-sm">
-                {[
-                  { label: "Born", value: person.born },
-                  { label: "Profession", value: person.profession },
-                  { label: "Known For", value: person.knownFor },
-                ].map(({ label, value }) => (
-                  <div key={label} className="border-b border-border/30 pb-3">
-                    <dt className="text-muted-foreground text-xs uppercase tracking-wider">{label}</dt>
-                    <dd className="font-medium text-foreground mt-1">{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
+          <div className="space-y-6 lg:sticky lg:top-28 self-start">
             {related.length > 0 && (
               <div className="glass-card p-6">
                 <h3 className="font-serif text-lg font-bold mb-5">Related Personalities</h3>

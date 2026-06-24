@@ -17,6 +17,7 @@ import EventDetail from "./pages/EventDetail";
 import TreeVolution from "./pages/TreeVolution";
 import BusinessInsights from "./pages/BusinessInsights";
 import BusinessInsightDetail from "./pages/BusinessInsightDetail";
+import InspiringVoices from "./pages/InspiringVoices";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/inspiring-voices" element={<InspiringVoices />} />
           <Route path="/category/:slug" element={<CategoryDetail />} />
           <Route path="/personality/:id" element={<PersonalityDetail />} />
           <Route path="/host-event" element={<HostEvent />} />

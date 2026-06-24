@@ -107,8 +107,8 @@
   }
 
   .personality-hero-image {
-    @apply w-full h-full object-cover;
-    object-position: center 20%;
+    @apply w-full h-full object-contain;
+    object-position: center top;
     image-rendering: auto;
   }
 
