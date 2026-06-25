@@ -39,6 +39,42 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "meta-reliance-ai-data-centre-jamnagar",
+    title: "Meta & Reliance to Build India's First AI-Enabled Data Centre in Jamnagar",
+    date: "25-06-2026",
+    category: "Tech & AI",
+    image: "/images/buisness-insights/meta-reliance-data-centre.jpg",
+    excerpt:
+      "Meta and Reliance will build a 168-MW AI-enabled data centre in Jamnagar, Gujarat — powered by renewable energy and cooled using desalinated seawater.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Meta has struck a partnership with Reliance Industries to build a 168-megawatt AI-enabled data centre in Jamnagar, Gujarat — its first major built-to-suit AI infrastructure deal in India.
+
+Under the agreement, Reliance will take end-to-end responsibility for development, while Meta will lease capacity from the facility. The data centre will be powered by renewable energy and cooled using desalinated seawater, with Meta covering all associated energy and water costs.
+
+In a related announcement, Meta signed deals with two Indian clean energy firms — CleanMax and Fourth Partner Energy — totalling close to 1 gigawatt of new capacity across Rajasthan, Karnataka, Tamil Nadu, Maharashtra, and Uttar Pradesh.
+
+The deal builds on a long-standing partnership between the companies that traces back to Meta's $5.7 billion investment in Jio Platforms in 2020, and a $100 million joint venture formed in 2025 to develop Llama-based enterprise AI solutions for Indian businesses. The Jamnagar facility is expected to be operational within two years.`,
+  },
+
+  {
+    id: "india-us-trade-talks-july-deadline",
+    title: "India-US Trade Talks Conclude Without Final Deal, July Deadline Looms",
+    date: "24-06-2026",
+    category: "Trade & Policy",
+    image: "/images/buisness-insights/india-us-trade-talks.jpg",
+    excerpt:
+      "India and the US wrapped two days of talks in New Delhi but left key issues unresolved, with a temporary 10% US tariff regime set to expire on July 24.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India and the United States wrapped up two days of high-level trade talks in New Delhi on June 24, but left critical issues unresolved ahead of a pivotal deadline. Commerce and Industry Minister Piyush Goyal and visiting US Trade Representative Jamieson Greer discussed market access, digital trade, and non-tariff barriers but gave no indication that all differences had been bridged.
+
+Both sides are racing to finalise an interim arrangement before the expiration of a temporary 10% US tariff regime on July 24 — a deadline that has added urgency to negotiations. The talks follow the Modi-Trump bilateral on the G7 sidelines in France on June 17.
+
+India has proposed eliminating or reducing tariffs on all US industrial goods and a wide range of agricultural products, while also expressing intentions to purchase $500 billion worth of US goods — including energy, aircraft, and technology products — over the next five years. Both sides described "substantial progress" but stopped short of declaring a breakthrough.`,
+  },
+
+  {
     id: "bharatiya-vyapar-mahotsav-2026",
     title: "India Gears Up for Bharatiya Vyapar Mahotsav 2026",
     date: "24-06-2026",

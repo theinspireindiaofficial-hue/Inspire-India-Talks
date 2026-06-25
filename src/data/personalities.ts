@@ -485,6 +485,23 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-06-22",
   },
+  {
+    id: "kunal-shah",
+    name: "Kunal Shah",
+    title: "Founder, CRED",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/kunal-shah.jpg",
+    born: "Mumbai",
+    profession: "Entrepreneur & Fintech Founder",
+    knownFor: "Founding CRED and FreeCharge, and decoding the psychology of money",
+    quote: "Trust is scarce, and those who demonstrate it deserve recognition.",
+    story: "In a world of startup founders chasing valuations and viral moments, Kunal Shah stands apart — and not because of the size of his company, but the sharpness of his mind. The founder of CRED and one of India's most respected entrepreneurial thinkers, Kunal Shah has built his reputation not just on business success, but on a rare ability to **decode human behaviour, wealth, and ambition** in ways that make people stop and think.\n\nBorn and raised in Mumbai, Kunal Shah's journey was far from a straight line. Before CRED, he co-founded **FreeCharge** — a mobile recharging platform that was acquired by Snapdeal in 2015 for a reported $400 million, one of the largest startup acquisitions in India at the time. It was proof that he could build and scale. But what came next revealed who he truly was.\n\nIn 2018, he launched **CRED** — an app that rewards creditworthy individuals for paying their credit card bills on time. The concept was unconventional, even polarising. Critics asked why anyone needed to be rewarded for financial responsibility. Kunal's answer was rooted in a deeper insight: trust is scarce, and those who demonstrate it deserve recognition. CRED grew into a multi-billion dollar fintech platform, attracting India's most affluent consumers and redefining how brands think about premium audiences.\n\nBut Kunal Shah's influence extends well beyond his companies. He is perhaps India's most followed founder-thinker on social media. His frameworks — like **Delta 4 Theory**, which explains why people switch products only when the new experience is significantly better — are studied by entrepreneurs across the country. He speaks candidly about wealth psychology, India's relationship with money, and the mindset gaps that hold people back. In a startup culture often obsessed with hustle, he champions **clarity over noise**.\n\nKunal Shah has shown that entrepreneurship is as much about understanding people as it is about building products. Whether you are a founder, a professional, or simply someone trying to make smarter decisions, his ideas offer a lens worth looking through.",
+    achievements: ["Co-founded FreeCharge, acquired by Snapdeal for a reported $400M in 2015", "Founded CRED in 2018, now a multi-billion dollar fintech platform", "Creator of the widely-studied Delta 4 Theory framework", "One of India's most followed founder-thinkers on social media", "Influential voice on wealth psychology and consumer behaviour"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-06-25",
+  },
   // ===== SHE TALKS =====
   {
     id: "kalpana-chawla",
@@ -2607,7 +2624,19 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
 ];
 
 export const getPersonalitiesByCategory = (categorySlug: string): Personality[] => {
-  return personalities.filter(p => p.categorySlug === categorySlug).reverse();
+  // Newest first: sort by addedAt (descending). For entries with the same or
+  // missing date, the one that appears LATER in the array is treated as newer,
+  // so newly added articles always surface at the top.
+  return personalities
+    .filter(p => p.categorySlug === categorySlug)
+    .map((person, index) => ({ person, index }))
+    .sort((a, b) => {
+      const dateA = a.person.addedAt ? new Date(a.person.addedAt).getTime() : 0;
+      const dateB = b.person.addedAt ? new Date(b.person.addedAt).getTime() : 0;
+      if (dateB !== dateA) return dateB - dateA;
+      return b.index - a.index;
+    })
+    .map(({ person }) => person);
 };
 
 export const getPersonalityById = (id: string): Personality | undefined => {
