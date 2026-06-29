@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Inspire India Talks (Preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: "hsl(220 20% 4%)",
+          foreground: "hsl(40 20% 95%)",
+          card: "hsl(220 18% 8%)",
+          primary: { DEFAULT: "hsl(24 95% 53%)", foreground: "hsl(0 0% 100%)" },
+          muted: { foreground: "hsl(220 10% 55%)" },
+          border: "hsl(220 14% 18%)",
+        },
+        fontFamily: {
+          sans: ["Inter", "sans-serif"],
+          serif: ["Fraunces", "Playfair Display", "serif"],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --primary: 24 95% 53%; }
+  body { background: hsl(220 20% 4%); color: hsl(40 20% 95%); font-family: "Inter", sans-serif; }
+  .font-serif { font-family: "Fraunces", "Playfair Display", serif; }
+  .glass-card {
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, rgba(17,24,39,0.95), rgba(30,41,59,0.85));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  .gradient-mesh {
+    background:
+      radial-gradient(ellipse at 20% 50%, hsl(24 95% 53% / 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(24 60% 40% / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 80%, hsl(220 50% 20% / 0.1) 0%, transparent 50%);
+  }
+  .preview-banner {
+    background: hsl(24 95% 53%); color: #fff; text-align: center;
+    font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 6px; font-weight: 600;
+  }
+</style>
+</head>
+<body class="bg-background text-foreground">
+<div class="preview-banner">Standalone design preview · About page · not wired into the live app</div>
+
+<!-- HERO -->
+<section id="top" class="relative overflow-hidden border-b border-white/5 gradient-mesh">
+  <div class="container mx-auto px-4 py-20 md:py-28">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-primary">
+          <span class="text-xs font-semibold uppercase tracking-[0.25em]">India's storytelling platform</span>
+        </div>
+        <h1 class="font-serif mt-8 max-w-5xl text-5xl font-bold leading-[0.98] tracking-tight md:text-7xl">
+          Inspiring minds.<br />
+          <span class="text-primary">Shaping India's</span> <span class="italic font-normal">future.</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/70">
+          Inspire India Talks is built to document stories, ideas, innovations, and journeys that help young India see what is possible from wherever they begin.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90">Explore Stories →</a>
+          <a class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary/50 hover:text-primary">Partner With Us</a>
+        </div>
+        <div class="mt-14 grid max-w-xl grid-cols-3 gap-6">
+          <div class="border-l border-primary pl-4"><div class="font-serif text-3xl font-bold md:text-4xl">50+</div><div class="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Voices</div></div>
+          <div class="border-l border-primary pl-4"><div class="font-serif text-3xl font-bold md:text-4xl">12+</div><div class="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">States</div></div>
+          <div class="border-l border-primary pl-4"><div class="font-serif text-3xl font-bold md:text-4xl">40+</div><div class="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Sectors</div></div>
+        </div>
+      </div>
+      <div class="hidden lg:col-span-4 lg:block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+          <img src="public/images/conference-stage.png" alt="Inspire India Talks event stage" class="h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="text-[10px] uppercase tracking-[0.3em] text-primary">Stories. Ideas. Impact.</div>
+            <div class="font-serif mt-3 text-2xl font-semibold leading-tight">A stage for the India that is building quietly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="container mx-auto px-4 py-20 md:py-28">
+  <div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+    <div class="lg:col-span-5">
+      <div class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+        <img src="public/images/founder-photo.png" alt="Founder Shamshad Alam" class="aspect-[4/5] h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <div class="text-[10px] uppercase tracking-[0.3em] text-primary">Founder</div>
+          <div class="font-serif mt-2 text-2xl font-semibold">Shamshad Alam</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-7 lg:pt-8">
+      <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Meet The Founder</span></div>
+      <h2 class="font-serif mt-6 text-4xl font-bold leading-tight md:text-6xl">The story behind <span class="text-primary">our story.</span></h2>
+      <div class="mt-8 flex flex-wrap gap-2">
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-foreground/70">Storyteller</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-foreground/70">Youth Builder</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-foreground/70">Bharat First</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-foreground/70">Platform Creator</span>
+      </div>
+      <p class="mt-8 text-lg leading-relaxed text-foreground/75">Shamshad Alam comes from the kind of India where ambition is strong but platforms are rare. Growing up outside metropolitan privilege meant seeing a truth up close: talent exists everywhere, but visibility does not.</p>
+      <p class="mt-5 text-lg leading-relaxed text-foreground/75">Inspire India Talks was born from that conviction. The platform exists to bring grounded Indian journeys to the front, so students, builders, and young leaders can meet role models who began closer to where they are.</p>
+      <div class="glass-card mt-8 p-6"><p class="font-serif text-2xl leading-snug">"The problem was never lack of potential. The problem was lack of access."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="border-t border-white/5 py-20 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Mission</span></div>
+        <h2 class="font-serif mt-6 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">Four pillars driving everything <span class="text-primary">we publish.</span></h2>
+      </div>
+      <p class="max-w-md text-foreground/65">A clear purpose shapes our stories, our events, our partners, and every conversation we choose to amplify.</p>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" id="pillars"></div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="border-t border-white/5 py-20 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Our Journey</span></div>
+    <h2 class="font-serif mt-6 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">Milestones that shaped <span class="text-primary">the road ahead.</span></h2>
+    <div class="mt-14 grid gap-5 md:grid-cols-4" id="journey-grid"></div>
+  </div>
+</section>
+
+<!-- COVER -->
+<section id="cover" class="border-t border-white/5 py-20 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">What We Cover</span></div>
+        <h2 class="font-serif mt-6 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">Editorial pillars, <span class="text-primary">one mission.</span></h2>
+      </div>
+      <p class="max-w-sm text-sm leading-relaxed text-foreground/65">From classrooms to startups, from public service to grassroots innovation, the platform follows stories that move India forward.</p>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cover-grid"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="border-t border-white/5 py-20 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+      <div class="order-2 lg:order-1 lg:col-span-6">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="public/images/conference-crowd.png" alt="Audience" class="aspect-[3/4] rounded-2xl border border-white/10 object-cover" />
+          <img src="public/images/buisness-insights/startup-funding-2026.jpg" alt="Startup discussion" class="mt-12 aspect-[3/4] rounded-2xl border border-white/10 object-cover" />
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 lg:col-span-6">
+        <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why Inspire India Talks?</span></div>
+        <h2 class="font-serif mt-6 text-4xl font-bold leading-tight md:text-6xl">We bridge inspiration <span class="text-primary">with action.</span></h2>
+        <p class="mt-8 text-lg leading-relaxed text-foreground/70">Young people do not only need success stories. They need believable proof, practical insight, and representation that tells them their starting point is not their limit.</p>
+        <ul class="mt-10 space-y-4" id="why-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision" class="relative overflow-hidden border-t border-white/5 py-24 md:py-36">
+  <div class="absolute inset-0 gradient-mesh opacity-70"></div>
+  <div class="container relative mx-auto px-4 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-primary">
+      <span class="text-xs font-semibold uppercase tracking-[0.25em]">Our Vision</span>
+    </div>
+    <h2 class="font-serif mx-auto mt-8 max-w-5xl text-4xl font-bold leading-tight md:text-7xl">To become India's most trusted platform for <span class="text-primary">inspiration, knowledge, and transformative storytelling.</span></h2>
+    <p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-foreground/70">Built for the leaders of tomorrow: entrepreneurs, educators, innovators, students, and changemakers writing India's next chapter.</p>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join" class="border-t border-white/5 py-20 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="glass-card overflow-hidden p-8 md:p-14 lg:p-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-7">
+          <div class="flex items-center gap-3"><span class="h-px w-8 bg-primary"></span><span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Join The Movement</span></div>
+          <h2 class="font-serif mt-6 text-4xl font-bold leading-tight md:text-6xl">Be part of a community <span class="text-primary">shaping India's future.</span></h2>
+          <p class="mt-6 max-w-xl leading-relaxed text-foreground/70">Read the stories, host a conversation, partner with the platform, or help us bring more unheard Indian journeys into the light.</p>
+        </div>
+        <div class="flex flex-col gap-3 lg:col-span-5">
+          <a class="inline-flex items-center justify-between rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90">Explore Stories →</a>
+          <a class="inline-flex items-center justify-between rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold transition hover:border-primary/50 hover:text-primary">Explore Events ▸</a>
+          <a class="inline-flex items-center justify-between rounded-full border border-white/15 px-7 py-4 text-sm font-semibold transition hover:border-primary/50 hover:text-primary">Partner With Us ⤝</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const pillars = [
+    ["Inspire", "Share real journeys that make ambition feel close, possible, and Indian."],
+    ["Educate", "Turn lived experience into practical lessons for students, founders, and young leaders."],
+    ["Empower", "Give emerging voices the confidence to build, lead, serve, and dream beyond geography."],
+    ["Connect", "Bring together changemakers, institutions, and youth through thoughtful storytelling."],
+  ];
+  document.getElementById("pillars").innerHTML = pillars.map(([t, x], i) => `
+    <div class="glass-card p-7">
+      <div class="flex items-center justify-between">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary font-serif font-bold">${t[0]}</div>
+        <span class="font-serif text-xs tracking-[0.25em] text-muted-foreground">0${i + 1}</span>
+      </div>
+      <h3 class="font-serif mt-6 text-2xl font-semibold">${t}</h3>
+      <p class="mt-3 text-sm leading-relaxed text-foreground/65">${x}</p>
+      <div class="mt-8 h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
+    </div>`).join("");
+
+  const journey = [
+    ["Origin", "A Small-Town Conviction", "The idea began with a simple belief: talent exists everywhere, but visibility does not."],
+    ["Stage", "Voices From Bharat", "Inspire India Talks started documenting founders, educators, officers, artists, and social leaders."],
+    ["Community", "Youth Conversations", "The platform grew into a space where young Indians could meet stories that felt relatable."],
+    ["Now", "A Growing Movement", "Today, the mission is expanding through stories, events, campaigns, and partnerships."],
+  ];
+  document.getElementById("journey-grid").innerHTML = journey.map(([y, t, x]) => `
+    <div class="relative border-l border-white/10 pl-6">
+      <div class="absolute -left-[7px] top-0 h-3.5 w-3.5 rounded-full border-2 border-primary bg-background"></div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.25em] text-primary">${y}</div>
+      <h3 class="font-serif mt-3 text-2xl font-semibold">${t}</h3>
+      <p class="mt-4 text-sm leading-relaxed text-foreground/65">${x}</p>
+    </div>`).join("");
+
+  const cover = [
+    ["Inspiring Voices", "Stories", "public/images/personalities/srikanth-bolla.webp"],
+    ["Business Insights", "Ideas", "public/images/buisness-insights/non-metro-startup-story.png"],
+    ["Youth Leadership", "Impact", "public/images/events/Khushi-grewal.jpg"],
+    ["Innovation", "Future", "public/images/buisness-insights/deeptech.png"],
+    ["Education", "Learning", "public/images/personalities/anand-kumar.jpeg"],
+    ["Social Change", "Bharat", "public/images/personalities/Chami-Murmu.jpg"],
+  ];
+  document.getElementById("cover-grid").innerHTML = cover.map(([t, c, img]) => `
+    <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
+      <img src="${img}" alt="${t}" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+      <div class="absolute left-5 top-5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-primary">${c}</div>
+      <div class="absolute bottom-0 left-0 right-0 p-6">
+        <h3 class="font-serif text-3xl font-semibold leading-tight transition group-hover:text-primary">${t}</h3>
+        <div class="mt-3 flex items-center gap-2 text-xs text-foreground/60">Read latest <span class="h-px w-8 bg-current"></span></div>
+      </div>
+    </div>`).join("");
+
+  const why = [
+    "Real Indian journeys, not borrowed motivation",
+    "Voices from towns, districts, campuses, and grassroots communities",
+    "Stories curated for young builders, students, educators, and leaders",
+    "A platform where visibility becomes belief",
+  ];
+  document.getElementById("why-list").innerHTML = why.map((p) => `
+    <li class="flex items-start gap-4"><span class="mt-0.5 text-primary">✓</span><span class="text-foreground/80">${p}</span></li>`).join("");
+</script>
+</body>
+</html>

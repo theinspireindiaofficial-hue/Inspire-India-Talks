@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Node compile cache (temp)
+.tmp/
+node-compile-cache/
+
+# Node compile cache (temp)
+.tmp/
+node-compile-cache/

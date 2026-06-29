@@ -39,6 +39,40 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "rbi-holds-repo-rate-525-markets-rally",
+    title: "RBI Holds Repo Rate at 5.25%, Markets Rally",
+    date: "29-06-2026",
+    category: "RBI & Markets",
+    image: "/images/buisness-insights/india-stock-market-fourth-largest.jpg",
+    excerpt:
+      "Sensex and Nifty traded higher after the RBI kept the repo rate unchanged at 5.25%, retained a neutral stance, and announced measures to boost capital inflows.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Sensex and Nifty traded higher after the Reserve Bank of India kept the repo rate unchanged at 5.25%, retained a neutral policy stance, and announced measures to boost capital inflows.
+
+The RBI also announced steps to improve foreign participation in Indian markets, including a higher investment limit in equities for Non-Resident Indians (NRIs) and Overseas Citizens of India (OCIs), along with an expansion of government securities available under the Fully Accessible Route (FAR).
+
+Rate-sensitive sectors such as banking, financial services, and real estate outperformed following the policy announcement, while IT and metal stocks remained under pressure.`,
+  },
+
+  {
+    id: "india-energy-storage-market-expansion-2032",
+    title: "India's Energy Storage Market Set for Major Expansion",
+    date: "29-06-2026",
+    category: "Energy & Sustainability",
+    image: "/images/buisness-insights/india-energy-storage-market-2032.jpg",
+    excerpt:
+      "India's C&I energy storage market is expected to scale to 22–31 GWh by 2032, driven by rising tariffs, renewable integration, and a push toward energy resilience.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's commercial and industrial (C&I) energy storage market is expected to scale rapidly to 22–31 GWh by 2032, supported by rising energy tariffs, renewable energy integration, cost optimisation needs, and a shift toward energy resilience and decarbonisation.
+
+This growth signals increasing corporate adoption of battery and storage solutions as India pushes toward its clean energy targets. The expansion is also being driven by government policy incentives for domestic manufacturing and renewable infrastructure.
+
+Analysts expect the storage sector to attract significant private investment over the next five years, making it one of the fastest-growing segments within India's broader energy transition landscape.`,
+  },
+
+  {
     id: "meta-reliance-ai-data-centre-jamnagar",
     title: "Meta & Reliance to Build India's First AI-Enabled Data Centre in Jamnagar",
     date: "25-06-2026",
