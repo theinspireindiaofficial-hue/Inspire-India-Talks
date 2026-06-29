@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "aman-gupta",
+    name: "Aman Gupta",
+    title: "Co-founder & CMO, boAt",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/aman-gupta.jpg",
+    born: "1982, New Delhi",
+    profession: "Entrepreneur & Brand Builder",
+    knownFor: "Building boAt into India's leading audio and wearables brand",
+    quote: "I want boAt to be a global brand that was born in India.",
+    story: "In a country where imported brands long ruled the electronics market, one man dared to ask a simple but powerful question: **Why can't India have its own?** Aman Gupta, co-founder and CMO of boAt, built a company around it. Today, boAt is India's leading audio and wearables brand, and Aman Gupta is one of the most recognizable faces in the Indian startup ecosystem. His story is not just about building a business; it's about building a **brand identity for an entire generation.**\n\nBorn in New Delhi in 1982, Aman Gupta came from a business family but chose to carve his own path. Armed with strong academic credentials, he worked with companies like **Citibank and KPMG** before joining the family business. But the entrepreneur in him was restless.\n\nIn 2016, Aman Gupta co-founded boAt alongside **Sameer Mehta**. The idea was straightforward: to offer durable, stylish, and affordable audio products to young Indians who were tired of paying premium prices for foreign brands or settling for cheap, low-quality alternatives. Starting with mobile charging cables and earphones, boAt quickly expanded into headphones, smartwatches, and speakers.\n\nWhat set boAt apart was not just its products, but its **branding.** Aman understood the pulse of young India — they wanted products that looked good, felt premium, and didn't burn a hole in their pockets. boAt positioned itself as a lifestyle brand, collaborating with cricketers, musicians, and influencers to build cultural relevance. The strategy worked. boAt became a **unicorn** and captured over **30% of India's hearables market**, outselling global giants like Sony and JBL in several categories.\n\nAman's visibility skyrocketed further when he joined **Shark Tank India** as an investor. His sharp questions, candid feedback, and memorable phrase \"Hum log toh doob gaye\" made him a household name well beyond the startup world.\n\nAman Gupta's journey is a masterclass in brand building, market understanding, and relentless execution. He didn't just find a gap in the market — he filled it with **style, strategy, and swagger.** For aspiring entrepreneurs, his story is proof that you don't need to reinvent the wheel; sometimes, you just need to make it louder.",
+    achievements: ["Co-founded boAt in 2016 with Sameer Mehta", "Built India's leading audio and wearables brand", "Captured 30%+ of India's hearables market, outselling Sony and JBL", "Grew boAt into a unicorn", "Investor on Shark Tank India"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-06-29",
+  },
+  {
     id: "kumar-mangalam-birla",
     name: "Kumar Mangalam Birla",
     title: "Chairman, Aditya Birla Group",
