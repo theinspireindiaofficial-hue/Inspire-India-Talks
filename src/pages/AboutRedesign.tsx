@@ -502,32 +502,4 @@ const About = () => {
                 </Link>
                 <Link
                   to="/events"
-                  className="inline-flex items-center justify-between rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold transition hover:border-primary/50 hover:text-primary"
-                >
-                  Explore Events
-                  <Megaphone className="h-4 w-4" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-between rounded-full border border-white/15 px-7 py-4 text-sm font-semibold transition hover:border-primary/50 hover:text-primary"
-                >
-                  Partner With Us
-                  <Handshake className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-center gap-3">
-    <span className="h-px w-8 bg-primary" />
-    <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">{children}</span>
-  </div>
-);
-
-export default About;
+          

@@ -11,12 +11,12 @@ const locationOf = (p: Personality): string => {
   return parts.length > 1 ? parts[parts.length - 1].trim() : "";
 };
 
-const Portrait = ({ p, className = "" }: { p: Personality; className?: string }) => (
+const Portrait = ({ p, className = "", fit = "object-cover object-top" }: { p: Personality; className?: string; fit?: string }) => (
   <img
     src={p.image}
     alt={p.name}
     loading="lazy"
-    className={`object-cover object-top ${className}`}
+    className={`${fit} ${className}`}
     onError={(e) => {
       (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(p.name)}&size=800&background=1a1a2e&color=f97316&bold=true`;
     }}
@@ -70,7 +70,7 @@ const InspiringVoices = () => {
               className="group grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-primary/20 bg-black/30 hover:border-primary/40 transition-colors"
             >
               <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[480px] overflow-hidden bg-gradient-to-br from-primary/20 via-black/40 to-black">
-                <Portrait p={lead} className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105" />
+                <Portrait p={lead} fit="object-contain object-center" className="absolute inset-0 w-full h-full p-4 transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/55 mb-5">

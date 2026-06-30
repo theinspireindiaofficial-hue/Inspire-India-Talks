@@ -39,11 +39,45 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "bharti-airtel-africa-stake-share-swap",
+    title: "Bharti Airtel Boosts Africa Stake via Share Swap",
+    date: "30-06-2026",
+    category: "Telecom & M&A",
+    image: "/images/business-insights/bharti-airtel-africa-stake.jpg",
+    excerpt:
+      "Bharti Airtel acquired a 16.3% stake in Airtel Africa from ICIL via a cashless ₹28,200 crore share swap, lifting its effective holding to roughly 79%.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Bharti Airtel acquired a 16.3% stake in Airtel Africa from ICIL through a cashless ₹28,200 crore share-swap deal, lifting its effective holding in the UK-listed Africa unit to roughly 79%. The move strengthens Airtel's control over its fast-growing African operations without requiring fresh cash outlay, reflecting the telecom major's continued push to consolidate its international portfolio.
+
+This comes at a time when India's telecom sector itself is showing strong momentum, with industry-wide revenue rising steadily on the back of robust data consumption and subscriber growth.
+
+Analysts view the swap as a strategic long-term bet on Africa's expanding telecom and digital services market, where Airtel has been investing heavily in network infrastructure and mobile money services.`,
+  },
+
+  {
+    id: "india-ev-sector-sales-surge-may-2026",
+    title: "India's EV Sector Sees Sharp Sales Surge",
+    date: "30-06-2026",
+    category: "EV & Mobility",
+    image: "/images/business-insights/india-ev-sales-surge-2026.jpg",
+    excerpt:
+      "India's auto retail registrations rose 5.5% YoY in May 2026, led by a 41.2% jump in EV sales as fuel prices spiked and adoption accelerated.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's domestic automobile retail registrations surged 5.5% year-on-year in May 2026, driven significantly by a robust 41.2% jump in electric vehicle sales. A steep surge in conventional petroleum fuel prices drove a sharp spike in electric vehicle penetration across India during May, accelerating consumer adoption.
+
+Supporting this momentum, Bengaluru-based EV maker Simple Energy raised ₹250 crore in debt and equity, led by Thyrocare founder Velumani's family office, to scale production from 3,000 to 15,000 scooters monthly and expand stores from 80 to 250, targeting an FY28 IPO.
+
+The move reflects strong investor confidence in India's electric two-wheeler segment, one of the fastest-growing pockets of the country's mobility transition.`,
+  },
+
+  {
     id: "rbi-holds-repo-rate-525-markets-rally",
     title: "RBI Holds Repo Rate at 5.25%, Markets Rally",
     date: "29-06-2026",
     category: "RBI & Markets",
-    image: "/images/buisness-insights/india-stock-market-fourth-largest.jpg",
+    image: "/images/business-insights/india-stock-market-fourth-largest.jpg",
     excerpt:
       "Sensex and Nifty traded higher after the RBI kept the repo rate unchanged at 5.25%, retained a neutral stance, and announced measures to boost capital inflows.",
     readTime: "3 min read",
@@ -60,7 +94,7 @@ Rate-sensitive sectors such as banking, financial services, and real estate outp
     title: "India's Energy Storage Market Set for Major Expansion",
     date: "29-06-2026",
     category: "Energy & Sustainability",
-    image: "/images/buisness-insights/india-energy-storage-market-2032.jpg",
+    image: "/images/business-insights/india-energy-storage-market-2032.jpg",
     excerpt:
       "India's C&I energy storage market is expected to scale to 22–31 GWh by 2032, driven by rising tariffs, renewable integration, and a push toward energy resilience.",
     readTime: "3 min read",
@@ -77,7 +111,7 @@ Analysts expect the storage sector to attract significant private investment ove
     title: "Meta & Reliance to Build India's First AI-Enabled Data Centre in Jamnagar",
     date: "25-06-2026",
     category: "Tech & AI",
-    image: "/images/buisness-insights/meta-reliance-data-centre.jpg",
+    image: "/images/business-insights/meta-reliance-data-centre.jpg",
     excerpt:
       "Meta and Reliance will build a 168-MW AI-enabled data centre in Jamnagar, Gujarat — powered by renewable energy and cooled using desalinated seawater.",
     readTime: "3 min read",
@@ -96,7 +130,7 @@ The deal builds on a long-standing partnership between the companies that traces
     title: "India-US Trade Talks Conclude Without Final Deal, July Deadline Looms",
     date: "24-06-2026",
     category: "Trade & Policy",
-    image: "/images/buisness-insights/india-us-trade-talks.jpg",
+    image: "/images/business-insights/india-us-trade-talks.jpg",
     excerpt:
       "India and the US wrapped two days of talks in New Delhi but left key issues unresolved, with a temporary 10% US tariff regime set to expire on July 24.",
     readTime: "3 min read",
@@ -113,7 +147,7 @@ India has proposed eliminating or reducing tariffs on all US industrial goods an
     title: "India Gears Up for Bharatiya Vyapar Mahotsav 2026",
     date: "24-06-2026",
     category: "Trade & MSME",
-    image: "/images/buisness-insights/bharatiya-vyapar-mahotsav-2026.jpg",
+    image: "/images/business-insights/bharatiya-vyapar-mahotsav-2026.jpg",
     excerpt:
       "India's largest Make-in-India multi-sectoral business expo runs 12–15 August 2026 at Bharat Mandapam, with 2,000+ exhibitors and over 10 lakh visitors expected.",
     readTime: "3 min read",
@@ -134,7 +168,7 @@ Registrations are currently open across four categories — Exhibitor, Business 
     title: "India Overtakes Japan to Become World's Fourth Largest Stock Market",
     date: "24-06-2026",
     category: "IPO & Markets",
-    image: "/images/buisness-insights/india-stock-market-fourth-largest.jpg",
+    image: "/images/business-insights/india-stock-market-fourth-largest.jpg",
     excerpt:
       "India crosses the $5.5 trillion milestone in June 2026, overtaking Japan to become the world's fourth largest stock market as the Sensex tops 85,000.",
     readTime: "3 min read",
@@ -151,7 +185,7 @@ Market analysts at Goldman Sachs and Morgan Stanley have both upgraded India's e
     title: "Tata Group Eyes $2 Billion Semiconductor Expansion in Gujarat",
     date: "24-06-2026",
     category: "Manufacturing",
-    image: "/images/buisness-insights/tata-semiconductor-gujarat.jpg",
+    image: "/images/business-insights/tata-semiconductor-gujarat.jpg",
     excerpt:
       "Tata Group plans an additional $2 billion in its Dholera chip plant, boosting capacity by nearly 60% and creating an estimated 8,000 direct jobs by 2027.",
     readTime: "3 min read",
@@ -168,7 +202,7 @@ Industry experts believe India's semiconductor ambitions could position the coun
     title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
     date: "23-06-2026",
     category: "Funding",
-    image: "/images/buisness-insights/meta-cred.jpg",
+    image: "/images/business-insights/meta-cred.jpg",
     excerpt:
       "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
     readTime: "3 min read",
@@ -184,7 +218,7 @@ The mood in India's startup world is shifting — from chasing growth to buildin
     title: "Meta Invests $900 Million in CRED, Taps Kunal Shah to Lead WhatsApp",
     date: "22-06-2026",
     category: "Deals & Fintech",
-    image: "/images/buisness-insights/startup-funding-2026.jpg",
+    image: "/images/business-insights/startup-funding-2026.jpg",
     excerpt:
       "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
     readTime: "3 min read",
@@ -203,7 +237,7 @@ Shah's fintech background has fuelled speculation that Meta may deepen financial
     title: "Jio Files for India's Largest-Ever IPO Valued at ₹13 Lakh Crore",
     date: "22-06-2026",
     category: "IPO & Markets",
-    image: "/images/buisness-insights/jio-ipo.jpeg",
+    image: "/images/business-insights/jio-ipo.jpeg",
     excerpt:
       "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
     readTime: "3 min read",
@@ -220,7 +254,7 @@ With the SEBI review underway, the public issue is expected later in 2026. The J
     title: "India-UK trade pact kicks in July 15 — Scotch whisky, cars, and Indian textiles set for tariff cuts",
     date: "22-06-2026",
     category: "Economy & Trade",
-    image: "/images/buisness-insights/india-uk-trade.png",
+    image: "/images/business-insights/india-uk-trade.png",
     excerpt:
       "The India-UK Comprehensive Economic and Trade Agreement will come into force on July 15, 2026, ushering in sweeping tariff reductions and expanded market access for both countries. While Scotch whisky and British automobiles will benefit from lower Indian duties, Indian exporters in textiles, footwear, marine products, and engineering goods gain duty-free access to the UK market, paving the way for stronger bilateral trade and economic cooperation.",
     readTime: "3 min read",
@@ -241,7 +275,7 @@ Experts caution that Indian exporters must upgrade product standards to meet UK 
     title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
     date: "18-06-2026",
     category: "Technology — AI Policy & Export Controls",
-    image: "/images/buisness-insights/fable-5-ai.png",
+    image: "/images/business-insights/fable-5-ai.png",
     excerpt:
      "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
     readTime: "4 min read",
@@ -270,7 +304,7 @@ For now, Anthropic leads.`
     title: "India's Startup Boom Breaks Out of the Metros",
     date: "19-06-2026",
     category: "Startups",
-    image: "/images/buisness-insights/non-metro-startup-story.png",
+    image: "/images/business-insights/non-metro-startup-story.png",
     excerpt:
       "Nearly half of India's 207,000-plus recognised startups now emerge from Tier II and Tier III cities, signalling a profound democratisation of entrepreneurship.",
     readTime: "3 min read",
@@ -282,7 +316,7 @@ For now, Anthropic leads.`
   title: "Ex-Vedantu Leader Raises Rs 30 Crore to Build an AI-Native Learning Platform",
   date: "19-06-2026",
   category: "Edtech",
-  image: "/images/buisness-insights/second-time-founder-prolearn.png",    
+  image: "/images/business-insights/second-time-founder-prolearn.png",    
   excerpt:
     "Second-time founder Ravneet Singh has raised Rs 30 crore in pre-seed funding for ProLearn, an AI-native platform aiming to replace one-size-fits-all video lectures with adaptive, personalised learning.",
   readTime: "2 min read",
@@ -295,7 +329,7 @@ For now, Anthropic leads.`
     title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
     date: "18-06-2026",
     category: "Funding",
-    image: "/images/buisness-insights/bigbasket-hari-menon.png",
+    image: "/images/business-insights/bigbasket-hari-menon.png",
     excerpt:
       "Business — Corporate Leadership / Retail & E-commerce",
     readTime: "3 min read",
@@ -317,7 +351,7 @@ Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan sai
     title: "Biodimension Raises ₹8 Crore to Transform Life Sciences",
     date: "15-06-2026",
     category: "Life Sciences",
-    image: "/images/buisness-insights/biodimension.png",
+    image: "/images/business-insights/biodimension.png",
     excerpt:
       "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
     readTime: "4 min read",
@@ -333,7 +367,7 @@ Currently, Biodimension has formed strategic collaborations with pharmaceutical 
     title: "Bengaluru Deeptech Startup Closes $40M Series B",
     date: "14-06-2026",
     category: "Funding",
-    image: "/images/buisness-insights/deeptech.png",
+    image: "/images/business-insights/deeptech.png",
     excerpt:
       "The round will fund global expansion and a new AI research lab in Bengaluru.",
     readTime: "3 min read",
@@ -349,7 +383,7 @@ As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in o
     id: "indian-deep-tech-innotrek-uk",
     title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
     category: "Emerging Tech",
-    image: "/images/buisness-insights/indian-deep-tech-innotrek-uk.png",
+    image: "/images/business-insights/indian-deep-tech-innotrek-uk.png",
     excerpt:
       "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
     featured: false,
@@ -368,7 +402,7 @@ Industry experts regard such efforts as steps towards diversifying Reliance's en
     title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
     date: "18-06-2026",
     category: "Energy",
-    image: "/images/buisness-insights/hydrogen.png",
+    image: "/images/business-insights/hydrogen.png",
     excerpt:
       "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
     readTime: "5 min read",
@@ -384,7 +418,7 @@ For a generation of founders building in artificial intelligence, semiconductors
     title: "IIT Madras Leads India's Innovation Charge in Nice at Bharat Innovates 2026",
     date: "18-06-2026",
     category: "Startups & Innovation",
-    image: "/images/buisness-insights/iit-madras-world-stage-bharat-innovates-2026.png",
+    image: "/images/business-insights/iit-madras-world-stage-bharat-innovates-2026.png",
     excerpt:
       "At Bharat Innovates 2026 in Nice, IIT Madras presents fifteen startups and leads two thematic tracks—proof that world-class deep-tech is emerging from Indian campuses.",
     readTime: "5 min read",
@@ -403,7 +437,7 @@ For aspiring founders, the message is clear: world-class ideas can and do emerge
     title: "India's Youngest Founders Cash In at Masters' Union Demo Day 2026",
     date: "18-06-2026",
     category: "Education & Entrepreneurship",
-    image: "/images/buisness-insights/masters-union-demo-day-2026.png",
+    image: "/images/business-insights/masters-union-demo-day-2026.png",
     excerpt:
       "At Masters' Union's Demo Day 2026, eighteen student startups raised Rs 4 crore across AI, fintech, mobility, and more—proof that company-building is starting before graduation.",
     readTime: "4 min read",
