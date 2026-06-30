@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "ashneer-grover",
+    name: "Ashneer Grover",
+    title: "Co-founder, BharatPe",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/Ashneer-Grover.webp",
+    born: "1982, Delhi",
+    profession: "Entrepreneur & Investor",
+    knownFor: "Co-founding BharatPe and his outspoken presence on Shark Tank India",
+    quote: "Startup success is rarely a straight line.",
+    story: "Few names in the Indian startup world spark as much debate as **Ashneer Grover**. Co-founder of BharatPe, former Shark Tank India judge, and a man never short of an opinion, Grover built a reputation for **blunt honesty** in an industry often polished with positivity. His journey — from investment banking to startup stardom to public controversy — is one of the most talked-about stories in modern Indian business.\n\nAshneer Grover was born in Delhi in 1982 and built a strong academic foundation early on, graduating from **IIT Delhi** and later earning an MBA from **IIM Ahmedabad**. Before entering the startup world, he spent over a decade in investment banking and corporate roles, working with firms like American Express, Kotak Investment Banking, and Grofers, where he served as CFO. This grounding in finance and operations later became central to how he built and scaled a startup.\n\nIn 2018, Grover co-founded **BharatPe** along with Shashvat Nakrani, aiming to simplify digital payments for small merchants across India through a single QR code accepting all UPI apps. The idea tapped directly into India's rapidly growing digital payments wave. Under his leadership, BharatPe expanded swiftly into lending and merchant services, eventually becoming a **unicorn** within a few years of launch — a rare and rapid feat even by startup standards.\n\nGrover's public profile grew further when he joined **Shark Tank India** as an investor in 2021. His sharp, no-nonsense style and willingness to challenge pitches directly made him one of the most discussed personalities on the show, turning him into a mainstream household name far beyond startup circles.\n\nHowever, his journey took a turbulent turn in 2022, when allegations of financial irregularities at BharatPe led to his **exit from the company** amid public disputes with the board. The episode became one of the most closely watched corporate governance controversies in India's startup ecosystem, sparking widespread conversation about founder accountability and boardroom dynamics.\n\nDespite the controversy, Grover has remained active and vocal, continuing to comment on startups, economic policy, and entrepreneurship through social media and public appearances.\n\nAshneer Grover's story is a reminder that **startup success is rarely a straight line.** His rapid rise, sharp business instincts, and equally sharp fall offer valuable lessons in ambition, governance, and the price of unfiltered confidence in the public eye.",
+    achievements: ["Co-founded BharatPe in 2018 with Shashvat Nakrani", "Scaled BharatPe into a unicorn within a few years", "Pioneered single-QR UPI payments for small merchants", "Investor and judge on Shark Tank India (2021)", "IIT Delhi and IIM Ahmedabad alumnus"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-06-30",
+  },
+  {
     id: "aman-gupta",
     name: "Aman Gupta",
     title: "Co-founder & CMO, boAt",

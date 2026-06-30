@@ -73,7 +73,7 @@ const CategoryDetail = () => {
                 <img
                   src={lead.image}
                   alt={lead.name}
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-contain object-center p-4 transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(lead.name)}&size=800&background=1a1a2e&color=f97316&bold=true`;
                   }}
