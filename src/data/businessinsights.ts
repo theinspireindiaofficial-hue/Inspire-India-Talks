@@ -39,6 +39,59 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-sovereign-ai-governance-hurdles",
+    title: "India's Sovereign AI Push Faces Governance Hurdles",
+    date: "01-07-2026",
+    category: "Tech & AI Policy",
+    image: "/images/business-insights/india-sovereign-ai-governance.png",
+    excerpt:
+      "As India races to build sovereign AI, governance is emerging as its biggest challenge — with deepfakes, accountability gaps, and rising public-sector AI use testing policymakers' balance of innovation and trust.",
+    readTime: "3 min read",
+    featured: false,
+    content: `As India accelerates its push to build sovereign AI capabilities, governance is emerging as its biggest challenge. Rising concerns around deepfakes, accountability, and growing public-sector use of AI are prompting policymakers to balance innovation with trust.
+
+Debates are intensifying over whether India's AI compute infrastructure — bolstered by subsidised GPU programmes — is sufficient to close the capability gap with global leaders.
+
+Experts warn that without robust regulatory frameworks, the rapid deployment of AI across government services and financial systems could outpace oversight, raising the stakes for policymakers as they race to scale India's AI ambitions responsibly.`,
+  },
+
+  {
+    id: "hdfc-bank-rajiv-kumar-chairman-puneet-sharma-cfo",
+    title: "HDFC Bank Strengthens Leadership with Rajiv Kumar as Chairman-Designate, Puneet Sharma as CFO",
+    date: "01-07-2026",
+    category: "Banking & Leadership",
+    image: "/images/business-insights/hdfc-bank-leadership.jpg",
+    excerpt:
+      "HDFC Bank draws investor attention after appointing former Finance Secretary Rajiv Kumar as Chairman-designate and Puneet Sharma as CFO, moves analysts say strengthen the bank ahead of a growth phase.",
+    readTime: "3 min read",
+    featured: false,
+    content: `HDFC Bank is drawing renewed investor attention following the appointment of former Finance Secretary Rajiv Kumar as Chairman-designate and Puneet Sharma as Chief Financial Officer.
+
+Analysts say the leadership changes strengthen the bank's governance and financial oversight at a pivotal moment, as HDFC Bank enters what many expect to be a robust growth phase.
+
+The optimism is underpinned by accelerating credit growth and easing net interest margin pressures, both of which are expected to support stronger earnings momentum for India's largest private-sector lender in the coming quarters.`,
+  },
+
+  {
+    id: "titan-reinvention-lifestyle-powerhouse",
+    title: "Titan's Reinvention: From Watchmaker to Lifestyle Powerhouse",
+    date: "01-07-2026",
+    category: "Retail & Lifestyle",
+    image: "/images/business-insights/titan-reinvention-lifestyle-powerhouse.jpg",
+    excerpt:
+      "Titan crossed Rs 50,000 crore in revenue in FY25 after nearly 40 years — then added the next Rs 25,000 crore in just one year, as it expands into eyecare, fragrances, sarees, and global markets.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Titan Company, the modest 1984 joint venture between Tata Industries and the Tamil Nadu Industrial Development Corporation, has grown into the second-most valued Tata Group company after TCS, with a market capitalisation of Rs 3.6 lakh crore.
+
+In FY25, Titan crossed Rs 50,000 crore in revenue — a milestone that took nearly 40 years to reach. It then added the next Rs 25,000 crore in just one year, in FY26, a sign of how sharply the company's growth curve has steepened.
+
+The company is now pushing beyond its core watches and jewellery business into lifestyle adjacencies including eyecare, fragrances, and sarees, alongside a growing international footprint — most notably its 2025 acquisition of Dubai-based jewellery chain Damas.
+
+Managing Director Ajoy Chawla describes the firm as "restless and responsible," a philosophy driven by constant product and retail innovation as Titan reinvents itself from a watchmaker into a diversified lifestyle powerhouse.`,
+  },
+
+  {
     id: "bharti-airtel-africa-stake-share-swap",
     title: "Bharti Airtel Boosts Africa Stake via Share Swap",
     date: "30-06-2026",
