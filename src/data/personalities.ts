@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "yusuf-hamied",
+    name: "Yusuf Hamied",
+    title: "Chairman, Cipla",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/yusuf-hamied.jpeg",
+    born: "1936, Vilnius, Lithuania",
+    profession: "Scientist & Industrialist",
+    knownFor: "Making life-saving AIDS drugs affordable for millions across the developing world",
+    quote: "None shall be denied medicine because they cannot afford it.",
+    story: "In the early 2000s, when AIDS was devastating entire populations across Africa and the developing world, one Indian pharmaceutical executive made a decision that shook global healthcare. **Yusuf Hamied**, Chairman of Cipla, offered life-saving antiretroviral drugs at a fraction of the price charged by multinational giants; this was a move that challenged the global pharmaceutical order and saved countless lives. His story is one of science, conscience, and the courage to do what is right over what is convenient.\n\nBorn in 1936 in Vilnius, Lithuania, Yusuf Hamied grew up in India after his family settled here. His father, **Khwaja Abdul Hamied**, had founded Cipla in 1935 with a strong nationalist vision: to make medicines accessible to every Indian, regardless of their economic status. Yusuf inherited not just the company, but that deeply rooted philosophy. He studied Chemistry at **Cambridge University** and returned to India to lead Cipla, steering it from a modest domestic manufacturer into a globally significant pharmaceutical force.\n\nHamied's defining moment came in 2001, when he announced at an international conference in Brussels that Cipla could supply a full year's course of AIDS antiretroviral drugs for just **350 US dollars per patient** — compared to the roughly $12,000 being charged by Western pharmaceutical companies at the time. The announcement sent shockwaves through the global medical and corporate community. Multinational drug makers, backed by international trade agreements and patent protections, had kept life-saving medication out of reach for millions of people in Africa and Asia.\n\nCipla's move, rooted in India's legal framework that did not recognise product patents for pharmaceuticals at the time, forced a worldwide conversation about **intellectual property, human rights, and the ethics of healthcare pricing.** Governments, international health organisations, and activists rallied around the cause. The ripple effects were significant — prices of AIDS drugs eventually fell globally, and access to treatment expanded dramatically across the developing world.\n\nUnder Hamied's leadership, Cipla grew into one of India's largest pharmaceutical companies, exporting to over **180 countries** and manufacturing a wide range of affordable generic medicines across multiple disease categories.\n\nYusuf Hamied's legacy goes far beyond pharmaceutical business. By choosing **humanity over profit** at a critical moment in history, he redefined what a company could stand for. In an industry often criticised for placing earnings above lives, he remains a rare and enduring example of purpose-driven leadership.",
+    achievements: ["Offered a year's AIDS treatment at $350 vs. ~$12,000 charged by Western firms", "Sparked a global fall in antiretroviral drug prices from 2001", "Grew Cipla into one of India's largest pharmaceutical companies", "Expanded exports to over 180 countries", "Cambridge-trained chemist championing affordable medicine"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-02",
+  },
+  {
     id: "ashneer-grover",
     name: "Ashneer Grover",
     title: "Co-founder, BharatPe",

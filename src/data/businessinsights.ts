@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "mahindra-june-record-sales",
+    title: "Mahindra & Mahindra Posts Record 37% Sales Jump in June",
+    date: "02-07-2026",
+    category: "Auto & Sales",
+    image: "/images/business-insights/mahindra-record-sales.jpg",
+    excerpt:
+      "Mahindra & Mahindra's sales surged 37% in June on strong UV and CV demand, capping a record FY26 boosted by late-2025 GST rate cuts.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Mahindra & Mahindra's sales surged 37% in June, with strong performance across its UV (utility vehicle) and CV (commercial vehicle) segments. The momentum follows a standout FY26 for the automaker.
+
+M&M recorded its highest-ever annual sales in both SUVs — reaching 6.6 lakh units, up 20% — and light commercial vehicles at 2.89 lakh units, up 13%.
+
+The surge has been largely driven by GST rate cuts that took effect in late 2025, which boosted consumer demand across the sector. The resilience in demand shows that lower prices have continued to outweigh concerns around geopolitical uncertainty.
+
+However, analysts caution that demand may moderate in FY27 as CAFE 3 norms, price hikes, and new powertrain introductions could pressure affordability going forward.`,
+  },
+
+  {
+    id: "sun-pharma-organon-acquisition",
+    title: "Sun Pharma's $11.75 Billion Organon Acquisition — India's Biggest Pharma Deal",
+    date: "02-07-2026",
+    category: "Pharma & M&A",
+    image: "/images/business-insights/sun-pharma-organon.jpeg",
+    excerpt:
+      "Sun Pharma agrees to acquire New Jersey-based Organon in an all-cash deal worth $11.75 billion — one of the largest outbound acquisitions by an Indian pharma firm.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Indian pharmaceutical giant Sun Pharma announced it has entered into an agreement to acquire New Jersey-headquartered Organon in an all-cash deal valued at $11.75 billion — one of the largest outbound acquisitions by an Indian pharmaceutical firm.
+
+The acquisition will lift Sun Pharma's revenues to $12.4 billion, ranking it among the top 25 global pharmaceutical companies. Organon, which was spun off from Merck in 2021, specializes in women's health and biosimilars.
+
+The transaction is expected to close in early 2027, subject to regulatory approvals and Organon shareholder approval.
+
+The deal catapults Sun Pharma into biosimilars and diversifies it beyond generics into high-value specialty medicines across 140 countries — a landmark moment for India's pharmaceutical industry on the global stage.`,
+  },
+
+  {
     id: "india-sovereign-ai-governance-hurdles",
     title: "India's Sovereign AI Push Faces Governance Hurdles",
     date: "01-07-2026",
