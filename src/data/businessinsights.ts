@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-vc-funding-h1-2026-jump",
+    title: "Indian Startup Ecosystem Sees 21% Jump in VC Funding in H1 2026",
+    date: "02-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/india-vc-funding-h1-2026.png",
+    excerpt:
+      "VC funding into Indian startups grew 21% year-on-year in H1 2026, signalling a sustained revival in capital inflows after a prolonged funding winter.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Venture capital funding into Indian startups recorded 21% annual growth in the first six months of 2026, sparking optimism about a sustained revival in capital inflows into the country. The rebound comes after a prolonged funding winter that dampened sentiment across the ecosystem.
+
+Notable deals during the period include cleantech startup BatX Energies raising ₹105 crore in a Series A round led by IvyCap Ventures, with participation from Zephyr Peacock, Mankind Pharma Family Office, and others. Elder care platform Age Care Labs also raised ₹85 crore in a Series B1 round.
+
+Additionally, entrepreneur Bhavin Turakhia launched Neo, an AI-native work platform, backed by a $30 million investment.
+
+Investor confidence appears to be returning, particularly in sectors like AI, cleantech, and healthcare, signalling a more mature and resilient startup landscape heading into H2 2026.`,
+  },
+
+  {
+    id: "upi-22-billion-transactions-june-2026",
+    title: "India's UPI Crosses 22 Billion Transactions in June 2026",
+    date: "02-07-2026",
+    category: "Fintech & Payments",
+    image: "/images/business-insights/upi-22-billion.png",
+    excerpt:
+      "India's UPI recorded a 23% rise in volumes, crossing 22 billion transactions in June 2026, cementing its position as a global leader in real-time digital payments.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's UPI ecosystem recorded a 23% rise in transaction volumes, crossing 22 billion transactions in June 2026, continuing its robust growth trajectory.
+
+The milestone cements India's position as a global leader in real-time digital payments. International adoption of UPI has also been expanding steadily, with several countries integrating the platform for cross-border remittances and retail transactions.
+
+The strong numbers reflect India's deepening digital payments infrastructure and its growing influence in global fintech innovation. The government has been actively promoting UPI adoption through bilateral agreements, and its reach now spans markets across Southeast Asia, the Middle East, and parts of Europe.
+
+With the National Payments Corporation of India pushing for further global rollout, UPI is increasingly being seen as a viable alternative to card-based international payment networks.`,
+  },
+
+  {
     id: "mahindra-june-record-sales",
     title: "Mahindra & Mahindra Posts Record 37% Sales Jump in June",
     date: "02-07-2026",
