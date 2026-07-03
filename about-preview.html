@@ -6,223 +6,86 @@
 <title>About — Inspire India Talks (Preview)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
     --bg:hsl(220 20% 4%);
     --fg:hsl(40 20% 95%);
     --primary:hsl(24 95% 53%);
-    --muted:hsl(220 10% 55%);
-    --line:rgba(255,255,255,.08);
+    --line:rgba(255,255,255,.1);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .serif{font-family:'Fraunces','Playfair Display',serif}
-  .container{max-width:1180px;margin:0 auto;padding:0 24px}
-  .mesh{background:
-      radial-gradient(ellipse at 20% 50%, hsl(24 95% 53% / .08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, hsl(24 60% 40% / .06) 0%, transparent 50%),
-      radial-gradient(ellipse at 40% 80%, hsl(220 50% 20% / .1) 0%, transparent 50%)}
-  .glass{background:linear-gradient(145deg,rgba(17,24,39,.95),rgba(30,41,59,.85));border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.3)}
-  section{border-top:1px solid var(--line)}
-  .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid hsl(24 95% 53% / .3);background:hsl(24 95% 53% / .06);color:var(--primary);padding:8px 16px;border-radius:999px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.25em}
-  .label{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.25em;color:var(--primary)}
-  .label .bar{height:1px;width:32px;background:var(--primary)}
-  h1.hero{font-size:clamp(40px,6vw,72px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-top:32px}
-  h2.big{font-size:clamp(34px,4.5vw,60px);font-weight:700;line-height:1.05;margin-top:24px}
-  .pri{color:var(--primary)}
-  .ital{font-style:italic;font-weight:400}
-  .lede{color:rgba(245,241,234,.7);font-size:18px;max-width:640px;margin-top:32px;line-height:1.7}
-  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 28px;font-size:14px;font-weight:600;text-decoration:none;transition:.2s}
-  .btn-pri{background:var(--primary);color:#fff}
-  .btn-ghost{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:var(--fg)}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:520px;margin-top:56px}
-  .stat{border-left:1px solid var(--primary);padding-left:16px}
-  .stat .n{font-size:34px;font-weight:700}
-  .stat .l{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-top:4px}
-  .grid{display:grid;gap:20px}
-  img{display:block;width:100%;height:100%;object-fit:cover}
-  .imgwrap{border-radius:20px;overflow:hidden;border:1px solid var(--line);position:relative}
-  .card{padding:28px}
-  .card .ic{width:48px;height:48px;border-radius:12px;background:hsl(24 95% 53% / .1);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:20px}
-  .card h3{font-size:22px;font-weight:600;margin-top:24px}
-  .card p{font-size:14px;color:rgba(245,241,234,.65);margin-top:12px}
-  .cardnum{font-size:12px;letter-spacing:.25em;color:var(--muted)}
-  .tline{position:relative;border-left:1px solid var(--line);padding-left:24px}
-  .dot{position:absolute;left:-7px;top:0;width:13px;height:13px;border-radius:50%;border:2px solid var(--primary);background:var(--bg);box-shadow:0 0 20px hsl(24 95% 53% / .7)}
-  .yr{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.25em;color:var(--primary)}
-  .cover{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
-  .cover .cat{position:absolute;left:18px;top:18px;border:1px solid hsl(24 95% 53% / .3);background:hsl(24 95% 53% / .1);color:var(--primary);padding:4px 12px;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.25em;z-index:2}
-  .cover .t{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:2}
-  .cover .t h3{font-size:28px;font-weight:600}
-  .cover .ov{position:absolute;inset:0;background:linear-gradient(to top,var(--bg),rgba(8,10,13,.4),transparent);z-index:1}
-  .check{display:flex;gap:16px;align-items:flex-start;margin-top:16px}
-  .check .c{color:var(--primary);flex:none;margin-top:2px}
-  .muted{color:rgba(245,241,234,.7)}
-  .banner{background:#1a1d12;color:#e9c46a;text-align:center;font-size:13px;padding:10px;font-weight:500}
-  @media(max-width:880px){.hide-sm{display:none}}
+  body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:100px 40px 120px}
+  .kicker{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.35em;color:var(--primary)}
+  h1{font-size:clamp(36px,5.5vw,58px);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-top:32px;max-width:880px}
+  h1 .pri{color:var(--primary)}
+  .tagline{margin-top:28px;font-size:20px;color:rgba(245,242,236,.6)}
+  section{margin-top:110px}
+  .founder-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  @media(max-width:900px){.founder-grid{grid-template-columns:1fr;gap:40px}}
+  .photo{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .caption-name{margin-top:20px;font-size:18px;font-weight:600}
+  .caption-role{margin-top:4px;font-size:14px;color:rgba(245,242,236,.5)}
+  p.body{font-size:18px;line-height:1.9;color:rgba(245,242,236,.75);margin-top:28px;max-width:880px}
+  strong{font-weight:600;color:var(--fg)}
+  blockquote{margin-top:48px;border-left:2px solid var(--primary);padding-left:32px}
+  blockquote p{font-size:26px;line-height:1.4;color:var(--fg)}
+  footer{margin-top:110px}
+  hr{border:none;border-top:1px solid var(--line)}
+  footer p{margin-top:40px;font-size:16px}
+  footer .dot{color:rgba(245,242,236,.4)}
+  footer .tag{color:rgba(245,242,236,.5);letter-spacing:.02em}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="banner">Local preview of the redesigned About page — not yet live. Built from About.new-draft.tsx.bak</div>
+  <header>
+    <div class="kicker">About</div>
+    <h1>Inspiring minds. <span class="pri">Shaping India's future.</span></h1>
+    <p class="tagline">India's storytelling platform.</p>
+  </header>
 
-<!-- HERO -->
-<section style="border-top:none" class="mesh">
-  <div class="container" style="padding-top:88px;padding-bottom:96px">
-    <div style="display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:center">
+  <section id="founder">
+    <div class="founder-grid">
+      <figure>
+        <div class="photo">
+          <img src="./public/images/founder-photo.png" alt="Shamshad Alam, Founder of Inspire India Talks" />
+        </div>
+        <figcaption>
+          <div class="caption-name">Shamshad Alam</div>
+          <div class="caption-role">Founder · Storyteller · Platform Creator</div>
+        </figcaption>
+      </figure>
       <div>
-        <span class="pill">&#10022; India's storytelling platform</span>
-        <h1 class="hero serif">Inspiring minds.<br><span class="pri">Shaping India's</span> <span class="ital">future.</span></h1>
-        <p class="lede">Inspire India Talks is built to document stories, ideas, innovations, and journeys that help young India see what is possible from wherever they begin.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:40px">
-          <a class="btn btn-pri" href="#">Explore Stories &#8594;</a>
-          <a class="btn btn-ghost" href="#">Partner With Us</a>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="n serif">50+</div><div class="l">Voices</div></div>
-          <div class="stat"><div class="n serif">12+</div><div class="l">States</div></div>
-          <div class="stat"><div class="n serif">40+</div><div class="l">Sectors</div></div>
-        </div>
-      </div>
-      <div class="hide-sm imgwrap" style="aspect-ratio:4/5">
-        <img src="./public/images/conference-stage.png" alt="stage" />
-        <div class="ov"></div>
-        <div style="position:absolute;bottom:24px;left:24px;right:24px;z-index:2">
-          <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--primary)">Stories. Ideas. Impact.</div>
-          <div class="serif" style="font-size:22px;font-weight:600;margin-top:10px">A stage for the India that is building quietly.</div>
-        </div>
+        <div class="kicker">The Founder</div>
+        <p class="body">Inspire India Talks was founded by <strong>Shamshad Alam</strong>, a storyteller whose conviction is simple and stubborn — talent exists everywhere, but visibility does not. He grew up watching that gap widen in silence, and eventually chose to spend his life closing it. What began as a set of honest conversations has grown into a platform, a movement, and a running record of the India that rarely reaches the mainstream.</p>
+        <p class="body">As a storyteller, platform creator, and community builder, Shamshad brings forward the founders, thinkers, and doers whose journeys deserve a wider audience — and in doing so, he is redefining what an inspiring Indian journey looks like.</p>
+        <blockquote>
+          <p>The problem was never lack of potential. The problem was lack of access.</p>
+        </blockquote>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOUNDER -->
-<section style="border-top:none">
-  <div class="container" style="padding:80px 24px">
-    <div style="display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start">
-      <div class="imgwrap" style="aspect-ratio:4/5">
-        <img src="./public/images/founder-photo.png" alt="founder" />
-        <div class="ov"></div>
-        <div style="position:absolute;bottom:24px;left:24px;z-index:2">
-          <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--primary)">Founder</div>
-          <div class="serif" style="font-size:24px;font-weight:600;margin-top:8px">Shamshad Alam</div>
-        </div>
-      </div>
-      <div style="padding-top:16px">
-        <div class="label"><span class="bar"></span>Meet The Founder</div>
-        <h2 class="big serif">The story behind <span class="pri">our story.</span></h2>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px">
-          <span style="border:1px solid var(--line);background:rgba(255,255,255,.05);padding:6px 12px;border-radius:999px;font-size:12px;color:rgba(245,241,234,.7)">Storyteller</span>
-          <span style="border:1px solid var(--line);background:rgba(255,255,255,.05);padding:6px 12px;border-radius:999px;font-size:12px;color:rgba(245,241,234,.7)">Youth Builder</span>
-          <span style="border:1px solid var(--line);background:rgba(255,255,255,.05);padding:6px 12px;border-radius:999px;font-size:12px;color:rgba(245,241,234,.7)">Bharat First</span>
-          <span style="border:1px solid var(--line);background:rgba(255,255,255,.05);padding:6px 12px;border-radius:999px;font-size:12px;color:rgba(245,241,234,.7)">Platform Creator</span>
-        </div>
-        <p class="lede" style="max-width:none">Shamshad Alam comes from the kind of India where ambition is strong but platforms are rare. Growing up outside metropolitan privilege meant seeing a truth up close: talent exists everywhere, but visibility does not.</p>
-        <p class="muted" style="margin-top:20px;font-size:18px;line-height:1.7">Inspire India Talks was born from that conviction. The platform exists to bring grounded Indian journeys to the front, so students, builders, and young leaders can meet role models who began closer to where they are.</p>
-        <div class="glass" style="margin-top:32px;padding:24px">
-          <p class="serif" style="font-size:24px;line-height:1.3">"The problem was never lack of potential. The problem was lack of access."</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <section id="purpose">
+    <div class="kicker">Our Purpose</div>
+    <p class="body">Inspire India Talks exists to document the stories, ideas, and journeys that help young India see what is possible. We look beyond the metros — to the small towns, tier-two cities, and quiet corners of the country where potential has always lived, waiting to be seen. Our work is to bring those grounded Indian journeys to the front, and to make them impossible to ignore.</p>
+    <p class="body">Every story we publish is an argument against the idea that opportunity belongs to a few. It is a record, a mirror, and an invitation — for the next founder in Ranchi, the next scientist in Aligarh, the next artist in Guwahati — to know the road is real, and it has been walked before.</p>
+  </section>
 
-<!-- MISSION -->
-<section>
-  <div class="container" style="padding:80px 24px">
-    <div class="label"><span class="bar"></span>Our Mission</div>
-    <h2 class="big serif" style="max-width:760px">Four pillars driving everything <span class="pri">we publish.</span></h2>
-    <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:56px">
-      <div class="glass card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="ic">&#10022;</div><span class="cardnum serif">01</span></div><h3 class="serif">Inspire</h3><p>Share real journeys that make ambition feel close, possible, and Indian.</p></div>
-      <div class="glass card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="ic">&#9783;</div><span class="cardnum serif">02</span></div><h3 class="serif">Educate</h3><p>Turn lived experience into practical lessons for students, founders, and young leaders.</p></div>
-      <div class="glass card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="ic">&#9650;</div><span class="cardnum serif">03</span></div><h3 class="serif">Empower</h3><p>Give emerging voices the confidence to build, lead, serve, and dream beyond geography.</p></div>
-      <div class="glass card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="ic">&#9737;</div><span class="cardnum serif">04</span></div><h3 class="serif">Connect</h3><p>Bring together changemakers, institutions, and youth through thoughtful storytelling.</p></div>
-    </div>
-  </div>
-</section>
+  <section id="believe">
+    <div class="kicker">What We Believe</div>
+    <p class="body">We believe storytelling is infrastructure. That when a young person from a forgotten town sees someone from a place like their own build something meaningful, a private belief shifts — quietly, permanently. We believe in grounded stories over highlight reels, in access over exclusivity, and in ideas that don't just inspire people, but move them to build. This is the work. This is why we exist.</p>
+  </section>
 
-<!-- JOURNEY -->
-<section>
-  <div class="container" style="padding:80px 24px">
-    <div class="label"><span class="bar"></span>Our Journey</div>
-    <h2 class="big serif" style="max-width:760px">Milestones that shaped <span class="pri">the road ahead.</span></h2>
-    <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:56px">
-      <div class="tline"><div class="dot"></div><div class="yr">Origin</div><h3 class="serif" style="font-size:22px;margin-top:12px">A Small-Town Conviction</h3><p class="muted" style="font-size:14px;margin-top:16px">The idea began with a simple belief: talent exists everywhere, but visibility does not.</p></div>
-      <div class="tline"><div class="dot"></div><div class="yr">Stage</div><h3 class="serif" style="font-size:22px;margin-top:12px">Voices From Bharat</h3><p class="muted" style="font-size:14px;margin-top:16px">Inspire India Talks started documenting founders, educators, officers, artists, and social leaders.</p></div>
-      <div class="tline"><div class="dot"></div><div class="yr">Community</div><h3 class="serif" style="font-size:22px;margin-top:12px">Youth Conversations</h3><p class="muted" style="font-size:14px;margin-top:16px">The platform grew into a space where young Indians could meet stories that felt relatable.</p></div>
-      <div class="tline"><div class="dot"></div><div class="yr">Now</div><h3 class="serif" style="font-size:22px;margin-top:12px">A Growing Movement</h3><p class="muted" style="font-size:14px;margin-top:16px">Today, the mission is expanding through stories, events, campaigns, and partnerships.</p></div>
-    </div>
-  </div>
-</section>
+  <footer>
+    <hr />
+    <p><strong>Inspire India Talks</strong> <span class="dot">&nbsp;·&nbsp;</span> <span class="tag">Stories that shape nations.</span></p>
+  </footer>
 
-<!-- WHAT WE COVER -->
-<section>
-  <div class="container" style="padding:80px 24px">
-    <div class="label"><span class="bar"></span>What We Cover</div>
-    <h2 class="big serif">Editorial pillars, <span class="pri">one mission.</span></h2>
-    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:56px">
-      <div class="cover"><span class="cat">Stories</span><div class="ov"></div><img src="./public/images/personalities/srikanth-bolla.webp"><div class="t"><h3 class="serif">Inspiring Voices</h3></div></div>
-      <div class="cover"><span class="cat">Ideas</span><div class="ov"></div><img src="./public/images/business-insights/non-metro-startup-story.png"><div class="t"><h3 class="serif">Business Insights</h3></div></div>
-      <div class="cover"><span class="cat">Impact</span><div class="ov"></div><img src="./public/images/events/Khushi-grewal.jpg"><div class="t"><h3 class="serif">Youth Leadership</h3></div></div>
-      <div class="cover"><span class="cat">Future</span><div class="ov"></div><img src="./public/images/business-insights/deeptech.png"><div class="t"><h3 class="serif">Innovation</h3></div></div>
-      <div class="cover"><span class="cat">Learning</span><div class="ov"></div><img src="./public/images/personalities/anand-kumar.jpeg"><div class="t"><h3 class="serif">Education</h3></div></div>
-      <div class="cover"><span class="cat">Bharat</span><div class="ov"></div><img src="./public/images/personalities/Chami-Murmu.jpg"><div class="t"><h3 class="serif">Social Change</h3></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section>
-  <div class="container" style="padding:80px 24px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div class="imgwrap" style="aspect-ratio:3/4"><img src="./public/images/conference-crowd.png"></div>
-        <div class="imgwrap" style="aspect-ratio:3/4;margin-top:48px"><img src="./public/images/business-insights/startup-funding-2026.jpg"></div>
-      </div>
-      <div>
-        <div class="label"><span class="bar"></span>Why Inspire India Talks?</div>
-        <h2 class="big serif">We bridge inspiration <span class="pri">with action.</span></h2>
-        <p class="lede" style="max-width:none">Young people do not only need success stories. They need believable proof, practical insight, and representation that tells them their starting point is not their limit.</p>
-        <div style="margin-top:32px">
-          <div class="check"><span class="c">&#10003;</span><span>Real Indian journeys, not borrowed motivation</span></div>
-          <div class="check"><span class="c">&#10003;</span><span>Voices from towns, districts, campuses, and grassroots communities</span></div>
-          <div class="check"><span class="c">&#10003;</span><span>Stories curated for young builders, students, educators, and leaders</span></div>
-          <div class="check"><span class="c">&#10003;</span><span>A platform where visibility becomes belief</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION -->
-<section class="mesh">
-  <div class="container" style="padding:104px 24px;text-align:center">
-    <span class="pill">&#9737; Our Vision</span>
-    <h2 class="big serif" style="max-width:980px;margin:32px auto 0">To become India's most trusted platform for <span class="pri">inspiration, knowledge, and transformative storytelling.</span></h2>
-    <p class="lede" style="margin:32px auto 0;max-width:640px">Built for the leaders of tomorrow: entrepreneurs, educators, innovators, students, and changemakers writing India's next chapter.</p>
-  </div>
-</section>
-
-<!-- JOIN -->
-<section>
-  <div class="container" style="padding:80px 24px">
-    <div class="glass" style="padding:56px">
-      <div style="display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center">
-        <div>
-          <div class="label"><span class="bar"></span>Join The Movement</div>
-          <h2 class="big serif">Be part of a community <span class="pri">shaping India's future.</span></h2>
-          <p class="muted" style="margin-top:24px;max-width:520px;line-height:1.7">Read the stories, host a conversation, partner with the platform, or help us bring more unheard Indian journeys into the light.</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <a class="btn btn-pri" style="justify-content:space-between" href="#">Explore Stories &#8594;</a>
-          <a class="btn btn-ghost" style="justify-content:space-between" href="#">Explore Events &#128226;</a>
-          <a class="btn btn-ghost" style="justify-content:space-between;background:none" href="#">Partner With Us &#129309;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+</div>
 </body>
 </html>

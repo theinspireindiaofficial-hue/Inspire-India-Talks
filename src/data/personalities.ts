@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "rashesh-shah",
+    name: "Rashesh Shah",
+    title: "Co-founder & Chairman, Edelweiss Group",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/rashesh-shah.jpg",
+    born: "Mumbai",
+    profession: "Financial Services Entrepreneur",
+    knownFor: "Building Edelweiss into one of India's most diversified financial services conglomerates",
+    quote: "Institutions are built with patience, not shortcuts.",
+    story: "In a country where financial services were long dominated by public sector institutions and old-money firms, **Rashesh Shah** dared to build something different. As the co-founder and chairman of Edelweiss Group, he has spent over three decades quietly constructing one of India's most diversified and respected financial services conglomerates — one that touches everything from wealth management and insurance to asset reconstruction and rural credit.\n\nRashesh Shah was born in a middle-class Gujarati family in Mumbai, with business in his DNA but no inherited enterprise to fall back on. He pursued chemical engineering before completing his MBA from **IIM Ahmedabad** — a credential that opened doors to the corporate world. After working with ICICI, he gained firsthand exposure to the mechanics of Indian finance, which would later prove invaluable.\n\nIn 1995, Shah co-founded Edelweiss with just **₹1 crore in capital** and a clear vision: to build a world-class financial services firm rooted in India. Starting as an investment bank focused on equity research and capital markets, Edelweiss stood out early for its intellectual rigor and research-driven approach — rare qualities in Indian finance at the time.\n\nOver the years, Shah expanded Edelweiss methodically across multiple verticals. The group grew to include asset management, life and general insurance, alternative investments, distressed asset resolution, and retail lending — particularly in rural and semi-urban India. This diversification was not accidental; it was a **deliberate strategy** to build a firm resilient enough to weather economic cycles.\n\nShah's most defining moment came during the **NBFC liquidity crisis of 2018–2019**, when several financial firms collapsed under stress. Edelweiss, too, faced headwinds, but Shah navigated the storm through restructuring, transparency with stakeholders, and a firm focus on long-term fundamentals. The group emerged leaner and more focused — a testament to his leadership under pressure.\n\nBeyond business, Shah has been a vocal advocate for deepening India's capital markets, expanding financial inclusion, and building institutional trust in the financial ecosystem.\n\nRashesh Shah's journey is one of **patient, principled institution-building** in a sector that rewards short-term thinking far too often. While his name may not trend on social media, the scale and depth of what he has built at Edelweiss speaks for itself. In Indian finance, he is quietly one of the most consequential builders of his generation.",
+    achievements: ["Co-founded Edelweiss in 1995 with just ₹1 crore in capital", "Built a diversified financial services conglomerate spanning wealth, insurance, and lending", "Pioneered a research-driven approach to Indian investment banking", "Steered Edelweiss through the 2018–2019 NBFC liquidity crisis", "Advocate for financial inclusion and deeper capital markets"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-03",
+  },
+  {
     id: "yusuf-hamied",
     name: "Yusuf Hamied",
     title: "Chairman, Cipla",
