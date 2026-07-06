@@ -39,6 +39,42 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-japan-summit-billions-commitments",
+    title: "India–Japan Summit Draws Billions in Commitments",
+    date: "06-07-2026",
+    category: "Trade & Diplomacy",
+    image: "/images/business-insights/india-japan-summit.png",
+    excerpt:
+      "The 16th India–Japan Annual Summit delivered a first-ever defence co-development project, a Joint Statement on AI, and over $10 billion in fresh Japanese investment commitments, deepening the two countries' strategic partnership.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The 16th India–Japan Annual Summit delivered a first-ever defence co-development project, a Joint Statement on AI, and over $10 billion in fresh Japanese investment commitments, marking a substantive deepening of the two countries' strategic partnership.
+
+More than 150 Japanese firms committed $12.5 billion in investment in India, spanning infrastructure, semiconductors, clean energy, and advanced manufacturing. Trade between the two countries has crossed $27.5 billion, with both governments aiming to further increase commerce by improving market access and promoting local currency trade.
+
+Artificial Intelligence has emerged as a new pillar of the partnership, with both countries expanding collaboration in AI research, digital infrastructure, cybersecurity, and trusted technologies.
+
+India and Japan are also working together to secure reliable supplies of critical minerals like lithium, cobalt, and rare earth elements, vital for electric vehicles and clean energy.`,
+  },
+
+  {
+    id: "tata-electronics-overtakes-foxconn-iphone-exports",
+    title: "Tata Electronics Overtakes Foxconn in iPhone Exports from India",
+    date: "06-07-2026",
+    category: "Manufacturing & Electronics",
+    image: "/images/business-insights/tata-iphone-exports.jpeg",
+    excerpt:
+      "Despite being a late entrant, Tata Electronics has overtaken Foxconn to grab a larger share of iPhones exported from India, assembling $26.3 billion worth against Foxconn's $25.6 billion over the FY22–FY26 PLI period.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Despite being a late entrant, Tata Electronics has overtaken Taiwanese electronics manufacturing giant Foxconn to grab a larger share of assembling iPhones exported from India during the five-year PLI scheme period between FY22 and FY26. iPhones assembled by Tata Electronics for export were pegged at $26.3 billion, compared to Foxconn's $25.6 billion.
+
+Most of these iPhones are exported to the US and Europe. Tata Electronics has also doubled its authorised share capital to ₹20,000 crore, signalling that more funds could be injected by the parent company.
+
+The milestone firmly establishes India as a serious global electronics manufacturing hub. Beyond smartphones, Tata Electronics is making a big push into semiconductors, investing around $14 billion to build a chip fabrication plant in Gujarat and a chip assembly and testing unit in Assam.`,
+  },
+
+  {
     id: "india-vc-funding-h1-2026-jump",
     title: "Indian Startup Ecosystem Sees 21% Jump in VC Funding in H1 2026",
     date: "02-07-2026",
