@@ -39,6 +39,40 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "ai-for-good-global-commission-indian-leaders",
+    title: "Ambani, Sunil Mittal and Lakshmi Mittal Named Founding Members of AI for Good Global Commission",
+    date: "07-07-2026",
+    category: "Tech & AI Policy",
+    image: "/images/business-insights/ai-for-good-commission.jpeg",
+    excerpt:
+      "Mukesh Ambani, Sunil Bharti Mittal, and Lakshmi N. Mittal have been named founding members of the ITU's newly launched 44-member AI for Good Global Commission.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Three of India's most prominent business leaders — Mukesh Ambani, chairman of Reliance Industries; Sunil Bharti Mittal, founder and chairman of Bharti Enterprises; and Lakshmi N. Mittal, executive chairman of ArcelorMittal — have been named founding members of the newly launched AI for Good Global Commission.
+
+Established under the International Telecommunication Union (ITU), the 44-member body is co-chaired by Rwanda's President Paul Kagame and Salesforce CEO Marc Benioff, with ITU Secretary-General Doreen Bogdan-Martin as vice-chair. The commission brings together heads of state, industry CEOs, and UN agency leaders — including Nvidia's Jensen Huang, Amazon's Andy Jassy, and Microsoft's Brad Smith — to forge practical, responsible AI pathways that strengthen trust, expand access, and ensure developing nations are not left behind.
+
+Its inaugural meeting opens today at the ITU's AI for Good Global Summit 2026 in Geneva, running alongside the first UN-mandated Global Dialogue on AI Governance.`,
+  },
+
+  {
+    id: "world-bank-1-5-bn-job-creation-india",
+    title: "World Bank Approves $1.5 Bn to Accelerate Private-Sector Job Creation in India",
+    date: "07-07-2026",
+    category: "Economy & Policy",
+    image: "/images/business-insights/world-bank-job-creation.png",
+    excerpt:
+      "The World Bank has approved $1.5 billion in Development Policy Financing to back structural reforms aimed at generating private-sector-led employment for 11 million young Indians.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The World Bank has approved $1.5 billion in Development Policy Financing to support a sweeping programme of structural reforms in India aimed at generating private-sector-led employment. The Boosting Job Creation initiative is designed to create opportunities for 11 million young Indians expected to enter the labour market over the next two decades.
+
+The package backs reforms in tax simplification, trade integration, and regulatory improvements, while actively targeting a reduction in barriers to entrepreneurship and a significant increase in female labour force participation. The financing complements India's broader Viksit Bharat 2047 vision.
+
+Separately, UPI — India's flagship digital payments rail — now operates in nine countries, including Singapore, UAE, France, Qatar, and Cambodia, following the successful launch of a real-time peer-to-peer cross-border remittance link with Nepal's National Payments Interface, operational since June 6, 2026, eliminating the need for physical currency exchange.`,
+  },
+
+  {
     id: "india-japan-summit-billions-commitments",
     title: "India–Japan Summit Draws Billions in Commitments",
     date: "06-07-2026",
