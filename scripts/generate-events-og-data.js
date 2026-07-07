@@ -75,6 +75,8 @@ const ogData = eventBlocks.map(block => {
         tagline: extractField(block, 'tagline'),
         coverImage: extractField(block, 'coverImage'),
         shortDescription: extractField(block, 'shortDescription'),
+        date: extractField(block, 'date'),
+        location: extractField(block, 'location'),
     };
 }).filter(Boolean);
 
