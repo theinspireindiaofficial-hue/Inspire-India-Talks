@@ -55,14 +55,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
             const fullTitle = `${title} — Inspire India Talks`;
             const description = shortDescription;
-            const imageUrl = `https://inspireindiatalks.com${image}`;
-            const pageUrl = `https://inspireindiatalks.com/events/${event.slug}`;
+            const imageUrl = `https://www.inspireindiatalks.com${image}`;
+            const pageUrl = `https://www.inspireindiatalks.com/events/${event.slug}`;
 
             html = html.replace(/<title>.*?<\/title>/, `<title>${fullTitle}</title>`);
 
             html = html.replace(
                 /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
                 `<meta name="description" content="${description}" />`
+            );
+
+            // Make the canonical self-referencing (point to this page, not the homepage)
+            html = html.replace(
+                /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
+                `<link rel="canonical" href="${pageUrl}" />`
             );
 
             const ogInjection = `<!-- OG_INJECT_START -->

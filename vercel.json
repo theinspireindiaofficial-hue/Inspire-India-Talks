@@ -14,6 +14,10 @@
       "destination": "/api/personality?id=:id"
     },
     {
+      "source": "/business-insights/:id",
+      "destination": "/api/business-insight?id=:id"
+    },
+    {
       "source": "/founders-talk",
       "destination": "/api/founders-talk"
     },

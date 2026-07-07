@@ -2,14 +2,16 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-interface PersonalityOG {
+interface BusinessInsightOG {
     id: string;
-    name: string;
     title: string;
+    excerpt: string;
     image: string;
-    knownFor: string;
-    quote: string;
+    category: string;
+    date: string;
 }
+
+const SITE_ORIGIN = 'https://www.inspireindiatalks.com';
 
 /** Escape special HTML characters to prevent XSS in meta tags */
 function escapeHtml(str: string): string {
@@ -24,7 +26,6 @@ function escapeHtml(str: string): string {
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { id: rawId } = req.query;
 
-    // Clean up the ID: remove trailing slashes, spaces, and lowercase it
     const id = typeof rawId === 'string'
         ? rawId.replace(/\/$/, '').trim().toLowerCase()
         : '';
@@ -33,54 +34,48 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).send('ID is required');
     }
 
-    // Set diagnostics headers
-    res.setHeader('X-OG-ID', id);
+    res.setHeader('X-OG-Insight-Id', id);
     res.setHeader('X-OG-Timestamp', new Date().toISOString());
 
     try {
-        // 1. Read index.html from the built output
         const indexPath = join(process.cwd(), 'dist', 'index.html');
         let html = readFileSync(indexPath, 'utf8');
 
-        // 2. Read the pre-generated OG data JSON
-        const ogDataPath = join(process.cwd(), 'dist', 'og-data.json');
-        const ogData: PersonalityOG[] = JSON.parse(readFileSync(ogDataPath, 'utf8'));
+        const ogDataPath = join(process.cwd(), 'dist', 'business-insights-og-data.json');
+        const ogData: BusinessInsightOG[] = JSON.parse(readFileSync(ogDataPath, 'utf8'));
 
-        // 3. Find the personality by ID
-        const person = ogData.find(p => p.id.toLowerCase() === id);
+        const article = ogData.find(a => a.id.toLowerCase() === id);
 
-        if (person) {
+        if (article) {
             res.setHeader('X-OG-Match', 'true');
-            res.setHeader('X-OG-Person', person.name);
+            res.setHeader('X-OG-Insight', article.title);
 
-            const name = escapeHtml(person.name || 'Inspire India Talks');
-            const title = escapeHtml(person.title || '');
-            const knownFor = escapeHtml(person.knownFor || '');
-            const quote = escapeHtml(person.quote || '');
-            const image = person.image || '/logo.png';
+            const title = escapeHtml(article.title || 'Business Insights — Inspire India Talks');
+            const excerpt = escapeHtml(article.excerpt || '');
+            const category = escapeHtml(article.category || '');
+            const image = article.image || '/logo.png';
 
-            const fullTitle = `${name} — Inspire India Talks`;
-            const description = `${title}${title && knownFor ? '. ' : ''}${knownFor}`;
-            const imageUrl = `https://www.inspireindiatalks.com${image}`;
-            const pageUrl = `https://www.inspireindiatalks.com/personality/${person.id}`;
-            const twitterQuote = quote || description;
+            const fullTitle = `${title} — Inspire India Talks`;
+            const description = excerpt || `${category} news and analysis from Inspire India Talks.`;
+            const imageUrl = image.startsWith('http') ? image : `${SITE_ORIGIN}${image}`;
+            const pageUrl = `${SITE_ORIGIN}/business-insights/${article.id}`;
 
-            // 4. Update the main <title> tag
+            // Update the main <title> tag
             html = html.replace(/<title>.*?<\/title>/, `<title>${fullTitle}</title>`);
 
-            // 5. Update the page-level description
+            // Update the page-level description
             html = html.replace(
                 /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
                 `<meta name="description" content="${description}" />`
             );
 
-            // 6. Replace the entire OG/Twitter block inside the markers
-            // Make the canonical self-referencing (point to this page, not the homepage)
+            // Make the canonical self-referencing (point to this article, not the homepage)
             html = html.replace(
                 /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
                 `<link rel="canonical" href="${pageUrl}" />`
             );
 
+            // Replace the OG/Twitter block inside the markers
             const ogInjection = `<!-- OG_INJECT_START -->
   <meta property="og:title" content="${fullTitle}" />
   <meta property="og:description" content="${description}" />
@@ -90,7 +85,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   <meta property="og:site_name" content="Inspire India Talks" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${fullTitle}" />
-  <meta name="twitter:description" content="${twitterQuote}" />
+  <meta name="twitter:description" content="${description}" />
   <meta name="twitter:image" content="${imageUrl}" />
   <!-- OG_INJECT_END -->`;
 
@@ -108,7 +103,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(200).send(html);
     } catch (error) {
         res.setHeader('X-OG-Error', 'true');
-        // Serve default index.html as fallback
         try {
             const indexPath = join(process.cwd(), 'dist', 'index.html');
             return res.status(200).send(readFileSync(indexPath, 'utf8'));
