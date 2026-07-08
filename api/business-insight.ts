@@ -23,6 +23,24 @@ function escapeHtml(str: string): string {
         .replace(/>/g, '&gt;');
 }
 
+/** Serialize a JSON-LD object safely for embedding inside a <script> tag */
+function jsonLd(obj: unknown): string {
+    return JSON.stringify(obj)
+        .replace(/</g, '\\u003c')
+        .replace(/>/g, '\\u003e')
+        .replace(/&/g, '\\u0026');
+}
+
+/** Convert "DD-MM-YYYY" (or ISO) to "YYYY-MM-DD"; empty string if unparseable. */
+function toIsoDate(raw: string): string {
+    if (!raw) return '';
+    let m = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+    m = raw.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+    if (m) return `${m[3]}-${m[2]}-${m[1]}`;
+    return '';
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { id: rawId } = req.query;
 
@@ -59,23 +77,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             const description = excerpt || `${category} news and analysis from Inspire India Talks.`;
             const imageUrl = image.startsWith('http') ? image : `${SITE_ORIGIN}${image}`;
             const pageUrl = `${SITE_ORIGIN}/business-insights/${article.id}`;
+            const isoDate = toIsoDate(article.date);
 
-            // Update the main <title> tag
             html = html.replace(/<title>.*?<\/title>/, `<title>${fullTitle}</title>`);
 
-            // Update the page-level description
             html = html.replace(
                 /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
                 `<meta name="description" content="${description}" />`
             );
 
-            // Make the canonical self-referencing (point to this article, not the homepage)
             html = html.replace(
                 /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
                 `<link rel="canonical" href="${pageUrl}" />`
             );
 
-            // Replace the OG/Twitter block inside the markers
             const ogInjection = `<!-- OG_INJECT_START -->
   <meta property="og:title" content="${fullTitle}" />
   <meta property="og:description" content="${description}" />
@@ -92,6 +107,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             html = html.replace(
                 /<!-- OG_INJECT_START -->[\s\S]*?<!-- OG_INJECT_END -->/,
                 ogInjection
+            );
+
+            const articleLd: Record<string, unknown> = {
+                '@context': 'https://schema.org',
+                '@type': 'NewsArticle',
+                headline: article.title,
+                description: article.excerpt || description,
+                image: [imageUrl],
+                url: pageUrl,
+                mainEntityOfPage: pageUrl,
+                author: { '@type': 'Organization', name: 'Inspire India Talks', url: SITE_ORIGIN },
+                publisher: {
+                    '@type': 'Organization',
+                    name: 'Inspire India Talks',
+                    logo: { '@type': 'ImageObject', url: `${SITE_ORIGIN}/logo.png` },
+                },
+            };
+            if (article.category) articleLd.articleSection = article.category;
+            if (isoDate) {
+                articleLd.datePublished = isoDate;
+                articleLd.dateModified = isoDate;
+            }
+
+            html = html.replace(
+                /<!-- LDJSON_INJECT_START -->[\s\S]*?<!-- LDJSON_INJECT_END -->/,
+                `<!-- LDJSON_INJECT_START -->\n  <script type="application/ld+json">${jsonLd(articleLd)}</script>\n  <!-- LDJSON_INJECT_END -->`
             );
         } else {
             res.setHeader('X-OG-Match', 'false');

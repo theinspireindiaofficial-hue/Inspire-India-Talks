@@ -11,6 +11,8 @@ interface PersonalityOG {
     quote: string;
 }
 
+const SITE_ORIGIN = 'https://www.inspireindiatalks.com';
+
 /** Escape special HTML characters to prevent XSS in meta tags */
 function escapeHtml(str: string): string {
     if (!str) return '';
@@ -19,6 +21,14 @@ function escapeHtml(str: string): string {
         .replace(/"/g, '&quot;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
+}
+
+/** Serialize a JSON-LD object safely for embedding inside a <script> tag */
+function jsonLd(obj: unknown): string {
+    return JSON.stringify(obj)
+        .replace(/</g, '\\u003c')
+        .replace(/>/g, '\\u003e')
+        .replace(/&/g, '\\u0026');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -61,8 +71,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
             const fullTitle = `${name} — Inspire India Talks`;
             const description = `${title}${title && knownFor ? '. ' : ''}${knownFor}`;
-            const imageUrl = `https://www.inspireindiatalks.com${image}`;
-            const pageUrl = `https://www.inspireindiatalks.com/personality/${person.id}`;
+            const imageUrl = image.startsWith('http') ? image : `${SITE_ORIGIN}${image}`;
+            const pageUrl = `${SITE_ORIGIN}/personality/${person.id}`;
             const twitterQuote = quote || description;
 
             // 4. Update the main <title> tag
@@ -74,13 +84,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 `<meta name="description" content="${description}" />`
             );
 
-            // 6. Replace the entire OG/Twitter block inside the markers
             // Make the canonical self-referencing (point to this page, not the homepage)
             html = html.replace(
                 /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
                 `<link rel="canonical" href="${pageUrl}" />`
             );
 
+            // 6. Replace the entire OG/Twitter block inside the markers
             const ogInjection = `<!-- OG_INJECT_START -->
   <meta property="og:title" content="${fullTitle}" />
   <meta property="og:description" content="${description}" />
@@ -97,6 +107,22 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             html = html.replace(
                 /<!-- OG_INJECT_START -->[\s\S]*?<!-- OG_INJECT_END -->/,
                 ogInjection
+            );
+
+            // 7. Inject schema.org Person structured data
+            const personLd: Record<string, unknown> = {
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: person.name,
+                url: pageUrl,
+                image: imageUrl,
+            };
+            if (person.title) personLd.jobTitle = person.title;
+            if (person.knownFor) personLd.description = person.knownFor;
+
+            html = html.replace(
+                /<!-- LDJSON_INJECT_START -->[\s\S]*?<!-- LDJSON_INJECT_END -->/,
+                `<!-- LDJSON_INJECT_START -->\n  <script type="application/ld+json">${jsonLd(personLd)}</script>\n  <!-- LDJSON_INJECT_END -->`
             );
         } else {
             res.setHeader('X-OG-Match', 'false');
