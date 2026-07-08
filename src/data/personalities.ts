@@ -370,7 +370,7 @@ export const personalities: Personality[] = [
       "Driving adoption through seamless user experience"
     ],
     authorName: "Inspire India",
-    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india-talks/",
     addedAt: "2026-03-17",
   },
     {
