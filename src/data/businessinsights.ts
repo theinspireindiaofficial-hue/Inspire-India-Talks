@@ -39,6 +39,48 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "fizzy-goblet-kareena-kapoor-investment",
+    title: "Fizzy Goblet Draws Strategic Investment from Kareena Kapoor Khan, Eyes Rs 100 Crore Run Rate",
+    date: "07-07-2026",
+    category: "Retail & Investment",
+    image: "/images/business-insights/fizzy-goblet-kareena.png",
+    excerpt:
+      "Homegrown footwear brand Fizzy Goblet has secured a strategic investment from actor Kareena Kapoor Khan as it targets an annual revenue run rate of over Rs 100 crore.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Homegrown footwear and accessories label Fizzy Goblet has announced a strategic investment from actor Kareena Kapoor Khan, deepening a bond that started when she began wearing the brand organically in 2014 and later became its brand ambassador in 2022.
+
+The move takes Kapoor Khan beyond endorsements into an active business role — she will now weigh in on design selection and support brand-building efforts across India and international markets.
+
+Founded more than 12 years ago by Laksheeta Govil with a modest initial investment of just Rs 1 lakh, Fizzy Goblet built its name around traditional Indian footwear such as juttis and kolhapuris. The brand ran as a bootstrapped venture before raising institutional capital from Accel. It currently operates at an annual revenue run rate of around Rs 60 crore and is aiming to cross Rs 100 crore in the coming year.
+
+Notably, the company says its growth has been driven entirely through its own channels — every sale flows through its website and company-owned stores, with no reliance on marketplaces or franchise partners. Its retail footprint has grown from four stores in 2022 to 16 company-owned outlets today.
+
+"Our vision is to make Fizzy Goblet the first globally recognised Indian footwear and accessories brand. Having Kareena on board as a strategic partner is the first major step on that journey," said founder Laksheeta Govil. Kapoor Khan added that her conviction in what Govil is building "has only grown," noting the brand has "always been part of my wardrobe."`,
+  },
+
+  {
+    id: "cultfit-drhp-ipo-filing",
+    title: "Cult.fit Files for IPO with SEBI, Eyeing Rs 950 Crore Fresh Issue",
+    date: "07-07-2026",
+    category: "IPO & Markets",
+    image: "/images/business-insights/cultfit-ipo.png",
+    excerpt:
+      "Fitness platform Cult.fit has filed its draft papers with SEBI for an IPO combining a Rs 950 crore fresh issue with a 17.86 crore share offer for sale by existing backers.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Fitness and wellness company Cult.fit has taken a decisive step towards the public markets, submitting its draft red herring prospectus (DRHP) to the Securities and Exchange Board of India for a proposed initial public offering.
+
+The offering pairs a fresh issue of shares worth up to Rs 950 crore with an offer for sale of as many as 17.86 crore shares from existing investors. The company has also flagged a possible pre-IPO placement of up to Rs 190 crore, which would trim the fresh issue by an equivalent amount. The final deal size will crystallise once the price band is set.
+
+Among the selling shareholders, Temasek-backed MacRitchie Investments is set to be the largest, parting with up to 2.47 crore shares. Others trimming their stakes include Fitness First Luxembourg, IDG Ventures India, Tata Digital, Chiratae Trust, Accel entities, Kalaari Capital and Schroders Capital, alongside co-founder Mukesh Bansal, who plans to offload up to 1.6 crore shares.
+
+Cult.fit intends to channel roughly Rs 217.5 crore of the proceeds into lease and rental costs for its existing centres, Rs 120 crore towards paring down debt, and Rs 75 crore into marketing and brand building, with the balance earmarked for general corporate use. Ahead of the filing, the company shored up its board with independent directors Kalpana Morparia, Arun M Kumar, Indu Bhushan and Pragya Misra to satisfy governance norms.
+
+Founded in 2016 by Mukesh Bansal and Ankit Nagori, Cult.fit now runs more than 700 fitness centres nationwide alongside its Cultsport and Carefit arms. The company has drawn over $714 million across 16 funding rounds and was last valued near Rs 12,600 crore (about $1.5 billion). For FY26, it posted revenue of Rs 1,720 crore while narrowing its net loss by 48% to Rs 252 crore. Axis Capital, Goldman Sachs (India), Jefferies India and JM Financial are steering the issue as lead managers.`,
+  },
+
+  {
     id: "ai-for-good-global-commission-indian-leaders",
     title: "Ambani, Sunil Mittal and Lakshmi Mittal Named Founding Members of AI for Good Global Commission",
     date: "07-07-2026",

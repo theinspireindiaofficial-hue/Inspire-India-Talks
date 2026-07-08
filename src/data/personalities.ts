@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "tage-rita-takhe",
+    name: "Tage Rita Takhe",
+    title: "Founder, Naara Aaba",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/tage-rita-takhe.webp",
+    born: "Ziro Valley, Arunachal Pradesh",
+    profession: "Agricultural Engineer & Entrepreneur",
+    knownFor: "Founding Naara Aaba, India's first organic kiwi wine brand",
+    quote: "Sometimes the greatest businesses are born not from discovering something new, but from seeing value where everyone else sees waste.",
+    story: "In the breathtaking **Ziro Valley** of Arunachal Pradesh, thousands of kiwis once ripened every year only to rot on the ground. Poor transportation, limited market access, and a lack of value addition meant farmers toiled tirelessly for disappointing returns. Many accepted this as their destiny. One woman refused to — **Tage Rita Takhe**, the visionary founder of **Naara Aaba**, India's first organic kiwi wine brand.\n\nBorn in Ziro Valley, Rita belongs to the **Apatani community**, a tribe renowned for its sustainable farming traditions. Growing up surrounded by orchards, she also witnessed the waste — every season, truckloads of fruit went unsold. Instead of accepting it, she asked a question that would redefine her life: **what if these fruits could become something more valuable?** She pursued Agricultural Engineering at NERIST, choosing the uncertainty of entrepreneurship over a stable career, driven by a belief that agriculture should create prosperity for farmers, not just crops.\n\nThe turning point came over a glass of wine with her husband: \"If grapes can become premium wine, why can't organically grown kiwis from Arunachal Pradesh?\" No organic kiwi winery existed in India. Many doubted her; some laughed. Yet she taught herself winemaking, fermentation, and food science, determined to craft a premium wine without compromising the fruit's natural flavor.\n\nIn 2017, **Naara Aaba** was born — named in memory of her late father-in-law and established in Hong village. The journey was anything but smooth: financial constraints, difficult mountainous logistics, and skepticism from investors meant building everything from scratch. But the mission was never solely about wine; it was about **rural transformation.** The company buys organically grown fruit directly from local farmers, reducing post-harvest losses, and has expanded into wines from pears, plums, and wild apples. It became a platform for **community empowerment** — employing women, training young people, and giving farmers reliable market linkages.\n\nFor decades, India's wine industry meant Maharashtra and Karnataka. Naara Aaba changed that, turning Ziro Valley into a destination for premium fruit wines and wine tourism. Rita's work has earned her the **Women Transforming India Award (2018)** from NITI Aayog and the UN, the **Nari Shakti Puraskar**, and a place in the Fortune–U.S. State Department Global Women's Mentoring Partnership. In 2023, she reached millions through **Shark Tank India Season 2**, securing a ₹75 lakh deal.\n\nTage Rita transformed discarded fruit into premium products, struggling farmers into valued partners, and a remote valley into an entrepreneurial destination. She proved that world-class businesses can emerge not just from technology hubs, but from India's farms and mountain valleys — **the true spirit of inspiring India.**",
+    achievements: ["Founded Naara Aaba in 2017 — India's first organic kiwi wine brand", "Won the Women Transforming India Award (2018) by NITI Aayog and the UN", "Received the Nari Shakti Puraskar, India's highest civilian honour for women", "Secured a ₹75 lakh deal on Shark Tank India Season 2 (2023)", "Empowered Ziro Valley farmers and women through rural employment and market linkages"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-07",
+  },
+  {
     id: "ck-ranganathan",
     name: "C.K. Ranganathan",
     title: "Founder & Chairman, CavinKare",
