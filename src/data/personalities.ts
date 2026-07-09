@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "maniram-dewan",
+    name: "Maniram Dewan",
+    title: "Pioneer of Assam's Tea Industry",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/maniram-dewan.avif",
+    born: "1806, Assam",
+    profession: "Entrepreneur & Freedom Fighter",
+    knownFor: "Becoming the first Indian to own and operate commercial tea estates",
+    quote: "The knowledge, the land, and the capability were always Indian.",
+    story: "Long before India's tea industry became a global powerhouse, one Assamese man saw its potential and fought relentlessly to make sure Indians had a place in it. **Maniram Dewan**, born in 1806 in Assam, was a pioneer who challenged colonial economics at a time when doing so came at the gravest personal cost. His story sits at the intersection of business ambition, national pride, and extraordinary courage.\n\nManiram Dutta Baruah, popularly known as Maniram Dewan, came from an influential Assamese family and served as a senior official under the **Ahom kingdom.** When the British East India Company took control of Assam in 1826, Maniram adapted with rare shrewdness, securing a position as a *dewan* — a local administrative officer — under the new rulers. His proximity to the British gave him something invaluable: access.\n\nIn the 1840s, the British were actively developing Assam's tea industry, but ownership and profits were firmly in European hands. Indians were permitted to work the gardens, not own them. Maniram saw this clearly and challenged it directly. He established two tea gardens — **Cinnamara and Jorhat** — becoming the first Indian to own and operate commercial tea estates in the country. In doing so, he didn't just start a business; he broke a colonial barrier.\n\nHis gardens were a statement. At a time when the British controlled every profitable enterprise in the region, an Indian owning a tea estate was an act of **economic defiance.** Maniram proved that the knowledge, the land, and the capability were always Indian — the profits simply didn't need to be European.\n\nBut Maniram's ambitions extended beyond business. He was deeply invested in Assamese sovereignty and became involved in the **1857 uprising** against British rule, working to mobilise support for the rebellion in the region. The British arrested him before the plans could fully unfold. He was tried swiftly and hanged in Jorhat in 1858 — making him not just a business pioneer, but a **martyr of the independence movement.**\n\nManiram Dewan's story is one that India's business world has largely forgotten, but shouldn't. He was an entrepreneur before the word existed in this context — a man who built something real in a system designed to exclude him, and who paid for his ambitions with his life. In Assam, he is remembered as a hero. The rest of India is still catching up.",
+    achievements: ["First Indian to own and operate commercial tea estates", "Established the Cinnamara and Jorhat tea gardens", "Senior official under the Ahom kingdom and later a dewan under the British", "Broke the colonial monopoly on tea ownership in Assam", "Martyr of the 1857 uprising, hanged in Jorhat in 1858"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-07",
+  },
+  {
     id: "tage-rita-takhe",
     name: "Tage Rita Takhe",
     title: "Founder, Naara Aaba",
