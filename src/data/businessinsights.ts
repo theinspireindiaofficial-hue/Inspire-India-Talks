@@ -39,6 +39,42 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "swiggy-majority-indian-owned-iocc",
+    title: "Swiggy Crosses a Major Structural Milestone as Foreign Ownership Falls Below 50%",
+    date: "07-07-2026",
+    category: "Startups & Ownership",
+    image: "/images/business-insights/swiggy-iocc.png",
+    excerpt:
+      "Swiggy has become majority Indian-owned after its foreign shareholding organically slipped below 50%, a shift that lets Instamart hold inventory directly.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Swiggy has become majority Indian-owned after its foreign shareholding fell organically below 50%. The shift is more significant than it might appear on the surface.
+
+Its reclassification as an Indian Owned and Controlled Company (IOCC) carries direct commercial implications — most notably, its quick commerce arm Instamart will now be able to hold inventory directly, improving margins and tightening supply chain control.
+
+The organic route to this threshold makes it particularly meaningful. Back in May, Swiggy's shareholders had failed to pass a resolution formally classifying it as an IOCC, making the natural crossing of the 50% foreign ownership ceiling the more credible path to that status.
+
+For Swiggy, locked in an intense battle with Zomato's Blinkit in the quick commerce space, tighter inventory control could prove a meaningful operational and cost advantage heading into the second half of FY27.`,
+  },
+
+  {
+    id: "india-uk-trade-pact-july-15",
+    title: "India–UK Trade Pact Set to Take Effect July 15",
+    date: "07-07-2026",
+    category: "Trade & Policy",
+    image: "/images/business-insights/india-uk-trade-pact.png",
+    excerpt:
+      "The finance ministry has notified rules of origin under the India–UK trade pact, clearing the way for the agreement to come into force from July 15.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The finance ministry has notified the rules for determining the origin of goods under the India–UK trade pact, clearing the way for the agreement to take effect from July 15. The deal has been long in the making — years of negotiations that repeatedly stalled over differences on tariffs, worker mobility, and Scotch whisky duties. Its imminent rollout marks a significant moment in India's trade diplomacy.
+
+India's free trade agreements with the UK and the EU are expected to boost toy exports through zero-duty market access, supported by fresh investments, expanding manufacturing capacity, and favourable government policies. Beyond toys, sectors such as pharmaceuticals, textiles, and IT services stand to gain considerably.
+
+Commerce Minister Piyush Goyal has said the Trade and Technology Council dialogue will complement the recently concluded India–EU free trade agreement, while India aims to seal a Canada FTA within six months — signalling an ambitious run of trade-deal activity on the horizon.`,
+  },
+
+  {
     id: "fizzy-goblet-kareena-kapoor-investment",
     title: "Fizzy Goblet Draws Strategic Investment from Kareena Kapoor Khan, Eyes Rs 100 Crore Run Rate",
     date: "07-07-2026",
