@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "shyam-sankeerth-gupta",
+    name: "Shyam Sankeerth Gupta",
+    title: "Founder & CEO, ApplyWizz — Building Global Careers with AI",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/shyam-sankeerth-gupta.png",
+    born: "Telangana",
+    profession: "Entrepreneur & AI Startup Founder",
+    knownFor: "Building ApplyWizz, an AI-powered career-tech startup, from a Tier-3 city in India",
+    quote: "Innovation, ambition, and execution are not limited by geography.",
+    story: "In a startup world that often assumes global ambition must be born in metros, **Shyam Sankeerth Gupta** is quietly rewriting the rulebook from Siddipet, Telangana. As the Founder and CEO of **ApplyWizz**, an AI-powered career technology startup, he is proving that a world-class company can be built from anywhere — provided the vision is bold enough and the execution sharp enough.\n\nHeadquartered in Hyderabad with operations based in Siddipet, ApplyWizz was born from a simple but powerful frustration: the process of applying for international jobs is complex, opaque, and intimidating for most candidates. Shyam set out to fix it by combining **artificial intelligence with human expertise**, simplifying global job applications and making international careers far more accessible than before.\n\nWhat sets his journey apart is the sheer pace of it. In **less than eight months**, Shyam transformed his idea into a rapidly growing company with a team of **100+ professionals**. Even more striking, **80% of his workforce is women** — a deliberate commitment to building inclusive employment opportunities while scaling a high-growth technology business.\n\nHis work has already drawn national and international attention. Shyam was auditioned for **Shark Tank USA**, a moment that underscored the global potential of ApplyWizz and its mission to redefine international recruitment through technology.\n\nBut perhaps the most inspiring part of his story is its setting. By building a globally focused AI startup from a **Tier-3 city**, Shyam is dismantling the belief that innovation belongs only to the country's biggest hubs. His journey speaks directly to aspiring entrepreneurs, students, and professionals who dream of creating meaningful impact from wherever they are.\n\nAs a speaker, Shyam shares hard-won lessons on building a technology startup from the ground up, scaling from idea to execution, leading and building teams in the earliest stages, embedding **diversity at the core** of hiring, and using AI to solve real-world career challenges — all underpinned by the mindset, resilience, and persistence that entrepreneurship demands.",
+    achievements: ["Founded ApplyWizz, an AI-powered career-technology startup, in Hyderabad/Siddipet", "Built a team of 100+ professionals in under eight months", "Created a workforce that is 80% women, prioritising inclusive hiring", "Auditioned for Shark Tank USA", "Building a globally focused AI product from a Tier-3 Indian city"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/in/shyam-sankeerth-gupta",
+    addedAt: "2026-07-09",
+  },
+  {
     id: "maniram-dewan",
     name: "Maniram Dewan",
     title: "Pioneer of Assam's Tea Industry",

@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "age-care-labs-series-b1-round",
+    title: "Age Care Labs Closes ₹85 Crore Round, Bets Big on India's Booming Elder Care Market",
+    date: "07-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/age-care-labs.png",
+    excerpt:
+      "Age Care Labs, parent of Emoha and Epoch Elder Care, has raised ₹85 crore in a Series B1 round as investors bet on India's rapidly expanding senior care market.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Age Care Labs, the parent company of elder care brands Emoha and Epoch Elder Care, has raised ₹85 crore in a Series B1 round — part of a larger ₹250 crore Series B expected to close by Q1 2027.
+
+The round was led by Shrem Group, with participation from Rainmatter — the investment arm of Zerodha — Pegasus Finvest, and several family offices. As part of the deal, Shrem Group has partnered with Emoha to co-launch Shremoha, a premium senior living platform.
+
+The raise underscores growing investor confidence in India's elder care sector as the country's over-60 population rapidly expands toward 340 million by 2050. Age Care Labs competes with KITES Senior Care, Alserv, and Ratan Tata-backed Goodfellows.
+
+The fresh capital will fund geographic expansion, technology development, and healthcare capability building. Having now raised over $20 million in total, the company is positioning itself as the dominant integrated platform in India's largely fragmented and underpenetrated senior care market.`,
+  },
+
+  {
+    id: "cci-approves-upgrad-unacademy-acquisition",
+    title: "CCI Clears upGrad's Acquisition of Unacademy — at a Fraction of Its Old Value",
+    date: "07-07-2026",
+    category: "Edtech & M&A",
+    image: "/images/business-insights/upgrad-unacademy.png",
+    excerpt:
+      "India's competition regulator has approved upGrad's acquisition of Unacademy, valuing the edtech rival at around ₹2,055 crore — a steep fall from its $3.4 billion pandemic-era peak.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's competition regulator cleared the way on July 7 for edtech platform upGrad to acquire rival Unacademy, marking one of the biggest deals in Indian online education history.
+
+The transaction values Unacademy at roughly ₹2,055 crore ($218 million) — a dramatic fall from the $3.4 billion valuation it commanded at the height of the pandemic-era edtech boom in 2021, when investors were pouring money into online learning at an unprecedented pace. The deal is structured as an all-share transaction, meaning Unacademy shareholders will receive upGrad stock rather than cash.
+
+For upGrad, led by entrepreneur Ronnie Screwvala, the acquisition is a strategic expansion into test preparation and K-12 learning — segments it previously had little presence in — and is expected to add around ₹500 crore to its annual revenue.
+
+The timing is telling: upGrad only recently turned profitable after years of losses, and Unacademy has been restructuring since its post-pandemic slowdown. India's edtech sector, once defined by sky-high valuations and aggressive growth, is now consolidating around survival and scale.`,
+  },
+
+  {
     id: "swiggy-majority-indian-owned-iocc",
     title: "Swiggy Crosses a Major Structural Milestone as Foreign Ownership Falls Below 50%",
     date: "07-07-2026",
