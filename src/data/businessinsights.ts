@@ -39,6 +39,29 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "made-in-india-chocolate-brands",
+    title: "Made in India: Homegrown Chocolate Brands Redefining Premium",
+    date: "09-07-2026",
+    category: "Consumer & Brands",
+    image: "/images/business-insights/made-in-india-chocolates.jpeg",
+    excerpt:
+      "A new generation of Indian chocolatiers is combining locally sourced cacao, artisanal craft, and world-class packaging to turn homegrown chocolate into a global contender.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's chocolate industry is quietly undergoing a remarkable transformation. While global brands have long dominated store shelves, a new generation of Indian chocolatiers is redefining what premium chocolate means — combining locally sourced cacao, artisanal craftsmanship, innovative flavours, and world-class packaging. From bean-to-bar makers working directly with farmers to luxury gifting brands crafting handmade bonbons and pralines, Indian chocolate is no longer just an alternative; it is becoming a global contender.
+
+Entisi — Founded by entrepreneur Nikki Thakker, Entisi has built a reputation for elegant, handcrafted chocolates designed for celebrations and premium gifting. Its collection spans bonbons, pralines, dragées, bars, and curated hampers, from dark and milk chocolate to sugar-free and dietary-specific options — reflecting how Indian premium chocolate is evolving in taste, presentation, and gifting culture.
+
+Bombay Sweet Shop — Blending India's traditional mithai heritage with modern confectionery, Bombay Sweet Shop reinvents classics like laddoos and barfis while also offering chocolate products, festive assortments, and contemporary gift boxes. It represents a new wave of Indian brands successfully merging nostalgia with innovation.
+
+Jakobi Chocolatier — Based in Kochi, Jakobi crafts artisanal chocolates including truffles, bonbons, filled bars, and signature slabs, with seasonal collections and sugar-free options. Its focus on quality and presentation showcases India's growing expertise in handcrafted chocolate making.
+
+Naviluna — Originating from Mysuru, Naviluna works closely with cacao farmers across Karnataka and Kerala to produce chocolate from organically grown Indian cacao. Its low-heat processing helps preserve the bean's natural flavour, resulting in distinctive dark and milk chocolate bars, and highlights India's growing bean-to-bar movement.
+
+India is emerging as one of the most exciting destinations for premium chocolate thanks to high-quality Indian-grown cacao, direct partnerships with local farmers, flavours inspired by Indian ingredients, premium gifting-focused packaging, and rising global recognition for artisanal craftsmanship. As consumer preferences shift toward authenticity, sustainability, and locally made premium products, Indian chocolatiers are proving they can compete with the best in the world — and supporting them means backing Indian entrepreneurs, farmers, designers, and artisans building a stronger food and luxury ecosystem.`,
+  },
+
+  {
     id: "world-bank-rooftop-solar-surya-ghar",
     title: "World Bank to Mobilise $4.2 Billion for India's Rooftop Solar Drive",
     date: "09-07-2026",
