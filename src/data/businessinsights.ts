@@ -39,6 +39,42 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "world-bank-rooftop-solar-surya-ghar",
+    title: "World Bank to Mobilise $4.2 Billion for India's Rooftop Solar Drive",
+    date: "09-07-2026",
+    category: "Energy & Climate",
+    image: "/images/business-insights/world-bank-rooftop-solar.jpeg",
+    excerpt:
+      "The World Bank is set to mobilise $4.2 billion in private financing, plus an $890 million direct package, to accelerate rooftop solar adoption under India's PM Surya Ghar scheme.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The World Bank is set to mobilise USD 4.2 billion in private financing, alongside an USD 890 million direct package, to accelerate rooftop solar adoption under India's PM Surya Ghar scheme. The initiative is a cornerstone of India's clean energy push, bringing solar power directly to millions of households nationwide.
+
+The move comes as India navigates a delicate balancing act between energy security, industrial growth, and climate commitments, particularly amid volatile global energy markets driven by ongoing geopolitical tensions.
+
+Separately, Gujarat unveiled its Data Centre Policy 2026–29, targeting hyperscale data centre and AI infrastructure investments to support the state's vision of a USD 3.5 trillion economy by 2047.
+
+Together, these developments reflect a broader national strategy in which energy transition and digital infrastructure are being pursued in tandem as twin pillars of India's long-term economic ambition.`,
+  },
+
+  {
+    id: "tripura-business-conclave-2026-mous",
+    title: "Tripura Signs 43 MoUs Worth ₹10,000 Crore at Business Conclave 2026",
+    date: "09-07-2026",
+    category: "Economy & Investment",
+    image: "/images/business-insights/tripura-business-conclave.png",
+    excerpt:
+      "Tripura signed 43 MoUs worth over ₹10,000 crore at the Destination Tripura Business Conclave 2026, a landmark haul for a state that has long struggled to attract large-scale private capital.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's northeastern states have long been viewed as laggards in attracting industrial investment, but Tripura is making a pointed statement to the contrary. The state signed 43 MoUs worth over ₹10,000 crore at the Destination Tripura Business Conclave 2026 — a significant haul for a region that has historically struggled to draw large-scale private capital.
+
+The conclave signals a broader push by northeastern states to leverage their strategic location bordering Bangladesh, Myanmar, and the wider Southeast Asian corridor as India deepens its Act East policy. Sectors including infrastructure, tourism, agro-processing, and renewable energy featured prominently among the investment commitments.
+
+The development aligns with the central government's increasing focus on unlocking the economic potential of India's northeast as a gateway to ASEAN markets, with improved connectivity and logistics investment laying the groundwork for a new chapter in regional industrial growth.`,
+  },
+
+  {
     id: "age-care-labs-series-b1-round",
     title: "Age Care Labs Closes ₹85 Crore Round, Bets Big on India's Booming Elder Care Market",
     date: "07-07-2026",
