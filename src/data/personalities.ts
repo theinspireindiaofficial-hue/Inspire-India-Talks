@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "ranjit-barthakur",
+    name: "Ranjit Barthakur",
+    title: "Founder, Globsyn Group",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/ranjit-barthakur.jpeg",
+    born: "Assam",
+    profession: "Entrepreneur & Institution Builder",
+    knownFor: "Building Globsyn Group and putting India's North East on the business map",
+    quote: "The long-term development of a region requires not just investment, but knowledge infrastructure.",
+    story: "When people think of India's technology and education industries, the names that come to mind are almost always from Bengaluru, Mumbai, or Hyderabad. Rarely does anyone look northeast. **Ranjit Barthakur** changed that. Born in Assam and driven by a vision far larger than his geography, he built **Globsyn Group** into a respected technology and business education enterprise — and in doing so, became one of the most significant business figures to emerge from a region the mainstream rarely notices.\n\nRanjit Barthakur grew up in Assam at a time when the North East was even further from India's economic mainstream than it is today. Opportunities were scarce, infrastructure was limited, and the idea of building a technology business from that part of the country would have seemed improbable to most. Barthakur, however, was not thinking small.\n\nHe went on to establish Globsyn Group, a conglomerate with interests spanning **information technology and business education.** Globsyn became best known for **Globsyn Business School** in Kolkata — an institution built with the explicit goal of delivering industry-relevant, future-facing management education. At a time when most business schools in India were following outdated curricula, Globsyn positioned itself around technology integration and practical business exposure, making it stand out in a crowded space.\n\nWhat makes Barthakur's story particularly compelling is the **intentionality** behind it. He did not simply build a business — he built institutions. His work in education reflected a belief that the long-term development of eastern and northeastern India required not just investment, but knowledge infrastructure. By creating a school that produced business-ready graduates, he was investing in human capital at a time when the region desperately needed it.\n\nBeyond Globsyn, Barthakur has been an active voice in conversations around the development of the North East, entrepreneurship, and the role of technology in bridging India's regional economic divides. He has worked at the intersection of **business, policy, and social development** — a rare combination.\n\nRanjit Barthakur's story is one of a man from an overlooked corner of India who built real institutions with lasting impact. In a country that celebrates its startup unicorns, his kind of purposeful, region-rooted entrepreneurship deserves far more recognition than it gets.",
+    achievements: ["Founded Globsyn Group, spanning IT and business education", "Established Globsyn Business School in Kolkata", "Pioneered technology-integrated, industry-relevant management education", "Became a leading business figure from India's North East", "Advocate for North East development and bridging regional economic divides"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-13",
+  },
+  {
     id: "arunabh-kumar",
     name: "Arunabh Kumar",
     title: "Founder, The Viral Fever (TVF)",

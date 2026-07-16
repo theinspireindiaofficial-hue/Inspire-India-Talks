@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "dhruva-space-antariksh-fund-raise",
+    title: "Dhruva Space Raises ₹60 Crore from India's Sovereign Space-Tech Fund",
+    date: "15-07-2026",
+    category: "Startups & Space Tech",
+    image: "/images/business-insights/dhruva-space.png",
+    excerpt:
+      "Hyderabad-based Dhruva Space has raised ₹60 crore in its maiden institutional round from the Antariksh Venture Capital Fund, India's sovereign fund dedicated to the space sector.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Hyderabad-based spacetech startup Dhruva Space has raised ₹60 crore in its maiden institutional funding round from the Antariksh Venture Capital Fund (AVCF), India's sovereign venture capital fund dedicated to the space sector. Managed by SIDBI Venture Capital and anchored by IN-SPACe, the fund aims to strengthen India's commercial space ecosystem.
+
+The investment will help Dhruva Space expand satellite manufacturing, space-based solutions, research and development, and global commercial partnerships.
+
+The funding marks a significant milestone for India's private space industry, which has gained momentum following policy reforms that opened the sector to private participation. Industry experts believe the investment validates India's ambition of becoming a global hub for satellite technology and space innovation.
+
+As demand for satellite communication, earth observation, and defence applications increases worldwide, Dhruva Space is expected to play an important role in building indigenous space capabilities while competing internationally.`,
+  },
+
+  {
+    id: "india-uk-ceta-enters-force",
+    title: "India–UK CETA Enters Into Force, Granting Duty-Free Access Across 99% of Tariff Lines",
+    date: "15-07-2026",
+    category: "Trade & Policy",
+    image: "/images/business-insights/india-uk-ceta.jpeg",
+    excerpt:
+      "The India–UK Comprehensive Economic and Trade Agreement came into force on July 15, 2026, eliminating UK tariffs on 99% of Indian exports — India's most ambitious trade deal with a G7 nation.",
+    readTime: "3 min read",
+    featured: false,
+    content: `The India–UK Comprehensive Economic and Trade Agreement (CETA), along with its companion Double Contribution Convention (DCC), officially came into force on July 15, 2026. Concluded after 14 rounds of negotiations and signed in London in July 2025, it is India's most ambitious trade deal with a G7 nation.
+
+The UK immediately eliminates tariffs on 99% of Indian exports — removing duties of up to 70% on processed foods, 21.5% on marine products, 12% on textiles, and 8% on pharmaceuticals.
+
+The DCC simultaneously exempts Indian professionals on temporary UK assignments from paying social security contributions for up to five years, covering over 75,000 workers across IT, engineering, healthcare, and finance.
+
+Commerce Secretary Rajesh Agrawal described it as a "gold standard" agreement spanning 30 chapters — including digital trade, government procurement, and professional mobility — and a defining step toward Viksit Bharat 2047.`,
+  },
+
+  {
     id: "made-in-india-chocolate-brands",
     title: "Made in India: Homegrown Chocolate Brands Redefining Premium",
     date: "09-07-2026",
