@@ -67,7 +67,7 @@ const CategoryDetail = () => {
           >
             <Link
               to={`/personality/${lead.id}`}
-              className="group grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-primary/20 bg-black/30 hover:border-primary/40 transition-colors"
+              className="group grid lg:grid-cols-2 gap-0 border border-border bg-card hover:border-primary/40 hover:shadow-xl transition-all"
             >
               <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[460px] overflow-hidden bg-gradient-to-br from-primary/20 via-black/40 to-black">
                 <img
@@ -127,7 +127,7 @@ const CategoryDetail = () => {
                 >
                   <Link
                     to={`/personality/${person.id}`}
-                    className="group block rounded-2xl overflow-hidden border border-primary/15 bg-black/30 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 h-full"
+                    className="group block border border-border bg-card hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full"
                   >
                     <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary/15 via-black/40 to-black">
                       <span className="absolute top-4 left-4 z-20 font-mono text-xs font-semibold text-white/70 bg-black/40 backdrop-blur-sm rounded-full px-2.5 py-1">

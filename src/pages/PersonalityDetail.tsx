@@ -97,7 +97,7 @@ const PersonalityDetail = () => {
       </motion.section>
 
       {/* ===== Editorial facts band ===== */}
-      <div className="border-b border-border/40 bg-black/20">
+      <div className="border-b border-border/40 bg-muted/40">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border/40">
             {[

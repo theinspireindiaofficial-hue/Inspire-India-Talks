@@ -67,7 +67,7 @@ const InspiringVoices = () => {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-16">
             <Link
               to={`/personality/${lead.id}`}
-              className="group grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-primary/20 bg-black/30 hover:border-primary/40 transition-colors"
+              className="group grid lg:grid-cols-2 gap-0 border border-border bg-card hover:border-primary/40 hover:shadow-xl transition-all"
             >
               <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[480px] overflow-hidden bg-gradient-to-br from-primary/20 via-black/40 to-black">
                 <Portrait p={lead} fit="object-contain object-center" className="absolute inset-0 w-full h-full p-4 transition-transform duration-700 group-hover:scale-105" />

@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useCallback } from "react";
 import Layout from "@/components/Layout";
 import PersonalityCard from "@/components/PersonalityCard";
 import { categories, getFeaturedPersonalities, personalities } from "@/data/personalities";
-import { ArrowRight, Users, BookOpen, Star, Award, Play, Send, Briefcase, Landmark, Rocket, Crown, GraduationCap, Stethoscope, Leaf, Trophy, Shield, Zap } from "lucide-react";
+import { businessinsights } from "@/data/businessinsights";
+import { ArrowRight, Users, BookOpen, Star, Play, Send, Briefcase, Crown, Stethoscope, Leaf, Trophy, Shield, Zap, Radio } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
-const heroQuotes = [
-  { text: "Inspiration that builds nations.", sub: "Stories of those who shaped India's future." },
-  { text: "Dream. Dare. Disrupt.", sub: "50+ journeys of relentless ambition." },
-  { text: "From struggle to triumph.", sub: "Real stories of India's greatest achievers." },
-];
 
 const categoryIcons: Record<string, React.ReactNode> = {
   entrepreneurs: <Briefcase className="h-8 w-8" />,
@@ -31,19 +26,16 @@ const WEB3FORMS_KEY = "30ad2072-0d0d-4d0b-8c55-ebeb571f65e4";
 
 const Index = () => {
   const featured = getFeaturedPersonalities();
+  const tickerItems = [...businessinsights]
+    .slice(0, 6)
+    .map((a) => a.title);
   const heroRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
-  const [quoteIdx, setQuoteIdx] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const t = setInterval(() => setQuoteIdx(i => (i + 1) % heroQuotes.length), 4000);
-    return () => clearInterval(t);
-  }, []);
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     setMousePos({ x: e.clientX, y: e.clientY });
@@ -63,73 +55,115 @@ const Index = () => {
       <div
         className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y - window.scrollY}px, hsl(24 95% 53% / 0.07), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y - window.scrollY}px, hsl(20 78% 42% / 0.06), transparent 40%)`,
         }}
       />
       <Layout>
-        <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden gradient-mesh">
+        {/* ===== Live ticker strip — real headlines, not decoration ===== */}
+        {tickerItems.length > 0 && (
+          <div className="bg-foreground text-background overflow-hidden">
+            <div className="container mx-auto px-4 flex items-center gap-4 py-2.5">
+              <span className="shrink-0 inline-flex items-center gap-1.5 text-primary text-[11px] font-bold uppercase tracking-widest">
+                <Radio className="h-3 w-3 animate-pulse" /> Latest
+              </span>
+              <div className="relative flex-1 overflow-hidden">
+                <div className="flex whitespace-nowrap animate-marquee">
+                  {[...tickerItems, ...tickerItems].map((t, i) => (
+                    <span key={i} className="text-xs md:text-sm text-background/85 mx-6">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <section ref={heroRef} className="relative min-h-[88vh] flex items-center overflow-hidden gradient-mesh">
+          {/* Textured backdrop: subtle dotted grid + soft blobs */}
           <div className="absolute inset-0">
+            <div
+              className="absolute inset-0 opacity-[0.28]"
+              style={{
+                backgroundImage: "radial-gradient(hsl(220 12% 78%) 1px, transparent 1px)",
+                backgroundSize: "26px 26px",
+                maskImage: "radial-gradient(ellipse 75% 65% at 50% 40%, black 35%, transparent 92%)",
+              }}
+            />
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/3 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/[0.03] rounded-full blur-3xl" />
           </div>
 
-          <motion.div style={{ opacity: heroOpacity, y: heroY }} className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              {/* Left — Quotes */}
+          <motion.div style={{ opacity: heroOpacity, y: heroY }} className="container mx-auto px-4 relative z-10 py-20 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+              {/* Left — Editorial masthead */}
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="lg:col-span-7"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-px w-12 bg-primary" />
-                  <span className="text-primary font-medium tracking-[0.3em] uppercase text-xs">Inspire India Talks</span>
+                <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card/60 backdrop-blur-sm px-4 py-1.5 mb-8">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span className="text-foreground/70 font-medium tracking-[0.18em] uppercase text-[11px]">
+                    An Independent Editorial Platform
+                  </span>
                 </div>
 
-                <motion.h1
-                  key={quoteIdx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  className="font-serif text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] glow-text"
-                >
-                  {heroQuotes[quoteIdx].text}
-                </motion.h1>
+                <h1 className="font-serif text-[2.75rem] sm:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight text-foreground">
+                  The people building
+                  <br className="hidden sm:block" /> a new{" "}
+                  <span className="text-primary">India</span> — and the
+                  <br className="hidden sm:block" /> ideas behind them.
+                </h1>
 
-                <motion.p
-                  key={`sub-${quoteIdx}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl"
-                >
-                  {heroQuotes[quoteIdx].sub}
-                </motion.p>
+                <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+                  In-depth profiles, founder journeys and business insight —
+                  reported, written and fact-checked by our editorial team.
+                </p>
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="mt-10 flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/inspiring-voices"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20"
+                  >
+                    Read the Stories <ArrowRight className="h-4 w-4" />
+                  </Link>
                   <Link
                     to="/events"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20"
+                    className="inline-flex items-center gap-2 text-foreground px-4 py-3.5 rounded-lg font-medium border border-border hover:border-foreground/40 hover:bg-secondary transition-all"
                   >
-                    Explore Events <ArrowRight className="h-4 w-4" />
+                    <Play className="h-4 w-4 text-primary" /> Upcoming Events
                   </Link>
-                  <Link
-                    to="/category/entrepreneurs"
-                    className="inline-flex items-center gap-2 border border-border text-foreground/80 px-8 py-4 rounded-xl font-medium hover:border-primary/50 hover:text-primary transition-all"
-                  >
-                    <Play className="h-4 w-4" /> Explore Stories
-                  </Link>
+                </div>
+
+                {/* Credibility bar — clean, no collage */}
+                <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-border/70 pt-7">
+                  <div>
+                    <p className="font-serif text-2xl font-bold text-foreground leading-none">{personalities.length}+</p>
+                    <p className="text-[11px] uppercase tracking-widest text-muted-foreground mt-1.5">Stories reported</p>
+                  </div>
+                  <div className="h-8 w-px bg-border" />
+                  <div>
+                    <p className="font-serif text-2xl font-bold text-foreground leading-none">{categories.length}</p>
+                    <p className="text-[11px] uppercase tracking-widest text-muted-foreground mt-1.5">Editorial desks</p>
+                  </div>
+                  <div className="h-8 w-px bg-border hidden sm:block" />
+                  <div className="hidden sm:block">
+                    <p className="font-serif text-2xl font-bold text-foreground leading-none">Weekly</p>
+                    <p className="text-[11px] uppercase tracking-widest text-muted-foreground mt-1.5">New features</p>
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Right — Event Video */}
+              {/* Right — Feature media, straight and framed */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="hidden lg:block relative"
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="hidden lg:block relative lg:col-span-5"
               >
-                <div className="relative rounded-2xl overflow-hidden aspect-video glass-card group">
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] border border-border shadow-2xl shadow-black/10">
                   <video
                     src="/images/events/0306(1).mp4"
                     autoPlay
@@ -138,52 +172,26 @@ const Index = () => {
                     playsInline
                     className="w-full h-full object-cover scale-[1.35]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
-                  {/* Floating badge */}
-                  <div className="absolute bottom-6 left-6 glass-card px-4 py-2 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                    <span className="text-xs font-medium text-foreground/90 tracking-wider uppercase">Inspire India Talks X IIIT Delhi Event</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
+
+                  {/* Top corner tag */}
+                  <div className="absolute top-5 left-5 inline-flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-white/90">On the ground</span>
+                  </div>
+
+                  {/* Caption */}
+                  <div className="absolute bottom-0 inset-x-0 p-6">
+                    <p className="text-[11px] font-medium uppercase tracking-widest text-primary mb-1.5">Featured Event</p>
+                    <p className="font-serif text-xl font-bold text-white leading-snug">
+                      Inspire India Talks × IIIT Delhi
+                    </p>
+                    <p className="text-sm text-white/70 mt-1">Conversations with India's changemakers.</p>
                   </div>
                 </div>
               </motion.div>
             </div>
           </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          >
-            <div className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-1.5">
-              <div className="w-1 h-2 bg-primary rounded-full" />
-            </div>
-          </motion.div>
-        </section>
-
-        {/* Stats */}
-        <section className="border-y border-border/50 py-8">
-          <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { icon: <Users className="h-5 w-5" />, number: `${personalities.length}+`, label: "Inspiring Stories" },
-              { icon: <BookOpen className="h-5 w-5" />, number: `${categories.length}+`, label: "Categories" },
-              { icon: <Star className="h-5 w-5" />, number: "100+", label: "Achievements" },
-              { icon: <Award className="h-5 w-5" />, number: `${personalities.length * 5}+`, label: "Inspiration" },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-center gap-2"
-              >
-                <div className="text-primary">{stat.icon}</div>
-                <span className="text-2xl font-bold font-serif text-foreground">{stat.number}</span>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">{stat.label}</span>
-              </motion.div>
-            ))}
-          </div>
         </section>
 
         {/* Story of the Week */}
@@ -318,8 +326,8 @@ const Index = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/5" />
                       )}
 
-                      {/* Dark gradient so text stays readable */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/5 transition-all duration-500 group-hover:from-background group-hover:via-background/60" />
+                      {/* Dark gradient so text stays readable, regardless of page theme */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10 transition-all duration-500 group-hover:from-black/95 group-hover:via-black/60" />
 
                       {/* Content pinned to the bottom, over the image */}
                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-7">
@@ -433,10 +441,10 @@ const RegistrationSection = () => {
                   <div className="h-px w-12 bg-primary" />
                   <span className="text-primary font-medium tracking-[0.3em] uppercase text-xs">Register Now</span>
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight">
                   Attend an <br /><span className="text-primary">Inspire Talk</span>
                 </h2>
-                <p className="mt-6 leading-relaxed max-w-md text-lg text-white/85">
+                <p className="mt-6 leading-relaxed max-w-md text-lg text-foreground/75">
 
                   Register your interest to attend our upcoming events. We'll review your profile and send a confirmation if selected.
                 </p>
@@ -452,7 +460,7 @@ const RegistrationSection = () => {
                       className="flex items-center gap-3"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      <span className="text-white/80 text-sm">{item}</span>
+                      <span className="text-foreground/70 text-sm">{item}</span>
                     </motion.div>
                   ))}
                 </div>

@@ -230,7 +230,7 @@ const FoundersTalk = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   onClick={() => setActiveTalk(talk)}
-                  className="group cursor-pointer bg-black/30 border border-primary/20 hover:border-primary/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 transition-all duration-300"
+                  className="group cursor-pointer bg-card border border-border hover:border-primary/40 hover:shadow-lg rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 transition-all duration-300"
                 >
                   <div className="relative aspect-video md:w-56 shrink-0 rounded-xl overflow-hidden bg-gradient-to-br from-primary/30 to-black flex items-center justify-center border border-white/5">
                     <span className="font-serif text-lg font-bold text-foreground/75 px-4 text-center">
