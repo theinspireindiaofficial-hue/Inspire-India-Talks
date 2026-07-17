@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-first-hydrogen-train",
+    title: "India Launches Its First Hydrogen-Powered Train",
+    date: "15-07-2026",
+    category: "Energy & Infrastructure",
+    image: "/images/business-insights/hydrogen-train.jpg",
+    excerpt:
+      "India has launched its first hydrogen-powered train, a milestone in its green mobility journey that emits only water vapor and heat instead of greenhouse gases.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India has taken a major step toward sustainable transportation with the launch of its first hydrogen-powered train, marking a significant milestone in the country's green mobility journey. Developed under Indian Railways' broader decarbonization strategy, the train uses hydrogen fuel cells to generate electricity, emitting only water vapor and heat instead of harmful greenhouse gases.
+
+Hydrogen-powered trains offer a cleaner alternative to diesel locomotives, particularly on non-electrified rail routes where full electrification may not be immediately feasible. This initiative aligns with India's commitment to achieving net-zero emissions by 2070 while strengthening energy security through cleaner technologies.
+
+Beyond reducing carbon emissions, the project is expected to accelerate innovation in hydrogen production, fuel infrastructure, and advanced railway engineering.
+
+As India continues investing in sustainable transport, hydrogen-powered railways could become a key pillar of the nation's future mobility ecosystem, reinforcing its ambition to emerge as a global leader in clean energy and green infrastructure.`,
+  },
+
+  {
+    id: "skyroot-vikram-i-mission-aagaman",
+    title: "Skyroot Aerospace Set to Make History with Vikram-I",
+    date: "15-07-2026",
+    category: "Startups & Space Tech",
+    image: "/images/business-insights/skyroot-vikram-i.jpg",
+    excerpt:
+      "Skyroot Aerospace is poised to launch Vikram-I, India's first privately developed orbital launch vehicle, under Mission Aagaman — a defining moment for the country's private space sector.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Skyroot Aerospace is poised to create history with the launch of Vikram-I, India's first privately developed orbital launch vehicle. Scheduled under Mission Aagaman, the rocket's maiden flight marks a defining moment for India's rapidly growing private space sector.
+
+Developed by the Hyderabad-based startup founded by former ISRO engineers, Vikram-I is designed to place payloads of up to 350 kg into Low Earth Orbit (LEO) using advanced carbon-composite structures, 3D-printed engines, and indigenous propulsion technologies. The mission will carry multiple commercial and technology demonstration payloads, showcasing India's increasing capability in affordable and reliable satellite launches.
+
+Beyond a technological milestone, Vikram-I symbolizes the success of India's space-sector reforms that opened opportunities for private innovation.
+
+A successful mission will strengthen India's position in the global space economy, encourage greater investment in space startups, and pave the way for a vibrant commercial launch ecosystem alongside ISRO's achievements.`,
+  },
+
+  {
     id: "dhruva-space-antariksh-fund-raise",
     title: "Dhruva Space Raises ₹60 Crore from India's Sovereign Space-Tech Fund",
     date: "15-07-2026",
