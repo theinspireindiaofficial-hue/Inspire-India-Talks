@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getServiceClient } from './_lib/supabase';
+import { getServiceClient } from './_lib/supabase.js';
 
 const SITE_ORIGIN =
   process.env.PUBLIC_SITE_ORIGIN || 'https://www.inspireindiatalks.com';

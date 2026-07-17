@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getServiceClient } from './_lib/supabase';
+import { getServiceClient } from './_lib/supabase.js';
 
 const SITE_ORIGIN =
   process.env.PUBLIC_SITE_ORIGIN || 'https://www.inspireindiatalks.com';
@@ -30,7 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (selErr) throw selErr;
     if (!row) return redirect('invalid');
 
-    // Already confirmed → still show success (idempotent).
+    // Already confirmed -> still show success (idempotent).
     if (row.status === 'confirmed') return redirect('success');
 
     const { error: updErr } = await supabase

@@ -1,12 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { randomUUID } from 'crypto';
 import { z } from 'zod';
-import { getServiceClient } from './_lib/supabase';
+import { getServiceClient } from './_lib/supabase.js';
 import {
   buildConfirmUrl,
   readSource,
   sendConfirmationEmail,
-} from './_lib/email';
+} from './_lib/email.js';
 
 const CONSENT_NOTE = 'Implicit opt-in via website newsletter signup form.';
 
