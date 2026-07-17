@@ -18,6 +18,7 @@ import TreeVolution from "./pages/TreeVolution";
 import BusinessInsights from "./pages/BusinessInsights";
 import BusinessInsightDetail from "./pages/BusinessInsightDetail";
 import InspiringVoices from "./pages/InspiringVoices";
+import NewsletterStatus from "./pages/NewsletterStatus";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,8 @@ const App = () => (
           <Route path="/tree-volution" element={<TreeVolution />} />
           <Route path="/business-insights" element={<BusinessInsights />} />
           <Route path="/business-insights/:id" element={<BusinessInsightDetail />} />
+          <Route path="/newsletter/confirmed" element={<NewsletterStatus variant="confirmed" />} />
+          <Route path="/newsletter/unsubscribed" element={<NewsletterStatus variant="unsubscribed" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

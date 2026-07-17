@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { categories } from "@/data/personalities";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 // ✅ EASY TO EDIT — Change your social media links here
 const socialLinks = [
@@ -25,6 +26,16 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
               India's premium storytelling and inspiration platform — showcasing the journeys of entrepreneurs, civil servants, innovators, and trailblazers who shaped the nation.
             </p>
+
+            <div className="mt-8 max-w-md">
+              <h4 className="font-serif font-semibold mb-2 text-foreground">
+                The weekly newsletter
+              </h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Get our best stories and interviews delivered to your inbox every week.
+              </p>
+              <NewsletterSignup source="footer" />
+            </div>
           </div>
 
           <div>
