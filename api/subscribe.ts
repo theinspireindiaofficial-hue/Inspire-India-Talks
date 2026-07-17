@@ -8,15 +8,10 @@ import {
   sendConfirmationEmail,
 } from './_lib/email';
 
-const CONSENT_TEXT =
-  'I agree to receive the weekly Inspire India Talks newsletter and understand I can unsubscribe at any time.';
+const CONSENT_NOTE = 'Implicit opt-in via website newsletter signup form.';
 
 const BodySchema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),
-  firstName: z.string().trim().max(80).optional().or(z.literal('')),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: 'Consent is required.' }),
-  }),
   source: z.string().max(200).optional(),
 });
 
@@ -36,7 +31,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const email = parsed.data.email;
-  const firstName = parsed.data.firstName?.trim() || null;
   const source = parsed.data.source || readSource(req) || null;
 
   const confirmToken = randomUUID();
@@ -53,21 +47,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     if (selErr) throw selErr;
 
-    // Already confirmed → nothing to do. Respond generically (don't leak membership).
+    // Already confirmed -> nothing to do. Respond generically (don't leak membership).
     if (existing && existing.status === 'confirmed') {
       return res.status(200).json({ ok: true });
     }
 
     if (existing) {
-      // Pending or previously unsubscribed → refresh token + name, reset to pending.
+      // Pending or previously unsubscribed -> refresh token, reset to pending.
       const { error: updErr } = await supabase
         .from('subscribers')
         .update({
-          first_name: firstName,
           status: 'pending',
           confirm_token: confirmToken,
           source,
-          consent_text: CONSENT_TEXT,
+          consent_text: CONSENT_NOTE,
           unsubscribed_at: null,
         })
         .eq('id', existing.id);
@@ -76,11 +69,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       // New subscriber
       const { error: insErr } = await supabase.from('subscribers').insert({
         email,
-        first_name: firstName,
         status: 'pending',
         confirm_token: confirmToken,
         source,
-        consent_text: CONSENT_TEXT,
+        consent_text: CONSENT_NOTE,
       });
       if (insErr) throw insErr;
     }
@@ -89,13 +81,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const confirmUrl = buildConfirmUrl(confirmToken);
     const { devConfirmUrl } = await sendConfirmationEmail({
       to: email,
-      firstName,
       confirmUrl,
     });
 
     return res.status(200).json({
       ok: true,
-      // Only present in non-production so the flow is testable without a mail provider.
       ...(devConfirmUrl ? { devConfirmUrl } : {}),
     });
   } catch (err) {

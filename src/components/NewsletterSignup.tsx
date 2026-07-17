@@ -2,11 +2,7 @@ import { useState } from "react";
 import { Mail, Loader2, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-
-const CONSENT_LABEL =
-  "I agree to receive the weekly newsletter. I can unsubscribe anytime.";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -19,8 +15,6 @@ interface NewsletterSignupProps {
 const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
   const { toast } = useToast();
   const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -35,14 +29,6 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
       });
       return;
     }
-    if (!consent) {
-      toast({
-        title: "One more thing",
-        description: "Please tick the consent box to subscribe.",
-        variant: "destructive",
-      });
-      return;
-    }
 
     setSubmitting(true);
     try {
@@ -51,8 +37,6 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim(),
-          firstName: firstName.trim() || undefined,
-          consent: true,
           source: source || (typeof window !== "undefined" ? window.location.pathname : undefined),
         }),
       });
@@ -67,8 +51,6 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
 
       setDone(true);
       setEmail("");
-      setFirstName("");
-      setConsent(false);
     } catch {
       toast({
         title: "Something went wrong",
@@ -98,43 +80,17 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
 
   return (
     <form onSubmit={handleSubmit} className={className} noValidate>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Input
-          type="text"
-          name="firstName"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          placeholder="First name (optional)"
-          autoComplete="given-name"
-          className="sm:max-w-[40%]"
-          disabled={submitting}
-        />
-        <Input
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          autoComplete="email"
-          required
-          disabled={submitting}
-        />
-      </div>
-
-      <label className="mt-3 flex items-start gap-2.5 cursor-pointer">
-        <Checkbox
-          checked={consent}
-          onCheckedChange={(v) => setConsent(v === true)}
-          disabled={submitting}
-          className="mt-0.5"
-          aria-label="Consent to receive the newsletter"
-        />
-        <span className="text-xs text-muted-foreground leading-relaxed">
-          {CONSENT_LABEL}
-        </span>
-      </label>
-
-      <Button type="submit" disabled={submitting} className="mt-4 w-full sm:w-auto">
+      <Input
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="you@example.com"
+        autoComplete="email"
+        required
+        disabled={submitting}
+      />
+      <Button type="submit" disabled={submitting} className="mt-3 w-full">
         {submitting ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" /> Subscribing…
