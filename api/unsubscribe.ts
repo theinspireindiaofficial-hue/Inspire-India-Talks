@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { getServiceClient } from './_lib/supabase.js';
+import { setResendContactUnsubscribed } from './_lib/email.js';
 
 const SITE_ORIGIN =
   process.env.PUBLIC_SITE_ORIGIN || 'https://www.inspireindiatalks.com';
@@ -22,12 +23,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { data: row, error: selErr } = await supabase
       .from('subscribers')
-      .select('id')
+      .select('id, email')
       .eq('unsubscribe_token', token)
       .maybeSingle();
 
     if (selErr) throw selErr;
     if (!row) return redirect('invalid');
+
+    await setResendContactUnsubscribed(row.email);
 
     const { error: updErr } = await supabase
       .from('subscribers')

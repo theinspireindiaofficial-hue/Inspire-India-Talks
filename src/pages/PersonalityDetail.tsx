@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { getPersonalityById, getPersonalitiesByCategory } from "@/data/personalities";
 import { ArrowLeft, Quote, ArrowRight } from "lucide-react";
+import NewsletterSheet from "@/components/NewsletterSheet";
 
 const PersonalityDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -228,6 +229,18 @@ const PersonalityDetail = () => {
                 </div>
               </motion.div>
             )}
+
+            <div className="border-t border-border pt-8">
+              <p className="font-serif text-xl font-bold text-foreground">Enjoyed this story?</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Subscribe for more inspiring Indian journeys, delivered weekly.
+              </p>
+              <NewsletterSheet
+                source="personality-article"
+                triggerLabel="Subscribe"
+                triggerClassName="mt-4"
+              />
+            </div>
           </div>
 
           {/* Sidebar */}

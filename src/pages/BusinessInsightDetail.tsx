@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 import { businessinsights, getBusinessInsightById } from "@/data/businessinsights";
 import { highlightKeywords } from "@/lib/highlight";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Facebook, Linkedin, Twitter } from "lucide-react";
+import NewsletterSheet from "@/components/NewsletterSheet";
 
 const BusinessInsightDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -125,6 +126,18 @@ const BusinessInsightDetail = () => {
                   {highlightKeywords(para)}
                 </motion.p>
               ))}
+
+              <div className="mt-12 border-t border-border pt-8">
+                <p className="font-serif text-xl font-bold text-foreground">Enjoyed this article?</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Get more inspiring stories and business insights in your inbox.
+                </p>
+                <NewsletterSheet
+                  source="business-insight-article"
+                  triggerLabel="Subscribe"
+                  triggerClassName="mt-4"
+                />
+              </div>
 
               <div className="mt-10 pt-6 border-t border-border">
                 <Link

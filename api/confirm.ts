@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { getServiceClient } from './_lib/supabase.js';
+import { syncConfirmedSubscriberToResend } from './_lib/email.js';
 
 const SITE_ORIGIN =
   process.env.PUBLIC_SITE_ORIGIN || 'https://www.inspireindiatalks.com';
@@ -23,12 +24,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { data: row, error: selErr } = await supabase
       .from('subscribers')
-      .select('id, status')
+      .select('id, status, email')
       .eq('confirm_token', token)
       .maybeSingle();
 
     if (selErr) throw selErr;
     if (!row) return redirect('invalid');
+
+    // Only confirmed readers are added to the Resend Broadcast audience.
+    await syncConfirmedSubscriberToResend(row.email);
 
     // Already confirmed -> still show success (idempotent).
     if (row.status === 'confirmed') return redirect('success');

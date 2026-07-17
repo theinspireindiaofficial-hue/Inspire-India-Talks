@@ -60,12 +60,7 @@ const Index = () => {
         }}
       />
       <Layout>
-        {/* Floating newsletter subscribe — top-right, just below the navbar */}
-        <div className="sticky top-32 z-40 h-0">
-          <div className="container mx-auto px-4 flex justify-end">
-            <NewsletterSheet source="home-hero" />
-          </div>
-        </div>
+        {/* Newsletter subscribe — stays in its original homepage position */}
         {/* ===== Live ticker strip — real headlines, not decoration ===== */}
         {tickerItems.length > 0 && (
           <div className="bg-foreground text-background overflow-hidden">
@@ -85,6 +80,10 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        <div className="container mx-auto flex justify-end px-4 pt-4">
+          <NewsletterSheet source="home-hero" />
+        </div>
 
         <section ref={heroRef} className="relative min-h-[88vh] flex items-center overflow-hidden gradient-mesh">
           {/* Textured backdrop: subtle dotted grid + soft blobs */}

@@ -14,9 +14,15 @@ interface NewsletterSheetProps {
   source?: string;
   /** Optional extra classes for the trigger button. */
   triggerClassName?: string;
+  /** Text shown on the button that opens the signup form. */
+  triggerLabel?: string;
 }
 
-const NewsletterSheet = ({ source = "home-panel", triggerClassName }: NewsletterSheetProps) => {
+const NewsletterSheet = ({
+  source = "home-panel",
+  triggerClassName,
+  triggerLabel = "Newsletter",
+}: NewsletterSheetProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -28,7 +34,7 @@ const NewsletterSheet = ({ source = "home-panel", triggerClassName }: Newsletter
           }
         >
           <Mail className="h-4 w-4" />
-          Newsletter
+          {triggerLabel}
         </button>
       </SheetTrigger>
       <SheetContent side="right" className="w-full sm:max-w-md flex flex-col">

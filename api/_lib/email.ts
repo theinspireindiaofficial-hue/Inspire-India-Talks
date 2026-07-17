@@ -35,6 +35,68 @@ export interface ConfirmationEmailArgs {
   confirmUrl: string;
 }
 
+function getResendApiKey(): string {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) throw new Error('Missing RESEND_API_KEY environment variable.');
+  return apiKey;
+}
+
+async function resendContactRequest(
+  path: string,
+  method: 'POST' | 'PATCH',
+  body: Record<string, unknown>
+): Promise<Response> {
+  return fetch(`https://api.resend.com${path}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${getResendApiKey()}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+}
+
+/**
+ * Add a double-opted-in reader to Resend Contacts so Broadcasts reach them.
+ * If the contact already exists, update it instead; confirmation links can be
+ * safely clicked again after an interrupted request.
+ */
+export async function syncConfirmedSubscriberToResend(email: string): Promise<void> {
+  const created = await resendContactRequest('/contacts', 'POST', {
+    email,
+    unsubscribed: false,
+  });
+
+  if (created.ok) return;
+  if (created.status !== 409) {
+    const detail = await created.text().catch(() => '');
+    throw new Error(`Resend contact creation failed (${created.status}): ${detail}`);
+  }
+
+  const updated = await resendContactRequest(
+    `/contacts/${encodeURIComponent(email)}`,
+    'PATCH',
+    { unsubscribed: false }
+  );
+  if (!updated.ok) {
+    const detail = await updated.text().catch(() => '');
+    throw new Error(`Resend contact update failed (${updated.status}): ${detail}`);
+  }
+}
+
+/** Keep Resend Broadcasts in sync with the site's unsubscribe page. */
+export async function setResendContactUnsubscribed(email: string): Promise<void> {
+  const response = await resendContactRequest(
+    `/contacts/${encodeURIComponent(email)}`,
+    'PATCH',
+    { unsubscribed: true }
+  );
+  if (!response.ok && response.status !== 404) {
+    const detail = await response.text().catch(() => '');
+    throw new Error(`Resend contact unsubscribe failed (${response.status}): ${detail}`);
+  }
+}
+
 function confirmationHtml(firstName: string | null | undefined, confirmUrl: string): string {
   const hi = firstName ? `Hi ${escapeHtml(firstName)},` : 'Hi there,';
   return `
