@@ -102,7 +102,7 @@ const BusinessInsightDetail = () => {
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full max-h-[480px] object-cover"
+                  className="w-full h-auto"
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).style.display = "none";
                   }}
@@ -127,7 +127,7 @@ const BusinessInsightDetail = () => {
                 </motion.p>
               ))}
 
-              <div className="mt-12 border-t border-border pt-8">
+              {/* <div className="mt-12 border-t border-border pt-8">
                 <p className="font-serif text-xl font-bold text-foreground">Enjoyed this article?</p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Get more inspiring stories and business insights in your inbox.
@@ -137,7 +137,7 @@ const BusinessInsightDetail = () => {
                   triggerLabel="Subscribe"
                   triggerClassName="mt-4"
                 />
-              </div>
+              </div> */}
 
               <div className="mt-10 pt-6 border-t border-border">
                 <Link

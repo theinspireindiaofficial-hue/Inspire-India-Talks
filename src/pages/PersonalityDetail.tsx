@@ -230,7 +230,7 @@ const PersonalityDetail = () => {
               </motion.div>
             )}
 
-            <div className="border-t border-border pt-8">
+            {/* <div className="border-t border-border pt-8">
               <p className="font-serif text-xl font-bold text-foreground">Enjoyed this story?</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Subscribe for more inspiring Indian journeys, delivered weekly.
@@ -240,7 +240,7 @@ const PersonalityDetail = () => {
                 triggerLabel="Subscribe"
                 triggerClassName="mt-4"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Sidebar */}

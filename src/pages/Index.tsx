@@ -81,9 +81,9 @@ const Index = () => {
           </div>
         )}
 
-        <div className="container mx-auto flex justify-end px-4 pt-4">
+        {/* <div className="container mx-auto flex justify-end px-4 pt-4">
           <NewsletterSheet source="home-hero" />
-        </div>
+        </div> */}
 
         <section ref={heroRef} className="relative min-h-[88vh] flex items-center overflow-hidden gradient-mesh">
           {/* Textured backdrop: subtle dotted grid + soft blobs */}
