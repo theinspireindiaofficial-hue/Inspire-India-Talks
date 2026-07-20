@@ -38,6 +38,37 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "gr-gopinath",
+    name: "G.R. Gopinath",
+    title: "Founder, Air Deccan — Pioneer of Low-Cost Aviation in India",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/gr-gopinath.jpeg",
+    born: "Karnataka",
+    profession: "Army Officer turned Entrepreneur & Aviation Pioneer",
+    knownFor: "Founding Air Deccan, India's first successful low-cost airline, and democratizing air travel for millions",
+    quote: "True entrepreneurship is about making the impossible possible.",
+    story: `In the history of Indian entrepreneurship, few stories are as inspiring as that of **Captain G.R. Gopinath**. Often referred to as the pioneer of low-cost aviation in India, Gopinath transformed air travel from a luxury enjoyed by a privileged few into an affordable mode of transportation for millions.
+
+Born in a small village in Karnataka, Gopinath began his career as an officer in the Indian Army. After leaving the military, he ventured into farming and explored diverse businesses — sericulture, dairy farming, and helicopter services — all of which sharpened his entrepreneurial instincts before his biggest leap.
+
+In 2003, he launched **Air Deccan**, India's first successful low-cost airline. At a time when air travel was considered the preserve of the wealthy, his revolutionary model brought dramatically lower fares to students, middle-class families, and first-time flyers. The airline also connected smaller cities with limited air links, contributing to regional development across India.
+
+Air Deccan's rapid growth compelled established carriers to cut prices and improve efficiency, fundamentally reshaping India's aviation landscape. Despite its success, mounting fuel costs and intense competition led to its **acquisition by Kingfisher Airlines in 2007.** The brand faded, but its impact endures — the low-cost model that dominates Indian aviation today is Gopinath's lasting contribution.
+
+Beyond aviation, he has remained an influential voice through his autobiography **Simply Fly** and public engagements, urging entrepreneurs to embrace bold ideas, calculated risk, and social purpose. Captain G.R. Gopinath's story is proof that a single visionary idea, pursued with persistence, can democratize an entire industry.`,
+    achievements: [
+      "Founded Air Deccan in 2003 — India's first successful low-cost airline",
+      "Democratized air travel by making fares accessible to the middle class",
+      "Connected smaller Indian cities with limited air connectivity",
+      "Transformed India's aviation landscape, forcing established carriers to compete on price",
+      "Authored Simply Fly, a celebrated business autobiography",
+    ],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-20",
+  },
+  {
     id: "ranjit-barthakur",
     name: "Ranjit Barthakur",
     title: "Founder, Globsyn Group",
