@@ -9,6 +9,7 @@ import { ArrowRight, Users, BookOpen, Star, Play, Send, Briefcase, Crown, Stetho
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import NewsletterSheet from "@/components/NewsletterSheet";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   entrepreneurs: <Briefcase className="h-8 w-8" />,
@@ -59,6 +60,7 @@ const Index = () => {
         }}
       />
       <Layout>
+        {/* Newsletter subscribe — stays in its original homepage position */}
         {/* ===== Live ticker strip — real headlines, not decoration ===== */}
         {tickerItems.length > 0 && (
           <div className="bg-foreground text-background overflow-hidden">
@@ -78,6 +80,10 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        {/* <div className="container mx-auto flex justify-end px-4 pt-4">
+          <NewsletterSheet source="home-hero" />
+        </div> */}
 
         <section ref={heroRef} className="relative min-h-[88vh] flex items-center overflow-hidden gradient-mesh">
           {/* Textured backdrop: subtle dotted grid + soft blobs */}

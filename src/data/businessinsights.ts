@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-2026-unicorn-class",
+    title: "India's 2026 Unicorn Class: AI, Fintech and SpaceTech Lead the Next Growth Story",
+    date: "20-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/india-2026-unicorn-class.jpeg",
+    excerpt:
+      "As of July 2026, six Indian startups have joined the unicorn club, led by AI, fintech, payments, and space tech — a new chapter driven by deep technology and long-term investor confidence.",
+    readTime: "3 min read",
+    featured: false,
+    content: `India's startup ecosystem is once again proving its resilience. While global venture funding has remained selective, 2026 has witnessed the emergence of a new cohort of billion-dollar startups, signalling that investors continue to back companies solving large-scale, technology-driven problems. As of 20 July 2026, six Indian startups have officially joined the unicorn club, collectively showcasing the country's growing strength in artificial intelligence, fintech, payments infrastructure, and space technology.
+
+Topping the list are Emergent, Sarvam AI, and KreditBee, each valued at approximately US$1.5 billion following their latest funding rounds. They are followed by Neysa, an AI cloud infrastructure company valued at US$1.4 billion, Juspay, a payments infrastructure leader valued at US$1.2 billion, and Skyroot Aerospace, India's first private space-tech unicorn with a valuation of around US$1.1 billion.
+
+Beyond the valuations, the 2026 unicorn class reflects a broader transformation in India's innovation economy. Artificial intelligence is rapidly becoming the country's next major growth engine, while fintech continues to deepen financial inclusion and digital payments. Meanwhile, the success of a space-tech company reaching unicorn status demonstrates India's expanding ambitions in frontier technologies.
+
+Together, these companies represent a new chapter in India's entrepreneurial journey — one driven by deep technology, global scalability, and the confidence of long-term investors.`,
+  },
+
+  {
+    id: "physicswallah-acquires-sarrthi-ias",
+    title: "PhysicsWallah Acquires UPSC Platform Sarrthi IAS, Expanding Deeper Into Competitive Exam Prep",
+    date: "15-07-2026",
+    category: "Edtech & M&A",
+    image: "/images/business-insights/physicswallah-sarrthi-ias.jpeg",
+    excerpt:
+      "Edtech unicorn PhysicsWallah has acquired UPSC prep platform Sarrthi IAS, gaining a direct foothold in one of India's most competitive exam markets.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Edtech unicorn PhysicsWallah has acquired Sarrthi IAS, a dedicated UPSC civil services exam preparation platform, adding another brand to its rapidly growing stable of exam-prep products beyond its engineering and medical coaching roots.
+
+The deal gives PhysicsWallah a direct foothold in the UPSC segment, one of India's most competitive and emotionally charged education markets, with hundreds of thousands of aspirants enrolling annually. PW has been on an acquisition spree as it diversifies from its flagship JEE and NEET content into competitive government job preparation, skill development, and K–12 tutoring.
+
+Sarrthi IAS brings an established community of civil services aspirants, curated content, and experienced faculty.
+
+The acquisition reflects a broader trend of edtech platforms consolidating niche players to build end-to-end learning ecosystems that cover a student from school through every major competitive exam they may sit in their lifetime.`,
+  },
+
+  {
     id: "india-first-hydrogen-train",
     title: "India Launches Its First Hydrogen-Powered Train",
     date: "15-07-2026",
