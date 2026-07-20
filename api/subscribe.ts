@@ -1,27 +1,25 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { randomUUID } from 'crypto';
 import { z } from 'zod';
+import { addSubscriberToMailchimp } from './_lib/mailchimp.js';
 import { getServiceClient } from './_lib/supabase.js';
-import {
-  buildConfirmUrl,
-  readSource,
-  sendConfirmationEmail,
-} from './_lib/email.js';
-
-const CONSENT_NOTE = 'Implicit opt-in via website newsletter signup form.';
+import { readSource } from './_lib/email.js';
 
 const BodySchema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),
   source: z.string().max(200).optional(),
 });
 
+/**
+ * Newsletter signup. Adds the email to the Mailchimp audience with double opt-in
+ * (Mailchimp sends the confirmation email and manages unsubscribes). A copy is
+ * also written to Supabase as a best-effort backup so we keep our own list.
+ */
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Parse + validate
   const parsed = BodySchema.safeParse(req.body ?? {});
   if (!parsed.success) {
     return res.status(400).json({
@@ -33,65 +31,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const email = parsed.data.email;
   const source = parsed.data.source || readSource(req) || null;
 
-  const confirmToken = randomUUID();
-
   try {
-    const supabase = getServiceClient();
-
-    // Is this email already known?
-    const { data: existing, error: selErr } = await supabase
-      .from('subscribers')
-      .select('id, status')
-      .eq('email', email)
-      .maybeSingle();
-
-    if (selErr) throw selErr;
-
-    // Already confirmed -> nothing to do. Respond generically (don't leak membership).
-    if (existing && existing.status === 'confirmed') {
-      return res.status(200).json({ ok: true });
-    }
-
-    if (existing) {
-      // Pending or previously unsubscribed -> refresh token, reset to pending.
-      const { error: updErr } = await supabase
-        .from('subscribers')
-        .update({
-          status: 'pending',
-          confirm_token: confirmToken,
-          source,
-          consent_text: CONSENT_NOTE,
-          unsubscribed_at: null,
-        })
-        .eq('id', existing.id);
-      if (updErr) throw updErr;
-    } else {
-      // New subscriber
-      const { error: insErr } = await supabase.from('subscribers').insert({
-        email,
-        status: 'pending',
-        confirm_token: confirmToken,
-        source,
-        consent_text: CONSENT_NOTE,
-      });
-      if (insErr) throw insErr;
-    }
-
-    // Send (or, until a provider is wired, log) the confirmation link.
-    const confirmUrl = buildConfirmUrl(confirmToken);
-    const { devConfirmUrl } = await sendConfirmationEmail({
-      to: email,
-      confirmUrl,
-    });
-
-    return res.status(200).json({
-      ok: true,
-      ...(devConfirmUrl ? { devConfirmUrl } : {}),
+    // Primary: add to Mailchimp (double opt-in). Mailchimp emails the confirmation.
+    await addSubscriberToMailchimp(email, {
+      doubleOptIn: true,
+      tags: source ? [source] : undefined,
     });
   } catch (err) {
-    console.error('[subscribe] error:', err);
+    console.error('[subscribe] mailchimp error:', err);
     return res
       .status(500)
       .json({ error: 'Something went wrong. Please try again.' });
   }
+
+  // Best-effort backup to Supabase — never blocks the signup.
+  try {
+    const supabase = getServiceClient();
+    await supabase
+      .from('subscribers')
+      .upsert(
+        { email, status: 'pending', source, consent_text: 'Newsletter signup form' },
+        { onConflict: 'email' }
+      );
+  } catch (err) {
+    console.error('[subscribe] supabase backup failed (non-fatal):', err);
+  }
+
+  return res.status(200).json({ ok: true });
 }
