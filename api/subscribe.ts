@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { z } from 'zod';
-import { addSubscriberToMailchimp } from './_lib/mailchimp.js';
+import { addSubscriberToMailchimp, MailchimpApiError } from './_lib/mailchimp.js';
 import { getServiceClient } from './_lib/supabase.js';
 import { readSource } from './_lib/email.js';
 
@@ -39,9 +39,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   } catch (err) {
     console.error('[subscribe] mailchimp error:', err);
+    // Keep provider details out of the browser, but return a stable diagnostic
+    // code that makes production failures identifiable in the Network panel.
+    if (err instanceof MailchimpApiError) {
+      const code =
+        err.status === 401
+          ? 'mailchimp_auth_failed'
+          : err.status === 403
+            ? 'mailchimp_permission_denied'
+            : err.status === 404
+              ? 'mailchimp_audience_not_found'
+              : 'mailchimp_request_failed';
+      return res.status(502).json({
+        error: 'Newsletter signup is temporarily unavailable. Please try again later.',
+        code,
+      });
+    }
+
     return res
-      .status(500)
-      .json({ error: 'Something went wrong. Please try again.' });
+      .status(503)
+      .json({
+        error: 'Newsletter signup is temporarily unavailable. Please try again later.',
+        code: 'mailchimp_not_configured',
+      });
   }
 
   // Best-effort backup to Supabase — never blocks the signup.

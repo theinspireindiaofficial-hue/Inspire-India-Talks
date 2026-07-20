@@ -41,7 +41,10 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
         }),
       });
 
-      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      if (!res.ok) {
+        const error = (await res.json().catch(() => ({}))) as { error?: string; code?: string };
+        throw new Error(error.error || `Request failed: ${res.status}`);
+      }
 
       const data = (await res.json()) as { ok?: boolean; devConfirmUrl?: string };
       if (data.devConfirmUrl) {
@@ -51,10 +54,10 @@ const NewsletterSignup = ({ source, className }: NewsletterSignupProps) => {
 
       setDone(true);
       setEmail("");
-    } catch {
+    } catch (error) {
       toast({
-        title: "Something went wrong",
-        description: "Please try again in a moment.",
+        title: "Newsletter signup unavailable",
+        description: error instanceof Error ? error.message : "Please try again in a moment.",
         variant: "destructive",
       });
     } finally {
