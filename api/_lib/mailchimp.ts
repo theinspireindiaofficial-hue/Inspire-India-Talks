@@ -1,5 +1,17 @@
 import { createHash } from 'crypto';
 
+export class MailchimpApiError extends Error {
+  constructor(
+    message: string,
+    public readonly status: number,
+    public readonly title?: string,
+    public readonly detail?: string
+  ) {
+    super(message);
+    this.name = 'MailchimpApiError';
+  }
+}
+
 /**
  * Mailchimp Marketing API integration.
  *
@@ -81,8 +93,11 @@ export async function addSubscriberToMailchimp(
   // Already on the list (subscribed/pending) -> treat as success.
   if (res.status === 400 && data.title === 'Member Exists') return;
 
-  throw new Error(
-    `Mailchimp add failed (${res.status}): ${data.title ?? ''} ${data.detail ?? ''}`.trim()
+  throw new MailchimpApiError(
+    `Mailchimp add failed (${res.status}): ${data.title ?? ''} ${data.detail ?? ''}`.trim(),
+    res.status,
+    data.title,
+    data.detail
   );
 }
 

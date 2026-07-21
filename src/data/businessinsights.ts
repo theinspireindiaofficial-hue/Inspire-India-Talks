@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "bharatpe-sg-finserve-succesship-paperless-credit",
+    title: "BharatPe, SG Finserve and Succesship Join Forces to Bring Paperless Credit to India's Merchants",
+    date: "20-07-2026",
+    category: "Fintech & Lending",
+    image: "/images/business-insights/bharatpe-sg-finserve.jpg",
+    excerpt:
+      "SG Finserve has partnered with BharatPe Money and Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.",
+    readTime: "3 min read",
+    featured: false,
+    content: `NBFC SG Finserve has partnered with BharatPe Money — the lending arm of payments unicorn BharatPe — and fintech infrastructure firm Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.
+
+Built in compliance with RBI's Digital Lending Guidelines, the product offers faster loan approvals, minimal documentation, and seamless onboarding, targeting the large pool of small business owners who lack access to formal credit.
+
+The collaboration connects SG Finserve's lending capital, BharatPe's merchant network of millions, and Succesship's technology infrastructure.
+
+The partnership reflects a growing playbook in Indian fintech — stacking complementary capabilities across NBFCs, payment platforms, and B2B infrastructure players to serve the underbanked MSME segment at scale, rather than building end-to-end in-house.`,
+  },
+
+  {
+    id: "indian-startups-weekly-funding-july-2026",
+    title: "Indian Startups Raised $281M Across 24 Deals in a Single Week, Led by AI and Fintech",
+    date: "20-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/weekly-funding-july-2026.jpg",
+    excerpt:
+      "Indian startups raised $281.4 million across 24 deals in the week of July 11–17, 2026 — more than three times the previous week — anchored by Emergent's $130 million unicorn round.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Indian startups raised a cumulative $281.4 million across 24 deals in the week of July 11–17, 2026 — over three times the $71.9 million logged the previous week, according to Inc42's weekly funding roundup published on July 19.
+
+The surge was anchored by Emergent's $130 million unicorn-minting AI round and a string of large growth-stage investments in fintech and consumer services.
+
+The weekly data underscores a broader pattern taking shape in 2026: capital is concentrating in AI-native platforms, late-stage companies with strong unit economics, and B2B infrastructure plays rather than early consumer bets.
+
+Analysts note that while headline numbers are strong, the number of individual deals has fallen compared to 2025, meaning fewer but larger rounds — and a tougher market for seed-stage founders pitching without substantial traction or recurring revenue.`,
+  },
+
+  {
     id: "india-2026-unicorn-class",
     title: "India's 2026 Unicorn Class: AI, Fintech and SpaceTech Lead the Next Growth Story",
     date: "20-07-2026",
