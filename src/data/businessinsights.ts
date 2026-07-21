@@ -43,7 +43,7 @@ export const businessinsights: BusinessInsight[] = [
     title: "BharatPe, SG Finserve and Succesship Join Forces to Bring Paperless Credit to India's Merchants",
     date: "20-07-2026",
     category: "Fintech & Lending",
-    image: "/images/business-insights/bharatpe-sg-finserve.jpg",
+    image: "/images/business-insights/bharatpe-sg-finserve.jpeg",
     excerpt:
       "SG Finserve has partnered with BharatPe Money and Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.",
     readTime: "3 min read",
@@ -62,7 +62,7 @@ The partnership reflects a growing playbook in Indian fintech — stacking compl
     title: "Indian Startups Raised $281M Across 24 Deals in a Single Week, Led by AI and Fintech",
     date: "20-07-2026",
     category: "Startups & Funding",
-    image: "/images/business-insights/weekly-funding-july-2026.jpg",
+    image: "/images/business-insights/weekly-funding-july-2026.jpeg",
     excerpt:
       "Indian startups raised $281.4 million across 24 deals in the week of July 11–17, 2026 — more than three times the previous week — anchored by Emergent's $130 million unicorn round.",
     readTime: "3 min read",

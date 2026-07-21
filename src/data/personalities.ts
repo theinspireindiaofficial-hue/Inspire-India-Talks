@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "a-velumani",
+    name: "A. Velumani",
+    title: "Founder, Thyrocare Technologies",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/a-velumani.png",
+    born: "Coimbatore, Tamil Nadu",
+    profession: "Scientist & Entrepreneur",
+    knownFor: "Building Thyrocare into India's largest thyroid diagnostics chain",
+    quote: "The most powerful businesses are born not from boardrooms, but from understanding what the world is missing.",
+    story: "Some stories don't just inspire — they humble you. Arokiaswamy Velumani, better known as **A. Velumani**, is one of Indian business's most extraordinary and least celebrated figures. Born into abject poverty in Tamil Nadu, with no connections, no capital, and no safety net, he went on to build **Thyrocare Technologies** — India's largest and most efficient thyroid diagnostics chain. His is a story not of privilege, strategy, or venture capital, but of sheer, unrelenting will.\n\nVelumani was born in a small village near Coimbatore into a family so poor that his father **sold flowers on the street** to survive. As a child, he walked several kilometres to school daily, often without footwear. Resources were scarce, but his hunger for education was not. He pushed through every obstacle to earn a degree in biochemistry, and then, remarkably, a **PhD from the Bhabha Atomic Research Centre (BARC)** in Mumbai — one of India's most prestigious scientific institutions.\n\nFor fourteen years, Velumani worked as a scientist at BARC, drawing a government salary and living a stable, secure life. It was the kind of job a man from his background was expected to hold onto forever. Instead, in **1996, he walked away from it.** He withdrew his entire provident fund savings — a modest ₹2 lakh — and founded Thyrocare.\n\nHis insight was simple but powerful: thyroid disorders were vastly underdiagnosed in India because testing was expensive and inconsistent. Velumani built a **centralised processing model** where samples from across the country were shipped to a single hub laboratory for testing, dramatically cutting costs without compromising accuracy. This model was radical for its time and made thyroid testing affordable for millions of ordinary Indians.\n\nThyrocare grew steadily and systematically. When it listed on Indian stock exchanges in **2016**, Velumani — the barefoot boy from Coimbatore — became a billionaire. In 2021, he sold a majority stake to PharmEasy in a deal valued at over **₹4,500 crore.**\n\nA. Velumani never sought the spotlight, and the spotlight rarely found him. But in laboratories across India, where everyday people get affordable diagnostics that once seemed out of reach, his legacy is undeniable. His life is proof that the most powerful businesses are often born not from boardrooms, but from a deep, personal understanding of what the world is missing.",
+    achievements: ["Founded Thyrocare in 1996 with just ₹2 lakh from his provident fund", "Earned a PhD from the Bhabha Atomic Research Centre (BARC)", "Pioneered a centralised lab model that made thyroid testing affordable nationwide", "Took Thyrocare public in 2016, becoming a billionaire", "Sold a majority stake to PharmEasy in 2021 in a deal valued over ₹4,500 crore"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-20",
+  },
+  {
     id: "gr-gopinath",
     name: "G.R. Gopinath",
     title: "Founder, Air Deccan — Pioneer of Low-Cost Aviation in India",
