@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "mp-ramachandran",
+    name: "M.P. Ramachandran",
+    title: "Founder, Jyothy Laboratories",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/mp-ramachandran.jpeg",
+    born: "Thrissur, Kerala",
+    profession: "Entrepreneur & FMCG Pioneer",
+    knownFor: "Founding Jyothy Laboratories and building Ujala to dethrone a multinational giant",
+    quote: "Lasting businesses are often built slowly, humbly, and from the ground up.",
+    story: "Some of India's most remarkable business stories are not told in boardrooms or business school case studies. They are born in small towns, built on instinct, and driven by an almost irrational belief in a simple idea. **M.P. Ramachandran**, the founder of **Jyothy Laboratories**, is one such story — a man who grew up in a modest Kerala household, started a business with little more than a formula and a dream, and went on to dethrone a multinational giant in its own product category.\n\nMulayam Panavelil Ramachandran was born in **Thrissur, Kerala**, into a family of modest means. After completing his education, he took up a job as a sales representative — a role that gave him ground-level insight into how products were sold and consumed in small-town and rural India. It was not a glamorous beginning, but it was an education that no MBA could fully replicate.\n\nIn 1983, Ramachandran founded Jyothy Laboratories with minimal capital and a single-minded focus on one product — **Ujala**, a liquid fabric whitener. At the time, the market was firmly owned by Reckitt Benckiser's **Robin Blue**, a dominant, globally backed brand that seemed untouchable. Ramachandran's strategy was not to match Robin Blue on its own terms, but to undercut it where it mattered most — price, accessibility, and effectiveness for the everyday Indian consumer.\n\nUjala was easier to use, more economical, and far better suited to Indian washing habits. Ramachandran and his small team took the product **door-to-door, village by village**, building trust one household at a time. The grassroots distribution model worked. Ujala steadily captured the market, eventually displacing Robin Blue as India's leading fabric whitener — a **David vs Goliath victory** that went largely unnoticed by mainstream business media.\n\nBuoyed by Ujala's success, Jyothy Laboratories expanded into other household and personal care categories, including **Maxo** mosquito repellents, **Exo** dishwash, and **Margo** soap following strategic acquisitions. The company listed on Indian stock exchanges and continued to grow as a credible homegrown FMCG player competing with some of the world's largest consumer goods companies.\n\nM.P. Ramachandran's story is a quiet masterclass in focus, patience, and deep consumer understanding. Without venture capital, without celebrity backing, and without media attention, he built a brand that entered millions of Indian homes. In an era obsessed with unicorns and disruption, his journey is a powerful reminder that lasting businesses are often built **slowly, humbly, and from the ground up.**",
+    achievements: ["Founded Jyothy Laboratories in 1983 with minimal capital", "Built Ujala into India's leading fabric whitener, dethroning Robin Blue", "Pioneered a grassroots, door-to-door rural distribution model", "Expanded into Maxo, Exo, and Margo across household and personal care", "Grew Jyothy Laboratories into a listed homegrown FMCG player"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-20",
+  },
+  {
     id: "a-velumani",
     name: "A. Velumani",
     title: "Founder, Thyrocare Technologies",

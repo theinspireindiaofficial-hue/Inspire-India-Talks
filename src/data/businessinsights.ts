@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "india-d2c-beyond-roas-playbook",
+    title: "India's D2C Founders Are Abandoning the ROAS Playbook and Rethinking Growth",
+    date: "20-07-2026",
+    category: "Consumer & Brands",
+    image: "/images/business-insights/d2c-roas-playbook.jpeg",
+    excerpt:
+      "India's direct-to-consumer brands are shifting away from ROAS obsession toward brand equity, owned channels, and repeat-customer economics as paid-acquisition costs climb.",
+    readTime: "3 min read",
+    featured: false,
+    content: `A widely discussed Inc42 analysis argues that India's direct-to-consumer brands are entering a fundamental strategic reset — moving away from ROAS (Return on Ad Spend) obsession and toward brand equity, owned channels, and repeat-customer economics.
+
+Rising performance marketing costs on Meta and Google, combined with investor pressure for profitability, have made pure paid-acquisition strategies unsustainable. Smarter D2C founders are now investing in WhatsApp, creator communities, newsletters, and offline touchpoints.
+
+Brands such as BlueStone, Mamaearth, and SUGAR Cosmetics have already made this shift — and hit sequential quarterly profitability as a result.
+
+The broader signal: the next generation of Indian D2C winners will be built on community and trust, not just performance ad budgets.`,
+  },
+
+  {
+    id: "ms-dhoni-solarsquare-series-c",
+    title: "MS Dhoni Backs SolarSquare in $53M Series C as Startup Eyes 30–40 New Cities",
+    date: "20-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/solarsquare-dhoni.jpeg",
+    excerpt:
+      "Residential rooftop solar startup SolarSquare has closed a $53 million Series C — India's largest VC round in the solar sector — with MS Dhoni investing and joining as brand ambassador.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Residential rooftop solar startup SolarSquare has closed a $53 million Series C — the largest VC round in India's solar sector — led by Lightspeed, with Lowercarbon Capital, NGP Capital, and Elevation Capital also participating.
+
+Former Indian captain MS Dhoni has invested through his family office, Midas Deals, and will serve as brand ambassador. Dhoni described the move as "investing in India's future."
+
+Founded in 2015 by Shreya Mishra, Neeraj Jain, and Nikhil Nahar, SolarSquare has installed rooftop solar systems in over 50,000 homes across 29 cities, offering end-to-end consultation, installation, financing, and maintenance. The company is currently operating at an annual revenue run rate of ₹1,000 crore.
+
+The capital will fund expansion into 30–40 new cities and platform upgrades.`,
+  },
+
+  {
     id: "bharatpe-sg-finserve-succesship-paperless-credit",
     title: "BharatPe, SG Finserve and Succesship Join Forces to Bring Paperless Credit to India's Merchants",
     date: "20-07-2026",
