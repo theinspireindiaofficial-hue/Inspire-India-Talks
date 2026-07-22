@@ -117,9 +117,9 @@ const NewsletterSignup = ({ className }: NewsletterSignupProps) => {
         <div className="flex items-start gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4">
           <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
           <div>
-            <p className="text-sm font-medium text-foreground">You're on the list!</p>
+            <p className="text-sm font-medium text-foreground">You're subscribed! 🎉</p>
             <p className="text-sm text-muted-foreground">
-              Check your inbox to confirm your subscription and start receiving the newsletter.
+              Thanks for joining — the Inspire India Talks newsletter will land in your inbox every week.
             </p>
           </div>
         </div>
