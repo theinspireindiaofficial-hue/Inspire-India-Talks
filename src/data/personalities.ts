@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "ravi-pillai",
+    name: "Ravi Pillai",
+    title: "Founder & Chairman, RP Group",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/ravi-pillai.jpeg",
+    born: "Haripad, Alappuzha, Kerala",
+    profession: "Industrialist & Philanthropist",
+    knownFor: "Building the RP Group into a multi-billion dollar Gulf conglomerate",
+    quote: "Perseverance, humility, and quiet ambition rarely trend, but always endure.",
+    story: "Not every great Indian business story begins in a boardroom in Mumbai or a startup hub in Bengaluru. Some begin in small coastal towns, with nothing but determination and a one-way ticket to the Gulf. **Ravi Pillai's** story is exactly that — a man who left Kerala with little, built a multi-billion dollar empire across the Middle East, and became one of the most successful yet least talked-about Indian entrepreneurs of his generation.\n\nBorn in **Haripad**, a small town in Kerala's Alappuzha district, Ravi Pillai grew up in modest circumstances. Like thousands of young Keralites before him, he looked toward the Gulf as his path out. He moved to the Middle East as a young man, starting at the very bottom — working in construction with no capital, no connections, and no safety net. What he had was an eye for opportunity and an extraordinary willingness to outwork everyone around him.\n\nStarting in Saudi Arabia, Pillai gradually moved from working in construction to contracting, and eventually to owning his own projects. He founded the **RP Group**, which grew steadily into a diversified conglomerate spanning construction, real estate, hospitality, and manufacturing. The group executed large-scale infrastructure and building projects across Saudi Arabia and the UAE, earning a reputation for reliability and scale.\n\nAt its peak, RP Group employed **tens of thousands of people**, a significant number of them Indians — many from Kerala itself. In a quiet but profound way, Pillai became an economic lifeline for numerous families back home, long before the term \"NRI philanthropy\" became fashionable.\n\nHis success abroad never dimmed his connection to Kerala. Pillai invested significantly in his home state through business ventures and philanthropic contributions — schools, hospitals, and community projects — particularly in and around Alappuzha. He is widely regarded in Kerala as a **self-made icon**, even if his name rarely reaches national headlines.\n\nWhat makes Pillai's story particularly compelling is the absence of hype around it. No TED talks, no viral interviews, no Shark Tank appearances — just decades of relentless work building something real and lasting. Ravi Pillai represents a generation of Indian builders who created extraordinary success far from the spotlight — a testament to the power of **perseverance, humility, and quiet ambition.**",
+    achievements: ["Founded the RP Group, a multi-billion dollar Gulf conglomerate", "Built operations across construction, real estate, hospitality, and manufacturing", "Employed tens of thousands, many of them Indians from Kerala", "Executed large-scale infrastructure projects across Saudi Arabia and the UAE", "Major philanthropist investing in schools, hospitals, and community projects in Kerala"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-20",
+  },
+  {
     id: "mp-ramachandran",
     name: "M.P. Ramachandran",
     title: "Founder, Jyothy Laboratories",
