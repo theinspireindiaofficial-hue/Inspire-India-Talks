@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "skylark-labs-150m-raise",
+    title: "Indian-Founded Skylark Labs in Talks to Raise $150M, Could Be India's Next AI Unicorn",
+    date: "20-07-2026",
+    category: "Startups & AI",
+    image: "/images/business-insights/skylark-labs.jpeg",
+    excerpt:
+      "Skylark Labs, a physical AI startup founded by Indian-born Dr Amarjot Singh, is in advanced talks to raise up to $150 million in a round that could push its valuation beyond $1 billion.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Skylark Labs, a physical AI startup founded by Indian-born Dr Amarjot Singh and headquartered in California, is in advanced talks to raise between $100 million and $150 million in a new funding round that could push its valuation beyond $1 billion. Around 70% of the capital is already committed, with Bommie Capital among the key backers.
+
+Skylark builds self-learning AI systems for edge devices — deployed on drones, robots, and autonomous vehicles — targeting defence, border security, and public safety applications.
+
+The company last raised $6 million at a $250 million valuation in April 2026, making the current raise a dramatic step-change in scale. Offices are being planned in India and Abu Dhabi alongside its Menlo Park base, with a hiring drive of 100 people underway.
+
+Skylark represents a new class of Indian-origin deep tech founders building globally from day one, rather than pivoting from domestic-first models.`,
+  },
+
+  {
+    id: "blinkit-spoilage-q1-fy27",
+    title: "Blinkit Lost ₹308 Crore to Spoiled Goods in One Quarter — Nearly 3x Its Own EBITDA",
+    date: "20-07-2026",
+    category: "Quick Commerce",
+    image: "/images/business-insights/blinkit-spoilage.jpeg",
+    excerpt:
+      "Blinkit lost around ₹308 crore to expired inventory, damage, transit loss, and theft in Q1 FY27 — nearly three times its quarterly adjusted EBITDA — as its inventory-led model amplifies risk.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Blinkit, India's dominant quick-commerce platform and now the largest revenue contributor for its parent Eternal, disclosed a striking operational challenge in its Q1 FY27 results: it lost approximately ₹308 crore — roughly 1.8% of its net order value — to expired inventory, damaged goods, items lost during transit, and theft. That figure is nearly three times Blinkit's quarterly adjusted EBITDA of ₹102 crore.
+
+The disclosure comes as Blinkit has transitioned from a marketplace model to an inventory-led model, meaning it now buys and holds goods directly rather than connecting buyers and sellers. The shift has supercharged revenue — up 553% year-on-year to ₹15,664 crore — but has also amplified inventory risk.
+
+Blinkit added 200 dark stores in the quarter, taking its network to 2,443 stores.
+
+The spoilage figure will be a central point of scrutiny for investors tracking the company's path to sustainable profitability.`,
+  },
+
+  {
     id: "india-d2c-beyond-roas-playbook",
     title: "India's D2C Founders Are Abandoning the ROAS Playbook and Rethinking Growth",
     date: "20-07-2026",
