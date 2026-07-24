@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "ts-kalyanaraman",
+    name: "T.S. Kalyanaraman",
+    title: "Founder & Chairman, Kalyan Jewellers",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/ts-kalyanaraman.jpeg",
+    born: "Thrissur, Kerala",
+    profession: "Entrepreneur & Jewellery Industry Pioneer",
+    knownFor: "Building Kalyan Jewellers on a foundation of transparency and trust",
+    quote: "In a market that rewarded cleverness, he chose integrity — and it turned out to be the smarter move.",
+    story: "There is a particular kind of entrepreneurial ambition that announces itself loudly — pitch decks, press releases, glossy profiles in business magazines. And then there is the kind that simply gets to work. **T.S. Kalyanaraman** belongs firmly to the latter. In 1993, from the culturally rich but commercially understated city of **Thrissur** in Kerala, he opened the first **Kalyan Jewellers** store with no grand proclamation — only a set of principles that the Indian jewellery industry had, for generations, chosen to ignore.\n\nTo understand what Kalyanaraman built, one must first understand what he was building against. The Indian jewellery trade of the early 1990s was an ecosystem sustained by **opacity.** Purity was assumed, rarely verified. Making charges were revealed at the counter, not before. Customers — even those spending their life savings on a daughter's wedding jewellery — had little recourse but to trust and hope.\n\nKalyanaraman's response was not disruption in the modern, theatrical sense of the word. It was something quieter, and in many ways more radical — **integrity, made systematic.** Certified purity. Transparent billing. Standardised pricing across the board. Practices that sound obvious in hindsight, but at the time represented a fundamental reimagining of how a jewellery business could operate.\n\nThe market responded with something no marketing campaign can manufacture: **loyalty.** Customers who had spent decades navigating the uncertainties of traditional jewellers found in Kalyan Jewellers a rare sense of security. That trust compounded over time, powering an expansion that moved steadily through South India, then northward across the country, and eventually into the Middle East — a natural market given Kerala's substantial diaspora.\n\nKalyanaraman also understood, ahead of many peers, that trust needed a vehicle. He invested meaningfully in brand-building and visibility, making Kalyan Jewellers a name that carried weight far beyond its city of origin. By the time the company **listed on Indian stock exchanges in 2021**, it had become one of the most recognised jewellery brands in the country.\n\nWhat Kalyanaraman built over three decades is, at its core, a lesson in the **compounding power of trust** — how a single, unwavering commitment to the customer, maintained consistently across years and geographies, can quietly become the foundation of something extraordinary. In a market that rewarded cleverness, he chose integrity. It turned out to be the smarter move.",
+    achievements: ["Founded Kalyan Jewellers in Thrissur in 1993", "Introduced certified purity, transparent billing, and standardised pricing", "Expanded across India and into the Middle East", "Built one of India's most recognised jewellery brands", "Took Kalyan Jewellers public on Indian stock exchanges in 2021"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-20",
+  },
+  {
     id: "ravi-pillai",
     name: "Ravi Pillai",
     title: "Founder & Chairman, RP Group",
