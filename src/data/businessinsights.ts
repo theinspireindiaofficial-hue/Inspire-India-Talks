@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "meesho-q1-fy27-results",
+    title: "Meesho Hits ₹3,713 Crore in Q1 Revenue and Cuts Losses by 54% as Path to Profit Sharpens",
+    date: "20-07-2026",
+    category: "E-commerce",
+    image: "/images/business-insights/meesho-q1.png",
+    excerpt:
+      "Meesho reported Q1 FY27 revenue of ₹3,713 crore while narrowing its net loss by 54%, signalling the SoftBank-backed social commerce giant is closing in on profitability.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Meesho's latest numbers tell a simple story: the company is getting much closer to making money. In Q1 FY27, the social commerce platform posted ₹3,713 crore in revenue, roughly flat from a year ago, but its net loss shrank by 54%. For a SoftBank-backed business that has spent years chasing scale, that is the more important figure.
+
+What has kept Meesho going is a customer that most of its rivals barely reach — the first-time online shopper in Tier 2, 3, and 4 towns, hunting for the lowest possible price. That reseller-driven, ultra-low-cost model has held up well even as quick commerce and premium e-commerce fought over the metros, because Meesho is simply playing a different game.
+
+Most of the improvement came from the unglamorous work of running the business better: cheaper fulfilment, stronger supplier terms, and less money spent on marketing for every order placed. Put together, it has Meesho on track to potentially turn profitable in FY27 — a first for India's social commerce space.
+
+An IPO is widely expected in 2027, and on its recent $2.1 billion valuation, this quarter only strengthens the argument that Meesho is one of the few e-commerce names in India that genuinely matters outside Flipkart and Amazon.`,
+  },
+
+  {
+    id: "fractal-q1-fy27-results",
+    title: "Fractal — India's Quiet AI Giant — Reports ₹72 Crore Profit on ₹913 Crore Q1 Revenue",
+    date: "20-07-2026",
+    category: "Startups & AI",
+    image: "/images/business-insights/fractal-ai.png",
+    excerpt:
+      "Fractal Analytics reported Q1 FY27 revenue of ₹913 crore with a ₹72 crore net profit, underlining how India's most durable AI opportunity may lie in deep enterprise intelligence.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Fractal Analytics, one of India's most respected but lesser-known AI and data science companies, has reported Q1 FY27 revenue of ₹913 crore with a net profit of ₹72 crore — a strong performance for a company that has quietly built one of the deepest enterprise AI practices globally.
+
+Backed by TPG Growth and Apax Partners, Fractal serves Fortune 500 companies across consumer goods, financial services, healthcare, and technology, deploying AI for decision-making at scale. Unlike flashier AI startups, Fractal has compounded steadily for over two decades without burning investor capital recklessly.
+
+Its profitability this quarter underlines a broader point: India's most durable AI opportunity may lie not in flashy consumer applications but in deep, hard-to-replicate enterprise intelligence.
+
+With revenue approaching ₹4,000 crore on an annualised basis, Fractal is positioning itself for a potential IPO within the next 18 months.`,
+  },
+
+  {
     id: "skylark-labs-150m-raise",
     title: "Indian-Founded Skylark Labs in Talks to Raise $150M, Could Be India's Next AI Unicorn",
     date: "20-07-2026",
