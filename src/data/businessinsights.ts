@@ -41,7 +41,7 @@ export const businessinsights: BusinessInsight[] = [
   {
     id: "meesho-q1-fy27-results",
     title: "Meesho Hits ₹3,713 Crore in Q1 Revenue and Cuts Losses by 54% as Path to Profit Sharpens",
-    date: "20-07-2026",
+    date: "24-07-2026",
     category: "E-commerce",
     image: "/images/business-insights/meesho-q1.png",
     excerpt:
@@ -60,7 +60,7 @@ An IPO is widely expected in 2027, and on its recent $2.1 billion valuation, thi
   {
     id: "fractal-q1-fy27-results",
     title: "Fractal — India's Quiet AI Giant — Reports ₹72 Crore Profit on ₹913 Crore Q1 Revenue",
-    date: "20-07-2026",
+    date: "24-07-2026",
     category: "Startups & AI",
     image: "/images/business-insights/fractal-ai.png",
     excerpt:
@@ -79,7 +79,7 @@ With revenue approaching ₹4,000 crore on an annualised basis, Fractal is posit
   {
     id: "skylark-labs-150m-raise",
     title: "Indian-Founded Skylark Labs in Talks to Raise $150M, Could Be India's Next AI Unicorn",
-    date: "20-07-2026",
+    date: "23-07-2026",
     category: "Startups & AI",
     image: "/images/business-insights/skylark-labs.jpeg",
     excerpt:
@@ -98,7 +98,7 @@ Skylark represents a new class of Indian-origin deep tech founders building glob
   {
     id: "blinkit-spoilage-q1-fy27",
     title: "Blinkit Lost ₹308 Crore to Spoiled Goods in One Quarter — Nearly 3x Its Own EBITDA",
-    date: "20-07-2026",
+    date: "23-07-2026",
     category: "Quick Commerce",
     image: "/images/business-insights/blinkit-spoilage.jpeg",
     excerpt:
@@ -117,7 +117,7 @@ The spoilage figure will be a central point of scrutiny for investors tracking t
   {
     id: "india-d2c-beyond-roas-playbook",
     title: "India's D2C Founders Are Abandoning the ROAS Playbook and Rethinking Growth",
-    date: "20-07-2026",
+    date: "22-07-2026",
     category: "Consumer & Brands",
     image: "/images/business-insights/d2c-roas-playbook.jpeg",
     excerpt:
@@ -136,7 +136,7 @@ The broader signal: the next generation of Indian D2C winners will be built on c
   {
     id: "ms-dhoni-solarsquare-series-c",
     title: "MS Dhoni Backs SolarSquare in $53M Series C as Startup Eyes 30–40 New Cities",
-    date: "20-07-2026",
+    date: "22-07-2026",
     category: "Startups & Funding",
     image: "/images/business-insights/solarsquare-dhoni.jpeg",
     excerpt:
@@ -155,7 +155,7 @@ The capital will fund expansion into 30–40 new cities and platform upgrades.`,
   {
     id: "bharatpe-sg-finserve-succesship-paperless-credit",
     title: "BharatPe, SG Finserve and Succesship Join Forces to Bring Paperless Credit to India's Merchants",
-    date: "20-07-2026",
+    date: "21-07-2026",
     category: "Fintech & Lending",
     image: "/images/business-insights/bharatpe-sg-finserve.jpeg",
     excerpt:
@@ -174,7 +174,7 @@ The partnership reflects a growing playbook in Indian fintech — stacking compl
   {
     id: "indian-startups-weekly-funding-july-2026",
     title: "Indian Startups Raised $281M Across 24 Deals in a Single Week, Led by AI and Fintech",
-    date: "20-07-2026",
+    date: "21-07-2026",
     category: "Startups & Funding",
     image: "/images/business-insights/weekly-funding-july-2026.jpeg",
     excerpt:
@@ -212,7 +212,7 @@ Together, these companies represent a new chapter in India's entrepreneurial jou
   {
     id: "physicswallah-acquires-sarrthi-ias",
     title: "PhysicsWallah Acquires UPSC Platform Sarrthi IAS, Expanding Deeper Into Competitive Exam Prep",
-    date: "15-07-2026",
+    date: "20-07-2026",
     category: "Edtech & M&A",
     image: "/images/business-insights/physicswallah-sarrthi-ias.jpeg",
     excerpt:
