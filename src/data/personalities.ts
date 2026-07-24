@@ -52,7 +52,7 @@ export const personalities: Personality[] = [
     achievements: ["Founded Kalyan Jewellers in Thrissur in 1993", "Introduced certified purity, transparent billing, and standardised pricing", "Expanded across India and into the Middle East", "Built one of India's most recognised jewellery brands", "Took Kalyan Jewellers public on Indian stock exchanges in 2021"],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-20",
+    addedAt: "2026-07-24",
   },
   {
     id: "ravi-pillai",
@@ -69,7 +69,7 @@ export const personalities: Personality[] = [
     achievements: ["Founded the RP Group, a multi-billion dollar Gulf conglomerate", "Built operations across construction, real estate, hospitality, and manufacturing", "Employed tens of thousands, many of them Indians from Kerala", "Executed large-scale infrastructure projects across Saudi Arabia and the UAE", "Major philanthropist investing in schools, hospitals, and community projects in Kerala"],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-20",
+    addedAt: "2026-07-23",
   },
   {
     id: "mp-ramachandran",
@@ -86,7 +86,7 @@ export const personalities: Personality[] = [
     achievements: ["Founded Jyothy Laboratories in 1983 with minimal capital", "Built Ujala into India's leading fabric whitener, dethroning Robin Blue", "Pioneered a grassroots, door-to-door rural distribution model", "Expanded into Maxo, Exo, and Margo across household and personal care", "Grew Jyothy Laboratories into a listed homegrown FMCG player"],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-20",
+    addedAt: "2026-07-22",
   },
   {
     id: "a-velumani",
@@ -103,7 +103,7 @@ export const personalities: Personality[] = [
     achievements: ["Founded Thyrocare in 1996 with just ₹2 lakh from his provident fund", "Earned a PhD from the Bhabha Atomic Research Centre (BARC)", "Pioneered a centralised lab model that made thyroid testing affordable nationwide", "Took Thyrocare public in 2016, becoming a billionaire", "Sold a majority stake to PharmEasy in 2021 in a deal valued over ₹4,500 crore"],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-20",
+    addedAt: "2026-07-21",
   },
   {
     id: "gr-gopinath",
@@ -151,7 +151,7 @@ Beyond aviation, he has remained an influential voice through his autobiography 
     achievements: ["Founded Globsyn Group, spanning IT and business education", "Established Globsyn Business School in Kolkata", "Pioneered technology-integrated, industry-relevant management education", "Became a leading business figure from India's North East", "Advocate for North East development and bridging regional economic divides"],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-13",
+    addedAt: "2026-07-16",
   },
   {
     id: "arunabh-kumar",
@@ -1135,7 +1135,7 @@ For aspiring entrepreneurs and leaders, his life offers timeless lessons: pursue
     ],
     authorName: "Inspire India",
     authorLinkedin: "https://www.linkedin.com/company/inspire-india",
-    addedAt: "2026-07-15",
+    addedAt: "2026-07-17",
   },
   {
     id: "anand-kumar",
