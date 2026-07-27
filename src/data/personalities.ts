@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "sunil-mittal",
+    name: "Sunil Mittal",
+    title: "Founder & Chairman, Bharti Enterprises",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/sunil-mittal.jpeg",
+    born: "1957, Ludhiana, Punjab",
+    profession: "Telecom Entrepreneur & Industrialist",
+    knownFor: "Building Bharti Airtel into one of Asia's largest telecom empires",
+    quote: "Infrastructure builds its own demand — make connectivity accessible, and people will find the means to use it.",
+    story: "Most great businesses are built on a singular, unwavering vision. **Sunil Mittal's** story is a more honest one. It is the story of a man who pivoted repeatedly — from bicycle parts to generator imports, from push-button phones to telecom licences — and somehow, through a combination of sharp instinct and impeccable timing, ended up building one of Asia's largest telecommunications empires. **Bharti Airtel** today connects hundreds of millions of people across India and Africa. But its origins trace back not to a boardroom vision statement, but to a young man from Ludhiana with **₹20,000** and a willingness to move fast.\n\nSunil Mittal was born in 1957 in Ludhiana, Punjab, into a family with a background in politics rather than business. He studied at Punjab University before heading to Mumbai with modest capital and even more modest certainty about what he wanted to build. His first venture was importing and selling **crankshafts** for local bicycle manufacturers — a practical, unglamorous trade that nonetheless taught him the fundamentals of moving goods, managing margins, and reading markets.\n\nWhen government policy shifted and that business became unviable, Mittal moved rather than mourned. He pivoted to importing Suzuki generator kits, then to **push-button phones** — a product that barely existed in India at the time, given the country's overwhelming reliance on rotary dial instruments. He assembled and sold these phones under the brand **Beetel**, finding himself in the right place at precisely the right moment as India's urban population began demanding something better.\n\nThe real leap came in **1992**, when India began liberalising its telecom sector. Mittal entered the cellular telephony space in Delhi, winning one of the country's first mobile licences. Most observers considered it a risky, capital-intensive gamble in a country where few could afford mobile phones. Mittal saw it differently — he understood, perhaps earlier than most, that **infrastructure builds its own demand.**\n\nWhat followed was a decade of bold expansion, strategic partnerships with global giants like **SingTel**, and a brand — **Airtel** — that became synonymous with mobile communication for an entire generation of Indians. His subsequent move into **Africa** extended that vision to a continent with strikingly similar dynamics: vast, underserved populations hungry for connectivity.\n\nSunil Mittal's career resists the clean narrative arc that business biographies tend to favour. There was no single defining idea, no founding myth worth mythologising. What there was, consistently, was the ability to **read a shifting landscape faster than everyone else** — and the willingness to rebuild, without sentiment, whenever the moment demanded it.",
+    achievements: ["Founded Bharti Enterprises, starting with just ₹20,000", "Won one of India's first mobile licences in 1992", "Built Airtel into one of Asia's largest telecom operators", "Expanded operations across India and Africa", "Forged major global partnerships, including with SingTel"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-27",
+  },
+  {
     id: "ts-kalyanaraman",
     name: "T.S. Kalyanaraman",
     title: "Founder & Chairman, Kalyan Jewellers",
