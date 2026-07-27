@@ -39,6 +39,40 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "flipkart-food-delivery-push",
+    title: "Flipkart Pushes Deeper Into Food Delivery",
+    date: "27-07-2026",
+    category: "E-commerce",
+    image: "/images/business-insights/flipkart-food-delivery.jpeg",
+    excerpt:
+      "Flipkart's 'digital mall' strategy is extending into food delivery, adding a new vertical to compete with Swiggy, Zomato, and Rapido as it aims to become a one-stop consumer destination.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Flipkart's expansion beyond e-commerce continued this week as reports on July 26 detailed the company's "digital mall" strategy extending into food delivery, adding a new vertical to compete with established players like Swiggy, Zomato, and Rapido.
+
+This follows Flipkart's confirmation days earlier that it would formally enter the food delivery space, signaling a broader ambition to transform its platform into a one-stop consumer destination spanning shopping, quick commerce, and now dining.
+
+The move intensifies competition across India's already crowded online food and delivery ecosystem as major players jockey for a share of daily consumer spending.`,
+  },
+
+  {
+    id: "capital-shifts-ai-to-manufacturing-deeptech",
+    title: "Capital Shifts From AI Hype to Manufacturing & Deeptech",
+    date: "27-07-2026",
+    category: "Startups & Funding",
+    image: "/images/business-insights/capital-shift-manufacturing.jpeg",
+    excerpt:
+      "Indian startups raised about $209 million in the week ending July 25 — a 44% dip — but the decline masks a shift in investor focus from AI toward manufacturing, aerospace, and healthcare infrastructure.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Indian startups pulled in about $209 million during the week ending July 25, a 44% dip from the prior week's strong showing. However, the decline masks a shift in investor focus — away from AI headlines toward companies building factories, enterprise banking software, aerospace tech, and healthcare infrastructure.
+
+The week's biggest deal went to Zetwerk, which raised $52 million in a pre-IPO round.
+
+Total July funding is estimated near $820 million, well below June's $1.91 billion, reflecting a broader diversification of venture capital toward India's industrial and manufacturing growth story rather than purely AI-driven bets.`,
+  },
+
+  {
     id: "meesho-q1-fy27-results",
     title: "Meesho Hits ₹3,713 Crore in Q1 Revenue and Cuts Losses by 54% as Path to Profit Sharpens",
     date: "24-07-2026",
