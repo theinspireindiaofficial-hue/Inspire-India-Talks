@@ -39,6 +39,42 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "temple-deepinder-goyal-valuation",
+    title: "Deepinder Goyal's Temple Doubles Valuation to $375 Million After ESOP Buyback",
+    date: "28-07-2026",
+    category: "Startups & Health Tech",
+    image: "/images/business-insights/temple-deepinder-goyal.png",
+    excerpt:
+      "Temple, the healthtech wearable startup founded by Zomato's Deepinder Goyal, has doubled its valuation to $375 million via a secondary share sale and launched its first ESOP liquidity programme.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Temple, the healthtech startup founded by Deepinder Goyal, has doubled its valuation to $375 million following a secondary share sale — roughly twice its earlier valuation of about $190 million, at which it had previously raised $54 million.
+
+The company is building a forehead-worn wearable designed to measure the body's metabolic state in real time. Currently in early access and positioned as a wellness product, it is expected to launch commercially within the next year, subject to further validation. Goyal founded Temple after stepping down as CEO of Eternal, and has been steadily expanding the team ahead of a wider rollout.
+
+Alongside the raise, Temple has launched its first ESOP liquidity programme — joining a wave of Indian startups returning cash to employees. By Entrackr's count, nine startups have collectively bought back ESOPs worth over $270 million in 2026 so far, including BrowserStack, Innovaccer, CoinDCX, and Unacademy.`,
+  },
+
+  {
+    id: "bombay-shaving-company-fy26-results",
+    title: "Bombay Shaving Company Revenue Jumps to ₹635 Crore, Nears Break-Even",
+    date: "28-07-2026",
+    category: "Consumer & Brands",
+    image: "/images/business-insights/bombay-shaving-company.png",
+    excerpt:
+      "Bombay Shaving Company's parent more than doubled revenue to ₹635 crore in FY26 and posted its first-ever positive adjusted EBITDA, signalling the grooming brand is closing in on profitability ahead of a planned IPO.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Visage Lines Personal Care, the parent of Bombay Shaving Company, has reported a 2.4x jump in operating revenue for FY26, alongside its first-ever positive adjusted EBITDA of ₹2 crore — a sign the grooming brand is finally converting scale into sustainable economics.
+
+Revenue from operations surged 139% to ₹635 crore in FY26, up from ₹266 crore a year earlier. The company's core personal care products — its flagship men's grooming brand Bombay Shaving Company and women's care brand Bombae — contributed over 91% of that, at ₹581 crore. A services arm, 100Days, and interest income took total revenue to ₹641 crore.
+
+Higher sales came with heavy investment: material costs rose 2.8x to ₹370 crore, while advertising and promotion climbed 55% to ₹158 crore. Even so, the Gurugram-based company narrowed its net loss sharply — down 85% to ₹9 crore, from ₹58 crore in FY25.
+
+The company last raised ₹136 crore (around $15.3 million) in November 2025, in a round led by Sixth Sense Ventures with participation from founder Shantanu Deshpande and former cricketer Rahul Dravid, as it gears up for a potential IPO.`,
+  },
+
+  {
     id: "flipkart-food-delivery-push",
     title: "Flipkart Pushes Deeper Into Food Delivery",
     date: "27-07-2026",

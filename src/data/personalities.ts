@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "verghese-kurien",
+    name: "Verghese Kurien",
+    title: "Founder, Amul & Father of the White Revolution",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/verghese-kurien.jpg",
+    born: "26 November 1921, Kozhikode, Kerala",
+    profession: "Social Entrepreneur & Engineer",
+    knownFor: "Leading Operation Flood and building Amul into a dairy powerhouse",
+    quote: "My life's work has taught me that the tools to progress lie in the hands of ordinary people.",
+    story: "It is one of history's great ironies that the man who made India the world's largest producer of milk did not particularly like the drink himself. **Verghese Kurien** — remembered as the **'Milkman of India'** — was a mechanical engineer with no background in dairying who ended up transforming the lives of millions of rural farmers and reshaping the nation's rural economy.\n\nBorn on 26 November 1921 in Kozhikode, Kerala, Kurien trained as an engineer and won a government scholarship to study **dairy engineering** in the United States. On his return, he was posted to a small, obscure town in Gujarat — **Anand** — to serve out his scholarship bond at a government creamery. He intended to leave as soon as he could. Instead, a chance encounter with a struggling farmers' cooperative changed the course of his life.\n\nThe local farmers were being exploited by middlemen and a private dairy that dictated prices. Kurien threw his lot in with them, helping build the **Kaira District Cooperative Milk Producers' Union** — the organisation that would give the world **Amul.** His model was revolutionary in its simplicity: put ownership and profits directly in the hands of farmers, cutting out exploitative intermediaries, and back them with modern technology and professional management.\n\nUnder his leadership, Amul pioneered the making of milk powder from buffalo milk — a technical feat considered impossible at the time — and built a brand that became a household name. But Kurien's ambitions were national. As the architect of **Operation Flood**, launched in 1970, he scaled the Anand cooperative model across India, creating a vast network of dairy cooperatives. The programme became the **world's largest agricultural development effort**, turning a milk-deficient nation into the largest milk producer on earth.\n\nKurien founded and led institutions like the **National Dairy Development Board (NDDB)** and the Institute of Rural Management Anand (IRMA), embedding his philosophy of farmer-owned, professionally-run enterprise into India's institutional fabric. His work earned him the World Food Prize, the Padma Vibhushan, and the Ramon Magsaysay Award.\n\nVerghese Kurien proved that entrepreneurship need not be measured only in personal fortune. By empowering millions of small farmers to become owners of their own destiny, he built one of the most successful and enduring examples of **cooperative capitalism** the world has ever seen.",
+    achievements: ["Built Amul and the Anand cooperative model that empowered millions of farmers", "Architect of Operation Flood — the world's largest dairy development programme", "Made India the world's largest producer of milk", "Founded the NDDB and the Institute of Rural Management Anand (IRMA)", "Recipient of the World Food Prize, Padma Vibhushan, and Ramon Magsaysay Award"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-28",
+  },
+  {
     id: "sunil-mittal",
     name: "Sunil Mittal",
     title: "Founder & Chairman, Bharti Enterprises",
