@@ -39,6 +39,25 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "apollo-eplane-electric-air-ambulance",
+    title: "Apollo & The ePlane Company Join Forces for India's First Electric Air Ambulance",
+    date: "28-07-2026",
+    category: "Health Tech & Mobility",
+    image: "/images/business-insights/apollo-eplane-air-ambulance.png",
+    excerpt:
+      "Apollo Hospitals and The ePlane Company have signed an MoU to bring electric air ambulances and medical delivery drones into India's emergency healthcare system.",
+    readTime: "3 min read",
+    featured: false,
+    content: `In a landmark move for Indian healthcare, Apollo Hospitals and The ePlane Company have signed a Memorandum of Understanding (MoU) to introduce electric air ambulances and medical delivery drones into the country's emergency care system. The MoU was signed in Chennai and announced at the Farnborough International Airshow in the UK on July 23.
+
+Under the partnership, Apollo Hospitals will evaluate ePlane's e200X electric vertical take-off and landing (eVTOL) aircraft for uses including inter-hospital patient transfers, trauma response, cardiac and stroke emergencies, and organ transportation. The aircraft is designed to move patients up to seven times faster than road transport — cutting the delays caused by traffic congestion and long distances that so often prove fatal in emergencies.
+
+The collaboration will also explore medical delivery drones developed by Amber Wings, a subsidiary of The ePlane Company, to transport critical materials such as blood products, organs, vaccines, medicines, and diagnostic samples between facilities.
+
+The ePlane Company recently unveiled the first full-scale prototype of its e200X, designated PT-01, which has entered ground testing ahead of planned certification flight tests in 2027, with commercial operations targeted from 2028. If realised, the tie-up could make emergency air mobility a practical reality for Indian patients — a significant step for the country's healthcare and deep-tech ambitions.`,
+  },
+
+  {
     id: "temple-deepinder-goyal-valuation",
     title: "Deepinder Goyal's Temple Doubles Valuation to $375 Million After ESOP Buyback",
     date: "28-07-2026",
