@@ -39,6 +39,65 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "table-space-350mn-ipo",
+    title: "Table Space to File Draft Papers for $350 Million IPO Next Month: Report",
+    date: "28-07-2026",
+    category: "IPO & Markets",
+    image: "/images/business-insights/table-space-ipo.png",
+    excerpt:
+      "Managed workspace provider Table Space is reportedly set to file its DRHP with SEBI next month for a public issue of up to $350 million, combining a ₹1,000 crore fresh issue with an offer for sale.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Managed office solutions provider Table Space is reportedly preparing to file its draft red herring prospectus (DRHP) with SEBI next month for a public issue worth up to $350 million.
+
+According to a Bloomberg report, the company is looking to raise up to $350 million (about ₹3,353 crore), through a mix of fresh equity shares worth around ₹1,000 crore and an offer for sale by existing shareholders. Responding to Inc42's queries, a Table Space spokesperson declined to comment on "market speculation or media reports." The company had earlier raised $300 million in equity from global private equity firm Hillhouse Capital in 2022.
+
+Founded in 2017 by the late Amit Banerji and Karan Chopra — and now led by Chopra and Kunal Mehra as co-CEOs — Table Space provides managed workspaces for large enterprises and global capability centres (GCCs), offering customised offices, ready-to-move suites, and workplace management services. It currently manages over 11 million sq ft across 80-plus centres in nine Indian cities, serving more than 425 enterprise clients.
+
+Financially, the company's operating revenue jumped 51% to ₹1,360 crore in FY25, from ₹908 crore in FY24, though it reported a net loss of ₹1,561 crore (versus an ₹11 crore profit the previous year), largely due to exceptional items.
+
+The plans come amid strong investor interest in India's flexible workspace sector, with peers such as Awfis, Smartworks, WeWork India, and IndiQube having gone public in recent years.`,
+  },
+
+  {
+    id: "pine-labs-q1-fy27-results",
+    title: "Pine Labs Reports ₹737 Crore Revenue in Q1 FY27 as Profit Jumps Over 4x",
+    date: "28-07-2026",
+    category: "Fintech",
+    image: "/images/business-insights/pine-labs-q1.png",
+    excerpt:
+      "Fintech major Pine Labs posted ₹737 crore in Q1 FY27 revenue, up 20% year-on-year, while net profit jumped fourfold to ₹20 crore.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Fintech major Pine Labs has reported a strong start to the fiscal year ending March 2027, with operating revenue growing 20% year-on-year and profit jumping fourfold.
+
+Revenue from operations rose to ₹737 crore in Q1 FY27, up from ₹616 crore a year earlier. The digital infrastructure and transaction platform was the largest contributor at ₹499 crore (up 14.9%), while the issuing and acquiring platform grew 31% to ₹238 crore. Including non-operating income, total income reached ₹766 crore.
+
+Crucially, revenue grew faster than costs. Total expenditure rose 10.6% to ₹728 crore, even as employee-benefit expenses — the company's biggest cost — actually fell 7.9% to ₹268 crore. The result: net profit surged to ₹20 crore, up from ₹5 crore in the same quarter last year. On a unit level, Pine Labs spent ₹0.99 to earn every rupee of operating revenue, an improvement from ₹1.07 a year ago.
+
+The Bengaluru-based company's shares traded around ₹151 during the day, giving it a market capitalisation of roughly ₹17,188 crore.`,
+  },
+
+  {
+    id: "snitch-acquires-berrylush",
+    title: "Snitch Acquires Berrylush to Enter Women's Fashion",
+    date: "28-07-2026",
+    category: "Consumer & Brands",
+    image: "/images/business-insights/snitch-berrylush.png",
+    excerpt:
+      "D2C fashion brand Snitch has acquired women's label Berrylush, marking its first major expansion beyond menswear as it builds a broader portfolio of fashion brands.",
+    readTime: "3 min read",
+    featured: false,
+    content: `D2C fashion brand Snitch has acquired women's fashion label Berrylush, marking its entry into the women's apparel segment as it expands beyond its menswear roots. Financial details of the transaction were not disclosed.
+
+Berrylush will continue to operate under its own brand while tapping Snitch's capabilities across product development, technology, supply chain, marketing, and omnichannel retail. Snitch will work with Berrylush co-founder Anusha Chandrashekar and her team to accelerate product innovation and expand the brand's presence.
+
+"Entering women's fashion has always been part of our long-term vision. Instead of starting from zero, we saw an opportunity to build on Berrylush's strong foundation," said Siddharth Dungarwal, founder and CEO of Snitch.
+
+The deal comes a little over a year after Snitch raised $40 million in a Series B round led by 360 ONE Asset, taking its total funding past $53 million. The company's revenue grew 81% to ₹900 crore in FY26, from ₹498 crore a year earlier — and the Berrylush acquisition marks its first step toward building a multi-brand fashion house.`,
+  },
+
+  {
     id: "apollo-eplane-electric-air-ambulance",
     title: "Apollo & The ePlane Company Join Forces for India's First Electric Air Ambulance",
     date: "28-07-2026",

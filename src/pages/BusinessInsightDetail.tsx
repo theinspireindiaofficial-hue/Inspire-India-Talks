@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { businessinsights, getBusinessInsightById } from "@/data/businessinsights";
 import { highlightKeywords } from "@/lib/highlight";
-import { ArrowLeft, ArrowRight, Calendar, Clock, Facebook, Linkedin, Twitter } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, Facebook, Linkedin, Instagram } from "lucide-react";
 import NewsletterSheet from "@/components/NewsletterSheet";
 
 const BusinessInsightDetail = () => {
@@ -90,9 +90,15 @@ const BusinessInsightDetail = () => {
                 )}
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
-                <Twitter className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
-                <Facebook className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
-                <Linkedin className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
+                <a href="https://www.instagram.com/inspireindiatalks/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <Instagram className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
+                </a>
+                <a href="https://www.facebook.com/p/Inspire-India-Talks-61577643296599/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
+                </a>
+                <a href="https://www.linkedin.com/company/inspire-india-talks/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="h-4 w-4 hover:text-primary transition-colors cursor-pointer" />
+                </a>
               </div>
             </div>
 

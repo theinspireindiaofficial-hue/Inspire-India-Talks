@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "satya-chakravarthy",
+    name: "Satya Chakravarthy",
+    title: "Founder & CEO, The ePlane Company",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/satya-chakravarthy.jpg",
+    born: "Chennai, Tamil Nadu",
+    profession: "Aerospace Scientist & Deep-Tech Entrepreneur",
+    knownFor: "Building India's first flying electric taxi (eVTOL) at The ePlane Company",
+    quote: "Planes were built on the wrong side of the planet — India can reimagine how the world flies.",
+    story: "While most of India's celebrated founders build apps and marketplaces, **Satya Chakravarthy** is trying to get India off the ground — literally. An aerospace professor at IIT Madras, he is the founder and CEO of **The ePlane Company**, the deep-tech startup building India's first flying electric taxi. His work sits at the frontier where hard science, patient engineering, and audacious entrepreneurship meet.\n\nChakravarthy's foundations are deeply academic. He earned a **BTech in Aerospace Engineering from IIT Madras**, followed by a Master's and PhD from **Georgia Tech** in the United States. He returned to join IIT Madras as faculty in 1997, becoming a full professor in 2009 — and, crucially, founding and heading the **National Centre for Combustion Research & Development (NCCRD)**, one of the country's premier propulsion research hubs. For most academics, that alone would have been a career. For Chakravarthy, it was a launchpad.\n\nHis central conviction is provocative: that the aircraft the world flies today were designed for a different era and a different geography — optimised for long-haul travel between airports, not for the dense, chaotic, short-hop realities of Indian cities. If aviation were being invented today, he argues, it would look nothing like the jet. That belief became the seed of **The ePlane Company**, which he founded in 2019 and incubated at IIT Madras with a deceptively simple mission: to make flying an everyday mode of transport, as ordinary as hailing a cab.\n\nThe company's flagship **e200 / e200X eVTOL** — an electric vertical take-off and landing aircraft — embodies that thinking. Rather than chasing size, Chakravarthy's team engineered the aircraft around India's constraints: it has one of the most compact footprints of any eVTOL in the world, small enough to lift off and land on urban rooftops, enabling point-to-point travel that skips the road network entirely. The same platform can be reconfigured as an **air ambulance**, promising to shave critical minutes off emergency response in cities strangled by traffic — the very capability now being explored through the company's partnership with Apollo Hospitals. Along the way, ePlane became the first company in India to secure a **Design Organisation Approval from the DGCA** for an electric aircraft, a regulatory milestone that signalled the technology's seriousness.\n\nWhat makes Chakravarthy truly exceptional is that ePlane is only one node in a web of deep-tech ventures he has helped bring to life. He is a co-founder of **Agnikul Cosmos** (private space launch vehicles), **GalaxEye** (satellite imaging), **Aerostrovilos Energy**, and **Avishkaar Hyperloop** — a portfolio that reads less like a founder's résumé and more like a blueprint for India's hard-tech future. Many of these emerged from the same IIT Madras ecosystem he helped cultivate, mentoring students to turn frontier research into companies.\n\nIn an ecosystem often chasing quick consumer wins, Satya Chakravarthy represents a rarer breed: the **scientist-entrepreneur** willing to spend years, even decades, solving genuinely hard problems where failure is likely and payoffs are distant. He is betting — with his research, his students, and his companies — that India can not merely adopt the technologies of the future, but invent them.",
+    achievements: ["Founded The ePlane Company (2019), building India's first flying electric taxi", "Developed the e200X eVTOL — among the most compact globally, convertible to an air ambulance", "First company in India with a DGCA Design Organisation Approval for an electric aircraft", "IIT Madras aerospace professor and founder of the NCCRD propulsion research centre", "Co-founder of deep-tech ventures including Agnikul Cosmos, GalaxEye, and Avishkaar Hyperloop"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-28",
+  },
+  {
     id: "verghese-kurien",
     name: "Verghese Kurien",
     title: "Founder, Amul & Father of the White Revolution",
