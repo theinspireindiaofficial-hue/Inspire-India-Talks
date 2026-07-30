@@ -38,6 +38,23 @@ export const categories: Category[] = [
 export const personalities: Personality[] = [
   // ===== ENTREPRENEURS & FOUNDERS =====
   {
+    id: "nithin-kamath",
+    name: "Nithin Kamath",
+    title: "Founder & CEO, Zerodha",
+    category: "Entrepreneurs & Founders",
+    categorySlug: "entrepreneurs",
+    image: "/images/personalities/nithin-kamath.webp",
+    born: "1979, Karnataka",
+    profession: "Fintech Entrepreneur",
+    knownFor: "Building Zerodha, India's largest stock brokerage, without any external funding",
+    quote: "We never raised money, never spent on marketing — we just tried to do right by the customer.",
+    story: "In an era where startups are often measured by how much money they raise, **Nithin Kamath** built one of India's most valuable fintech companies by raising **nothing at all.** As the founder and CEO of **Zerodha**, he turned a simple idea — make stock trading radically cheaper and more transparent — into India's largest retail stock brokerage, all without a single rupee of external funding or a marketing budget.\n\nKamath's beginnings were far from glamorous. Born in 1979 and raised in Karnataka, he started trading the stock markets as a teenager. Lacking capital, he famously worked at a **call centre at night** to fund his trading by day. Those years taught him the market from the inside — its opportunities, but also the frustrations of high brokerage fees and opaque practices that stacked the odds against ordinary retail investors.\n\nIn 2010, along with his brother **Nikhil Kamath**, he founded **Zerodha** (a blend of \"zero\" and *rodha*, the Sanskrit word for barrier). The company pioneered the **discount broking** model in India: flat, low fees and zero brokerage on equity delivery trades, at a time when incumbents charged a percentage on every transaction. It was a direct assault on how the industry made money — and it worked. Zerodha grew, entirely by word of mouth, into the country's biggest brokerage by active clients, and became **profitable and debt-free** in the process.\n\nMuch of that success rests on technology and trust. Zerodha's in-house trading platform, **Kite**, set a new standard for speed and simplicity, while **Varsity**, its free financial-education platform, taught millions of Indians how markets actually work. Kamath's philosophy has consistently been to align the company's interests with the customer's — even when that meant leaving easy money on the table.\n\nBeyond Zerodha, he has extended his influence across the ecosystem. Through **Rainmatter**, its fintech incubator and fund, he backs and mentors emerging startups, while the **Rainmatter Foundation** channels resources into climate and public-health initiatives. He also co-founded the wealth-management firm **True Beacon.**\n\nNithin Kamath's story is a quiet rebuke to the idea that scale requires reckless spending. By staying **bootstrapped, profitable, and customer-obsessed**, he proved that in India's frothy startup landscape, patience and principle can build something far more durable than hype.",
+    achievements: ["Founded Zerodha in 2010 with his brother Nikhil Kamath", "Built India's largest stock brokerage — bootstrapped, profitable, and debt-free", "Pioneered the discount broking model with zero-brokerage equity delivery", "Created the Kite trading platform and the free Varsity education platform", "Founded Rainmatter, the Rainmatter Foundation, and co-founded True Beacon"],
+    authorName: "Inspire India",
+    authorLinkedin: "https://www.linkedin.com/company/inspire-india",
+    addedAt: "2026-07-30",
+  },
+  {
     id: "satya-chakravarthy",
     name: "Satya Chakravarthy",
     title: "Founder & CEO, The ePlane Company",
