@@ -22,7 +22,9 @@ const PATTERNS: RegExp[] = [
   // percentages: 43%  or  10 per cent / 10 percent
   /\d[\d,.]*\s?(?:%|per\s?cent|percent)/i,
   // bare numbers immediately followed by a scale word: 527 million, 4 crore
-  new RegExp(`${NUM}(?:-?plus)?\\s?${UNIT}`, "i"),
+  // (?![A-Za-z]) stops single-letter units like "m" from matching the start of
+  // a following word, e.g. "POEM-4 module" or "PSLV-C60 mission".
+  new RegExp(`${NUM}(?:-?plus)?\\s?${UNIT}(?![A-Za-z])`, "i"),
   // hyphenated quantities like 60-satellite, 207,000-plus
   /\d[\d,.]*-(?:plus|satellite|year|month|week|day|seat|store|city|cities)/i,
   // standalone years 2020-2099
