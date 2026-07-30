@@ -37,9 +37,9 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/events/:slug" element={<EventDetail />} />
           <Route path="/tree-volution" element={<TreeVolution />} />
-          <Route path="/business-insights" element={<BusinessInsights />} />
-          <Route path="/business-legacy" element={<BusinessInsights />} /> {/* Fallback to insights for now */}
-          <Route path="/startup-stories" element={<BusinessInsights />} /> {/* Fallback to insights for now */}
+          <Route path="/business-insights" element={<BusinessInsights feed="insights" />} />
+          <Route path="/business-legacy" element={<BusinessInsights feed="legacy" />} />
+          <Route path="/startup-stories" element={<BusinessInsights feed="startups" />} />
           <Route path="/business-insights/:id" element={<BusinessInsightDetail />} />
           <Route path="/newsletter/confirmed" element={<NewsletterStatus variant="confirmed" />} />
           <Route path="/newsletter/unsubscribed" element={<NewsletterStatus variant="unsubscribed" />} />

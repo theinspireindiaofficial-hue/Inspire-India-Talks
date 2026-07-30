@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import NewsletterSheet from "@/components/NewsletterSheet";
 
 const socialLinks = [
   { name: "Instagram", icon: <Instagram className="h-4 w-4" />, url: "https://www.instagram.com/inspireindiatalks/" },
@@ -12,6 +13,23 @@ const Footer = () => {
   return (
     <footer className="border-t-2 border-foreground mt-20 bg-background text-foreground">
       <div className="container mx-auto px-4 py-16">
+
+        {/* Newsletter band */}
+        <div className="border-b border-border pb-10 mb-12 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <span className="text-primary text-[10px] font-bold uppercase tracking-widest block mb-2">The Newsletter</span>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+              One considered edition, every Friday
+            </h3>
+            <p className="text-sm text-foreground/70 mt-2 max-w-xl leading-relaxed">
+              The week's reporting from every desk, condensed for readers who are short on time and long on curiosity.
+            </p>
+          </div>
+          <div className="md:justify-self-end">
+            <NewsletterSheet source="footer" triggerLabel="Subscribe Free" />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           
           {/* Left Col */}

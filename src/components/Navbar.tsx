@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import NewsletterSheet from "@/components/NewsletterSheet";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,32 +28,54 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-background border-b-[3px] border-foreground">
-      {/* Top Banner */}
+      {/* Top Banner — real date left, edition line right */}
       <div className="bg-primary text-primary-foreground py-1.5 px-4 text-[10px] sm:text-xs font-semibold uppercase tracking-widest flex justify-between items-center">
-        <span>VOL. IX - NO. 212 - NEW DELHI EDITION</span>
-        <span className="hidden sm:inline">AN INDEPENDENT EDITORIAL PLATFORM</span>
+        <span>{today}</span>
+        <span className="hidden sm:inline">New Delhi Edition · Independent Journalism</span>
       </div>
 
-      <div className="container mx-auto px-4 pt-6 pb-4">
-        {/* Date */}
-        <div className="text-center text-xs uppercase tracking-wider text-muted-foreground font-medium mb-4">
-          {today}
+      <div className="container mx-auto px-4 pt-5 pb-3">
+        {/* Masthead — logo & tagline (left), title (centre), newsletter (right) */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-x-6 gap-y-4 mb-4">
+          {/* Left flank: logo + editorial line */}
+          <div className="flex items-center gap-4 justify-center md:justify-start">
+            <Link to="/" className="inline-block shrink-0" aria-label="Inspire India Talks home">
+              <img
+                src="/logo-transparent.png"
+                alt="Inspire India Talks"
+                className="h-16 w-16 md:h-24 md:w-24 object-contain"
+              />
+            </Link>
+            <p className="hidden lg:block max-w-[20ch] font-serif text-[13px] italic leading-snug text-foreground/70 border-l border-border pl-4">
+              Reported profiles of the founders, companies and ideas shaping a new India.
+            </p>
+          </div>
+
+          {/* Centre: masthead title */}
+          <div className="text-center">
+            <Link to="/" className="inline-block">
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-black text-foreground tracking-tight leading-none">
+                Inspire India Talks
+              </h1>
+            </Link>
+          </div>
+
+          {/* Right flank: newsletter + cadence note */}
+          <div className="flex flex-col items-center md:items-end gap-2">
+            <NewsletterSheet source="navbar" triggerLabel="Newsletter" />
+            <p className="hidden lg:block text-[10px] uppercase tracking-[0.18em] text-muted-foreground font-medium">
+              A considered edition, every Friday
+            </p>
+          </div>
         </div>
 
-        {/* Masthead */}
-        <div className="text-center mb-6">
-          <Link to="/" className="inline-block">
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] font-black text-foreground tracking-tight leading-none mb-3">
-              Inspire India Talks
-            </h1>
-          </Link>
-          <div className="flex items-center justify-center gap-4 mt-2">
-            <div className="h-px bg-border w-16 hidden md:block"></div>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-foreground/80 font-semibold">
-              THE PEOPLE BUILDING A NEW INDIA — AND THE IDEAS BEHIND THEM
-            </p>
-            <div className="h-px bg-border w-16 hidden md:block"></div>
-          </div>
+        {/* Subtitle rule */}
+        <div className="flex items-center justify-center gap-4 mb-5">
+          <div className="h-px bg-foreground/25 flex-1 max-w-[140px]"></div>
+          <p className="text-[10px] md:text-xs uppercase tracking-[0.22em] text-foreground/80 font-semibold text-center">
+            The People Building a New India — and the Ideas Behind Them
+          </p>
+          <div className="h-px bg-foreground/25 flex-1 max-w-[140px]"></div>
         </div>
 
         {/* Desktop Nav */}
