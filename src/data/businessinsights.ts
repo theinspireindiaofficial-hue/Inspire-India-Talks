@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "ofbusiness-fy26-results",
+    title: "OfBusiness Posts ₹724 Crore Profit on ₹20,645 Crore Revenue in FY26",
+    date: "30-07-2026",
+    category: "Startups & B2B Commerce",
+    image: "/images/business-insights/ofbusiness-fy26.jpg",
+    excerpt:
+      "IPO-bound B2B commerce and financing platform OfBusiness grew net profit 21% to ₹724 crore in FY26 and turned free-cash-flow positive for the first time, even as it trimmed revenue by exiting low-return lines.",
+    readTime: "3 min read",
+    featured: false,
+    content: `IPO-bound B2B commerce and financing platform OfBusiness has reported a 21% year-on-year jump in profit after tax to ₹724 crore in FY26, up from ₹597 crore a year earlier. Consolidated revenue, however, slipped 7% to ₹20,645 crore from ₹22,241 crore, as the company deliberately discontinued select low-return business lines.
+
+The core commerce business — spanning metals, chemicals, apparel, and food processing — brought in ₹19,174 crore. Profitability improved sharply: EBITDA grew 39% to ₹769 crore and margins widened to 4% from 2.6%. Operating cash flow from commerce nearly doubled to ₹1,302 crore, and the company turned free-cash-flow-to-firm positive for the first time, at ₹390 crore.
+
+Its financing arm, Oxyzo Financial Services, grew its asset base 28% to ₹11,800 crore, with a healthy 3.8% return on assets and a low gross NPA ratio of 0.75%.
+
+Founded in 2015 by Asish Mohapatra, Ruchi Kalra, Bhuvan Gupta, and Vasant Sridhar, OfBusiness offers SMEs raw-material procurement, working-capital financing, and tender intelligence. Its BidAssist platform now serves over 1.5 million business users and aggregates 50,000-plus live tenders daily. The company's workforce has crossed 30,000, nearly doubling in a year on the back of its South India apparel expansion. "FY27 will be a pivotal year for us as returns from prior investments play out," said co-founder and CEO Asish Mohapatra.`,
+  },
+
+  {
+    id: "instamart-nandita-sinha-ceo",
+    title: "Instamart Names Former Myntra CEO Nandita Sinha as CEO; Amitesh Jha Resigns",
+    date: "30-07-2026",
+    category: "Quick Commerce",
+    image: "/images/business-insights/instamart-nandita-sinha.jpg",
+    excerpt:
+      "Swiggy's quick commerce arm Instamart has appointed former Myntra CEO Nandita Sinha as its chief executive, effective August 3, as Amitesh Jha steps down.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Swiggy's quick commerce arm Instamart has appointed former Myntra CEO Nandita Sinha as its Chief Executive Officer, effective August 3. She succeeds Amitesh Jha, who has resigned to pursue other opportunities; Jha had joined Instamart as CEO in August 2024 after leaving Flipkart.
+
+Swiggy said Jha tendered his resignation on July 28 and will step out of the company's senior management from August 3. Group CEO Sriharsha Majety credited him with leading Instamart through a key phase of expansion — including the launch of Noice and improvements in contribution margins — while welcoming Sinha's "vision, customer obsession and operational rigor."
+
+Sinha arrives with more than two decades across consumer internet, e-commerce, and FMCG. At Myntra, she led the platform through market-share gains and EBITDA profitability, and has previously held leadership roles at Flipkart, Britannia, and Hindustan Unilever. At Instamart, she will focus on expanding assortment, improving profitability, strengthening customer experience, and driving operational excellence.
+
+The change marks the third senior-level exit at Instamart in recent months, following the departures of COO Ankit Jain and CBO Hari Kumar. Jain has since joined listed retailer Nykaa to lead its quick commerce vertical, Nykaa Now.`,
+  },
+
+  {
     id: "table-space-350mn-ipo",
     title: "Table Space to File Draft Papers for $350 Million IPO Next Month: Report",
     date: "28-07-2026",
