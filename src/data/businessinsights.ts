@@ -39,6 +39,44 @@ export const businessinsights: BusinessInsight[] = [
   // },
   // =================================================================================
   {
+    id: "vault-virat-kohli-investors",
+    title: "Virat Kohli and Brother Vikas Join \"Vault by Virat Kohli\" as Strategic Investors",
+    date: "31-07-2026",
+    category: "Business & Lifestyle",
+    image: "/images/business-insights/vault-virat-kohli.png",
+    excerpt:
+      "Premium fitness chain Vault by Virat Kohli has brought cricketer Virat Kohli and his brother Vikas on board as strategic investors, deepening the star's involvement as the brand plans a nationwide expansion.",
+    readTime: "3 min read",
+    featured: false,
+    content: `Premium franchise-led fitness chain Vault by Virat Kohli has formally onboarded cricketer and entrepreneur Virat Kohli and his brother Vikas Kohli as strategic investors, cementing the family's role in the brand that carries his name. The move takes Virat beyond being the face of the chain into an active ownership role, and the backing will fund the company's next phase of national expansion through its franchise-partner model.
+
+Founded in 2023 by Mukesh Gogia, Vault is positioned as a premium fitness and wellness destination — blending strength and functional training, structured programmes, and dedicated recovery facilities. It has partnered with global equipment and recovery names like Matrix, Torque USA, and Precor, with Hyperice powering its recovery rooms.
+
+The Delhi-based brand already operates across Tier I and Tier II cities including Delhi NCR, Bengaluru, Gorakhpur, and Hyderabad, and now wants to push into Tier III markets, betting on rising demand for organised, premium fitness infrastructure.
+
+For India's startup scene, the tie-up is another example of a marquee athlete moving from brand ambassador to genuine business builder — lending both capital and credibility to a homegrown consumer brand.`,
+  },
+
+  {
+    id: "phonepe-pulsepro-launch",
+    title: "PhonePe Launches PulsePro, Turning Payments Data into Market Intelligence",
+    date: "31-07-2026",
+    category: "Fintech & Innovation",
+    image: "/images/business-insights/phonepe-pulsepro.png",
+    excerpt:
+      "PhonePe has launched PulsePro, an enterprise intelligence platform that turns anonymised transaction data from its vast payments network into near-real-time market insights for businesses.",
+    readTime: "3 min read",
+    featured: false,
+    content: `PhonePe has launched PulsePro, an enterprise intelligence platform that converts aggregated, anonymised transaction data from its payments network into actionable market insights — a notable step in monetising data as a product.
+
+PulsePro lets businesses analyse consumer spending trends, category performance, and local market dynamics to guide expansion, distribution, site selection, and category growth. PhonePe pitches it as a near-real-time alternative to slow, survey-based market research, covering more than 200 store categories and over 100 market signals down to district and postal-code level — including hyperlocal quick-commerce penetration.
+
+The platform draws on PhonePe's enormous footprint: over 700 million registered users, more than 50 million merchants, and 99% of India's postal codes. It extends PhonePe Pulse, the free public data platform launched in 2021, with PulsePro positioned as a paid, advanced enterprise tier.
+
+Some quirky insights PhonePe surfaced from the data: Chakan in Pune has the most OTT users nationwide, Maharashtra leads in pet-related spending, and Marathahalli in Bengaluru records the most late-night orders in the country. "Businesses today don't just need more data, they need better intelligence," said Karthik Raghupathy, Head of Strategy at PhonePe.`,
+  },
+
+  {
     id: "tata-group-150-year-journey",
     title: "Tata Group: A 150-Year Journey of Trust, Growth, and Nation Building",
     date: "30-07-2026",
