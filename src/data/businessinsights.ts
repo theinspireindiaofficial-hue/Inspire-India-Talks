@@ -1,51 +1,44 @@
-// src/data/businessinsights.ts
+// =====================================================================
+// BUSINESS INSIGHTS  —  data + shared types for all three tabs.
 //
-// HOW TO ADD A NEWS ARTICLE (no coding needed):
-//   1. Copy the whole { ... } block marked TEMPLATE below.
-//   2. Paste it at the TOP of the list (newest first).
-//   3. Fill in the fields between the quotes. Keep the quotes and commas.
-//   4. Put the image file in:  public/images/business-insights/
-//   5. Save. The site updates automatically after the change is pushed.
+// This project has THREE business tabs, each with its OWN data file and
+// its OWN image folder:
+//   1. Business Insights (news)  -> this file            -> public/images/business-insights/
+//   2. Business Legacy           -> businesslegacy.ts    -> public/images/business-legacy/
+//   3. Startups                  -> businessstartups.ts  -> public/images/business-startups/
+//
+// HOW TO ADD A NEWS ARTICLE:
+//   1. Copy a { } block below and paste it at the TOP of the list.
+//   2. Fill in the fields. Keep the quotes and commas.
+//   3. Put the image in  public/images/business-insights/
+//      and reference it as "/images/business-insights/your-file.jpg".
 //
 // Required: id, title, date, image, excerpt, content
 // Optional: category, featured, readTime
+// =====================================================================
+import { businesslegacy } from "./businesslegacy";
+import { businessstartups } from "./businessstartups";
 
 export interface BusinessInsight {
-  id: string;        // unique short name, e.g. "biodimension-8-crore"
-  title: string;     // headline
-  date: string;      // "DD-MM-YYYY", e.g. "15-06-2026"
-  image: string;     // "/images/business-insights/your-file.jpg"
-  excerpt: string;   // 1–2 line summary shown on the card
-  content: string;   // full article. Use a blank line for new paragraphs.
-  category?: string; // optional label, e.g. "Funding" (shows in orange)
-  featured?: boolean;// optional: set true on ONE article to make it the big hero
-  readTime?: string; // optional, e.g. "4 min read"
+  id: string;
+  title: string;
+  date: string;        // "DD-MM-YYYY"
+  image: string;
+  excerpt: string;
+  content: string;
+  category?: string;
+  featured?: boolean;
+  readTime?: string;
 }
 
 export const businessinsights: BusinessInsight[] = [
-  // ===================== TEMPLATE — copy this block to add news =====================
-  // {
-  //   id: "short-unique-name",
-  //   title: "Your headline here",
-  //   date: "DD-MM-YYYY",
-  //   category: "Funding",
-  //   image: "/images/business-insights/your-image.jpg",
-  //   excerpt: "One or two sentences that appear on the card.",
-  //   readTime: "3 min read",
-  //   featured: false,
-  //   content: `Opening paragraph of the full article.
-  //
-  // Leave a blank line to start a new paragraph. Write as much as you like here.`,
-  // },
-  // =================================================================================
   {
     id: "vault-virat-kohli-investors",
     title: "Virat Kohli and Brother Vikas Join \"Vault by Virat Kohli\" as Strategic Investors",
     date: "31-07-2026",
     category: "Business & Lifestyle",
     image: "/images/business-insights/vault-virat-kohli.png",
-    excerpt:
-      "Premium fitness chain Vault by Virat Kohli has brought cricketer Virat Kohli and his brother Vikas on board as strategic investors, deepening the star's involvement as the brand plans a nationwide expansion.",
+    excerpt: "Premium fitness chain Vault by Virat Kohli has brought cricketer Virat Kohli and his brother Vikas on board as strategic investors, deepening the star's involvement as the brand plans a nationwide expansion.",
     readTime: "3 min read",
     featured: false,
     content: `Premium franchise-led fitness chain Vault by Virat Kohli has formally onboarded cricketer and entrepreneur Virat Kohli and his brother Vikas Kohli as strategic investors, cementing the family's role in the brand that carries his name. The move takes Virat beyond being the face of the chain into an active ownership role, and the backing will fund the company's next phase of national expansion through its franchise-partner model.
@@ -56,15 +49,13 @@ The Delhi-based brand already operates across Tier I and Tier II cities includin
 
 For India's startup scene, the tie-up is another example of a marquee athlete moving from brand ambassador to genuine business builder — lending both capital and credibility to a homegrown consumer brand.`,
   },
-
   {
     id: "phonepe-pulsepro-launch",
     title: "PhonePe Launches PulsePro, Turning Payments Data into Market Intelligence",
     date: "31-07-2026",
     category: "Fintech & Innovation",
     image: "/images/business-insights/phonepe-pulsepro.png",
-    excerpt:
-      "PhonePe has launched PulsePro, an enterprise intelligence platform that turns anonymised transaction data from its vast payments network into near-real-time market insights for businesses.",
+    excerpt: "PhonePe has launched PulsePro, an enterprise intelligence platform that turns anonymised transaction data from its vast payments network into near-real-time market insights for businesses.",
     readTime: "3 min read",
     featured: false,
     content: `PhonePe has launched PulsePro, an enterprise intelligence platform that converts aggregated, anonymised transaction data from its payments network into actionable market insights — a notable step in monetising data as a product.
@@ -75,311 +66,13 @@ The platform draws on PhonePe's enormous footprint: over 700 million registered 
 
 Some quirky insights PhonePe surfaced from the data: Chakan in Pune has the most OTT users nationwide, Maharashtra leads in pet-related spending, and Marathahalli in Bengaluru records the most late-night orders in the country. "Businesses today don't just need more data, they need better intelligence," said Karthik Raghupathy, Head of Strategy at PhonePe.`,
   },
-
-  {
-    id: "tata-group-150-year-journey",
-    title: "Tata Group: A 150-Year Journey of Trust, Growth, and Nation Building",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/tata-group.jpg",
-    excerpt: "For more than 150 years, Tata has been much more than a business conglomerate—it has been a part of India's growth story.",
-    readTime: "7 min read",
-    featured: false,
-    content: `When people think of India's most trusted business houses, the **Tata Group** is often the first name that comes to mind. For more than **150 years**, Tata has been much more than a business conglomerate—it has been a part of India's growth story. From building industries and creating jobs to introducing world-class products and services, the group has played a significant role in shaping modern India. Founded in **1868** by **Jamsetji Nusserwanji Tata**, the company began as a small trading enterprise in Mumbai. Today, it has grown into one of the world's largest and most respected business groups, guided by a simple yet powerful purpose: **"Leadership with Trust."**
-
-According to the official Tata Group Business Overview, the group has expanded into a truly global organization. Today, Tata operates in **more than 100 countries across six continents**, serving millions of customers through a diverse range of businesses. The group currently consists of **31 companies**, including **26 publicly listed companies**, making it one of the most diversified business groups in the world. Together, these companies generated a combined revenue of more than **US $180 billion during FY 2024–25**. As of **31 March 2025**, the combined market capitalization of Tata companies stood at over **US $328 billion**, reflecting the strength and value of the Tata brand in global markets.
-
-One of the biggest reasons behind Tata's success is its unique business structure. Rather than operating as a single company, the Tata Group is made up of independent companies that are promoted by **Tata Sons**, the group's principal investment holding company. Each company has its own Board of Directors and management team, giving it the freedom to make business decisions while remaining connected through the shared values and principles of the Tata brand. This structure allows every business to innovate, grow, and respond to changing market needs while maintaining high standards of corporate governance.
-
-Over the years, the Tata Group has expanded into almost every major sector of the economy. Its businesses operate in technology, steel, automotive, consumer products, retail, infrastructure, financial services, telecommunications, tourism and travel, aerospace and defence, trading, and investments. This wide business portfolio enables Tata to serve individuals, businesses, and governments across different industries.
-
-Some of the group's most well-known companies include **Tata Consultancy Services (TCS)**, one of the world's leading IT services and consulting companies; **Tata Motors**, a leading automobile manufacturer; **Tata Steel**, one of the world's major steel producers; **Titan**, known for its watches and jewellery; **Tata Consumer Products**; **Tata Power**; **Indian Hotels Company Limited (IHCL)**, which operates the iconic Taj Hotels; **Trent**; **Tata Communications**; **Tata Digital**; and **Air India**. Each of these businesses contributes to the group's overall strength while serving millions of customers every day.
-
-The Tata Group is also one of the world's largest employers. According to the official website, the group provides employment to **more than one million people worldwide**. Beyond creating jobs, Tata is committed to building workplaces that encourage innovation, learning, and long-term growth. The group's global presence across **over 100 countries** has helped it build strong relationships with customers, partners, and communities around the world while continuing to maintain its roots in India.
-
-What truly makes Tata different from many other business groups is its commitment to society. The official website states that approximately **66% of Tata Sons** is owned by philanthropic trusts. This means that a significant portion of the wealth created by Tata businesses is used to improve people's lives through initiatives in education, healthcare, scientific research, rural development, livelihood generation, arts, and culture. This unique ownership model reflects the vision of founder **Jamsetji Tata**, who believed that businesses should create value not only for shareholders but also for society as a whole.
-
-Everything the Tata Group does is guided by a clear purpose: **to improve the quality of life of the communities it serves globally through long-term stakeholder value creation based on Leadership with Trust**. This philosophy influences every Tata company and shapes the way the group conducts business. It focuses on building lasting relationships with customers, supporting employees, creating value for shareholders, working responsibly with business partners, and contributing positively to society.
-
-Today, the Tata Group stands as a remarkable example of how a business can grow while staying true to its values. With **31 companies**, operations in **more than 100 countries**, a workforce of **over one million employees**, annual revenue exceeding **US$180 billion**, and a combined market capitalization of more than **US$328 billion**, the group continues to strengthen its global presence while remaining deeply committed to India's development. Its journey from a small trading company established in **1868** to one of the world's most admired business groups is a story of vision, perseverance, innovation, and trust. More than just a corporate success, the Tata Group represents a legacy of nation-building that continues to inspire businesses and entrepreneurs across the world.
-
-Source: Official Tata Group Business Overview – https://www.tata.com/business/overview`,
-  },
-
-  {
-    id: "godrej-enterprises-125-year-journey",
-    title: "Godrej Enterprises Group: More Than a Century of Innovation, Trust, and Nation Building",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/godrej-group.jpg",
-    excerpt: "For over 125 years, Godrej Enterprises Group has been an integral part of India's industrial journey, from a lock-making business to a diversified engineering enterprise.",
-    readTime: "7 min read",
-    featured: false,
-    content: `For over **125 years**, **Godrej Enterprises Group (GEG)** has been an integral part of India's industrial journey. The Godrej Group was founded in **1897** in Mumbai, India, by brothers **Ardeshir Godrej** and **Pirojsha Burjorji Godrej**. Ardeshir, originally a lawyer, chose to pursue invention and manufacturing, beginning with the creation of **high-security locks**, while his brother Pirojsha played a pivotal role in transforming the business into a large-scale industrial enterprise. Established during the **Swadeshi movement**, the company was driven by a vision to manufacture high-quality products in India and reduce dependence on imported goods. What began as a small manufacturing business has today evolved into one of India's leading engineering and manufacturing enterprises. Guided by its purpose of **"Pioneering Progress for Generations,"** Godrej Enterprises Group continues to combine innovation, technology, and sustainability while creating products and solutions that touch millions of lives across the world.
-
-According to the official website, Godrej Enterprises Group has grown into a highly diversified organization with businesses spread across **10 major business groups**. Its operations cover a wide range of industries, including locks and security solutions, home appliances, furniture and fittings, aerospace, aviation, defence, energy, advanced engineering, healthcare equipment, building materials, intralogistics, tooling, construction and EPC services, interior solutions, IT solutions, and vending machines. This diverse portfolio reflects the company's remarkable ability to adapt to changing market demands while consistently delivering innovative products and engineering solutions for both consumers and industries.
-
-From its beginnings in India, the company has steadily expanded its footprint across the globe. Today, Godrej Enterprises Group operates across **five continents** and exports its products and engineering solutions to **more than 45 countries** through its international subsidiaries and strategic business partnerships. Its technologies and products are used in homes, offices, airports, factories, hospitals, infrastructure projects, and even **India's space programme**. According to the company, its businesses positively impact the lives of **more than 1.1 billion customers worldwide**, highlighting the extraordinary scale and global reach of its operations.
-
-The company's growth is also reflected in its strong manufacturing capabilities and financial performance. As reported on the official website, Godrej Enterprises Group recorded a consolidated revenue of **₹19,769 crore for FY 2024–25** (provisional and unaudited). Supporting this extensive business network is a workforce of **more than 15,000 employees**, who contribute across manufacturing, engineering, research, innovation, operations, and customer service. The group operates **31 state-of-the-art manufacturing facilities across India**, where products ranging from security systems and consumer appliances to advanced engineering solutions are designed and manufactured. These modern facilities play a crucial role in maintaining the company's reputation for quality, precision, and reliability.
-
-Innovation has remained at the heart of Godrej Enterprises Group since its earliest days. The company introduced the **world's first patented springless lock**, setting new benchmarks in security technology. Over the decades, it pioneered several **Made in India** products, including **safes, steel cupboards, refrigerators, and typewriters**, many of which became household names. Today, innovation continues to drive the company's future. According to the official website, Godrej Enterprises Group has **registered and filed more than 1,575 patents and design applications**, reflecting its continued investment in research, product development, advanced engineering, and technological excellence.
-
-Sustainability is another defining pillar of the company's long-term vision. Godrej Enterprises Group follows a **People-first, Nation-first, and Planet-first** approach, ensuring that business growth goes hand in hand with environmental responsibility. Through its **Good & Green** initiatives, the company focuses on reducing its environmental footprint by promoting sustainable manufacturing, conserving natural resources, advancing green hydrogen and energy storage technologies, and developing environmentally responsible products. The company also highlights that it has been **conserving mangroves for more than 80 years**, demonstrating its long-standing commitment to protecting biodiversity and preserving natural ecosystems. Looking ahead, Godrej Enterprises Group aims to generate **50% of its revenue from sustainable products by 2032**, reinforcing its commitment to building a greener future.
-
-Beyond business success, Godrej Enterprises Group has consistently contributed to social development. Through its **'Disha' skilling programme**, the company has **empowered more than 150,000 people across 23 states in India** by providing vocational training in manufacturing, construction, technical services, sales, and rural entrepreneurship. The company's ownership structure also reflects its commitment to giving back to society, with **23% of its shares held by the Pirojsha Godrej Foundation**, ensuring that a significant portion of the wealth created by the business supports philanthropic initiatives and community development.
-
-At the heart of Godrej Enterprises Group is a clear purpose—**"Pioneering Progress for Generations."** Guided by values of **integrity, trust, customer centricity, entrepreneurship, respect, and environmental stewardship**, the company continues to create meaningful customer experiences while building a business admired for innovation, sustainability, and long-term value creation.
-
-From a lock-making business established in **1897** to a diversified engineering enterprise operating across **10 business groups**, **five continents**, and **more than 45 countries**, Godrej Enterprises Group has built an extraordinary legacy. With **over 15,000 employees**, **31 manufacturing facilities**, **₹19,769 crore in revenue**, and products and solutions that positively impact **more than 1.1 billion people worldwide**, the company stands among India's most respected industrial organizations. Its journey demonstrates how innovation, responsible business practices, and a commitment to society can create enduring success. As Godrej Enterprises Group continues to invest in advanced technologies and sustainable growth, it remains focused on shaping a better future for generations to come.
-
-Source: Official Godrej Enterprises Group Website – https://www.godrejenterprises.com/`,
-  },
-
-  {
-    id: "bata-130-year-journey",
-    title: "Bata: A Global Footwear Brand Walking with the World for More Than 130 Years",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/bata.jpg",
-    excerpt: "From a small family workshop in 1894 to operations in 56 countries and 5,800 stores, Bata has spent more than 130 years making quality footwear affordable to the world.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For more than 130 years, **Bata** has been helping people move forward with confidence every day. What began as a small family-owned business in **1894** in Zlín (now in the Czech Republic) has grown into one of the world's most recognized footwear companies. Founded by **Tomáš Baťa**, along with his brother Antonín Baťa and sister Anna Baťová, the company was built on a simple yet powerful vision—to make quality footwear affordable and accessible to everyone. Over the decades, Bata has remained true to this purpose while expanding into a truly global brand. Even today, it continues to operate as a family-owned company, guided by the belief that long-term success comes from serving customers, empowering employees, and creating a positive impact in the communities where it operates.
-
-According to the official Bata website, the company has established an impressive global presence. Today, Bata operates in **56 countries** and manages a network of approximately **5,800 retail stores**, making it one of the world's largest footwear retailers. Every day, more than one million customers choose Bata products, reflecting the trust the brand has earned across generations. Supporting this global network is a workforce of more than **32,000 employees** representing over **76 nationalities**, who contribute to every aspect of the business—from product design and manufacturing to retail operations, innovation, and customer service. Bata also operates 17 specialized production facilities worldwide, enabling the company to manufacture products close to the markets it serves while maintaining consistent quality, efficiency, and reliability.
-
-One of the key reasons behind Bata's enduring success is its unique approach to business. The company describes itself as an **"international and local"** organization. This philosophy allows Bata to combine global expertise with a deep understanding of local cultures, lifestyles, and consumer preferences. Rather than offering identical products in every market, the company develops footwear that meets the specific needs of customers in different regions. This customer-centric approach has helped Bata build strong relationships with millions of families around the world.
-
-Innovation has been at the heart of Bata's journey since its earliest days. The company believes that innovation goes beyond creating stylish footwear—it also involves improving manufacturing processes, developing advanced materials, enhancing comfort, and delivering greater value to customers. To support this commitment, Bata operates dedicated Shoe Innovation Centres, where experts develop modern footwear technologies and designs that combine comfort, durability, affordability, and style. This continuous investment in research and development has enabled Bata to remain competitive while meeting the evolving expectations of consumers across generations.
-
-Over the years, Bata has also developed a diverse portfolio of footwear brands catering to different lifestyles and age groups. Alongside its flagship Bata brand, the company offers internationally recognized brands such as **North Star**, **Power**, **Bubblegummers**, and **Weinbrenner**. These brands provide footwear for children, students, professionals, athletes, outdoor enthusiasts, and families. Whether it is school shoes, sports footwear, casual wear, formal shoes, or rugged outdoor boots, Bata has built a reputation for delivering products that combine quality, comfort, style, and affordability.
-
-The company believes its responsibility extends beyond business performance. According to its official website, Bata's purpose is to improve lives by creating value for customers, employees, suppliers, business partners, and the communities it serves. It is committed to fostering an inclusive workplace where employees are respected, encouraged to grow, and provided with opportunities to succeed. At the same time, Bata continues to reduce its environmental footprint by promoting responsible sourcing, sustainable business practices, and environmentally conscious operations across its global network.
-
-Bata's leadership reflects its international outlook. Guided by an experienced and multicultural leadership team, the company combines global expertise with local market insights to respond to changing consumer needs while remaining true to the values that have shaped Bata for more than a century. By balancing innovation with its long-standing family-owned culture, Bata continues to strengthen its position as one of the world's most trusted footwear companies.
-
-Today, Bata stands among the world's leading footwear manufacturers and retailers, serving millions of customers through a legacy built on quality, innovation, and trust. With over 130 years of history, operations in **56 countries**, approximately **5,800 retail stores**, 17 specialized production facilities, a global workforce of more than **32,000 employees**, and over one million customers served every day, the company continues to fulfill its mission of making quality footwear accessible to people everywhere. Its remarkable journey from a small family business in **1894** to a globally recognized brand is a story of vision, innovation, customer trust, and continuous growth. As Bata looks to the future, it remains committed to creating comfortable, stylish, and affordable footwear while building a better future for generations to come.
-
-Source: Official Bata Company Website – https://www.thebatacompany.com/`,
-  },
-
-  {
-    id: "amul-white-revolution",
-    title: "Amul: The Cooperative That Changed India's Dairy Story Forever",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/amul.jpg",
-    excerpt: "Born in 1946 as a farmer-owned movement, Amul powered India's White Revolution and grew into a cooperative serving 3.64 million milk producers with ₹65,911 crore in turnover.",
-    readTime: "6 min read",
-    featured: false,
-    content: `**Amul**'s remarkable journey began in **1946** in Anand, Gujarat, when local dairy farmers, led by **Tribhuvandas Kishibhai Patel** and inspired by **Sardar Vallabhbhai Patel**, came together to establish a cooperative that would free them from exploitation by middlemen. This farmer-owned movement later became the foundation of the **Gujarat Co-operative Milk Marketing Federation Ltd. (GCMMF)**. Under the visionary leadership of **Dr. Verghese Kurien**, widely known as the "Father of the **White Revolution**," Amul pioneered the cooperative dairy model that transformed India's milk production and empowered millions of rural families.
-
-For generations of Indians, Amul has been much more than a dairy brand—it is a symbol of trust, quality, and the power of collective effort. Every packet of milk, every cube of butter, and every scoop of ice cream carries the story of millions of dairy farmers whose dedication has transformed India's dairy industry. Popularly known as "The Taste of India," Amul is one of the world's most successful cooperative organizations and a shining example of how a farmer-owned enterprise can create lasting economic and social impact. Through its commitment to quality, innovation, and rural empowerment, Amul played a defining role in India's White Revolution, helping the country become the world's largest producer of milk.
-
-According to the official website, Amul is marketed by the Gujarat Co-operative Milk Marketing Federation Ltd. (GCMMF), which was established in **1973** as the apex marketing organization of Gujarat's dairy cooperative societies. The federation was created with a clear mission—to ensure that dairy farmers receive fair and remunerative returns for their milk while consumers receive fresh, high-quality dairy products at affordable prices. Over the years, this simple yet powerful vision has transformed GCMMF into India's largest food products marketing organization and a globally recognized model of cooperative success.
-
-The true strength of Amul lies in its vast cooperative network. Today, the federation is supported by 18 district cooperative milk producers' unions spread across **33 districts** of Gujarat. These unions are connected to nearly 18,600 village milk cooperative societies, collectively owned by **3.64 million** milk producer members. Every day, this extensive network procures around **35 million** litres of milk, with an average daily milk collection of **32 million** litres. To efficiently manage this enormous volume, Amul has built a milk handling capacity of **50 million** litres per day, making it one of the largest dairy procurement and processing systems in the world. This unique farmer-owned structure ensures that every litre of milk directly contributes to improving the livelihoods of millions of rural families.
-
-What started as a movement in Gujarat has now expanded across the country. According to the official website, Amul today procures milk from more than **12 states** across India, working with over one million additional milk producers outside Gujarat. This expansion has strengthened India's dairy ecosystem while creating sustainable income opportunities for farmers beyond its home state. By connecting rural producers directly with urban markets, Amul has built a business model where growth benefits both consumers and milk producers alike.
-
-The company's remarkable growth is equally reflected in its financial performance. As reported by the federation, GCMMF recorded a sales turnover of **₹65,911 crore** during FY **2024**–25, reinforcing its position as India's largest food products marketing organization. Building on this momentum, the overall Amul brand group revenues have crossed the historic **₹1 lakh crore** milestone. Continuous investments in modern dairy plants, advanced milk processing technology, cold-chain infrastructure, logistics, and product innovation have enabled the organization to meet rising consumer demand while maintaining world-class quality standards.
-
-One of Amul's greatest strengths is its unmatched marketing and distribution network. The federation operates through **87 branches** across India and has developed an extensive network of approximately **20,000 dealers** and **2.8 million** retailers, making it one of the country's largest FMCG distribution systems. This widespread network ensures that fresh milk and dairy products reach consumers in cities, towns, and villages every day. Beyond India, Amul also exports its products to several international markets, strengthening its reputation as a globally recognized Indian dairy brand.
-
-Over the decades, Amul has evolved from a butter brand into a comprehensive dairy and food company. Today, its diverse product portfolio includes fresh milk, butter, ghee, cheese, paneer, curd, milk powder, chocolates, ice creams, fresh cream, health beverages, pizza cheese, traditional Indian sweets, beverages, and several other dairy-based products. By continuously introducing innovative products while maintaining strict quality standards, Amul has successfully adapted to changing consumer preferences without compromising its promise of affordability and excellence. The federation has also adopted modern technologies across milk procurement, manufacturing, quality control, logistics, and distribution, improving operational efficiency while ensuring farmers benefit from better infrastructure, faster payments, and improved market access.
-
-At its heart, Amul remains a cooperative built by farmers and for farmers. Its success is measured not only by business growth but also by the prosperity it creates for millions of dairy-producing families. Today, with 18 district unions, 18,600 village cooperative societies, **3.64 million** milk producer members, procurement extending across more than **12 states**, around **35 million** litres of milk procured daily, a handling capacity of **50 million** litres per day, a turnover of **₹65,911 crore**, and one of India's largest distribution networks, Amul stands as one of the world's greatest cooperative success stories. Its journey proves that when innovation, trust, and community work together, they can transform an entire industry and create opportunities for generations to come.
-
-Source: Official Amul Website – https://amul.com/`,
-  },
-
-  {
-    id: "britannia-century-journey",
-    title: "Britannia Industries: A Century-Long Journey of Trust, Taste, and Innovation",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/britannia.jpg",
-    excerpt: "Established in 1892, Britannia has grown from a small biscuit maker into one of India's leading food companies, exporting to over 80 countries while staying plastic neutral for four years.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For more than 130 years, **Britannia** Industries Limited** has been a part of everyday life for millions of people. Whether it is a packet of biscuits with morning tea, a slice of fresh bread at breakfast, or a healthy snack for children, Britannia has earned a place in Indian homes through its commitment to quality and trust. Established in **1892**, the company has grown from a small biscuit manufacturer into one of India's leading food companies. Guided by its purpose of "Serve Better Every Day," Britannia continues to create products that combine great taste, nutrition, and affordability while building a business that positively impacts consumers, employees, farmers, and communities.
-
-According to the official Britannia website, the company has steadily expanded its presence across India and around the world. Today, Britannia's products are available in every corner of the country and are exported to more than **80 countries**, making the brand one of India's most recognized names in the global food industry. Its continued international expansion reflects the company's ability to understand changing consumer preferences while maintaining the quality and reliability that generations have trusted.
-
-Although Britannia is best known for its iconic biscuits, the company has evolved into a diversified food business with an extensive product portfolio. Today, it manufactures and markets a wide variety of products, including biscuits, breads, cakes, rusks, salted snacks, dairy products, cheese, butter, ghee, flavoured milk, and milk powder. By continuously introducing innovative products while improving existing ones, Britannia has successfully adapted to changing lifestyles and consumer needs without losing sight of its heritage.
-
-The company's impressive growth is supported by a strong manufacturing infrastructure. According to the official Annual Report for FY **2024**–25, Britannia operates **20 manufacturing plants** across India, supported by 7 offices that manage its domestic operations. Beyond India, the company has expanded its footprint with 4 international manufacturing plants and 1 overseas office, enabling it to efficiently serve customers in global markets. This robust manufacturing network ensures consistent product quality, strengthens supply chain efficiency, and allows Britannia to meet the growing demand for its products both in India and internationally.
-
-Behind Britannia's success is a dedicated workforce that drives its operations every day. As reported in the company's official disclosures, Britannia employs 3,380 permanent employees and works with 20,457 factory workers, bringing the total number of people involved in its operations to more than 23,800. The company places strong emphasis on employee welfare, workplace safety, and professional development. Most of its manufacturing facilities are certified under ISO 45001, reflecting Britannia's commitment to maintaining high standards of occupational health and safety across its operations.
-
-Innovation has always been one of Britannia's strongest pillars. The company continuously invests in research and product development to create foods that are both delicious and nutritious. It focuses on improving product formulations by reducing sugar and sodium levels, increasing the use of whole grains, and offering healthier alternatives to consumers. According to the company's sustainability highlights, these continuous improvements have helped Britannia achieve **99%** consumer satisfaction during FY **2024**–25, demonstrating the trust customers continue to place in the brand.
-
-Sustainability is deeply integrated into Britannia's long-term growth strategy. According to its official Impact Report, the company has made significant progress in responsible manufacturing and environmental conservation. Today, **79%** of Britannia's plastic packaging is recyclable, **57%** of water used in operations is reused, and **22%** of the company's power comes from renewable energy sources. Britannia has also remained plastic neutral for four consecutive years, highlighting its commitment to reducing environmental impact while building a more sustainable future for generations to come.
-
-Beyond business, Britannia believes in creating meaningful social impact. Through the **Britannia Nutrition Foundation (BNF)** and several community development initiatives, the company has positively impacted more than **3 lakh** people across India. It also supports rural livelihoods by working closely with 2,981 dairy farmers, helping strengthen the dairy value chain while improving income opportunities for farming communities. These initiatives reflect Britannia's belief that business success should go hand in hand with social responsibility, nutrition, and inclusive growth.
-
-Today, Britannia Industries stands as one of India's most respected and admired food companies. With a legacy of more than 130 years, exports to over **80 countries**, **20 manufacturing plants** in India, an international manufacturing presence, a workforce of more than **23,800 employees** and workers, and a diversified portfolio of trusted food products, the company continues to shape the future of India's food industry. Its journey is a remarkable story of innovation, resilience, quality, and consumer trust. As Britannia continues to grow, it remains committed to its purpose of "Serve Better Every Day," delivering nutritious, high-quality food while creating sustainable value for customers, employees, farmers, and communities around the world.
-
-Source: Official Britannia Industries Website and Annual Report FY 2024–25 – https://www.britannia.co.in/`,
-  },
-
-  {
-    id: "parle-products-generations",
-    title: "Parle Products: The Brand That Grew with Every Generation of India",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/parle-products.jpg",
-    excerpt: "From a Vile Parle factory with 12 employees in 1929 to the maker of Parle-G, Monaco and Melody, Parle has grown alongside India for nearly a century.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For almost a century, **Parle** Products** has been much more than a food company—it has been a part of India's everyday life and one of the country's most beloved household brands. Whether it is the familiar taste of **Parle-G**, the sweetness of Melody and Kismi, the colourful joy of Poppins, or the crispy crunch of **Monaco** and Krackjack, Parle's products have created memories for millions of people across generations. From children carrying Parle biscuits in their school bags to families sharing snacks over tea, the company has become deeply woven into India's culture. Today, Parle stands proudly as India's leading manufacturer of biscuits and confectionery, earning the trust of consumers not only in India but across the world through its unwavering commitment to quality, innovation, nutrition, and affordability.
-
-According to the official Parle Products website, the journey began in **1928**, when visionary entrepreneur **Mohanlal Dayal Chauhan** established the House of Parle with a dream of manufacturing high-quality food products in India. A year later, in **1929**, the company's first factory was set up in **Vile Parle**, Mumbai, where just 12 dedicated employees began producing confectionery. Although the operation was modest, it laid the foundation for what would become one of India's most successful and respected food companies. From these humble beginnings, Parle has grown into a global brand while remaining true to the values of trust, quality, and customer satisfaction that shaped its early years.
-
-A turning point in Parle's history came in **1939**, when the company introduced **Parle Gluco**, the biscuit that later became the legendary Parle-G. Over the decades, Parle-G earned a reputation as one of India's most loved biscuits, admired for its quality, affordability, and nutritional value. The company continued its journey of innovation with the launch of Monaco, India's first salted cracker, in **1942**. As consumer preferences evolved, Parle expanded its portfolio with iconic products such as Cheeslings (**1956**), Kismi (**1963**), Poppins (**1966**), Krackjack (**1972**), Melody (**1983**), Mango Bite (**1989**), Hide & Seek (**1996**), 20-20 Cookies (**2008**), and the premium Platina range. Each launch reflected the company's ability to understand changing consumer tastes while consistently delivering products that offered exceptional value for money.
-
-Today, Parle has evolved into a diversified food company with an extensive range of products catering to consumers of all ages. According to the official website, the company's portfolio includes biscuits, cookies, confectionery, snacks, cakes, rusks, breakfast cereals, atta, and premium Platina products. Every product is developed with the philosophy of delivering the perfect combination of quality, nutrition, superior taste, and affordability, ensuring that Parle products remain accessible to families across every segment of society.
-
-One of the biggest reasons behind Parle's remarkable success is its deep understanding of Indian consumers. The company has always believed that food should not only taste good but also provide value and nourishment. This philosophy has enabled Parle to build lasting relationships with consumers in metropolitan cities, small towns, and even the remotest villages of India. Its products continue to be recognised for offering dependable quality at prices that millions of families can afford, making Parle one of the most trusted names in the Indian food industry.
-
-Parle's growth has extended far beyond India's borders. According to the official website, the company's products are now available across all continents, reaching consumers in major international markets such as the United States, the United Kingdom, Canada, Australia, New Zealand, and the Middle East. To strengthen its global presence, Parle has established manufacturing units in eight countries outside India—Cameroon, Nigeria, Ghana, Ethiopia, Kenya, Ivory Coast, Nepal, and Mexico (where a facility was established in **2018**)—allowing it to serve overseas markets more efficiently. Parle has also earned internationally recognised certifications, including FSSC 22000, ISO 22000, and Halal Certification, reflecting its commitment to maintaining world-class quality and food safety standards.
-
-Innovation has always remained one of the pillars of Parle's success. Throughout its journey, the company has embraced modern technology to improve manufacturing efficiency and product quality. According to its official history, Parle introduced India's longest biscuit oven measuring 250 feet, along with advanced packaging technologies that significantly enhanced product freshness and shelf life. These continuous investments in technology have enabled the company to maintain its leadership position while meeting the ever-changing expectations of consumers across the globe.
-
-Guided by its vision of building a lasting legacy, Parle remains committed to "building the legacy with passion and integrity by providing innovative, high-quality, great-value products within India and across the globe." This commitment is reflected in every aspect of its business—from product development and manufacturing to customer satisfaction and international expansion.
-
-Today, nearly a century after a small factory with only **12 employees** began producing confectionery in Mumbai, Parle Products has become one of India's most iconic and respected food companies. With a rich legacy dating back to **1928**, an extensive portfolio of biscuits, confectionery, snacks, cakes, rusks, breakfast cereals, atta, and premium products, exports spanning all continents, manufacturing facilities in eight countries outside India, and a reputation built on quality, affordability, innovation, and consumer trust, Parle continues to shape the future of the food and confectionery industry while staying true to the values that have guided it for nearly a century. Its remarkable journey is not just the story of a successful company—it is the story of a brand that has grown alongside India, bringing smiles, memories, and trusted products to millions of families for generations.
-
-Source: Official Parle Products Website – https://www.parleproducts.com/`,
-  },
-
-  {
-    id: "bajaj-group-century-journey",
-    title: "Bajaj Group: A Century of Building India Through Trust, Innovation, and Purpose",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/bajaj-group.jpg",
-    excerpt: "Founded by freedom fighter Jamnalal Bajaj, the Bajaj Group today spans 40 companies, ₹14 lakh crore in market cap and around 1,00,000 employees across India.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For more than a century, the **Bajaj Group** has been far more than a business conglomerate—it has been a symbol of trust, resilience, innovation, and nation-building. From helping shape India's industrial landscape to creating products and services that touch millions of lives every day, Bajaj has consistently stood for integrity, innovation, and social responsibility. Whether it is a motorcycle on the road, a home appliance, a financial solution, or an insurance policy, the Bajaj name has become deeply embedded in the lives of millions of people. Guided by its enduring philosophy that "Common good is more important than individual gain," the Bajaj Group continues to demonstrate that sustainable business success and social progress can go hand in hand.
-
-According to the official Bajaj Group website, the organization was founded by **Jamnalal Bajaj**, one of India's most respected industrialists, philanthropists, and freedom fighters. A close associate of **Mahatma Gandhi**, Jamnalal Bajaj firmly believed that businesses should not exist solely to generate profits but should also contribute to the welfare of society. His vision laid the foundation for a business culture built on ethics, simplicity, and public service. This legacy was carried forward by Kamalnayan Bajaj and Ramkrishna Bajaj, and later strengthened under the dynamic leadership of **Rahul Bajaj**, who transformed the group into one of India's most admired and diversified business houses. Today, every Bajaj company continues to uphold the values established by its founder while embracing innovation, technological advancement, and global growth.
-
-Over the decades, the Bajaj Group has evolved into one of India's largest and most influential corporate groups. According to the official website, the group today comprises **40 companies** operating across multiple industries, with a combined market capitalization of approximately **₹14 lakh crore**. Its businesses collectively employ around **1,00,000 people** worldwide, making Bajaj one of India's largest private-sector employers. This remarkable growth reflects more than a century of visionary leadership, continuous innovation, responsible governance, and a commitment to creating long-term value for customers, employees, shareholders, and society.
-
-One of the greatest strengths of the Bajaj Group is the diversity of its businesses. Today, the group has established a strong presence across automobiles, financial services, housing finance, investment management, life insurance, general insurance, electrical products and appliances, engineering, renewable energy, stainless steel, specialty materials, material handling equipment, cranes, and travel services. Through its flagship companies—including **Bajaj Auto**, **Bajaj Finserv**, **Bajaj Finance**, Bajaj Electricals, Mukand Limited, Hind Musafir Agency, and several others—the group has built a diversified business ecosystem that serves millions of customers across India and international markets. This broad portfolio has enabled Bajaj to remain resilient while adapting to changing market conditions and evolving consumer needs.
-
-Innovation has been one of the driving forces behind Bajaj's continued success. According to the official website, the group's companies consistently invest in advanced technologies, research, and product development to deliver world-class products and services. From manufacturing reliable motorcycles and electric mobility solutions to offering innovative financial products and expanding into renewable energy, Bajaj has continually evolved with changing times. Every company within the group shares a common commitment to quality, customer satisfaction, operational excellence, and responsible growth, strengthening the trust that generations of consumers have placed in the Bajaj name.
-
-Beyond business achievements, the Bajaj Group has always believed that true success lies in making a meaningful difference in society. Inspired by Mahatma Gandhi's ideals of simple living and high thinking, the group actively contributes to education, healthcare, rural development, women's empowerment, environmental sustainability, and community welfare through its charitable trusts and corporate social responsibility initiatives. This philosophy of giving back to society has remained central to Bajaj's identity for generations, making it not only one of India's largest business groups but also one of its most respected corporate citizens.
-
-The Bajaj Group's remarkable longevity is rooted in its ability to preserve its core values while embracing change. Every generation of leadership has successfully combined tradition with modern thinking, ensuring that the organization remains competitive in an increasingly dynamic global economy. Strong corporate governance, ethical business practices, customer-centric innovation, and a long-term vision have enabled Bajaj to continue expanding into new industries while maintaining the trust and confidence of stakeholders around the world.
-
-Today, the Bajaj Group proudly stands among India's most influential business conglomerates. With 40 group companies, a combined market capitalization of approximately **₹14 lakh crore**, a global workforce of around **1,00,000 employees**, and operations spanning automobiles, financial services, insurance, engineering, electrical products and appliances, renewable energy, specialty materials, material handling equipment, cranes, and travel services, the group continues to shape India's economic progress while expanding its global presence. More importantly, Bajaj has never lost sight of the ideals on which it was founded—integrity, innovation, customer trust, and service to society. Its extraordinary journey is not merely the story of a successful corporate group; it is the story of an institution that has spent more than a century helping build a stronger, more self-reliant India while creating lasting value for millions of customers, employees, communities, and future generations.
-
-Source: Official Bajaj Group Website – https://www.bajajgroup.company/`,
-  },
-
-  {
-    id: "dabur-142-year-journey",
-    title: "Dabur India: A 142-Year Journey of Ayurveda, Innovation, and Global Excellence",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/dabur.jpg",
-    excerpt: "Founded in 1884, Dabur has become the world's largest Ayurvedic company, reaching 120+ countries and 7.7 million retail outlets with over 250 natural products.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For more than 140 years, **Dabur** India Limited** has been a trusted companion in the lives of millions of families. From a spoonful of Dabur Chyawanprash during winter to a bottle of Dabur Honey, Réal Fruit Juice, Dabur Amla Hair Oil, or Dabur Red Toothpaste, the brand has become a familiar name in households across India and around the world. What started as a small Ayurvedic medicine business has grown into one of India's largest Fast-Moving Consumer Goods (FMCG) companies and the world's largest Ayurvedic and Natural Health Care Company. Rooted in the timeless wisdom of **Ayurveda** and strengthened by modern science, Dabur continues to fulfill its vision of **"Dedicated to the Health & Well-being of Every Household"** through its mission of "Ghar Ghar Ayurveda."
-
-According to the official Dabur website, the company's inspiring journey began in **1884**, when **Dr. S. K. Burman**, a dedicated physician, founded Dabur in Kolkata with a simple yet powerful vision—to make effective Ayurvedic healthcare accessible to every individual. Starting from a modest setup, Dr. Burman prepared and distributed Ayurvedic medicines that quickly earned the trust of local communities because of their quality and effectiveness. Over the decades, this small venture transformed into a professionally managed multinational corporation while staying true to the principles of trust, authenticity, innovation, and natural healthcare. Today, after more than 142 years of continuous growth, Dabur remains one of India's oldest and most respected consumer goods companies.
-
-The company's expansion over the years has been nothing short of remarkable. According to its official website, Dabur's products are now available in more than **120 countries** spread across four continents, making it one of India's strongest global FMCG brands. The company has established a significant international presence across the Middle East, SAARC nations, Africa, Europe, the United States, and Russia, with overseas business contributing more than **25%** of Dabur's total turnover. This global reach reflects the growing acceptance of Ayurveda and natural healthcare products, allowing Dabur to successfully take India's traditional wellness heritage to consumers across the world.
-
-Supporting this international growth is a robust manufacturing network. According to the official Annual Report, Dabur operates manufacturing facilities across nine countries—India, the United Arab Emirates, Nepal, Bangladesh, Sri Lanka, South Africa, Nigeria, Egypt, and Turkey. Within India, the company operates 12 modern manufacturing locations, equipped with advanced technology and high-quality production standards. Continuing its expansion, Dabur has also announced its first manufacturing facility in South India, beginning with an investment of **₹135 crore**, which is expected to grow to **₹400 crore** over the next five years. This new facility alone is expected to generate around 250 direct employment opportunities, along with thousands of indirect jobs, demonstrating the company's long-term commitment to economic development and regional growth.
-
-Dabur has also built one of the largest distribution networks in India's FMCG industry. According to its official corporate profile, the company's products are available through **7.7 million** retail outlets across urban and rural India. This extensive network ensures that Dabur products reach consumers in almost every part of the country. In fact, the company proudly states that 8 out of every 10 Indian households use at least one Dabur product, highlighting the exceptional level of trust it has earned over generations. Beyond India, Dabur continues to strengthen its global distribution channels, ensuring that consumers in more than **120 countries** have access to its wide range of health and wellness products.
-
-One of Dabur's greatest strengths is its diverse product portfolio. According to the official website, the company offers more than 250 Ayurvedic and natural products across multiple categories, including healthcare, personal care, oral care, hair care, skin care, home care, hygiene, and food & beverages. Its portfolio includes some of India's most iconic brands, such as Dabur Chyawanprash, Dabur Honey, Dabur Honitus, Dabur Pudin Hara, Dabur Lal Tail, Dabur Amla Hair Oil, Dabur Red Toothpaste, Réal Fruit Juices, and the internationally recognised Vatika brand. By combining centuries-old Ayurvedic knowledge with modern scientific research, Dabur has successfully created products that meet the evolving needs of consumers while preserving the authenticity of natural healthcare.
-
-Behind Dabur's continued success is a talented and diverse workforce. According to the company's official Annual Report, Dabur employs **5,341 people** representing **25 nationalities** across **14 countries**, creating an inclusive and multicultural work environment. The company places strong emphasis on employee development, leadership training, workplace safety, diversity, and continuous learning. Beyond its direct workforce, Dabur also works closely with **12,753 farmers** engaged in medicinal herb cultivation and collection and **17,141 beekeepers**, helping strengthen rural livelihoods while ensuring a sustainable supply of high-quality natural ingredients. This collaborative ecosystem reflects Dabur's commitment to creating shared value across its supply chain.
-
-Sustainability and responsible business practices remain central to Dabur's long-term vision. According to the official reports, Dabur is a **105%** Plastic Waste Positive Enterprise, collecting and recycling more plastic waste than it introduces into the market. In addition, **61%** of the company's Scope 1 and Scope 2 energy requirements are met through renewable and clean energy sources, significantly reducing its environmental footprint. Through various social initiatives focused on healthcare, education, rural development, and environmental conservation, Dabur has positively impacted more than **3.61 million** (**36.1 lakh**) beneficiaries, demonstrating that business success can go hand in hand with community development and environmental responsibility.
-
-Today, Dabur India Limited stands as one of India's most admired multinational FMCG companies. With a rich heritage spanning more than 140 years, operations in over **120 countries**, manufacturing facilities across nine countries, **12 manufacturing locations** in India, a workforce of **5,341 employees** representing **25 nationalities** across **14 countries**, a distribution network serving **7.7 million** retail outlets, and a portfolio of more than 250 Ayurvedic and natural products, the company continues to set new benchmarks in health, wellness, and innovation. Its journey is far more than the story of a successful business—it is the story of an organization that has preserved the ancient wisdom of Ayurveda while embracing modern science, touching millions of lives every day and proudly carrying India's natural healthcare legacy to the global stage.
-
-Source: Official Dabur Website – https://www.dabur.com/`,
-  },
-
-  {
-    id: "hindustan-motors-ambassador",
-    title: "Hindustan Motors: The Company That Gave India Its Most Iconic Car – The Ambassador",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/hindustan-motors-ambassador.jpg",
-    excerpt: "Established in 1942, Hindustan Motors built India's first fully integrated car plant and gave the nation the Ambassador — a symbol of prestige and reliability for decades.",
-    readTime: "6 min read",
-    featured: false,
-    content: `Few automobiles have left a mark on India's history quite like the **Ambassador**. For decades, it was more than just a car—it was a symbol of prestige, reliability, and national identity. It transported Presidents and Prime Ministers, served as the preferred vehicle for government officials, powered countless taxi fleets, and became a cherished family car for millions of Indians. Behind this legendary automobile stands **Hindustan Motors** Limited (HML)**, a company whose remarkable journey mirrors the growth of India's own automobile industry. Through engineering excellence, innovation, and a pioneering spirit, Hindustan Motors played a defining role in putting India on wheels.
-
-According to the official Hindustan Motors website, Hindustan Motors Limited was established in **1942** by industrialist **B. M. Birla** as part of the Birla Group, with the vision of developing a strong indigenous automobile manufacturing industry in India. At a time when the country relied heavily on imported vehicles, the company aimed to build domestic manufacturing capabilities and contribute to India's industrial progress. Initially, its manufacturing operations were established at Port Okha in Gujarat. Following India's independence, a major milestone came in **1948**, when the company's operations were shifted to Uttarpara in Hooghly district, West Bengal. There, Hindustan Motors established India's first fully integrated automobile manufacturing plant, equipped with advanced facilities including a press shop, forge shop, foundry, machine shop, engine assembly unit, axle assembly facilities, and an in-house Research and Development (R&D) division. This integrated manufacturing ecosystem marked a turning point in India's industrial development and established Hindustan Motors as one of the pioneers of the country's automobile industry.
-
-Over the years, Hindustan Motors grew into one of India's most respected automobile manufacturers, with the Ambassador becoming its most celebrated creation. Based on the British Morris Oxford Series III, the Ambassador was redesigned and adapted to suit Indian roads and driving conditions. Renowned for its spacious interiors, rugged construction, comfortable ride quality, and exceptional durability, it earned the trust of millions of customers across the country. Over the years, the Ambassador was offered in several variants, including **1500 cc** and **2000 cc** diesel models, **1800 cc** petrol versions, as well as CNG and LPG options, enabling the company to meet the changing needs of Indian consumers. Its timeless design and dependable performance made it one of the longest-running automobile models in Indian automotive history.
-
-As the company expanded, Hindustan Motors diversified beyond passenger cars. According to the official website, it entered the light commercial vehicle (LCV) segment with the launch of the **Winner**, a versatile one-tonne payload mini truck powered by a **1500 cc** diesel engine. Manufacturing of the Winner was carried out at the Uttarpara plant, while an additional production facility was established at Pithampur near Indore, Madhya Pradesh, where the **1800 cc** CNG version was produced. This expansion enabled Hindustan Motors to serve India's growing logistics and commercial transportation sectors while strengthening its presence in multiple segments of the automobile industry.
-
-One of the company's most significant milestones was its technical collaboration with **Mitsubishi Motors Corporation** of Japan. This collaboration enabled Hindustan Motors to manufacture internationally recognised Mitsubishi vehicles in India. At its modern manufacturing facility in Tiruvallur near Chennai, Tamil Nadu, the company produced premium models such as the Mitsubishi Pajero, Cedia, Montero, Outlander, and the high-performance Lancer Evolution X (EVO X). This collaboration introduced advanced Japanese engineering and manufacturing technology to Indian consumers while further strengthening Hindustan Motors' reputation as a technologically capable automobile manufacturer.
-
-The company's capabilities extended far beyond vehicle manufacturing. According to the official website, the Uttarpara manufacturing complex also produced automotive components and forged products, demonstrating the company's engineering expertise. In addition, the armouring division, operating through Hindustan Motors Finance Corporation Limited, specialised in producing bullet-resistant versions of the Ambassador and Mitsubishi Pajero to meet the security requirements of government agencies and other security-conscious customers. These specialised operations reflected Hindustan Motors' technical expertise and its ability to deliver highly customised automotive solutions.
-
-Throughout its journey, Hindustan Motors remained committed to the principles of quality, customer satisfaction, environmental responsibility, and continuous technological advancement. Its integrated manufacturing facilities and dedicated research and development division enabled the company to design and manufacture vehicles suited to Indian road conditions, climate, and customer expectations. This unwavering commitment to engineering excellence earned Hindustan Motors the trust of generations of consumers and established it as one of the pioneers of India's automobile manufacturing industry.
-
-The Ambassador, in particular, became much more than a product—it became a part of India's cultural identity. It served as the official vehicle of government departments, carried diplomats and political leaders, became the backbone of taxi services in major cities, and remained a trusted family car for decades. Its spacious cabin, robust build quality, and dependable performance created an emotional bond with millions of Indians, making it one of the most iconic automobiles ever produced in the country.
-
-Hindustan Motors continues to occupy a special place in India's industrial heritage. From establishing India's first fully integrated automobile manufacturing plant to expanding into light commercial vehicles, automotive components, armoured vehicles, and premium Mitsubishi passenger cars, the company made an enduring contribution to the nation's automotive industry. While the Ambassador remains its most celebrated legacy, Hindustan Motors' true achievement lies in helping build India's manufacturing capabilities and inspiring generations of automotive innovation. Its story is not merely the history of an automobile company—it is the story of an institution that helped shape India's industrial future and gave the nation one of its greatest automotive icons.
-
-Source: Official Hindustan Motors Website – http://www.hindmotor.com/aboutus.asp`,
-  },
-
-  {
-    id: "vicks-legacy-of-care",
-    title: "Vicks: A Legacy of Care That Has Comforted Families for More Than 130 Years",
-    date: "30-07-2026",
-    category: "Business Legacy",
-    image: "/images/business-insights/vicks.jpg",
-    excerpt: "From a pharmacist's home remedies in the 1890s to the global reach of P&G, Vicks has spent more than 130 years bringing cough-and-cold relief to families worldwide.",
-    readTime: "6 min read",
-    featured: false,
-    content: `For more than a century, **Vicks** has been far more than a healthcare brand—it has been a symbol of comfort, trust, and care passed down through generations. Almost every family has a memory connected to Vicks, whether it is the soothing touch of **Vicks VapoRub** on a cold winter night, the refreshing relief of a Vicks Inhaler during nasal congestion, or the comforting taste of a Vicks Cough Drop that eases a sore throat. What began as a small collection of home remedies has grown into one of the world's most trusted names in cough and cold care. Today, backed by the global strength of **Procter & Gamble (P&G)**, Vicks continues to combine scientific innovation with genuine care, fulfilling its mission of helping people breathe easier, recover faster, and feel better every day.
-
-According to the official Vicks website, the brand's remarkable journey began in the 1890s, when **Lunsford Richardson**, a pharmacist from Greensboro, North Carolina, set out to develop effective home remedies for common illnesses. Richardson created and marketed a collection of 21 medicinal products under the Vicks name, which was chosen in honour of his brother-in-law and business associate, **Dr. Joshua Vick**, whose encouragement and support played an important role in the early growth of the business. Driven by a vision to provide safe, effective, and easily accessible remedies for families, Richardson combined pharmaceutical knowledge with carefully selected natural ingredients to develop innovative healthcare solutions. Among these was Vicks Croup and Pneumonia Salve, a unique formulation made with menthol and Japanese pine oil. When applied to the chest, the body's natural warmth released medicated vapours that helped relieve cough and chest congestion. This simple yet highly effective remedy quickly gained widespread popularity and later evolved into the iconic Vicks VapoRub, a product that continues to be trusted by millions of families around the world.
-
-A major turning point in the brand's history came during the Spanish Flu pandemic of **1918**–**1919**. As millions of people searched for relief from cold and flu symptoms, demand for Vicks VapoRub increased dramatically. According to the official website, annual sales surged from **US$900,000** to **US$2.9 million** within just one year, requiring its manufacturing facilities to operate around the clock to meet the overwhelming demand. This extraordinary growth transformed Vicks from a regional healthcare product into an internationally recognised household brand, firmly establishing its reputation for reliability during one of history's most challenging public health crises.
-
-Innovation has always been at the heart of Vicks' success. Rather than relying on a single product, the brand continuously expanded its healthcare portfolio to meet evolving consumer needs. In **1931**, Vicks introduced Vicks Va-tro-nol Nose Drops and Vicks Cough Drops, with the cough drops achieving remarkable success by selling more than **25 million** packages in their very first year. Building on this success, the brand introduced Vicks Cough Syrup in **1952**, followed by Vicks Sinex Nasal Spray in **1959**. One of its most significant innovations came in **1966** with the launch of **NyQuil**, one of the world's first multi-symptom nighttime cold medicines in liquid form. The product portfolio continued to expand with DayCare (later renamed DayQuil) in **1976**, NyQuil LiquiCaps in **1991**, and DayQuil and NyQuil SEVERE in **2013**, reflecting Vicks' continued commitment to scientific advancement and consumer well-being.
-
-Today, Vicks offers a broad range of healthcare solutions that help millions of people manage everyday cold and flu symptoms. In India, the official product portfolio includes Vicks VapoRub, Vicks Action 500, Vicks Inhaler, Vicks Roll-On, Vicks Roll-On Inhaler, Vicks BabyRub, Vicks 3-in-1 Lozenges, and Vicks Cough Drops. These products are carefully designed to provide relief from cough, sore throat, blocked nose, chest congestion, headaches, body pain, and other common cold symptoms. Beyond its products, Vicks also educates consumers through its Science of Healing platform, sharing expert-backed information on illnesses, symptom management, and overall wellness.
-
-The global success of Vicks is further strengthened by its parent company, Procter & Gamble (P&G), one of the world's largest consumer goods companies. According to the official P&G India website, the company serves billions of consumers worldwide through a portfolio of trusted brands. In India, P&G employs more than **2,500 people** across six manufacturing sites, supported by dedicated teams in research, product development, marketing, sales, and supply chain management. Vicks is one of 13 leading brands within P&G India's portfolio, benefiting from the company's world-class expertise in innovation, consumer research, quality assurance, and advanced manufacturing technologies.
-
-Vicks has also achieved remarkable global expansion over the years. Through P&G's extensive international distribution network, Vicks products are available across North America, Europe, Latin America, Asia-Pacific, the Middle East, and Africa. The official Vicks website maintains dedicated platforms for numerous countries, including India, the United States, Canada, Mexico, Australia, South Africa, France, Germany, Italy, Poland, Spain, and the United Kingdom, demonstrating the brand's widespread international presence. This global footprint has enabled millions of families across different cultures to rely on Vicks for trusted relief from common illnesses.
-
-More than its products or global reach, Vicks has built its reputation on compassion and trust. For more than 130 years, the brand has remained committed to improving everyday healthcare by combining scientific research with a genuine understanding of family needs. Every innovation introduced by Vicks has been driven by a simple objective—to help people recover comfortably and continue living their lives with confidence. This unwavering commitment to quality, safety, and consumer care has made Vicks one of the world's most respected healthcare brands.
-
-Today, Vicks stands as one of the world's leading cough and cold relief brands, supported by the global expertise, research capabilities, and manufacturing excellence of Procter & Gamble. From a pharmacist's small collection of home remedies in the 1890s to a globally trusted healthcare brand serving millions of families every day, Vicks has successfully preserved its legacy of care while embracing continuous innovation. Its remarkable journey is not simply the story of a successful healthcare brand—it is the story of a brand that has spent more than a century bringing comfort, relief, and peace of mind to families around the world.
-
-Source: Official Vicks Website – https://vicks.co.in/en-in/our-difference`,
-  },
-  // =================================================================================
   {
     id: "made-in-bharat-space-chips",
     title: "India to Power Its Rockets with Home-Grown \"Made in Bharat\" Space Chips",
     date: "30-07-2026",
     category: "Tech & Innovation",
     image: "/images/business-insights/made-in-bharat-space-chips.png",
-    excerpt:
-      "India will begin using domestically developed semiconductor chips in its space launch vehicles, marking a major step toward self-reliance in one of the hardest areas of deep tech.",
+    excerpt: "India will begin using domestically developed semiconductor chips in its space launch vehicles, marking a major step toward self-reliance in one of the hardest areas of deep tech.",
     readTime: "3 min read",
     featured: false,
     content: `India is set to take a significant leap in deep-tech self-reliance. On July 27, 2026, Union Minister Ashwini Vaishnaw announced that domestically developed semiconductor chips will soon power Indian space launch vehicles — a milestone that reduces the country's dependence on imported electronics for its most critical missions. The announcement followed a meeting with Skyroot Aerospace, after its Vikram-1 became India's first privately developed orbital-class rocket to successfully reach orbit.
@@ -390,15 +83,13 @@ At the heart of India's push is VIKRAM3201, a 32-bit indigenous microprocessor j
 
 The effort reflects a rare collaboration across ISRO, SCL, VSSC, IIT Madras, and private players like Skyroot — combining research, academia, and industry. As India's launch cadence and satellite ambitions grow, these home-grown chips are expected to become the quiet backbone of its next generation of rockets and spacecraft.`,
   },
-
   {
     id: "instamart-nandita-sinha-ceo",
     title: "Instamart Names Former Myntra CEO Nandita Sinha as CEO; Amitesh Jha Resigns",
     date: "30-07-2026",
     category: "Quick Commerce",
     image: "/images/business-insights/instamart-nandita-sinha.png",
-    excerpt:
-      "Swiggy's quick commerce arm Instamart has appointed former Myntra CEO Nandita Sinha as its chief executive, effective August 3, as Amitesh Jha steps down.",
+    excerpt: "Swiggy's quick commerce arm Instamart has appointed former Myntra CEO Nandita Sinha as its chief executive, effective August 3, as Amitesh Jha steps down.",
     readTime: "3 min read",
     featured: false,
     content: `Swiggy's quick commerce arm Instamart has appointed former Myntra CEO Nandita Sinha as its Chief Executive Officer, effective August 3. She succeeds Amitesh Jha, who has resigned to pursue other opportunities; Jha had joined Instamart as CEO in August 2024 after leaving Flipkart.
@@ -409,15 +100,13 @@ Sinha arrives with more than two decades across consumer internet, e-commerce, a
 
 The change marks the third senior-level exit at Instamart in recent months, following the departures of COO Ankit Jain and CBO Hari Kumar. Jain has since joined listed retailer Nykaa to lead its quick commerce vertical, Nykaa Now.`,
   },
-
   {
     id: "table-space-350mn-ipo",
     title: "Table Space to File Draft Papers for $350 Million IPO Next Month: Report",
     date: "28-07-2026",
     category: "IPO & Markets",
     image: "/images/business-insights/table-space-ipo.png",
-    excerpt:
-      "Managed workspace provider Table Space is reportedly set to file its DRHP with SEBI next month for a public issue of up to $350 million, combining a ₹1,000 crore fresh issue with an offer for sale.",
+    excerpt: "Managed workspace provider Table Space is reportedly set to file its DRHP with SEBI next month for a public issue of up to $350 million, combining a ₹1,000 crore fresh issue with an offer for sale.",
     readTime: "3 min read",
     featured: false,
     content: `Managed office solutions provider Table Space is reportedly preparing to file its draft red herring prospectus (DRHP) with SEBI next month for a public issue worth up to $350 million.
@@ -430,15 +119,13 @@ Financially, the company's operating revenue jumped 51% to ₹1,360 crore in FY2
 
 The plans come amid strong investor interest in India's flexible workspace sector, with peers such as Awfis, Smartworks, WeWork India, and IndiQube having gone public in recent years.`,
   },
-
   {
     id: "pine-labs-q1-fy27-results",
     title: "Pine Labs Reports ₹737 Crore Revenue in Q1 FY27 as Profit Jumps Over 4x",
     date: "28-07-2026",
     category: "Fintech",
     image: "/images/business-insights/pine-labs-q1.png",
-    excerpt:
-      "Fintech major Pine Labs posted ₹737 crore in Q1 FY27 revenue, up 20% year-on-year, while net profit jumped fourfold to ₹20 crore.",
+    excerpt: "Fintech major Pine Labs posted ₹737 crore in Q1 FY27 revenue, up 20% year-on-year, while net profit jumped fourfold to ₹20 crore.",
     readTime: "3 min read",
     featured: false,
     content: `Fintech major Pine Labs has reported a strong start to the fiscal year ending March 2027, with operating revenue growing 20% year-on-year and profit jumping fourfold.
@@ -449,15 +136,13 @@ Crucially, revenue grew faster than costs. Total expenditure rose 10.6% to ₹72
 
 The Bengaluru-based company's shares traded around ₹151 during the day, giving it a market capitalisation of roughly ₹17,188 crore.`,
   },
-
   {
     id: "snitch-acquires-berrylush",
     title: "Snitch Acquires Berrylush to Enter Women's Fashion",
     date: "28-07-2026",
     category: "Consumer & Brands",
     image: "/images/business-insights/snitch-berrylush.png",
-    excerpt:
-      "D2C fashion brand Snitch has acquired women's label Berrylush, marking its first major expansion beyond menswear as it builds a broader portfolio of fashion brands.",
+    excerpt: "D2C fashion brand Snitch has acquired women's label Berrylush, marking its first major expansion beyond menswear as it builds a broader portfolio of fashion brands.",
     readTime: "3 min read",
     featured: false,
     content: `D2C fashion brand Snitch has acquired women's fashion label Berrylush, marking its entry into the women's apparel segment as it expands beyond its menswear roots. Financial details of the transaction were not disclosed.
@@ -468,15 +153,13 @@ Berrylush will continue to operate under its own brand while tapping Snitch's ca
 
 The deal comes a little over a year after Snitch raised $40 million in a Series B round led by 360 ONE Asset, taking its total funding past $53 million. The company's revenue grew 81% to ₹900 crore in FY26, from ₹498 crore a year earlier — and the Berrylush acquisition marks its first step toward building a multi-brand fashion house.`,
   },
-
   {
     id: "apollo-eplane-electric-air-ambulance",
     title: "Apollo & The ePlane Company Join Forces for India's First Electric Air Ambulance",
     date: "28-07-2026",
     category: "Health Tech & Mobility",
     image: "/images/business-insights/apollo-eplane-air-ambulance.png",
-    excerpt:
-      "Apollo Hospitals and The ePlane Company have signed an MoU to bring electric air ambulances and medical delivery drones into India's emergency healthcare system.",
+    excerpt: "Apollo Hospitals and The ePlane Company have signed an MoU to bring electric air ambulances and medical delivery drones into India's emergency healthcare system.",
     readTime: "3 min read",
     featured: false,
     content: `In a landmark move for Indian healthcare, Apollo Hospitals and The ePlane Company have signed a Memorandum of Understanding (MoU) to introduce electric air ambulances and medical delivery drones into the country's emergency care system. The MoU was signed in Chennai and announced at the Farnborough International Airshow in the UK on July 23.
@@ -487,32 +170,13 @@ The collaboration will also explore medical delivery drones developed by Amber W
 
 The ePlane Company recently unveiled the first full-scale prototype of its e200X, designated PT-01, which has entered ground testing ahead of planned certification flight tests in 2027, with commercial operations targeted from 2028. If realised, the tie-up could make emergency air mobility a practical reality for Indian patients — a significant step for the country's healthcare and deep-tech ambitions.`,
   },
-
-  {
-    id: "temple-deepinder-goyal-valuation",
-    title: "Deepinder Goyal's Temple Doubles Valuation to $375 Million After ESOP Buyback",
-    date: "28-07-2026",
-    category: "Startups & Health Tech",
-    image: "/images/business-insights/temple-deepinder-goyal.png",
-    excerpt:
-      "Temple, the healthtech wearable startup founded by Zomato's Deepinder Goyal, has doubled its valuation to $375 million via a secondary share sale and launched its first ESOP liquidity programme.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Temple, the healthtech startup founded by Deepinder Goyal, has doubled its valuation to $375 million following a secondary share sale — roughly twice its earlier valuation of about $190 million, at which it had previously raised $54 million.
-
-The company is building a forehead-worn wearable designed to measure the body's metabolic state in real time. Currently in early access and positioned as a wellness product, it is expected to launch commercially within the next year, subject to further validation. Goyal founded Temple after stepping down as CEO of Eternal, and has been steadily expanding the team ahead of a wider rollout.
-
-Alongside the raise, Temple has launched its first ESOP liquidity programme — joining a wave of Indian startups returning cash to employees. By Entrackr's count, nine startups have collectively bought back ESOPs worth over $270 million in 2026 so far, including BrowserStack, Innovaccer, CoinDCX, and Unacademy.`,
-  },
-
   {
     id: "bombay-shaving-company-fy26-results",
     title: "Bombay Shaving Company Revenue Jumps to ₹635 Crore, Nears Break-Even",
     date: "28-07-2026",
     category: "Consumer & Brands",
     image: "/images/business-insights/bombay-shaving-company.png",
-    excerpt:
-      "Bombay Shaving Company's parent more than doubled revenue to ₹635 crore in FY26 and posted its first-ever positive adjusted EBITDA, signalling the grooming brand is closing in on profitability ahead of a planned IPO.",
+    excerpt: "Bombay Shaving Company's parent more than doubled revenue to ₹635 crore in FY26 and posted its first-ever positive adjusted EBITDA, signalling the grooming brand is closing in on profitability ahead of a planned IPO.",
     readTime: "3 min read",
     featured: false,
     content: `Visage Lines Personal Care, the parent of Bombay Shaving Company, has reported a 2.4x jump in operating revenue for FY26, alongside its first-ever positive adjusted EBITDA of ₹2 crore — a sign the grooming brand is finally converting scale into sustainable economics.
@@ -523,15 +187,13 @@ Higher sales came with heavy investment: material costs rose 2.8x to ₹370 cror
 
 The company last raised ₹136 crore (around $15.3 million) in November 2025, in a round led by Sixth Sense Ventures with participation from founder Shantanu Deshpande and former cricketer Rahul Dravid, as it gears up for a potential IPO.`,
   },
-
   {
     id: "flipkart-food-delivery-push",
     title: "Flipkart Pushes Deeper Into Food Delivery",
     date: "27-07-2026",
     category: "E-commerce",
     image: "/images/business-insights/flipkart-food-delivery.jpeg",
-    excerpt:
-      "Flipkart's 'digital mall' strategy is extending into food delivery, adding a new vertical to compete with Swiggy, Zomato, and Rapido as it aims to become a one-stop consumer destination.",
+    excerpt: "Flipkart's 'digital mall' strategy is extending into food delivery, adding a new vertical to compete with Swiggy, Zomato, and Rapido as it aims to become a one-stop consumer destination.",
     readTime: "3 min read",
     featured: false,
     content: `Flipkart's expansion beyond e-commerce continued this week as reports on July 26 detailed the company's "digital mall" strategy extending into food delivery, adding a new vertical to compete with established players like Swiggy, Zomato, and Rapido.
@@ -540,32 +202,13 @@ This follows Flipkart's confirmation days earlier that it would formally enter t
 
 The move intensifies competition across India's already crowded online food and delivery ecosystem as major players jockey for a share of daily consumer spending.`,
   },
-
-  {
-    id: "capital-shifts-ai-to-manufacturing-deeptech",
-    title: "Capital Shifts From AI Hype to Manufacturing & Deeptech",
-    date: "27-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/capital-shift-manufacturing.jpeg",
-    excerpt:
-      "Indian startups raised about $209 million in the week ending July 25 — a 44% dip — but the decline masks a shift in investor focus from AI toward manufacturing, aerospace, and healthcare infrastructure.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Indian startups pulled in about $209 million during the week ending July 25, a 44% dip from the prior week's strong showing. However, the decline masks a shift in investor focus — away from AI headlines toward companies building factories, enterprise banking software, aerospace tech, and healthcare infrastructure.
-
-The week's biggest deal went to Zetwerk, which raised $52 million in a pre-IPO round.
-
-Total July funding is estimated near $820 million, well below June's $1.91 billion, reflecting a broader diversification of venture capital toward India's industrial and manufacturing growth story rather than purely AI-driven bets.`,
-  },
-
   {
     id: "meesho-q1-fy27-results",
     title: "Meesho Hits ₹3,713 Crore in Q1 Revenue and Cuts Losses by 54% as Path to Profit Sharpens",
     date: "24-07-2026",
     category: "E-commerce",
     image: "/images/business-insights/meesho-q1.png",
-    excerpt:
-      "Meesho reported Q1 FY27 revenue of ₹3,713 crore while narrowing its net loss by 54%, signalling the SoftBank-backed social commerce giant is closing in on profitability.",
+    excerpt: "Meesho reported Q1 FY27 revenue of ₹3,713 crore while narrowing its net loss by 54%, signalling the SoftBank-backed social commerce giant is closing in on profitability.",
     readTime: "3 min read",
     featured: false,
     content: `Meesho's latest numbers tell a simple story: the company is getting much closer to making money. In Q1 FY27, the social commerce platform posted ₹3,713 crore in revenue, roughly flat from a year ago, but its net loss shrank by 54%. For a SoftBank-backed business that has spent years chasing scale, that is the more important figure.
@@ -576,53 +219,13 @@ Most of the improvement came from the unglamorous work of running the business b
 
 An IPO is widely expected in 2027, and on its recent $2.1 billion valuation, this quarter only strengthens the argument that Meesho is one of the few e-commerce names in India that genuinely matters outside Flipkart and Amazon.`,
   },
-
-  {
-    id: "fractal-q1-fy27-results",
-    title: "Fractal — India's Quiet AI Giant — Reports ₹72 Crore Profit on ₹913 Crore Q1 Revenue",
-    date: "24-07-2026",
-    category: "Startups & AI",
-    image: "/images/business-insights/fractal-ai.png",
-    excerpt:
-      "Fractal Analytics reported Q1 FY27 revenue of ₹913 crore with a ₹72 crore net profit, underlining how India's most durable AI opportunity may lie in deep enterprise intelligence.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Fractal Analytics, one of India's most respected but lesser-known AI and data science companies, has reported Q1 FY27 revenue of ₹913 crore with a net profit of ₹72 crore — a strong performance for a company that has quietly built one of the deepest enterprise AI practices globally.
-
-Backed by TPG Growth and Apax Partners, Fractal serves Fortune 500 companies across consumer goods, financial services, healthcare, and technology, deploying AI for decision-making at scale. Unlike flashier AI startups, Fractal has compounded steadily for over two decades without burning investor capital recklessly.
-
-Its profitability this quarter underlines a broader point: India's most durable AI opportunity may lie not in flashy consumer applications but in deep, hard-to-replicate enterprise intelligence.
-
-With revenue approaching ₹4,000 crore on an annualised basis, Fractal is positioning itself for a potential IPO within the next 18 months.`,
-  },
-
-  {
-    id: "skylark-labs-150m-raise",
-    title: "Indian-Founded Skylark Labs in Talks to Raise $150M, Could Be India's Next AI Unicorn",
-    date: "23-07-2026",
-    category: "Startups & AI",
-    image: "/images/business-insights/skylark-labs.jpeg",
-    excerpt:
-      "Skylark Labs, a physical AI startup founded by Indian-born Dr Amarjot Singh, is in advanced talks to raise up to $150 million in a round that could push its valuation beyond $1 billion.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Skylark Labs, a physical AI startup founded by Indian-born Dr Amarjot Singh and headquartered in California, is in advanced talks to raise between $100 million and $150 million in a new funding round that could push its valuation beyond $1 billion. Around 70% of the capital is already committed, with Bommie Capital among the key backers.
-
-Skylark builds self-learning AI systems for edge devices — deployed on drones, robots, and autonomous vehicles — targeting defence, border security, and public safety applications.
-
-The company last raised $6 million at a $250 million valuation in April 2026, making the current raise a dramatic step-change in scale. Offices are being planned in India and Abu Dhabi alongside its Menlo Park base, with a hiring drive of 100 people underway.
-
-Skylark represents a new class of Indian-origin deep tech founders building globally from day one, rather than pivoting from domestic-first models.`,
-  },
-
   {
     id: "blinkit-spoilage-q1-fy27",
     title: "Blinkit Lost ₹308 Crore to Spoiled Goods in One Quarter — Nearly 3x Its Own EBITDA",
     date: "23-07-2026",
     category: "Quick Commerce",
     image: "/images/business-insights/blinkit-spoilage.jpeg",
-    excerpt:
-      "Blinkit lost around ₹308 crore to expired inventory, damage, transit loss, and theft in Q1 FY27 — nearly three times its quarterly adjusted EBITDA — as its inventory-led model amplifies risk.",
+    excerpt: "Blinkit lost around ₹308 crore to expired inventory, damage, transit loss, and theft in Q1 FY27 — nearly three times its quarterly adjusted EBITDA — as its inventory-led model amplifies risk.",
     readTime: "3 min read",
     featured: false,
     content: `Blinkit, India's dominant quick-commerce platform and now the largest revenue contributor for its parent Eternal, disclosed a striking operational challenge in its Q1 FY27 results: it lost approximately ₹308 crore — roughly 1.8% of its net order value — to expired inventory, damaged goods, items lost during transit, and theft. That figure is nearly three times Blinkit's quarterly adjusted EBITDA of ₹102 crore.
@@ -633,15 +236,13 @@ Blinkit added 200 dark stores in the quarter, taking its network to 2,443 stores
 
 The spoilage figure will be a central point of scrutiny for investors tracking the company's path to sustainable profitability.`,
   },
-
   {
     id: "india-d2c-beyond-roas-playbook",
     title: "India's D2C Founders Are Abandoning the ROAS Playbook and Rethinking Growth",
     date: "22-07-2026",
     category: "Consumer & Brands",
     image: "/images/business-insights/d2c-roas-playbook.jpeg",
-    excerpt:
-      "India's direct-to-consumer brands are shifting away from ROAS obsession toward brand equity, owned channels, and repeat-customer economics as paid-acquisition costs climb.",
+    excerpt: "India's direct-to-consumer brands are shifting away from ROAS obsession toward brand equity, owned channels, and repeat-customer economics as paid-acquisition costs climb.",
     readTime: "3 min read",
     featured: false,
     content: `A widely discussed Inc42 analysis argues that India's direct-to-consumer brands are entering a fundamental strategic reset — moving away from ROAS (Return on Ad Spend) obsession and toward brand equity, owned channels, and repeat-customer economics.
@@ -652,34 +253,13 @@ Brands such as BlueStone, Mamaearth, and SUGAR Cosmetics have already made this 
 
 The broader signal: the next generation of Indian D2C winners will be built on community and trust, not just performance ad budgets.`,
   },
-
-  {
-    id: "ms-dhoni-solarsquare-series-c",
-    title: "MS Dhoni Backs SolarSquare in $53M Series C as Startup Eyes 30–40 New Cities",
-    date: "22-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/solarsquare-dhoni.jpeg",
-    excerpt:
-      "Residential rooftop solar startup SolarSquare has closed a $53 million Series C — India's largest VC round in the solar sector — with MS Dhoni investing and joining as brand ambassador.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Residential rooftop solar startup SolarSquare has closed a $53 million Series C — the largest VC round in India's solar sector — led by Lightspeed, with Lowercarbon Capital, NGP Capital, and Elevation Capital also participating.
-
-Former Indian captain MS Dhoni has invested through his family office, Midas Deals, and will serve as brand ambassador. Dhoni described the move as "investing in India's future."
-
-Founded in 2015 by Shreya Mishra, Neeraj Jain, and Nikhil Nahar, SolarSquare has installed rooftop solar systems in over 50,000 homes across 29 cities, offering end-to-end consultation, installation, financing, and maintenance. The company is currently operating at an annual revenue run rate of ₹1,000 crore.
-
-The capital will fund expansion into 30–40 new cities and platform upgrades.`,
-  },
-
   {
     id: "bharatpe-sg-finserve-succesship-paperless-credit",
     title: "BharatPe, SG Finserve and Succesship Join Forces to Bring Paperless Credit to India's Merchants",
     date: "21-07-2026",
     category: "Fintech & Lending",
     image: "/images/business-insights/bharatpe-sg-finserve.jpeg",
-    excerpt:
-      "SG Finserve has partnered with BharatPe Money and Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.",
+    excerpt: "SG Finserve has partnered with BharatPe Money and Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.",
     readTime: "3 min read",
     featured: false,
     content: `NBFC SG Finserve has partnered with BharatPe Money — the lending arm of payments unicorn BharatPe — and fintech infrastructure firm Succesship Technologies to launch a fully digital, paperless credit solution for India's merchants and MSMEs.
@@ -690,53 +270,13 @@ The collaboration connects SG Finserve's lending capital, BharatPe's merchant ne
 
 The partnership reflects a growing playbook in Indian fintech — stacking complementary capabilities across NBFCs, payment platforms, and B2B infrastructure players to serve the underbanked MSME segment at scale, rather than building end-to-end in-house.`,
   },
-
-  {
-    id: "indian-startups-weekly-funding-july-2026",
-    title: "Indian Startups Raised $281M Across 24 Deals in a Single Week, Led by AI and Fintech",
-    date: "21-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/weekly-funding-july-2026.jpeg",
-    excerpt:
-      "Indian startups raised $281.4 million across 24 deals in the week of July 11–17, 2026 — more than three times the previous week — anchored by Emergent's $130 million unicorn round.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Indian startups raised a cumulative $281.4 million across 24 deals in the week of July 11–17, 2026 — over three times the $71.9 million logged the previous week, according to Inc42's weekly funding roundup published on July 19.
-
-The surge was anchored by Emergent's $130 million unicorn-minting AI round and a string of large growth-stage investments in fintech and consumer services.
-
-The weekly data underscores a broader pattern taking shape in 2026: capital is concentrating in AI-native platforms, late-stage companies with strong unit economics, and B2B infrastructure plays rather than early consumer bets.
-
-Analysts note that while headline numbers are strong, the number of individual deals has fallen compared to 2025, meaning fewer but larger rounds — and a tougher market for seed-stage founders pitching without substantial traction or recurring revenue.`,
-  },
-
-  {
-    id: "india-2026-unicorn-class",
-    title: "India's 2026 Unicorn Class: AI, Fintech and SpaceTech Lead the Next Growth Story",
-    date: "20-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/india-2026-unicorn-class.jpeg",
-    excerpt:
-      "As of July 2026, six Indian startups have joined the unicorn club, led by AI, fintech, payments, and space tech — a new chapter driven by deep technology and long-term investor confidence.",
-    readTime: "3 min read",
-    featured: false,
-    content: `India's startup ecosystem is once again proving its resilience. While global venture funding has remained selective, 2026 has witnessed the emergence of a new cohort of billion-dollar startups, signalling that investors continue to back companies solving large-scale, technology-driven problems. As of 20 July 2026, six Indian startups have officially joined the unicorn club, collectively showcasing the country's growing strength in artificial intelligence, fintech, payments infrastructure, and space technology.
-
-Topping the list are Emergent, Sarvam AI, and KreditBee, each valued at approximately US$1.5 billion following their latest funding rounds. They are followed by Neysa, an AI cloud infrastructure company valued at US$1.4 billion, Juspay, a payments infrastructure leader valued at US$1.2 billion, and Skyroot Aerospace, India's first private space-tech unicorn with a valuation of around US$1.1 billion.
-
-Beyond the valuations, the 2026 unicorn class reflects a broader transformation in India's innovation economy. Artificial intelligence is rapidly becoming the country's next major growth engine, while fintech continues to deepen financial inclusion and digital payments. Meanwhile, the success of a space-tech company reaching unicorn status demonstrates India's expanding ambitions in frontier technologies.
-
-Together, these companies represent a new chapter in India's entrepreneurial journey — one driven by deep technology, global scalability, and the confidence of long-term investors.`,
-  },
-
   {
     id: "physicswallah-acquires-sarrthi-ias",
     title: "PhysicsWallah Acquires UPSC Platform Sarrthi IAS, Expanding Deeper Into Competitive Exam Prep",
     date: "20-07-2026",
     category: "Edtech & M&A",
     image: "/images/business-insights/physicswallah-sarrthi-ias.jpeg",
-    excerpt:
-      "Edtech unicorn PhysicsWallah has acquired UPSC prep platform Sarrthi IAS, gaining a direct foothold in one of India's most competitive exam markets.",
+    excerpt: "Edtech unicorn PhysicsWallah has acquired UPSC prep platform Sarrthi IAS, gaining a direct foothold in one of India's most competitive exam markets.",
     readTime: "3 min read",
     featured: false,
     content: `Edtech unicorn PhysicsWallah has acquired Sarrthi IAS, a dedicated UPSC civil services exam preparation platform, adding another brand to its rapidly growing stable of exam-prep products beyond its engineering and medical coaching roots.
@@ -747,15 +287,13 @@ Sarrthi IAS brings an established community of civil services aspirants, curated
 
 The acquisition reflects a broader trend of edtech platforms consolidating niche players to build end-to-end learning ecosystems that cover a student from school through every major competitive exam they may sit in their lifetime.`,
   },
-
   {
     id: "india-first-hydrogen-train",
     title: "India Launches Its First Hydrogen-Powered Train",
     date: "15-07-2026",
     category: "Energy & Infrastructure",
     image: "/images/business-insights/hydrogen-train.jpg",
-    excerpt:
-      "India has launched its first hydrogen-powered train, a milestone in its green mobility journey that emits only water vapor and heat instead of greenhouse gases.",
+    excerpt: "India has launched its first hydrogen-powered train, a milestone in its green mobility journey that emits only water vapor and heat instead of greenhouse gases.",
     readTime: "3 min read",
     featured: false,
     content: `India has taken a major step toward sustainable transportation with the launch of its first hydrogen-powered train, marking a significant milestone in the country's green mobility journey. Developed under Indian Railways' broader decarbonization strategy, the train uses hydrogen fuel cells to generate electricity, emitting only water vapor and heat instead of harmful greenhouse gases.
@@ -766,53 +304,13 @@ Beyond reducing carbon emissions, the project is expected to accelerate innovati
 
 As India continues investing in sustainable transport, hydrogen-powered railways could become a key pillar of the nation's future mobility ecosystem, reinforcing its ambition to emerge as a global leader in clean energy and green infrastructure.`,
   },
-
-  {
-    id: "skyroot-vikram-i-mission-aagaman",
-    title: "Skyroot Aerospace Set to Make History with Vikram-I",
-    date: "15-07-2026",
-    category: "Startups & Space Tech",
-    image: "/images/business-insights/skyroot-vikram-i.jpg",
-    excerpt:
-      "Skyroot Aerospace is poised to launch Vikram-I, India's first privately developed orbital launch vehicle, under Mission Aagaman — a defining moment for the country's private space sector.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Skyroot Aerospace is poised to create history with the launch of Vikram-I, India's first privately developed orbital launch vehicle. Scheduled under Mission Aagaman, the rocket's maiden flight marks a defining moment for India's rapidly growing private space sector.
-
-Developed by the Hyderabad-based startup founded by former ISRO engineers, Vikram-I is designed to place payloads of up to 350 kg into Low Earth Orbit (LEO) using advanced carbon-composite structures, 3D-printed engines, and indigenous propulsion technologies. The mission will carry multiple commercial and technology demonstration payloads, showcasing India's increasing capability in affordable and reliable satellite launches.
-
-Beyond a technological milestone, Vikram-I symbolizes the success of India's space-sector reforms that opened opportunities for private innovation.
-
-A successful mission will strengthen India's position in the global space economy, encourage greater investment in space startups, and pave the way for a vibrant commercial launch ecosystem alongside ISRO's achievements.`,
-  },
-
-  {
-    id: "dhruva-space-antariksh-fund-raise",
-    title: "Dhruva Space Raises ₹60 Crore from India's Sovereign Space-Tech Fund",
-    date: "15-07-2026",
-    category: "Startups & Space Tech",
-    image: "/images/business-insights/dhruva-space.png",
-    excerpt:
-      "Hyderabad-based Dhruva Space has raised ₹60 crore in its maiden institutional round from the Antariksh Venture Capital Fund, India's sovereign fund dedicated to the space sector.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Hyderabad-based spacetech startup Dhruva Space has raised ₹60 crore in its maiden institutional funding round from the Antariksh Venture Capital Fund (AVCF), India's sovereign venture capital fund dedicated to the space sector. Managed by SIDBI Venture Capital and anchored by IN-SPACe, the fund aims to strengthen India's commercial space ecosystem.
-
-The investment will help Dhruva Space expand satellite manufacturing, space-based solutions, research and development, and global commercial partnerships.
-
-The funding marks a significant milestone for India's private space industry, which has gained momentum following policy reforms that opened the sector to private participation. Industry experts believe the investment validates India's ambition of becoming a global hub for satellite technology and space innovation.
-
-As demand for satellite communication, earth observation, and defence applications increases worldwide, Dhruva Space is expected to play an important role in building indigenous space capabilities while competing internationally.`,
-  },
-
   {
     id: "india-uk-ceta-enters-force",
     title: "India–UK CETA Enters Into Force, Granting Duty-Free Access Across 99% of Tariff Lines",
     date: "15-07-2026",
     category: "Trade & Policy",
     image: "/images/business-insights/india-uk-ceta.jpeg",
-    excerpt:
-      "The India–UK Comprehensive Economic and Trade Agreement came into force on July 15, 2026, eliminating UK tariffs on 99% of Indian exports — India's most ambitious trade deal with a G7 nation.",
+    excerpt: "The India–UK Comprehensive Economic and Trade Agreement came into force on July 15, 2026, eliminating UK tariffs on 99% of Indian exports — India's most ambitious trade deal with a G7 nation.",
     readTime: "3 min read",
     featured: false,
     content: `The India–UK Comprehensive Economic and Trade Agreement (CETA), along with its companion Double Contribution Convention (DCC), officially came into force on July 15, 2026. Concluded after 14 rounds of negotiations and signed in London in July 2025, it is India's most ambitious trade deal with a G7 nation.
@@ -823,15 +321,13 @@ The DCC simultaneously exempts Indian professionals on temporary UK assignments 
 
 Commerce Secretary Rajesh Agrawal described it as a "gold standard" agreement spanning 30 chapters — including digital trade, government procurement, and professional mobility — and a defining step toward Viksit Bharat 2047.`,
   },
-
   {
     id: "made-in-india-chocolate-brands",
     title: "Made in India: Homegrown Chocolate Brands Redefining Premium",
     date: "09-07-2026",
     category: "Consumer & Brands",
     image: "/images/business-insights/made-in-india-chocolates.jpeg",
-    excerpt:
-      "A new generation of Indian chocolatiers is combining locally sourced cacao, artisanal craft, and world-class packaging to turn homegrown chocolate into a global contender.",
+    excerpt: "A new generation of Indian chocolatiers is combining locally sourced cacao, artisanal craft, and world-class packaging to turn homegrown chocolate into a global contender.",
     readTime: "3 min read",
     featured: false,
     content: `India's chocolate industry is quietly undergoing a remarkable transformation. While global brands have long dominated store shelves, a new generation of Indian chocolatiers is redefining what premium chocolate means — combining locally sourced cacao, artisanal craftsmanship, innovative flavours, and world-class packaging. From bean-to-bar makers working directly with farmers to luxury gifting brands crafting handmade bonbons and pralines, Indian chocolate is no longer just an alternative; it is becoming a global contender.
@@ -846,15 +342,13 @@ Naviluna — Originating from Mysuru, Naviluna works closely with cacao farmers 
 
 India is emerging as one of the most exciting destinations for premium chocolate thanks to high-quality Indian-grown cacao, direct partnerships with local farmers, flavours inspired by Indian ingredients, premium gifting-focused packaging, and rising global recognition for artisanal craftsmanship. As consumer preferences shift toward authenticity, sustainability, and locally made premium products, Indian chocolatiers are proving they can compete with the best in the world — and supporting them means backing Indian entrepreneurs, farmers, designers, and artisans building a stronger food and luxury ecosystem.`,
   },
-
   {
     id: "world-bank-rooftop-solar-surya-ghar",
     title: "World Bank to Mobilise $4.2 Billion for India's Rooftop Solar Drive",
     date: "09-07-2026",
     category: "Energy & Climate",
     image: "/images/business-insights/world-bank-rooftop-solar.jpeg",
-    excerpt:
-      "The World Bank is set to mobilise $4.2 billion in private financing, plus an $890 million direct package, to accelerate rooftop solar adoption under India's PM Surya Ghar scheme.",
+    excerpt: "The World Bank is set to mobilise $4.2 billion in private financing, plus an $890 million direct package, to accelerate rooftop solar adoption under India's PM Surya Ghar scheme.",
     readTime: "3 min read",
     featured: false,
     content: `The World Bank is set to mobilise USD 4.2 billion in private financing, alongside an USD 890 million direct package, to accelerate rooftop solar adoption under India's PM Surya Ghar scheme. The initiative is a cornerstone of India's clean energy push, bringing solar power directly to millions of households nationwide.
@@ -865,15 +359,13 @@ Separately, Gujarat unveiled its Data Centre Policy 2026–29, targeting hypersc
 
 Together, these developments reflect a broader national strategy in which energy transition and digital infrastructure are being pursued in tandem as twin pillars of India's long-term economic ambition.`,
   },
-
   {
     id: "tripura-business-conclave-2026-mous",
     title: "Tripura Signs 43 MoUs Worth ₹10,000 Crore at Business Conclave 2026",
     date: "09-07-2026",
     category: "Economy & Investment",
     image: "/images/business-insights/tripura-business-conclave.png",
-    excerpt:
-      "Tripura signed 43 MoUs worth over ₹10,000 crore at the Destination Tripura Business Conclave 2026, a landmark haul for a state that has long struggled to attract large-scale private capital.",
+    excerpt: "Tripura signed 43 MoUs worth over ₹10,000 crore at the Destination Tripura Business Conclave 2026, a landmark haul for a state that has long struggled to attract large-scale private capital.",
     readTime: "3 min read",
     featured: false,
     content: `India's northeastern states have long been viewed as laggards in attracting industrial investment, but Tripura is making a pointed statement to the contrary. The state signed 43 MoUs worth over ₹10,000 crore at the Destination Tripura Business Conclave 2026 — a significant haul for a region that has historically struggled to draw large-scale private capital.
@@ -882,34 +374,13 @@ The conclave signals a broader push by northeastern states to leverage their str
 
 The development aligns with the central government's increasing focus on unlocking the economic potential of India's northeast as a gateway to ASEAN markets, with improved connectivity and logistics investment laying the groundwork for a new chapter in regional industrial growth.`,
   },
-
-  {
-    id: "age-care-labs-series-b1-round",
-    title: "Age Care Labs Closes ₹85 Crore Round, Bets Big on India's Booming Elder Care Market",
-    date: "07-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/age-care-labs.png",
-    excerpt:
-      "Age Care Labs, parent of Emoha and Epoch Elder Care, has raised ₹85 crore in a Series B1 round as investors bet on India's rapidly expanding senior care market.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Age Care Labs, the parent company of elder care brands Emoha and Epoch Elder Care, has raised ₹85 crore in a Series B1 round — part of a larger ₹250 crore Series B expected to close by Q1 2027.
-
-The round was led by Shrem Group, with participation from Rainmatter — the investment arm of Zerodha — Pegasus Finvest, and several family offices. As part of the deal, Shrem Group has partnered with Emoha to co-launch Shremoha, a premium senior living platform.
-
-The raise underscores growing investor confidence in India's elder care sector as the country's over-60 population rapidly expands toward 340 million by 2050. Age Care Labs competes with KITES Senior Care, Alserv, and Ratan Tata-backed Goodfellows.
-
-The fresh capital will fund geographic expansion, technology development, and healthcare capability building. Having now raised over $20 million in total, the company is positioning itself as the dominant integrated platform in India's largely fragmented and underpenetrated senior care market.`,
-  },
-
   {
     id: "cci-approves-upgrad-unacademy-acquisition",
     title: "CCI Clears upGrad's Acquisition of Unacademy — at a Fraction of Its Old Value",
     date: "07-07-2026",
     category: "Edtech & M&A",
     image: "/images/business-insights/upgrad-unacademy.png",
-    excerpt:
-      "India's competition regulator has approved upGrad's acquisition of Unacademy, valuing the edtech rival at around ₹2,055 crore — a steep fall from its $3.4 billion pandemic-era peak.",
+    excerpt: "India's competition regulator has approved upGrad's acquisition of Unacademy, valuing the edtech rival at around ₹2,055 crore — a steep fall from its $3.4 billion pandemic-era peak.",
     readTime: "3 min read",
     featured: false,
     content: `India's competition regulator cleared the way on July 7 for edtech platform upGrad to acquire rival Unacademy, marking one of the biggest deals in Indian online education history.
@@ -920,34 +391,13 @@ For upGrad, led by entrepreneur Ronnie Screwvala, the acquisition is a strategic
 
 The timing is telling: upGrad only recently turned profitable after years of losses, and Unacademy has been restructuring since its post-pandemic slowdown. India's edtech sector, once defined by sky-high valuations and aggressive growth, is now consolidating around survival and scale.`,
   },
-
-  {
-    id: "swiggy-majority-indian-owned-iocc",
-    title: "Swiggy Crosses a Major Structural Milestone as Foreign Ownership Falls Below 50%",
-    date: "07-07-2026",
-    category: "Startups & Ownership",
-    image: "/images/business-insights/swiggy-iocc.png",
-    excerpt:
-      "Swiggy has become majority Indian-owned after its foreign shareholding organically slipped below 50%, a shift that lets Instamart hold inventory directly.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Swiggy has become majority Indian-owned after its foreign shareholding fell organically below 50%. The shift is more significant than it might appear on the surface.
-
-Its reclassification as an Indian Owned and Controlled Company (IOCC) carries direct commercial implications — most notably, its quick commerce arm Instamart will now be able to hold inventory directly, improving margins and tightening supply chain control.
-
-The organic route to this threshold makes it particularly meaningful. Back in May, Swiggy's shareholders had failed to pass a resolution formally classifying it as an IOCC, making the natural crossing of the 50% foreign ownership ceiling the more credible path to that status.
-
-For Swiggy, locked in an intense battle with Zomato's Blinkit in the quick commerce space, tighter inventory control could prove a meaningful operational and cost advantage heading into the second half of FY27.`,
-  },
-
   {
     id: "india-uk-trade-pact-july-15",
     title: "India–UK Trade Pact Set to Take Effect July 15",
     date: "07-07-2026",
     category: "Trade & Policy",
     image: "/images/business-insights/india-uk-trade-pact.png",
-    excerpt:
-      "The finance ministry has notified rules of origin under the India–UK trade pact, clearing the way for the agreement to come into force from July 15.",
+    excerpt: "The finance ministry has notified rules of origin under the India–UK trade pact, clearing the way for the agreement to come into force from July 15.",
     readTime: "3 min read",
     featured: false,
     content: `The finance ministry has notified the rules for determining the origin of goods under the India–UK trade pact, clearing the way for the agreement to take effect from July 15. The deal has been long in the making — years of negotiations that repeatedly stalled over differences on tariffs, worker mobility, and Scotch whisky duties. Its imminent rollout marks a significant moment in India's trade diplomacy.
@@ -956,15 +406,13 @@ India's free trade agreements with the UK and the EU are expected to boost toy e
 
 Commerce Minister Piyush Goyal has said the Trade and Technology Council dialogue will complement the recently concluded India–EU free trade agreement, while India aims to seal a Canada FTA within six months — signalling an ambitious run of trade-deal activity on the horizon.`,
   },
-
   {
     id: "fizzy-goblet-kareena-kapoor-investment",
     title: "Fizzy Goblet Draws Strategic Investment from Kareena Kapoor Khan, Eyes Rs 100 Crore Run Rate",
     date: "07-07-2026",
     category: "Retail & Investment",
     image: "/images/business-insights/fizzy-goblet-kareena.png",
-    excerpt:
-      "Homegrown footwear brand Fizzy Goblet has secured a strategic investment from actor Kareena Kapoor Khan as it targets an annual revenue run rate of over Rs 100 crore.",
+    excerpt: "Homegrown footwear brand Fizzy Goblet has secured a strategic investment from actor Kareena Kapoor Khan as it targets an annual revenue run rate of over Rs 100 crore.",
     readTime: "3 min read",
     featured: false,
     content: `Homegrown footwear and accessories label Fizzy Goblet has announced a strategic investment from actor Kareena Kapoor Khan, deepening a bond that started when she began wearing the brand organically in 2014 and later became its brand ambassador in 2022.
@@ -977,15 +425,13 @@ Notably, the company says its growth has been driven entirely through its own ch
 
 "Our vision is to make Fizzy Goblet the first globally recognised Indian footwear and accessories brand. Having Kareena on board as a strategic partner is the first major step on that journey," said founder Laksheeta Govil. Kapoor Khan added that her conviction in what Govil is building "has only grown," noting the brand has "always been part of my wardrobe."`,
   },
-
   {
     id: "cultfit-drhp-ipo-filing",
     title: "Cult.fit Files for IPO with SEBI, Eyeing Rs 950 Crore Fresh Issue",
     date: "07-07-2026",
     category: "IPO & Markets",
     image: "/images/business-insights/cultfit-ipo.png",
-    excerpt:
-      "Fitness platform Cult.fit has filed its draft papers with SEBI for an IPO combining a Rs 950 crore fresh issue with a 17.86 crore share offer for sale by existing backers.",
+    excerpt: "Fitness platform Cult.fit has filed its draft papers with SEBI for an IPO combining a Rs 950 crore fresh issue with a 17.86 crore share offer for sale by existing backers.",
     readTime: "3 min read",
     featured: false,
     content: `Fitness and wellness company Cult.fit has taken a decisive step towards the public markets, submitting its draft red herring prospectus (DRHP) to the Securities and Exchange Board of India for a proposed initial public offering.
@@ -998,15 +444,13 @@ Cult.fit intends to channel roughly Rs 217.5 crore of the proceeds into lease an
 
 Founded in 2016 by Mukesh Bansal and Ankit Nagori, Cult.fit now runs more than 700 fitness centres nationwide alongside its Cultsport and Carefit arms. The company has drawn over $714 million across 16 funding rounds and was last valued near Rs 12,600 crore (about $1.5 billion). For FY26, it posted revenue of Rs 1,720 crore while narrowing its net loss by 48% to Rs 252 crore. Axis Capital, Goldman Sachs (India), Jefferies India and JM Financial are steering the issue as lead managers.`,
   },
-
   {
     id: "ai-for-good-global-commission-indian-leaders",
     title: "Ambani, Sunil Mittal and Lakshmi Mittal Named Founding Members of AI for Good Global Commission",
     date: "07-07-2026",
     category: "Tech & AI Policy",
     image: "/images/business-insights/ai-for-good-commission.jpeg",
-    excerpt:
-      "Mukesh Ambani, Sunil Bharti Mittal, and Lakshmi N. Mittal have been named founding members of the ITU's newly launched 44-member AI for Good Global Commission.",
+    excerpt: "Mukesh Ambani, Sunil Bharti Mittal, and Lakshmi N. Mittal have been named founding members of the ITU's newly launched 44-member AI for Good Global Commission.",
     readTime: "3 min read",
     featured: false,
     content: `Three of India's most prominent business leaders — Mukesh Ambani, chairman of Reliance Industries; Sunil Bharti Mittal, founder and chairman of Bharti Enterprises; and Lakshmi N. Mittal, executive chairman of ArcelorMittal — have been named founding members of the newly launched AI for Good Global Commission.
@@ -1015,15 +459,13 @@ Established under the International Telecommunication Union (ITU), the 44-member
 
 Its inaugural meeting opens today at the ITU's AI for Good Global Summit 2026 in Geneva, running alongside the first UN-mandated Global Dialogue on AI Governance.`,
   },
-
   {
     id: "world-bank-1-5-bn-job-creation-india",
     title: "World Bank Approves $1.5 Bn to Accelerate Private-Sector Job Creation in India",
     date: "07-07-2026",
     category: "Economy & Policy",
     image: "/images/business-insights/world-bank-job-creation.png",
-    excerpt:
-      "The World Bank has approved $1.5 billion in Development Policy Financing to back structural reforms aimed at generating private-sector-led employment for 11 million young Indians.",
+    excerpt: "The World Bank has approved $1.5 billion in Development Policy Financing to back structural reforms aimed at generating private-sector-led employment for 11 million young Indians.",
     readTime: "3 min read",
     featured: false,
     content: `The World Bank has approved $1.5 billion in Development Policy Financing to support a sweeping programme of structural reforms in India aimed at generating private-sector-led employment. The Boosting Job Creation initiative is designed to create opportunities for 11 million young Indians expected to enter the labour market over the next two decades.
@@ -1032,15 +474,13 @@ The package backs reforms in tax simplification, trade integration, and regulato
 
 Separately, UPI — India's flagship digital payments rail — now operates in nine countries, including Singapore, UAE, France, Qatar, and Cambodia, following the successful launch of a real-time peer-to-peer cross-border remittance link with Nepal's National Payments Interface, operational since June 6, 2026, eliminating the need for physical currency exchange.`,
   },
-
   {
     id: "india-japan-summit-billions-commitments",
     title: "India–Japan Summit Draws Billions in Commitments",
     date: "06-07-2026",
     category: "Trade & Diplomacy",
     image: "/images/business-insights/india-japan-summit.png",
-    excerpt:
-      "The 16th India–Japan Annual Summit delivered a first-ever defence co-development project, a Joint Statement on AI, and over $10 billion in fresh Japanese investment commitments, deepening the two countries' strategic partnership.",
+    excerpt: "The 16th India–Japan Annual Summit delivered a first-ever defence co-development project, a Joint Statement on AI, and over $10 billion in fresh Japanese investment commitments, deepening the two countries' strategic partnership.",
     readTime: "3 min read",
     featured: false,
     content: `The 16th India–Japan Annual Summit delivered a first-ever defence co-development project, a Joint Statement on AI, and over $10 billion in fresh Japanese investment commitments, marking a substantive deepening of the two countries' strategic partnership.
@@ -1051,15 +491,13 @@ Artificial Intelligence has emerged as a new pillar of the partnership, with bot
 
 India and Japan are also working together to secure reliable supplies of critical minerals like lithium, cobalt, and rare earth elements, vital for electric vehicles and clean energy.`,
   },
-
   {
     id: "tata-electronics-overtakes-foxconn-iphone-exports",
     title: "Tata Electronics Overtakes Foxconn in iPhone Exports from India",
     date: "06-07-2026",
     category: "Manufacturing & Electronics",
     image: "/images/business-insights/tata-iphone-exports.jpeg",
-    excerpt:
-      "Despite being a late entrant, Tata Electronics has overtaken Foxconn to grab a larger share of iPhones exported from India, assembling $26.3 billion worth against Foxconn's $25.6 billion over the FY22–FY26 PLI period.",
+    excerpt: "Despite being a late entrant, Tata Electronics has overtaken Foxconn to grab a larger share of iPhones exported from India, assembling $26.3 billion worth against Foxconn's $25.6 billion over the FY22–FY26 PLI period.",
     readTime: "3 min read",
     featured: false,
     content: `Despite being a late entrant, Tata Electronics has overtaken Taiwanese electronics manufacturing giant Foxconn to grab a larger share of assembling iPhones exported from India during the five-year PLI scheme period between FY22 and FY26. iPhones assembled by Tata Electronics for export were pegged at $26.3 billion, compared to Foxconn's $25.6 billion.
@@ -1068,34 +506,13 @@ Most of these iPhones are exported to the US and Europe. Tata Electronics has al
 
 The milestone firmly establishes India as a serious global electronics manufacturing hub. Beyond smartphones, Tata Electronics is making a big push into semiconductors, investing around $14 billion to build a chip fabrication plant in Gujarat and a chip assembly and testing unit in Assam.`,
   },
-
-  {
-    id: "india-vc-funding-h1-2026-jump",
-    title: "Indian Startup Ecosystem Sees 21% Jump in VC Funding in H1 2026",
-    date: "02-07-2026",
-    category: "Startups & Funding",
-    image: "/images/business-insights/india-vc-funding-h1-2026.png",
-    excerpt:
-      "VC funding into Indian startups grew 21% year-on-year in H1 2026, signalling a sustained revival in capital inflows after a prolonged funding winter.",
-    readTime: "3 min read",
-    featured: false,
-    content: `Venture capital funding into Indian startups recorded 21% annual growth in the first six months of 2026, sparking optimism about a sustained revival in capital inflows into the country. The rebound comes after a prolonged funding winter that dampened sentiment across the ecosystem.
-
-Notable deals during the period include cleantech startup BatX Energies raising ₹105 crore in a Series A round led by IvyCap Ventures, with participation from Zephyr Peacock, Mankind Pharma Family Office, and others. Elder care platform Age Care Labs also raised ₹85 crore in a Series B1 round.
-
-Additionally, entrepreneur Bhavin Turakhia launched Neo, an AI-native work platform, backed by a $30 million investment.
-
-Investor confidence appears to be returning, particularly in sectors like AI, cleantech, and healthcare, signalling a more mature and resilient startup landscape heading into H2 2026.`,
-  },
-
   {
     id: "upi-22-billion-transactions-june-2026",
     title: "India's UPI Crosses 22 Billion Transactions in June 2026",
     date: "02-07-2026",
     category: "Fintech & Payments",
     image: "/images/business-insights/upi-22-billion.png",
-    excerpt:
-      "India's UPI recorded a 23% rise in volumes, crossing 22 billion transactions in June 2026, cementing its position as a global leader in real-time digital payments.",
+    excerpt: "India's UPI recorded a 23% rise in volumes, crossing 22 billion transactions in June 2026, cementing its position as a global leader in real-time digital payments.",
     readTime: "3 min read",
     featured: false,
     content: `India's UPI ecosystem recorded a 23% rise in transaction volumes, crossing 22 billion transactions in June 2026, continuing its robust growth trajectory.
@@ -1106,15 +523,13 @@ The strong numbers reflect India's deepening digital payments infrastructure and
 
 With the National Payments Corporation of India pushing for further global rollout, UPI is increasingly being seen as a viable alternative to card-based international payment networks.`,
   },
-
   {
     id: "mahindra-june-record-sales",
     title: "Mahindra & Mahindra Posts Record 37% Sales Jump in June",
     date: "02-07-2026",
     category: "Auto & Sales",
     image: "/images/business-insights/mahindra-record-sales.jpg",
-    excerpt:
-      "Mahindra & Mahindra's sales surged 37% in June on strong UV and CV demand, capping a record FY26 boosted by late-2025 GST rate cuts.",
+    excerpt: "Mahindra & Mahindra's sales surged 37% in June on strong UV and CV demand, capping a record FY26 boosted by late-2025 GST rate cuts.",
     readTime: "3 min read",
     featured: false,
     content: `Mahindra & Mahindra's sales surged 37% in June, with strong performance across its UV (utility vehicle) and CV (commercial vehicle) segments. The momentum follows a standout FY26 for the automaker.
@@ -1125,15 +540,13 @@ The surge has been largely driven by GST rate cuts that took effect in late 2025
 
 However, analysts caution that demand may moderate in FY27 as CAFE 3 norms, price hikes, and new powertrain introductions could pressure affordability going forward.`,
   },
-
   {
     id: "sun-pharma-organon-acquisition",
     title: "Sun Pharma's $11.75 Billion Organon Acquisition — India's Biggest Pharma Deal",
     date: "02-07-2026",
     category: "Pharma & M&A",
     image: "/images/business-insights/sun-pharma-organon.jpeg",
-    excerpt:
-      "Sun Pharma agrees to acquire New Jersey-based Organon in an all-cash deal worth $11.75 billion — one of the largest outbound acquisitions by an Indian pharma firm.",
+    excerpt: "Sun Pharma agrees to acquire New Jersey-based Organon in an all-cash deal worth $11.75 billion — one of the largest outbound acquisitions by an Indian pharma firm.",
     readTime: "3 min read",
     featured: false,
     content: `Indian pharmaceutical giant Sun Pharma announced it has entered into an agreement to acquire New Jersey-headquartered Organon in an all-cash deal valued at $11.75 billion — one of the largest outbound acquisitions by an Indian pharmaceutical firm.
@@ -1144,15 +557,13 @@ The transaction is expected to close in early 2027, subject to regulatory approv
 
 The deal catapults Sun Pharma into biosimilars and diversifies it beyond generics into high-value specialty medicines across 140 countries — a landmark moment for India's pharmaceutical industry on the global stage.`,
   },
-
   {
     id: "india-sovereign-ai-governance-hurdles",
     title: "India's Sovereign AI Push Faces Governance Hurdles",
     date: "01-07-2026",
     category: "Tech & AI Policy",
     image: "/images/business-insights/india-sovereign-ai-governance.png",
-    excerpt:
-      "As India races to build sovereign AI, governance is emerging as its biggest challenge — with deepfakes, accountability gaps, and rising public-sector AI use testing policymakers' balance of innovation and trust.",
+    excerpt: "As India races to build sovereign AI, governance is emerging as its biggest challenge — with deepfakes, accountability gaps, and rising public-sector AI use testing policymakers' balance of innovation and trust.",
     readTime: "3 min read",
     featured: false,
     content: `As India accelerates its push to build sovereign AI capabilities, governance is emerging as its biggest challenge. Rising concerns around deepfakes, accountability, and growing public-sector use of AI are prompting policymakers to balance innovation with trust.
@@ -1161,15 +572,13 @@ Debates are intensifying over whether India's AI compute infrastructure — bols
 
 Experts warn that without robust regulatory frameworks, the rapid deployment of AI across government services and financial systems could outpace oversight, raising the stakes for policymakers as they race to scale India's AI ambitions responsibly.`,
   },
-
   {
     id: "hdfc-bank-rajiv-kumar-chairman-puneet-sharma-cfo",
     title: "HDFC Bank Strengthens Leadership with Rajiv Kumar as Chairman-Designate, Puneet Sharma as CFO",
     date: "01-07-2026",
     category: "Banking & Leadership",
     image: "/images/business-insights/hdfc-bank-leadership.jpg",
-    excerpt:
-      "HDFC Bank draws investor attention after appointing former Finance Secretary Rajiv Kumar as Chairman-designate and Puneet Sharma as CFO, moves analysts say strengthen the bank ahead of a growth phase.",
+    excerpt: "HDFC Bank draws investor attention after appointing former Finance Secretary Rajiv Kumar as Chairman-designate and Puneet Sharma as CFO, moves analysts say strengthen the bank ahead of a growth phase.",
     readTime: "3 min read",
     featured: false,
     content: `HDFC Bank is drawing renewed investor attention following the appointment of former Finance Secretary Rajiv Kumar as Chairman-designate and Puneet Sharma as Chief Financial Officer.
@@ -1178,15 +587,13 @@ Analysts say the leadership changes strengthen the bank's governance and financi
 
 The optimism is underpinned by accelerating credit growth and easing net interest margin pressures, both of which are expected to support stronger earnings momentum for India's largest private-sector lender in the coming quarters.`,
   },
-
   {
     id: "titan-reinvention-lifestyle-powerhouse",
     title: "Titan's Reinvention: From Watchmaker to Lifestyle Powerhouse",
     date: "01-07-2026",
     category: "Retail & Lifestyle",
     image: "/images/business-insights/titan-reinvention-lifestyle-powerhouse.jpg",
-    excerpt:
-      "Titan crossed Rs 50,000 crore in revenue in FY25 after nearly 40 years — then added the next Rs 25,000 crore in just one year, as it expands into eyecare, fragrances, sarees, and global markets.",
+    excerpt: "Titan crossed Rs 50,000 crore in revenue in FY25 after nearly 40 years — then added the next Rs 25,000 crore in just one year, as it expands into eyecare, fragrances, sarees, and global markets.",
     readTime: "3 min read",
     featured: false,
     content: `Titan Company, the modest 1984 joint venture between Tata Industries and the Tamil Nadu Industrial Development Corporation, has grown into the second-most valued Tata Group company after TCS, with a market capitalisation of Rs 3.6 lakh crore.
@@ -1197,15 +604,13 @@ The company is now pushing beyond its core watches and jewellery business into l
 
 Managing Director Ajoy Chawla describes the firm as "restless and responsible," a philosophy driven by constant product and retail innovation as Titan reinvents itself from a watchmaker into a diversified lifestyle powerhouse.`,
   },
-
   {
     id: "bharti-airtel-africa-stake-share-swap",
     title: "Bharti Airtel Boosts Africa Stake via Share Swap",
     date: "30-06-2026",
     category: "Telecom & M&A",
     image: "/images/business-insights/bharti-airtel-africa-stake.jpg",
-    excerpt:
-      "Bharti Airtel acquired a 16.3% stake in Airtel Africa from ICIL via a cashless ₹28,200 crore share swap, lifting its effective holding to roughly 79%.",
+    excerpt: "Bharti Airtel acquired a 16.3% stake in Airtel Africa from ICIL via a cashless ₹28,200 crore share swap, lifting its effective holding to roughly 79%.",
     readTime: "3 min read",
     featured: false,
     content: `Bharti Airtel acquired a 16.3% stake in Airtel Africa from ICIL through a cashless ₹28,200 crore share-swap deal, lifting its effective holding in the UK-listed Africa unit to roughly 79%. The move strengthens Airtel's control over its fast-growing African operations without requiring fresh cash outlay, reflecting the telecom major's continued push to consolidate its international portfolio.
@@ -1214,15 +619,13 @@ This comes at a time when India's telecom sector itself is showing strong moment
 
 Analysts view the swap as a strategic long-term bet on Africa's expanding telecom and digital services market, where Airtel has been investing heavily in network infrastructure and mobile money services.`,
   },
-
   {
     id: "india-ev-sector-sales-surge-may-2026",
     title: "India's EV Sector Sees Sharp Sales Surge",
     date: "30-06-2026",
     category: "EV & Mobility",
     image: "/images/business-insights/india-ev-sales-surge-2026.jpg",
-    excerpt:
-      "India's auto retail registrations rose 5.5% YoY in May 2026, led by a 41.2% jump in EV sales as fuel prices spiked and adoption accelerated.",
+    excerpt: "India's auto retail registrations rose 5.5% YoY in May 2026, led by a 41.2% jump in EV sales as fuel prices spiked and adoption accelerated.",
     readTime: "3 min read",
     featured: false,
     content: `India's domestic automobile retail registrations surged 5.5% year-on-year in May 2026, driven significantly by a robust 41.2% jump in electric vehicle sales. A steep surge in conventional petroleum fuel prices drove a sharp spike in electric vehicle penetration across India during May, accelerating consumer adoption.
@@ -1231,15 +634,13 @@ Supporting this momentum, Bengaluru-based EV maker Simple Energy raised ₹250 c
 
 The move reflects strong investor confidence in India's electric two-wheeler segment, one of the fastest-growing pockets of the country's mobility transition.`,
   },
-
   {
     id: "rbi-holds-repo-rate-525-markets-rally",
     title: "RBI Holds Repo Rate at 5.25%, Markets Rally",
     date: "29-06-2026",
     category: "RBI & Markets",
     image: "/images/business-insights/india-stock-market-fourth-largest.jpg",
-    excerpt:
-      "Sensex and Nifty traded higher after the RBI kept the repo rate unchanged at 5.25%, retained a neutral stance, and announced measures to boost capital inflows.",
+    excerpt: "Sensex and Nifty traded higher after the RBI kept the repo rate unchanged at 5.25%, retained a neutral stance, and announced measures to boost capital inflows.",
     readTime: "3 min read",
     featured: false,
     content: `Sensex and Nifty traded higher after the Reserve Bank of India kept the repo rate unchanged at 5.25%, retained a neutral policy stance, and announced measures to boost capital inflows.
@@ -1248,15 +649,13 @@ The RBI also announced steps to improve foreign participation in Indian markets,
 
 Rate-sensitive sectors such as banking, financial services, and real estate outperformed following the policy announcement, while IT and metal stocks remained under pressure.`,
   },
-
   {
     id: "india-energy-storage-market-expansion-2032",
     title: "India's Energy Storage Market Set for Major Expansion",
     date: "29-06-2026",
     category: "Energy & Sustainability",
     image: "/images/business-insights/india-energy-storage-market-2032.jpg",
-    excerpt:
-      "India's C&I energy storage market is expected to scale to 22–31 GWh by 2032, driven by rising tariffs, renewable integration, and a push toward energy resilience.",
+    excerpt: "India's C&I energy storage market is expected to scale to 22–31 GWh by 2032, driven by rising tariffs, renewable integration, and a push toward energy resilience.",
     readTime: "3 min read",
     featured: false,
     content: `India's commercial and industrial (C&I) energy storage market is expected to scale rapidly to 22–31 GWh by 2032, supported by rising energy tariffs, renewable energy integration, cost optimisation needs, and a shift toward energy resilience and decarbonisation.
@@ -1265,15 +664,13 @@ This growth signals increasing corporate adoption of battery and storage solutio
 
 Analysts expect the storage sector to attract significant private investment over the next five years, making it one of the fastest-growing segments within India's broader energy transition landscape.`,
   },
-
   {
     id: "meta-reliance-ai-data-centre-jamnagar",
     title: "Meta & Reliance to Build India's First AI-Enabled Data Centre in Jamnagar",
     date: "25-06-2026",
     category: "Tech & AI",
     image: "/images/business-insights/meta-reliance-data-centre.jpg",
-    excerpt:
-      "Meta and Reliance will build a 168-MW AI-enabled data centre in Jamnagar, Gujarat — powered by renewable energy and cooled using desalinated seawater.",
+    excerpt: "Meta and Reliance will build a 168-MW AI-enabled data centre in Jamnagar, Gujarat — powered by renewable energy and cooled using desalinated seawater.",
     readTime: "3 min read",
     featured: false,
     content: `Meta has struck a partnership with Reliance Industries to build a 168-megawatt AI-enabled data centre in Jamnagar, Gujarat — its first major built-to-suit AI infrastructure deal in India.
@@ -1284,15 +681,13 @@ In a related announcement, Meta signed deals with two Indian clean energy firms 
 
 The deal builds on a long-standing partnership between the companies that traces back to Meta's $5.7 billion investment in Jio Platforms in 2020, and a $100 million joint venture formed in 2025 to develop Llama-based enterprise AI solutions for Indian businesses. The Jamnagar facility is expected to be operational within two years.`,
   },
-
   {
     id: "india-us-trade-talks-july-deadline",
     title: "India-US Trade Talks Conclude Without Final Deal, July Deadline Looms",
     date: "24-06-2026",
     category: "Trade & Policy",
     image: "/images/business-insights/india-us-trade-talks.jpg",
-    excerpt:
-      "India and the US wrapped two days of talks in New Delhi but left key issues unresolved, with a temporary 10% US tariff regime set to expire on July 24.",
+    excerpt: "India and the US wrapped two days of talks in New Delhi but left key issues unresolved, with a temporary 10% US tariff regime set to expire on July 24.",
     readTime: "3 min read",
     featured: false,
     content: `India and the United States wrapped up two days of high-level trade talks in New Delhi on June 24, but left critical issues unresolved ahead of a pivotal deadline. Commerce and Industry Minister Piyush Goyal and visiting US Trade Representative Jamieson Greer discussed market access, digital trade, and non-tariff barriers but gave no indication that all differences had been bridged.
@@ -1301,15 +696,13 @@ Both sides are racing to finalise an interim arrangement before the expiration o
 
 India has proposed eliminating or reducing tariffs on all US industrial goods and a wide range of agricultural products, while also expressing intentions to purchase $500 billion worth of US goods — including energy, aircraft, and technology products — over the next five years. Both sides described "substantial progress" but stopped short of declaring a breakthrough.`,
   },
-
   {
     id: "bharatiya-vyapar-mahotsav-2026",
     title: "India Gears Up for Bharatiya Vyapar Mahotsav 2026",
     date: "24-06-2026",
     category: "Trade & MSME",
     image: "/images/business-insights/bharatiya-vyapar-mahotsav-2026.jpg",
-    excerpt:
-      "India's largest Make-in-India multi-sectoral business expo runs 12–15 August 2026 at Bharat Mandapam, with 2,000+ exhibitors and over 10 lakh visitors expected.",
+    excerpt: "India's largest Make-in-India multi-sectoral business expo runs 12–15 August 2026 at Bharat Mandapam, with 2,000+ exhibitors and over 10 lakh visitors expected.",
     readTime: "3 min read",
     featured: true,
     content: `India's most ambitious trade exposition is set to take centre stage this Independence Day season. The Bharatiya Vyapar Mahotsav (BVM) 2026, billed as the country's largest Make-in-India multi-sectoral business expo, will be held from 12 to 15 August 2026 at Bharat Mandapam, Pragati Maidan, New Delhi.
@@ -1322,15 +715,13 @@ Union Commerce Minister Piyush Goyal, who launched the BVM portal in May, called
 
 Registrations are currently open across four categories — Exhibitor, Business Delegate, Speaker, and Visitor — at bharatiyavyaparmahotsav.com.`,
   },
-
   {
     id: "india-overtakes-japan-stock-market",
     title: "India Overtakes Japan to Become World's Fourth Largest Stock Market",
     date: "24-06-2026",
     category: "IPO & Markets",
     image: "/images/business-insights/india-stock-market-fourth-largest.jpg",
-    excerpt:
-      "India crosses the $5.5 trillion milestone in June 2026, overtaking Japan to become the world's fourth largest stock market as the Sensex tops 85,000.",
+    excerpt: "India crosses the $5.5 trillion milestone in June 2026, overtaking Japan to become the world's fourth largest stock market as the Sensex tops 85,000.",
     readTime: "3 min read",
     featured: false,
     content: `India has officially overtaken Japan to become the world's fourth largest stock market by market capitalization, crossing the $5.5 trillion milestone in June 2026. The BSE Sensex crossed the 85,000 mark this month, driven by strong foreign institutional investor inflows, robust corporate earnings, and growing retail investor participation. India now trails only the United States, China, and the United Kingdom in total market cap.
@@ -1339,15 +730,13 @@ The surge has been fueled by outperformance in sectors including capital goods, 
 
 Market analysts at Goldman Sachs and Morgan Stanley have both upgraded India's equity outlook to "Overweight," projecting further upside driven by a young demographic, rising middle-class consumption, and continued government capital expenditure in infrastructure and manufacturing.`,
   },
-
   {
     id: "tata-semiconductor-gujarat-expansion",
     title: "Tata Group Eyes $2 Billion Semiconductor Expansion in Gujarat",
     date: "24-06-2026",
     category: "Manufacturing",
     image: "/images/business-insights/tata-semiconductor-gujarat.jpg",
-    excerpt:
-      "Tata Group plans an additional $2 billion in its Dholera chip plant, boosting capacity by nearly 60% and creating an estimated 8,000 direct jobs by 2027.",
+    excerpt: "Tata Group plans an additional $2 billion in its Dholera chip plant, boosting capacity by nearly 60% and creating an estimated 8,000 direct jobs by 2027.",
     readTime: "3 min read",
     featured: false,
     content: `The Tata Group is set to invest an additional $2 billion in expanding its semiconductor manufacturing facility in Dholera, Gujarat, as part of India's ambitious push to become a global chipmaking hub. The expansion, expected to be operational by 2027, will increase the plant's production capacity by nearly 60% and create an estimated 8,000 direct jobs.
@@ -1356,15 +745,13 @@ This move comes on the back of strong government support under the India Semicon
 
 Industry experts believe India's semiconductor ambitions could position the country as a credible alternative to China and Taiwan in the global supply chain, especially as Western nations aggressively diversify chip sourcing.`,
   },
-
   {
     id: "india-startup-funding-2026",
     title: "India's Startup Funding Slows in 2026, But Quality Deals Hold Strong",
     date: "23-06-2026",
     category: "Funding",
     image: "/images/business-insights/meta-cred.jpg",
-    excerpt:
-      "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
+    excerpt: "Indian startups raised $8.44 billion across 831 rounds in H1 2026 — a 14.7% drop — as investors turn more selective, prioritising quality deals over volume.",
     readTime: "3 min read",
     content: `India's startup ecosystem is going through a careful phase in 2026. While money is still flowing in, investors are being far more selective about where they put it.
 
@@ -1372,15 +759,13 @@ Indian startups raised $8.44 billion across 831 equity funding rounds between Ja
 
 The mood in India's startup world is shifting — from chasing growth to building real businesses. Investors are tightening their standards, but the ecosystem remains one of the most active in the world.`,
   },
-
   {
     id: "meta-cred-investment",
     title: "Meta Invests $900 Million in CRED, Taps Kunal Shah to Lead WhatsApp",
     date: "22-06-2026",
     category: "Deals & Fintech",
     image: "/images/business-insights/startup-funding-2026.jpg",
-    excerpt:
-      "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
+    excerpt: "Meta leads a $900 million round in CRED for a ~20% stake at a $4.5 billion valuation, and appoints founder Kunal Shah as the new global CEO of WhatsApp.",
     readTime: "3 min read",
     featured: false,
     content: `In a landmark deal reshaping India's tech landscape, Meta has led a $900 million financing round in Indian fintech giant CRED, structured through a combination of primary and secondary share purchases, making Meta a minority investor in the company.
@@ -1391,15 +776,13 @@ As part of the deal, CRED founder Kunal Shah has been appointed global CEO of Wh
 
 Shah's fintech background has fuelled speculation that Meta may deepen financial services and commerce integrations within WhatsApp in the years ahead.`,
   },
-
   {
     id: "jio-platforms-ipo",
     title: "Jio Files for India's Largest-Ever IPO Valued at ₹13 Lakh Crore",
     date: "22-06-2026",
     category: "IPO & Markets",
     image: "/images/business-insights/jio-ipo.jpeg",
-    excerpt:
-      "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
+    excerpt: "Reliance Industries officially sets the stage for India's biggest stock market debut, filing draft papers for a 100% fresh issue of Jio Platforms valued at ₹12–13 lakh crore.",
     readTime: "3 min read",
     featured: false,
     content: `Reliance Industries has officially set the stage for India's biggest stock market debut. At its 49th Annual General Meeting (AGM), chairman Mukesh Ambani confirmed that the board approved the draft papers for the Jio Platforms IPO, with the filing submitted to the Securities and Exchange Board of India (SEBI) on June 19.
@@ -1408,15 +791,13 @@ Jio Platforms, Reliance's telecom and digital arm with over 527 million subscrib
 
 With the SEBI review underway, the public issue is expected later in 2026. The Jio IPO is widely seen as both a market milestone and a defining chapter in India's digital economy story.`,
   },
-
-    {
+  {
     id: "india-uk-trade",
     title: "India-UK trade pact kicks in July 15 — Scotch whisky, cars, and Indian textiles set for tariff cuts",
     date: "22-06-2026",
     category: "Economy & Trade",
     image: "/images/business-insights/india-uk-trade.png",
-    excerpt:
-      "The India-UK Comprehensive Economic and Trade Agreement will come into force on July 15, 2026, ushering in sweeping tariff reductions and expanded market access for both countries. While Scotch whisky and British automobiles will benefit from lower Indian duties, Indian exporters in textiles, footwear, marine products, and engineering goods gain duty-free access to the UK market, paving the way for stronger bilateral trade and economic cooperation.",
+    excerpt: "The India-UK Comprehensive Economic and Trade Agreement will come into force on July 15, 2026, ushering in sweeping tariff reductions and expanded market access for both countries. While Scotch whisky and British automobiles will benefit from lower Indian duties, Indian exporters in textiles, footwear, marine products, and engineering goods gain duty-free access to the UK market, paving the way for stronger bilateral trade and economic cooperation.",
     readTime: "3 min read",
     content: `After years of negotiations and a signing in July 2025, the India-UK Comprehensive Economic and Trade Agreement will formally come into force on July 15, 2026 — making it India's first bilateral trade deal with a Western nation.
 
@@ -1428,16 +809,13 @@ Indian whisky tariffs on British Scotch drop from 150% to 75% on day one, fallin
 
 Experts caution that Indian exporters must upgrade product standards to meet UK regulatory norms to fully capitalise on the new terms. The government has been urged to run domestic outreach programmes for industry.`,
   },
-
-  
   {
     id: "fable-5-ai",
     title: "US Restricts Anthropic's Mythos 5 and Fable 5 AI Models Over Jailbreak Concerns",
     date: "18-06-2026",
     category: "Technology — AI Policy & Export Controls",
     image: "/images/business-insights/fable-5-ai.png",
-    excerpt:
-     "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
+    excerpt: "Anthropic shut down its Fable 5 and Mythos 5 models worldwide after a US export directive cited a jailbreak-related security concern, a move it's complying with but disputing.",
     readTime: "4 min read",
     featured: false,
     content: `Anthropic stunned the tech world this week, hitting a $965 billion valuation that pushed it past rival OpenAI—remarkable, given OpenAI's six-year head start and the fact that Anthropic was founded by its former employees.
@@ -1456,42 +834,29 @@ Investors, meanwhile, back Anthropic's clear enterprise-first path to profit, pr
 
 The AI race is young, but whoever earns the most trust may win.
 
-For now, Anthropic leads.`
+For now, Anthropic leads.`,
   },
-
-    {
-    id: "non-metro-startup-story",
-    title: "India's Startup Boom Breaks Out of the Metros",
+  {
+    id: "second-time-founder-prolearn",
+    title: "Ex-Vedantu Leader Raises Rs 30 Crore to Build an AI-Native Learning Platform",
     date: "19-06-2026",
-    category: "Startups",
-    image: "/images/business-insights/non-metro-startup-story.png",
-    excerpt:
-      "Nearly half of India's 207,000-plus recognised startups now emerge from Tier II and Tier III cities, signalling a profound democratisation of entrepreneurship.",
-    readTime: "3 min read",
-    content: `India's startup boom is no longer confined to its big-city hubs. The country now counts more than 207,000 recognised startups, 112 unicorns, and over $350 billion in collective value — and crucially, nearly half of these startups are emerging from Tier II and Tier III cities. \n\nThis geographic shift carries real significance. Founders building outside Bengaluru, Mumbai, and Delhi enjoy lower operating costs, closer proximity to underserved customers, and a sharper understanding of demand in markets that larger players have long overlooked. Instead of chasing trends from a distance, they are solving problems they live alongside every day. \n\nThe trend also speaks to the maturing of India's startup infrastructure. Digital public rails, policy support, seed programmes, and growing founder networks now make it possible to build a serious company almost anywhere in the country. For India, the implication is profound: entrepreneurship is becoming genuinely democratised. The next great Indian company may well be built not in a glass tower in a metro, but in a smaller city, closer to the real demand it serves.`,
-  },
+    category: "Edtech",
+    image: "/images/business-insights/second-time-founder-prolearn.png",
+    excerpt: "Second-time founder Ravneet Singh has raised Rs 30 crore in pre-seed funding for ProLearn, an AI-native platform aiming to replace one-size-fits-all video lectures with adaptive, personalised learning.",
+    readTime: "2 min read",
+    content: `Experience counts in entrepreneurship, and ProLearn is a case in point. Former Vedantu technology leader Ravneet Singh has raised Rs 30 crore in a pre-seed round for his new venture, an AI-native learning platform aiming to reimagine online education.
 
-    {
-  id: "second-time-founder-prolearn",
-  title: "Ex-Vedantu Leader Raises Rs 30 Crore to Build an AI-Native Learning Platform",
-  date: "19-06-2026",
-  category: "Edtech",
-  image: "/images/business-insights/second-time-founder-prolearn.png",    
-  excerpt:
-    "Second-time founder Ravneet Singh has raised Rs 30 crore in pre-seed funding for ProLearn, an AI-native platform aiming to replace one-size-fits-all video lectures with adaptive, personalised learning.",
-  readTime: "2 min read",
-  content: "Experience counts in entrepreneurship, and ProLearn is a case in point. Former Vedantu technology leader Ravneet Singh has raised Rs 30 crore in a pre-seed round for his new venture, an AI-native learning platform aiming to reimagine online education.\n\nAt the heart of ProLearn is an AI-powered learning companion designed to deliver personalised, interactive, and adaptive learning experiences — moving beyond one-size-fits-all video lectures toward education that responds to each individual student. The fresh capital will fuel product and engineering development, strengthen the platform's AI and reasoning infrastructure, expand curriculum-aligned content, and support hiring ahead of its public launch.\n\nWhat makes the story compelling is the founder's pedigree. Having previously helped build technology at one of India's best-known edtech companies, Singh represents a growing wave of experienced operators taking another swing at hard problems with sharper insight and stronger networks. As AI reshapes how knowledge is delivered, seasoned founders like Singh are well placed to build the next generation of learning tools — and to do so with the wisdom of having been there before.",
+At the heart of ProLearn is an AI-powered learning companion designed to deliver personalised, interactive, and adaptive learning experiences — moving beyond one-size-fits-all video lectures toward education that responds to each individual student. The fresh capital will fuel product and engineering development, strengthen the platform's AI and reasoning infrastructure, expand curriculum-aligned content, and support hiring ahead of its public launch.
 
+What makes the story compelling is the founder's pedigree. Having previously helped build technology at one of India's best-known edtech companies, Singh represents a growing wave of experienced operators taking another swing at hard problems with sharper insight and stronger networks. As AI reshapes how knowledge is delivered, seasoned founders like Singh are well placed to build the next generation of learning tools — and to do so with the wisdom of having been there before.`,
   },
-  
   {
     id: "bigbasket-hari-menon",
     title: "Bigbasket Co-Founder Hari Menon Steps Down as CEO, Amazon Veteran Amit Nanda Takes Over",
     date: "18-06-2026",
     category: "Funding",
     image: "/images/business-insights/bigbasket-hari-menon.png",
-    excerpt:
-      "Business — Corporate Leadership / Retail & E-commerce",
+    excerpt: "Business — Corporate Leadership / Retail & E-commerce",
     readTime: "3 min read",
     content: `BENGALURU — Bigbasket co-founder Hari Menon has stepped down as CEO of the Tata Group-backed grocery and quick-commerce company, handing the reins to former Amazon India executive Amit Nanda. The move marks the end of an era for one of India's earliest online grocery pioneers, coming as the sector races to shorten delivery times.
 
@@ -1505,15 +870,13 @@ Founded in 2011, Bigbasket helped popularise online grocery shopping in India an
 
 Menon praised Nanda's track record, while Tata Digital CEO Sajith Sivanandan said his experience suits the company's expansion goals.`,
   },
-
   {
     id: "biodimension-8-crore",
     title: "Biodimension Raises ₹8 Crore to Transform Life Sciences",
     date: "15-06-2026",
     category: "Life Sciences",
     image: "/images/business-insights/biodimension.png",
-    excerpt:
-      "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
+    excerpt: "The Pune-based biotech startup will use the fresh capital to scale its 3D bioprinting platform and accelerate tissue-engineering research.",
     readTime: "4 min read",
     content: `Life sciences firm Biodimension, headquartered out of Bengaluru, has raised ₹8 crore in a fundraising round co-led by IAN Angel Fund and including other investors like Campus Angels Network, Dr. Sampath Srisailam, and angel investor Aaryan Baid. These funds will be utilized in product development, expanding laboratories, reinforcing its research and business teams, and commercializing its products in India and overseas.
 
@@ -1521,15 +884,13 @@ Manojkumar S., Ranjith Kumar Velusamy, and Pradeep Arunachalam are the founders 
 
 Currently, Biodimension has formed strategic collaborations with pharmaceutical companies, biotechs, research institutions, and contract research organizations both in India and Singapore. Moving forward, this company intends to ramp up their oncology research capability, scale their Bioassay-as-a-Service offering, and enter international markets, especially Southeast Asia.`,
   },
-
   {
     id: "deeptech-series-b",
     title: "Bengaluru Deeptech Startup Closes $40M Series B",
     date: "14-06-2026",
     category: "Funding",
     image: "/images/business-insights/deeptech.png",
-    excerpt:
-      "The round will fund global expansion and a new AI research lab in Bengaluru.",
+    excerpt: "The round will fund global expansion and a new AI research lab in Bengaluru.",
     readTime: "3 min read",
     content: `Bangalore-based fashion-tech startup NeuroPixel.AI recently stated that it is discontinuing its services after five years of developing AI-powered products for the fashion industry. Launched in 2020 by co-founders Arvind Venugopal Nair and Amritendu Mukherjee, the company offered a suite of technologies that helped fashion companies develop virtual models, automate their product catalogs, and provide virtual try-on experiences without the expensive process of photo shoots.
 
@@ -1537,17 +898,15 @@ NeuroPixel.AI managed to attract the interest of retail and e-commerce companies
 
 As explained by CEO and founder Arvind Venugopal Nair, besides difficulties in obtaining timely payments from the company's largest client, other factors such as lack of funds and limited market presence hindered the growth of NeuroPixel.AI. The company maintains its own unique set of AI technologies that can produce top quality products for less, but it has decided to end its service business while looking into other ways to make money off its technology stack.`,
   },
-
-
   {
     id: "indian-deep-tech-innotrek-uk",
     title: "Indian Deep-Tech Goes Global: Nasscom's InnoTrek UK 2026 Opens Doors in London",
+    date: undefined,
     category: "Emerging Tech",
     image: "/images/business-insights/indian-deep-tech-innotrek-uk.png",
-    excerpt:
-      "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
-    featured: false,
+    excerpt: "Nasscom's InnoTrek UK 2026 connects Indian deep-tech startups with UK investors, enterprises, and policymakers—marking a decisive shift toward global ambitions",
     readTime: "4 min read",
+    featured: false,
     content: `The firm has also announced plans of making investments worth ₹75,000 crores in its oil-to-chemicals (O2C) division, besides boosting its green energy efforts. It is expected that such an investment will be used to increase the efficiency of their refining and petrochemical production operations, thus improving the firm's international competitiveness.
 
 On the other hand, Reliance's ambition is to have a manufacturing capacity for solar modules worth 20 GW within the next five years from its Giga complex in Jamnagar, Gujarat. The proposed facility would target solar modules, battery storage, fuel cells, and green hydrogen manufacturing operations as part of the country's efforts to boost renewable energy production.
@@ -1556,15 +915,13 @@ According to Chairman Mukesh Ambani, it was imperative to address present-day ne
 
 Industry experts regard such efforts as steps towards diversifying Reliance's energy sources.`,
   },
-
   {
     id: "green-hydrogen-push",
     title: "Reliance Commits ₹75,000 Cr to Green Hydrogen Push",
     date: "18-06-2026",
     category: "Energy",
     image: "/images/business-insights/hydrogen.png",
-    excerpt:
-      "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
+    excerpt: "The investment is part of a broader plan to make clean energy cost-competitive within the decade.",
     readTime: "5 min read",
     content: `India's deep-tech ambitions took a decisive international turn this June as industry body Nasscom launched InnoTrek UK 2026, a flagship global market-access programme. From June 8 to 12, a carefully selected cohort of Indian deep-tech startups travelled to the United Kingdom for an intensive week of market insights, investor access, and business development opportunities, with several engagements timed around London Tech Week.
 
@@ -1572,34 +929,13 @@ The initiative is more than a networking trip. It is designed to strengthen Indi
 
 For a generation of founders building in artificial intelligence, semiconductors, and other frontier fields, programmes like InnoTrek signal a shift in mindset: Indian startups are no longer content to serve only the domestic market. They are positioning themselves as global players from day one. As cross-border partnerships deepen, such missions could prove pivotal in turning India's deep-tech promise into worldwide commercial success.`,
   },
-
-    {
-    id: "iit-madras-world-stage-bharat-innovates-2026",
-    title: "IIT Madras Leads India's Innovation Charge in Nice at Bharat Innovates 2026",
-    date: "18-06-2026",
-    category: "Startups & Innovation",
-    image: "/images/business-insights/iit-madras-world-stage-bharat-innovates-2026.png",
-    excerpt:
-      "At Bharat Innovates 2026 in Nice, IIT Madras presents fifteen startups and leads two thematic tracks—proof that world-class deep-tech is emerging from Indian campuses.",
-    readTime: "5 min read",
-    content: `India's premier engineering institution is carrying the country's innovation story to a global audience. IIT Madras is showcasing a range of deep-tech innovations, startups, and strategic research initiatives at Bharat Innovates 2026, an international technology exhibition organised by the Ministry of Education in Nice, France, from June 14 to 16.
-
-The institute's role at the event is significant. IIT Madras is leading two of the thirteen thematic areas on display and presenting fifteen startups incubated within its own ecosystem — a powerful demonstration of how academic research is being translated into real, market-ready ventures.
-
-This kind of presence matters. For years, India's brightest technical talent has been celebrated abroad; now its institutions are exporting not just engineers but entire companies and research agendas. By placing home-grown deep-tech alongside global peers, IIT Madras strengthens India's reputation as a serious source of frontier innovation.
-
-For aspiring founders, the message is clear: world-class ideas can and do emerge from Indian campuses, and the global stage is increasingly within reach.`,
-  },
-
-  
-    {
+  {
     id: "masters-union-demo-day-2026",
     title: "India's Youngest Founders Cash In at Masters' Union Demo Day 2026",
     date: "18-06-2026",
     category: "Education & Entrepreneurship",
     image: "/images/business-insights/masters-union-demo-day-2026.png",
-    excerpt:
-      "At Masters' Union's Demo Day 2026, eighteen student startups raised Rs 4 crore across AI, fintech, mobility, and more—proof that company-building is starting before graduation.",
+    excerpt: "At Masters' Union's Demo Day 2026, eighteen student startups raised Rs 4 crore across AI, fintech, mobility, and more—proof that company-building is starting before graduation.",
     readTime: "4 min read",
     content: `Entrepreneurial energy was on full display at Masters' Union's Demo Day 2026 in Gurugram, where eighteen student-led startups secured a combined Rs 4 crore in funding commitments. Remarkably, much of the backing was announced within an hour of the founders' pitches — a testament to both investor confidence and the quality of ideas on show.
 
@@ -1611,6 +947,9 @@ The story is an encouraging one for India's startup pipeline. When students can 
   },
 ];
 
-// Look up a single article by its id (used by the full-page article view).
+// Look up a single article by id across ALL three tabs (used by the
+// full-page article view so every article opens correctly).
 export const getBusinessInsightById = (id: string): BusinessInsight | undefined =>
-  businessinsights.find((a) => a.id === id);
+  businessinsights.find((a) => a.id === id) ??
+  businesslegacy.find((a) => a.id === id) ??
+  businessstartups.find((a) => a.id === id);

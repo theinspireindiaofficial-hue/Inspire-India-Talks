@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock, TrendingUp } from "lucide-react";
 import { businessinsights as rawInsights } from "../data/businessinsights";
+import { businesslegacy } from "../data/businesslegacy";
+import { businessstartups } from "../data/businessstartups";
 import { highlightKeywords } from "@/lib/highlight";
 
 /* Loose local type so this page compiles regardless of how
@@ -27,9 +29,11 @@ const toTime = (d: string): number => {
 };
 
 /* Newest first — so the latest story is always at the top. */
-const articles = ([...(rawInsights as unknown as Article[])]).sort(
-  (a, b) => toTime(b.date) - toTime(a.date)
-);
+const articles = ([
+  ...(rawInsights as unknown as Article[]),
+  ...(businesslegacy as unknown as Article[]),
+  ...(businessstartups as unknown as Article[]),
+]).sort((a, b) => toTime(b.date) - toTime(a.date));
 
 /* ===== Feeds — each tab shows only its own category of article ===== */
 export type Feed = "insights" | "legacy" | "startups";

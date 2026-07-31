@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { personalities } from "@/data/personalities";
 import { businessinsights } from "@/data/businessinsights";
+import { businesslegacy } from "@/data/businesslegacy";
+import { businessstartups } from "@/data/businessstartups";
 import { events } from "@/data/events";
 import { Radio } from "lucide-react";
 import NewsletterSheet from "@/components/NewsletterSheet";
 
 const Index = () => {
-  // Split articles by category so each homepage section mirrors its tab.
-  const isLegacy = (a: typeof businessinsights[number]) => a.category === "Business Legacy";
-  const isStartup = (a: typeof businessinsights[number]) => !!a.category && /^Startups/i.test(a.category);
-  const newsStories = businessinsights.filter((a) => !isLegacy(a) && !isStartup(a));
-  const legacyStories = businessinsights.filter(isLegacy);
-  const startupAll = businessinsights.filter(isStartup);
+  // Each homepage section mirrors its tab, and each tab now has its own data file.
+  const newsStories = businessinsights;      // Business Insights (news)
+  const legacyStories = businesslegacy;      // Business Legacy
+  const startupAll = businessstartups;       // Startups
 
   const tickerItems = newsStories.slice(0, 8).map((a) => a.title);
 
