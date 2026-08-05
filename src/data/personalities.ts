@@ -60,7 +60,7 @@ export const personalities: Personality[] = [
     title: "Co-founder, Snapdeal & Titan Capital",
     category: "Entrepreneurs & Founders",
     categorySlug: "entrepreneurs",
-    image: "/images/personalities/kunal-bahl.webp",
+    image: "/images/personalities/kunal-bahl-cropped.webp",
     born: "New Delhi, India",
     profession: "Entrepreneur & Investor",
     knownFor: "Co-founding Snapdeal and backing early-stage Indian startups through Titan Capital",
